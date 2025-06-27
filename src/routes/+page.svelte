@@ -55,7 +55,7 @@
 					</p>
 					<p class="mt-6 text-lg/8 text-gray-100">
 						Keep your career wins in one place—never lose track of your progress, big or small.
-						Career Fingerprint helps you turn everyday accomplishments into powerful career assets.
+						Skill Fingerprint helps you turn everyday accomplishments into powerful career assets.
 					</p>
 					<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 						<div class="relative pl-9">
