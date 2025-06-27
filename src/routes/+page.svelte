@@ -57,9 +57,9 @@
 						Keep your career wins in one place—never lose track of your progress, big or small.
 						Career Fingerprint helps you turn everyday accomplishments into powerful career assets.
 					</p>
-					<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-200 lg:max-w-none">
+					<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 						<div class="relative pl-9">
-							<dt class="inline font-semibold text-gray-400">
+							<dt class="inline font-semibold text-gray-50">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
@@ -79,7 +79,7 @@
 							<dd class="inline">Get a weekly reminder to fill out achievements</dd>
 						</div>
 						<div class="relative pl-9">
-							<dt class="inline font-semibold text-gray-400">
+							<dt class="inline font-semibold text-gray-50">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
@@ -100,7 +100,7 @@
 							<dd class="inline">Easily transform entries into polished resume bullets.</dd>
 						</div>
 						<div class="relative pl-9">
-							<dt class="inline font-semibold text-gray-400">
+							<dt class="inline font-semibold text-gray-50">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
