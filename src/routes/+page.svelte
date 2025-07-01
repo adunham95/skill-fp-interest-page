@@ -31,12 +31,16 @@
 			</div>
 		</div>
 	</div>
-	<div class=" lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+	<div class=" relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
 		<img
 			class="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
 			src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
 			alt=""
 		/>
+		<!-- <p class=" absolute right-0 bottom-0 text-[8px] text-gray-100">
+			Photo by Photo By: Kaboompics.com:
+			https://www.pexels.com/photo/a-woman-wearing-eyeglasses-using-laptop-5908728/
+		</p> -->
 	</div>
 </div>
 
@@ -126,13 +130,16 @@
 					</dl>
 				</div>
 			</div>
-			<img
-				src="/images/screenshot-sfp.png"
-				alt="Product screenshot"
-				class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
-				width="2432"
-				height="1442"
-			/>
+			<picture>
+				<source srcset="/images/screenshot-resume-tool.webp" type="image/webp" />
+				<img
+					src="/images/screenshot-resume-tool.png"
+					alt="Product screenshot"
+					class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
+					width="2432"
+					height="1442"
+				/>
+			</picture>
 		</div>
 	</div>
 </div>
@@ -240,8 +247,11 @@
 		</h2>
 		<p class="mt-6 max-w-2xl text-base/7 text-gray-300">
 			Have a different question and can’t find the answer you’re looking for? Reach out to our
-			support team by <a href="#" class="text-primary hover:text-primary-600 font-semibold"
-				>sending us an email</a
+			support team by sending us an email at <a
+				href="mailto:careerfingerprint@gmail.com"
+				class="text-primary hover:text-primary-600 font-semibold"
+			>
+				careerfingerprint@gmail.com</a
 			> and we’ll get back to you as soon as we can.
 		</p>
 		<div class="mt-20">
