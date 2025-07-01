@@ -5,7 +5,7 @@
 			How you use
 		</h2>
 		<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-			Learn How to use Skill Fingerprint to unlock your full potential
+			Learn How to use Career Fingerprint to unlock your full potential
 		</p>
 	</div>
 </div>
@@ -18,7 +18,7 @@
 				Current Employees
 			</h2>
 			<p class="mt-6 text-lg/8 text-gray-600">
-				Skill Fingerprint helps you document them, show impact, and prepare for promotions or
+				Career Fingerprint helps you document them, show impact, and prepare for promotions or
 				performance reviews.
 			</p>
 		</div>
@@ -121,7 +121,7 @@
 				<div class="flex flex-col">
 					<dt class="text-base/7 font-semibold text-gray-900">Track Interviews</dt>
 					<dd class="mt-1 flex flex-auto flex-col text-base/7 text-gray-600">
-						<p class="flex-auto">Save all your interviews into Skill Fingerprint</p>
+						<p class="flex-auto">Save all your interviews into Career Fingerprint</p>
 					</dd>
 				</div>
 				<div class="flex flex-col">

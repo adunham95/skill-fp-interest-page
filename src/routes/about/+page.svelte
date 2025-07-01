@@ -38,7 +38,7 @@
 			The Problem
 		</h3>
 		<p class="pb-4 text-xl/8 text-gray-600">
-			Skill Fingerprint was born from a simple frustration: preparing for job interviews shouldn't
+			Career Fingerprint was born from a simple frustration: preparing for job interviews shouldn't
 			feel like archaeological work, digging through old emails and trying to remember what you
 			accomplished two years ago.
 		</p>
@@ -79,7 +79,7 @@
 		</p>
 		<p class="pb-4 text-xl/8 text-gray-600">
 			Whether you're preparing for your next role or positioning yourself for growth in your current
-			one, Skill Fingerprint will ensure your achievements are always at your fingertips, ready to
+			one, Career Fingerprint will ensure your achievements are always at your fingertips, ready to
 			open doors and advance your career.
 		</p>
 		<p class="pb-4 text-xl/8 font-bold text-gray-600">

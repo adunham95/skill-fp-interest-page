@@ -41,7 +41,7 @@
 		<li>
 			<p>
 				<strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
-				or &quot;Our&quot; in this Agreement) refers to Skill Fingerprint LLC, 1212 Hickey Rd Knoxville
+				or &quot;Our&quot; in this Agreement) refers to Career Fingerprint LLC, 1212 Hickey Rd Knoxville
 				TN 37932.
 			</p>
 		</li>
@@ -87,7 +87,7 @@
 		</li>
 		<li>
 			<p>
-				<strong>Website</strong> refers to Skill Fingerprint, accessible from
+				<strong>Website</strong> refers to Career Fingerprint, accessible from
 				<a href="https://skillfingerprint.com/" rel="external nofollow noopener" target="_blank"
 					>https://skillfingerprint.com/</a
 				>
@@ -410,10 +410,9 @@
 		You are advised to review this Privacy Policy periodically for any changes. Changes to this
 		Privacy Policy are effective when they are posted on this page.
 	</p>
-	<!-- TODO After email setups -->
-	<!-- <h2>Contact Us</h2>
+	<h2>Contact Us</h2>
 	<p>If you have any questions about this Privacy Policy, You can contact us:</p>
 	<ul>
-		<li>By email: skillfingerprint@gmail.com</li>
-	</ul> -->
+		<li>By email: careerfingerprint@gmail.com</li>
+	</ul>
 </div>

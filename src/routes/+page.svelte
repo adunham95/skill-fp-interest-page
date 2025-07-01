@@ -18,7 +18,7 @@
 					<h1
 						class="font-title text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
 					>
-						Build your unique skill fingerprint
+						Build your unique Career Fingerprint
 					</h1>
 					<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 						Organize your accomplishments, build standout resumes, and confidently prepare for
@@ -55,7 +55,7 @@
 					</p>
 					<p class="mt-6 text-lg/8 text-gray-100">
 						Keep your career wins in one place—never lose track of your progress, big or small.
-						Skill Fingerprint helps you turn everyday accomplishments into powerful career assets.
+						Career Fingerprint helps you turn everyday accomplishments into powerful career assets.
 					</p>
 					<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 						<div class="relative pl-9">
@@ -256,9 +256,9 @@
 					</dd>
 				</div> -->
 				<div>
-					<dt class="text-base/7 font-semibold text-white">What is Skill Fingerprint used for?</dt>
+					<dt class="text-base/7 font-semibold text-white">What is Career Fingerprint used for?</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
-						Skill Fingerprint helps you track your accomplishments, prepare resumes, and get ready
+						Career Fingerprint helps you track your accomplishments, prepare resumes, and get ready
 						for interviews. It’s a private workspace that supports your career growth—whether you’re
 						job hunting, preparing for a performance review, or just staying organized.
 					</dd>
@@ -268,7 +268,7 @@
 						How is this different from LinkedIn or a resume builder?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
-						Skill Fingerprint helps you track the journey, not just the destination. It’s a private
+						Career Fingerprint helps you track the journey, not just the destination. It’s a private
 						space to collect wins, prep for interviews, and convert your work into resumes—without
 						broadcasting it publicly.
 					</dd>
@@ -287,13 +287,13 @@
 						What if I’m changing careers or industries?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
-						Skill Fingerprint helps you reflect on transferable skills and reframe your experience
+						Career Fingerprint helps you reflect on transferable skills and reframe your experience
 						for a new direction—whether it's a new role, industry, or path entirely.
 					</dd>
 				</div> -->
 				<div>
 					<dt class="text-base/7 font-semibold text-white">
-						How does Skill Fingerprint help with interview prep?
+						How does Career Fingerprint help with interview prep?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
 						Our interview screen brings together your top achievements, role descriptions, and notes
@@ -306,13 +306,13 @@
 						Can I track my accomplishments over time?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
-						Absolutely. Skill Fingerprint is like a living career journal—you can log wins, skills
+						Absolutely. Career Fingerprint is like a living career journal—you can log wins, skills
 						used, lessons learned, and see your growth unfold.
 					</dd>
 				</div>
 				<div>
 					<dt class="text-base/7 font-semibold text-white">
-						How can Skill Fingerprint help with performance reviews?
+						How can Career Fingerprint help with performance reviews?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
 						By logging wins regularly, you’ll always have a record of your impact—perfect for annual

@@ -15,7 +15,7 @@
 		<li>
 			<p>
 				<strong>Application</strong> means the software program provided by the Company downloaded by
-				You on any electronic device, named Skill Fingerprint
+				You on any electronic device, named Career Fingerprint
 			</p>
 		</li>
 		<li>
@@ -39,7 +39,7 @@
 		<li>
 			<p>
 				<strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
-				or &quot;Our&quot; in this Agreement) refers to Skill Fingerprint.
+				or &quot;Our&quot; in this Agreement) refers to Career Fingerprint.
 			</p>
 		</li>
 		<li>
@@ -70,7 +70,7 @@
 		</li>
 		<li>
 			<p>
-				<strong>Website</strong> refers to Skill Fingerprint, accessible from
+				<strong>Website</strong> refers to Career Fingerprint, accessible from
 				<a href="skillfingerprint.com" rel="external nofollow noopener" target="_blank"
 					>skillfingerprint.com</a
 				>
