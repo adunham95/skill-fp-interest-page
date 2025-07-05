@@ -1,9 +1,13 @@
 <script lang="ts"></script>
 
+<svelte:head>
+	<title>About | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title>
+</svelte:head>
+
 <div class="relative isolate overflow-hidden">
 	<img
 		src="/images/pexels-pixabay-290595.jpg"
-		alt=""
+		alt="A city looking out over water"
 		class="absolute inset-0 -z-10 size-full object-cover"
 	/>
 
@@ -12,7 +16,7 @@
 			class="mx-auto max-w-2xl rounded-md bg-white/30 p-4 backdrop-blur-md lg:mx-0 lg:shrink-0 lg:pt-8"
 		>
 			<h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-7xl">
-				Our Mission
+				Career Fingerprint: Our Mission
 			</h1>
 			<p class="mt-8 text-lg font-medium text-pretty text-gray-200 sm:text-xl/8">
 				We help ambitious professionals capture, organize, and leverage their achievements to
@@ -120,7 +124,11 @@
 			{#each teamMembers as teamMate}
 				<li>
 					<div class="flex items-center gap-x-6">
-						<img class="size-16 rounded-full" src={teamMate.imgURL} alt="" />
+						<img
+							class="size-16 rounded-full"
+							src={teamMate.imgURL}
+							alt="CEO/Founder Adrian Dunham"
+						/>
 						<div>
 							<h3 class="text-lg font-semibold tracking-tight text-gray-900">
 								{teamMate.name}

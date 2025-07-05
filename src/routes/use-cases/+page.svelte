@@ -1,9 +1,13 @@
+<svelte:head>
+	<title>How to use | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title>
+</svelte:head>
+
 <div class=" px-6 py-24 sm:py-32 lg:px-8">
 	<div class="mx-auto max-w-2xl text-center">
 		<p class="text-primary text-base/7 font-semibold">Use Cases</p>
-		<h2 class="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-			How you use
-		</h2>
+		<h1 class="mt-2 text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+			How you use Career Fingerprint
+		</h1>
 		<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 			Learn How to use Career Fingerprint to unlock your full potential
 		</p>

@@ -1,3 +1,9 @@
+<svelte:head>
+	<title
+		>Terms and Conditions | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title
+	>
+</svelte:head>
+
 <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8">
 	<h1>Terms and Conditions</h1>
 	<p>Last updated: June 26, 2025</p>
@@ -71,8 +77,8 @@
 		<li>
 			<p>
 				<strong>Website</strong> refers to Career Fingerprint, accessible from
-				<a href="skillfingerprint.com" rel="external nofollow noopener" target="_blank"
-					>skillfingerprint.com</a
+				<a href="https://career-fingerprint.com/" rel="external nofollow noopener" target="_blank"
+					>https://career-fingerprint.com/</a
 				>
 			</p>
 		</li>
@@ -242,6 +248,6 @@
 	<h2>Contact Us</h2>
 	<p>If you have any questions about these Terms and Conditions, You can contact us:</p>
 	<ul>
-		<li>By email: skillfingerprint@gmail.com</li>
+		<li>By email: careerfingerprint@gmail.com</li>
 	</ul>
 </div>

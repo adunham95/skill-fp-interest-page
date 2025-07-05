@@ -1,3 +1,9 @@
+<svelte:head>
+	<title
+		>Privacy Policy | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title
+	>
+</svelte:head>
+
 <div class="prose mx-auto max-w-7xl p-6 lg:px-8">
 	<h1>Privacy Policy</h1>
 	<p>Last updated: July 01, 2025</p>
@@ -88,8 +94,8 @@
 		<li>
 			<p>
 				<strong>Website</strong> refers to Career Fingerprint, accessible from
-				<a href="https://skillfingerprint.com/" rel="external nofollow noopener" target="_blank"
-					>https://skillfingerprint.com/</a
+				<a href="https://career-fingerprint.com/" rel="external nofollow noopener" target="_blank"
+					>https://career-fingerprint.com/</a
 				>
 			</p>
 		</li>
