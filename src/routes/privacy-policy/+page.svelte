@@ -1,7 +1,9 @@
+<script>
+	import { generatePageName } from '$lib/Utils/generatePageName';
+</script>
+
 <svelte:head>
-	<title
-		>Privacy Policy | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title
-	>
+	<title>{generatePageName('Privacy Policy')}</title>
 </svelte:head>
 
 <div class="prose mx-auto max-w-7xl p-6 lg:px-8">

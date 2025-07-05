@@ -1,7 +1,9 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import { generatePageName } from '$lib/Utils/generatePageName';
+</script>
 
 <svelte:head>
-	<title>About | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title>
+	<title>{generatePageName('Abount')}</title>
 </svelte:head>
 
 <div class="relative isolate overflow-hidden">

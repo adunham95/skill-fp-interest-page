@@ -1,5 +1,9 @@
+<script>
+	import { generatePageName } from '$lib/Utils/generatePageName';
+</script>
+
 <svelte:head>
-	<title>How to use | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title>
+	<title>{generatePageName('Use Cases')}</title>
 </svelte:head>
 
 <div class=" px-6 py-24 sm:py-32 lg:px-8">

@@ -1,7 +1,9 @@
+<script>
+	import { generatePageName } from '$lib/Utils/generatePageName';
+</script>
+
 <svelte:head>
-	<title
-		>Terms and Conditions | Career Fingerprint | Track Your Achievements & Build Standout Resumes</title
-	>
+	<title>{generatePageName('Terms and Conditions')}</title>
 </svelte:head>
 
 <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8">
