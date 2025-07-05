@@ -108,12 +108,12 @@
 								>
 							</li>
 							<li>
-								<a href="/use-cases#educators" class="text-sm/6 text-gray-400 hover:text-gray-300"
+								<a href="/use-cases" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Educators (coming soon)</a
 								>
 							</li>
 							<li>
-								<a href="/use-cases#institions" class="text-sm/6 text-gray-400 hover:text-gray-300"
+								<a href="/use-cases" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Education Institutions(coming soon)</a
 								>
 							</li>
