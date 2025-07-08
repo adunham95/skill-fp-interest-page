@@ -30,14 +30,14 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": siteName,
-			"url": url
+			"name": "Career Fingerprint",
+			"url":  "https://career-fingerprint.com"
 		},
         {
             "@type": "Organization",
-            "@id": `${url}/#organization`,
-            "name": siteName,
-            "url": url
+            "@id": "https://career-fingerprint.com/#organization",
+            "name": "Career Fingerprint",
+			"url":  "https://career-fingerprint.com"
         }
 	</script>
 {/snippet}
