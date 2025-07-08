@@ -32,13 +32,13 @@
 			"@type": "WebSite",
 			"name": siteName,
 			"url": url
-		}
+		},
         {
             "@type": "Organization",
             "@id": `${url}/#organization`,
             "name": siteName,
             "url": url
-        },
+        }
 	</script>
 {/snippet}
 
