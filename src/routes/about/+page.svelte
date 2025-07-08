@@ -1,10 +1,8 @@
 <script lang="ts">
-	import { generatePageName } from '$lib/Utils/generatePageName';
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>{generatePageName('Abount')}</title>
-</svelte:head>
+<Seo pageName="About" />
 
 <div class="relative isolate overflow-hidden">
 	<img

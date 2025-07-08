@@ -1,10 +1,8 @@
 <script>
-	import { generatePageName } from '$lib/Utils/generatePageName';
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>{generatePageName('Use Cases')}</title>
-</svelte:head>
+<Seo pageName="Use Cases" />
 
 <div class=" px-6 py-24 sm:py-32 lg:px-8">
 	<div class="mx-auto max-w-2xl text-center">

@@ -1,10 +1,8 @@
 <script>
-	import { generatePageName } from '$lib/Utils/generatePageName';
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>{generatePageName('Terms and Conditions')}</title>
-</svelte:head>
+<Seo pageName="'Terms and Conditions'" />
 
 <div class="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8">
 	<h1>Terms and Conditions</h1>

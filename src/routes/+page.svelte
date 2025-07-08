@@ -1,5 +1,8 @@
 <script>
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
+
+<Seo />
 
 <div class="relative">
 	<div class="mx-auto max-w-7xl">

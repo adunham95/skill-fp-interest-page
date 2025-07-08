@@ -1,10 +1,8 @@
 <script>
-	import { generatePageName } from '$lib/Utils/generatePageName';
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
 
-<svelte:head>
-	<title>{generatePageName('Privacy Policy')}</title>
-</svelte:head>
+<Seo pageName="Privacy Policy" />
 
 <div class="prose mx-auto max-w-7xl p-6 lg:px-8">
 	<h1>Privacy Policy</h1>
