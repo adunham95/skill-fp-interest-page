@@ -99,7 +99,7 @@
 									/>
 								</svg>
 
-								Resumé Ready
+								Resume Ready
 							</dt>
 							<dd class="inline">Easily transform entries into polished resume bullets.</dd>
 						</div>
@@ -120,11 +120,12 @@
 									/>
 								</svg>
 
-								Interview prep
+								Meeting prep
 							</dt>
 							<dd class="inline">
-								Prep for an interview and get a detailed interview screen where you can view all
-								your achievements, resume, job description and previous notes on a single screen
+								Prep for an interview or meeting and get a detailed meeting screen where you can
+								view all your achievements, resume, job description and previous notes on a single
+								screen
 							</dd>
 						</div>
 					</dl>
@@ -154,7 +155,7 @@
 				Built for every stage of your journey
 			</p>
 			<p class="mt-6 text-lg/8 text-gray-600">
-				Whether you're growing in your current role, switching industries, or starting fresh, Skill
+				Whether you're growing in your current role, switching industries, or starting fresh, Career
 				Fingerprint evolves with your career journey.
 			</p>
 		</div>
@@ -239,6 +240,112 @@
 	</div>
 </div>
 
+<div class="bg-background py-24 sm:py-32">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mx-auto max-w-2xl text-center">
+			<h2 class="text-primary text-base/7 font-semibold">Toolkit</h2>
+			<p
+				class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+			>
+				Career Fingerprint Toolkit
+			</p>
+			<p class="mt-6 text-lg/8 text-gray-900">
+				Use every tool in our Career Toolkit to stay organized, prepared, and confident at every
+				stage of your professional journey. Whether you're prepping for an interview or updating
+				your resume, our tools are here to help.
+			</p>
+		</div>
+		<div
+			class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+		>
+			<article
+				class="hover:bg-secondary/10 flex flex-col items-start justify-between rounded-2xl p-4"
+			>
+				<div class="border-secondary relative w-full rounded-2xl border-2">
+					<img
+						src="/images/undraw_launch-event_aur1.svg"
+						alt=""
+						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
+					/>
+				</div>
+				<div class="max-w-xl">
+					<div class="group relative">
+						<h3 class="mt-8 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+							<p>Record Career Achievements</p>
+						</h3>
+						<p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+							Log wins with our Accomplishment Tracker to boost your resume and prep for reviews.
+						</p>
+					</div>
+				</div>
+			</article>
+			<article
+				class="hover:bg-secondary/10 flex flex-col items-start justify-between rounded-2xl p-4"
+			>
+				<div class="border-secondary relative w-full rounded-2xl border-2">
+					<img
+						src="/images/undraw_saving-notes_wp71.svg"
+						alt=""
+						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
+					/>
+				</div>
+				<div class="max-w-xl">
+					<div class="group relative">
+						<h3 class="mt-8 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+							<p>Prep For Meetings</p>
+						</h3>
+						<p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+							Stay focused with tools to organize thoughts for interviews, 1:1s, or team updates.
+						</p>
+					</div>
+				</div>
+			</article>
+			<article
+				class="hover:bg-secondary/10 flex flex-col items-start justify-between rounded-2xl p-4"
+			>
+				<div class="border-secondary relative w-full rounded-2xl border-2">
+					<img
+						src="/images/undraw_online-stats_50mk.svg"
+						alt=""
+						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
+					/>
+				</div>
+				<div class="max-w-xl">
+					<div class="group relative">
+						<h3 class="mt-8 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+							<p>Meeting Screen</p>
+						</h3>
+						<p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+							Access key points fast with a personalized Career Toolkit note system.
+						</p>
+					</div>
+				</div>
+			</article>
+			<article
+				class="hover:bg-secondary/10 flex flex-col items-start justify-between rounded-2xl p-4"
+			>
+				<div class="border-secondary relative w-full rounded-2xl border-2">
+					<img
+						src="/images/undraw_working_n9u0.svg"
+						alt=""
+						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
+					/>
+				</div>
+				<div class="max-w-xl">
+					<div class="group relative">
+						<h3 class="mt-8 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+							<p>Track Your Career</p>
+						</h3>
+						<p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
+							Use our Job Application Tracker and Resume Builder to showcase your growth.
+						</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
+
 <!-- FAQ -->
 <div class="bg-secondary">
 	<div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
@@ -256,15 +363,6 @@
 		</p>
 		<div class="mt-20">
 			<dl class="space-y-16 sm:grid sm:grid-cols-2 sm:space-y-0 sm:gap-x-6 sm:gap-y-16 lg:gap-x-10">
-				<!-- <div>
-					<dt class="text-base/7 font-semibold text-white">
-						What&#039;s the best thing about Switzerland?
-					</dt>
-					<dd class="mt-2 text-base/7 text-gray-300">
-						I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Quas cupiditate laboriosam fugiat.
-					</dd>
-				</div> -->
 				<div>
 					<dt class="text-base/7 font-semibold text-white">What is Career Fingerprint used for?</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
@@ -292,23 +390,13 @@
 						internships, school projects, or volunteer work.
 					</dd>
 				</div>
-				<!-- <div>
-					<dt class="text-base/7 font-semibold text-white">
-						What if I’m changing careers or industries?
-					</dt>
-					<dd class="mt-2 text-base/7 text-gray-300">
-						Career Fingerprint helps you reflect on transferable skills and reframe your experience
-						for a new direction—whether it's a new role, industry, or path entirely.
-					</dd>
-				</div> -->
 				<div>
 					<dt class="text-base/7 font-semibold text-white">
 						How does Career Fingerprint help with interview prep?
 					</dt>
 					<dd class="mt-2 text-base/7 text-gray-300">
-						Our interview screen brings together your top achievements, role descriptions, and notes
-						so you can walk into interviews with confidence. Think of it as your personal cheat
-						sheet.
+						Our meeting screen brings together your top achievements, role descriptions, and notes
+						so you can walk into meetings with confidence. Think of it as your personal cheat sheet.
 					</dd>
 				</div>
 				<div>
@@ -329,8 +417,6 @@
 						reviews, promotions, or raise discussions.
 					</dd>
 				</div>
-
-				<!-- More questions... -->
 			</dl>
 		</div>
 	</div>
