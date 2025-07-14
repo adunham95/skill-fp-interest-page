@@ -17,15 +17,15 @@
 			</svg>
 
 			<div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
-				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-2xl">
 					<h1
-						class="font-title text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
+						class="font-title text-5xl leading-14 font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
 					>
-						Build your unique Career Fingerprint
+						Highlight your your unique achievements
 					</h1>
 					<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-						Organize your accomplishments, build standout resumes, and confidently prepare for
-						what’s next.
+						Add your achievements your Career Fingerprint to help you standout during your next
+						interview or 1:1
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">
 						<!-- <a href="/get-started" class="btn btn--primary">Build My Fingerprint</a> -->
