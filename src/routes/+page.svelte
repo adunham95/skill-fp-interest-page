@@ -38,7 +38,7 @@
 		<img
 			class="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
 			src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
-			alt=""
+			alt="Guy sitting on a ledge working on a laptop"
 		/>
 		<!-- <p class=" absolute right-0 bottom-0 text-[8px] text-gray-100">
 			Photo by Photo By: Kaboompics.com:
@@ -138,7 +138,7 @@
 				<source srcset="/images/screenshot-resume-tool.webp" type="image/webp" />
 				<img
 					src="/images/screenshot-resume-tool.png"
-					alt="Product screenshot"
+					alt="Product screenshot of the resume tool"
 					class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
 					width="2432"
 					height="1442"
@@ -250,7 +250,7 @@
 			<p
 				class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
 			>
-				Career Fingerprint Toolkit
+				Your Career Toolkit
 			</p>
 			<p class="mt-6 text-lg/8 text-gray-900">
 				Use every tool in our Career Toolkit to stay organized, prepared, and confident at every
@@ -267,7 +267,7 @@
 				<div class="border-secondary relative w-full rounded-2xl border-2">
 					<img
 						src="/images/undraw_launch-event_aur1.svg"
-						alt=""
+						alt="Launch event shot"
 						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
 					/>
 				</div>
@@ -288,7 +288,7 @@
 				<div class="border-secondary relative w-full rounded-2xl border-2">
 					<img
 						src="/images/undraw_saving-notes_wp71.svg"
-						alt=""
+						alt="Preparing for meetings"
 						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
 					/>
 				</div>
@@ -309,7 +309,7 @@
 				<div class="border-secondary relative w-full rounded-2xl border-2">
 					<img
 						src="/images/undraw_online-stats_50mk.svg"
-						alt=""
+						alt="Person sitting on a computer monitor with progress bars"
 						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
 					/>
 				</div>
@@ -330,7 +330,7 @@
 				<div class="border-secondary relative w-full rounded-2xl border-2">
 					<img
 						src="/images/undraw_working_n9u0.svg"
-						alt=""
+						alt="Two people sitting with an interview"
 						class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"
 					/>
 				</div>
