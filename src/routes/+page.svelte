@@ -1,8 +1,13 @@
 <script>
 	import Seo from '$lib/Components/SEO.svelte';
+	import { PUBLIC_CLOUDFLARE_TURNSTYLE_SITE_KEY } from '$env/static/public';
 </script>
 
 <Seo />
+
+<svelte:head>
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</svelte:head>
 
 <div class="relative">
 	<div class="mx-auto max-w-7xl">
@@ -28,7 +33,7 @@
 						interview or 1:1.
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">
-						<!-- <a href="/get-started" class="btn btn--primary">Build My Fingerprint</a> -->
+						<a href="#signup" class="btn btn--primary">Build My Fingerprint</a>
 					</div>
 				</div>
 			</div>
@@ -426,16 +431,14 @@
 </div>
 
 <!-- Email Sign UP -->
-
-<!-- TODO Hiding Email Sign Up -->
-<!-- <div class="bg-white py-16 sm:py-24 lg:py-32">
+<div id="signup" class=" py-16 sm:py-24 lg:py-32">
 	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
 		<h2
-			class="max-w-xl text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl lg:col-span-7"
+			class="max-w-xl text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-3xl lg:col-span-7"
 		>
-			Want product news and updates? Sign up for our newsletter.
+			Want to be the first to try it?<br /> Sign up for our wait list
 		</h2>
-		<form class="w-full max-w-md lg:col-span-5 lg:pt-2">
+		<form class="w-full max-w-md lg:col-span-5 lg:pt-2" method="POST" action="?/emailSignUp">
 			<div class="flex gap-x-4">
 				<label for="email-address" class="sr-only">Email address</label>
 				<input
@@ -447,19 +450,16 @@
 					class="focus:outline-primary min-w-0 flex-auto rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6"
 					placeholder="Enter your email"
 				/>
-				<button
-					type="submit"
-					class="bg-primary hover:bg-primary-400 focus-visible:outline-primary flex-none rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
-					>Subscribe</button
-				>
+				<div class="cf-turnstile" data-sitekey={PUBLIC_CLOUDFLARE_TURNSTYLE_SITE_KEY}></div>
+				<button type="submit" class="btn btn--primary">Sign up</button>
 			</div>
 			<p class="mt-4 text-sm/6 text-gray-900">
 				We care about your data. Read our <a
-					href="#"
+					href="/privacy-policy"
 					class="text-primary hover:text-primary-400 font-semibold whitespace-nowrap"
 					>privacy policy</a
 				>.
 			</p>
 		</form>
 	</div>
-</div> -->
+</div>
