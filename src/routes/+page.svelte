@@ -25,7 +25,7 @@
 					</h1>
 					<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 						Add your achievements your Career Fingerprint to help you standout during your next
-						interview or 1:1
+						interview or 1:1.
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">
 						<!-- <a href="/get-started" class="btn btn--primary">Build My Fingerprint</a> -->

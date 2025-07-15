@@ -105,7 +105,7 @@
 	<div>
 		{@render teamList([
 			{ name: 'Adrian Dunham', imgURL: 'images/AdrianHeadshot.jpeg', title: 'Founder/CEO' },
-			{ name: 'Emelie Dunham', imgURL: '', title: 'Co-Founder' }
+			{ name: 'Emelie Dunham', imgURL: 'images/emelie-headshot.jpeg', title: 'Co-Founder' }
 		])}
 	</div>
 </div>
@@ -127,7 +127,7 @@
 						<img
 							class="size-16 rounded-full"
 							src={teamMate.imgURL}
-							alt="CEO/Founder Adrian Dunham"
+							alt={`${teamMate.name} : ${teamMate.title}`}
 						/>
 						<div>
 							<h3 class="text-lg font-semibold tracking-tight text-gray-900">
