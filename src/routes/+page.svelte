@@ -431,7 +431,7 @@
 </div>
 
 <!-- Email Sign UP -->
-<div id="signup" class=" py-16 sm:py-24 lg:py-32">
+<!-- <div id="signup" class=" py-16 sm:py-24 lg:py-32">
 	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
 		<h2
 			class="max-w-xl text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-3xl lg:col-span-7"
@@ -462,4 +462,4 @@
 			</p>
 		</form>
 	</div>
-</div>
+</div> -->
