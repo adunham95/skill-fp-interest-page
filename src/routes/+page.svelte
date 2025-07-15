@@ -22,7 +22,7 @@
 			</svg>
 
 			<div class="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
-				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-2xl">
+				<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-[472px]">
 					<h1
 						class="font-title text-5xl leading-14 font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
 					>
@@ -431,7 +431,7 @@
 </div>
 
 <!-- Email Sign UP -->
-<div id="signup" class=" py-16 sm:py-24 lg:py-32">
+<!-- <div id="signup" class=" py-16 sm:py-24 lg:py-32">
 	<div class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-12 lg:gap-8 lg:px-8">
 		<h2
 			class="max-w-xl text-3xl font-semibold tracking-tight text-balance text-gray-900 sm:text-3xl lg:col-span-7"
@@ -462,4 +462,4 @@
 			</p>
 		</form>
 	</div>
-</div>
+</div> -->
