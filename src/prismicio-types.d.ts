@@ -162,11 +162,11 @@ type HomepageDocumentDataSlicesSlice =
 	| AudienceOverviewSlice;
 
 /**
- * Content for homepage documents
+ * Content for Home Page documents
  */
 interface HomepageDocumentData {
 	/**
-	 * Slice Zone field in *homepage*
+	 * Slice Zone field in *Home Page*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
@@ -175,7 +175,7 @@ interface HomepageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/slices
 	 */
 	slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
-	 * Meta Title field in *homepage*
+	 * Meta Title field in *Home Page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
@@ -186,7 +186,7 @@ interface HomepageDocumentData {
 	meta_title: prismic.KeyTextField;
 
 	/**
-	 * Meta Description field in *homepage*
+	 * Meta Description field in *Home Page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
@@ -197,7 +197,7 @@ interface HomepageDocumentData {
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *homepage*
+	 * Meta Image field in *Home Page*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -209,7 +209,7 @@ interface HomepageDocumentData {
 }
 
 /**
- * homepage document from Prismic
+ * Home Page document from Prismic
  *
  * - **API ID**: `homepage`
  * - **Repeatable**: `false`
@@ -233,11 +233,11 @@ type PageDocumentDataSlicesSlice =
 	| AudienceOverviewSlice;
 
 /**
- * Content for page documents
+ * Content for Page documents
  */
 interface PageDocumentData {
 	/**
-	 * Slice Zone field in *page*
+	 * Slice Zone field in *Page*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
@@ -246,7 +246,7 @@ interface PageDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/slices
 	 */
 	slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
-	 * Meta Title field in *page*
+	 * Meta Title field in *Page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
@@ -257,7 +257,7 @@ interface PageDocumentData {
 	meta_title: prismic.KeyTextField;
 
 	/**
-	 * Meta Description field in *page*
+	 * Meta Description field in *Page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
@@ -268,7 +268,7 @@ interface PageDocumentData {
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *page*
+	 * Meta Image field in *Page*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
@@ -280,7 +280,7 @@ interface PageDocumentData {
 }
 
 /**
- * page document from Prismic
+ * Page document from Prismic
  *
  * - **API ID**: `page`
  * - **Repeatable**: `true`

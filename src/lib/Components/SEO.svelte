@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { generatePageName } from '$lib/Utils/generatePageName';
 	import { page } from '$app/state';
+	import { asImageSrc, type ImageFieldImage } from '@prismicio/client';
 
 	type SeoData = {
 		pageName?: string;
@@ -9,10 +10,7 @@
 		meta_description?: string;
 		url?: string;
 		index?: boolean;
-		meta_image?: {
-			url: string;
-			alt: string;
-		};
+		meta_image?: ImageFieldImage;
 	};
 
 	let {
@@ -20,7 +18,8 @@
 		siteName = 'Career Fingerprint',
 		meta_description = 'Career Fingerprint helps professionals and students organize accomplishments, prepare for interviews, and create impactful resumes.',
 		url = page.url.href,
-		index = page.data.index ?? true
+		index = page.data.index ?? true,
+		meta_image
 	}: SeoData = $props();
 </script>
 
@@ -42,6 +41,8 @@
 	<meta property="og:title" content={siteName} />
 	<meta property="og:description" content={meta_description} />
 	<meta property="og:url" content={url} />
+
+	<meta property="og:image" content={asImageSrc(meta_image)} />
 
 	<!-- SCHEMA JSONLD -->
 	{@render jsonLdWebsite()}
