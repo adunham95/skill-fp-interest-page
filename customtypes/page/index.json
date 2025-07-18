@@ -1,7 +1,7 @@
 {
 	"format": "page",
-	"id": "legal",
-	"label": "Legal",
+	"id": "page",
+	"label": "page",
 	"repeatable": true,
 	"status": true,
 	"json": {
@@ -12,19 +12,30 @@
 					"label": "UID"
 				}
 			},
-			"page_name": {
-				"type": "Text",
-				"config": {
-					"label": "Page Name",
-					"placeholder": ""
-				}
-			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"faq_group": {
+							"type": "SharedSlice"
+						},
+						"feature_side_hero": {
+							"type": "SharedSlice"
+						},
+						"headline_overlay": {
+							"type": "SharedSlice"
+						},
+						"team_overview": {
+							"type": "SharedSlice"
+						},
 						"section_with_subsections": {
+							"type": "SharedSlice"
+						},
+						"feature_cards_grid": {
+							"type": "SharedSlice"
+						},
+						"audience_overview": {
 							"type": "SharedSlice"
 						}
 					}

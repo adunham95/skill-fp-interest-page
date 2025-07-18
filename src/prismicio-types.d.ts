@@ -154,66 +154,54 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type LandingPageDocumentDataSlicesSlice =
-	| TeamOverviewSlice
+type HomepageDocumentDataSlicesSlice =
+	| HeroSlice
 	| FeatureSideHeroSlice
 	| FeatureCardsGridSlice
 	| FaqGroupSlice
-	| AudienceOverviewSlice
-	| HeroSlice;
+	| AudienceOverviewSlice;
 
 /**
- * Content for Landing Page documents
+ * Content for homepage documents
  */
-interface LandingPageDocumentData {
+interface HomepageDocumentData {
 	/**
-	 * Page Title field in *Landing Page*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: landing_page.page_title
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/text
-	 */
-	page_title: prismic.KeyTextField;
-
-	/**
-	 * Slice Zone field in *Landing Page*
+	 * Slice Zone field in *homepage*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: landing_page.slices[]
+	 * - **API ID Path**: homepage.slices[]
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/slices
 	 */
-	slices: prismic.SliceZone<LandingPageDocumentDataSlicesSlice> /**
-	 * Meta Title field in *Landing Page*
+	slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
+	 * Meta Title field in *homepage*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: landing_page.meta_title
+	 * - **API ID Path**: homepage.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */;
 	meta_title: prismic.KeyTextField;
 
 	/**
-	 * Meta Description field in *Landing Page*
+	 * Meta Description field in *homepage*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: landing_page.meta_description
+	 * - **API ID Path**: homepage.meta_description
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *Landing Page*
+	 * Meta Image field in *homepage*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: landing_page.meta_image
+	 * - **API ID Path**: homepage.meta_image
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
@@ -221,74 +209,70 @@ interface LandingPageDocumentData {
 }
 
 /**
- * Landing Page document from Prismic
+ * homepage document from Prismic
  *
- * - **API ID**: `landing_page`
- * - **Repeatable**: `true`
+ * - **API ID**: `homepage`
+ * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/content-modeling
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type LandingPageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<LandingPageDocumentData>,
-	'landing_page',
+export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<HomepageDocumentData>,
+	'homepage',
 	Lang
 >;
 
-type LegalDocumentDataSlicesSlice = SectionWithSubsectionsSlice;
+type PageDocumentDataSlicesSlice =
+	| FaqGroupSlice
+	| FeatureSideHeroSlice
+	| HeadlineOverlaySlice
+	| TeamOverviewSlice
+	| SectionWithSubsectionsSlice
+	| FeatureCardsGridSlice
+	| AudienceOverviewSlice;
 
 /**
- * Content for Legal documents
+ * Content for page documents
  */
-interface LegalDocumentData {
+interface PageDocumentData {
 	/**
-	 * Page Name field in *Legal*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: legal.page_name
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/fields/text
-	 */
-	page_name: prismic.KeyTextField;
-
-	/**
-	 * Slice Zone field in *Legal*
+	 * Slice Zone field in *page*
 	 *
 	 * - **Field Type**: Slice Zone
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: legal.slices[]
+	 * - **API ID Path**: page.slices[]
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/slices
 	 */
-	slices: prismic.SliceZone<LegalDocumentDataSlicesSlice> /**
-	 * Meta Title field in *Legal*
+	slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
+	 * Meta Title field in *page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A title of the page used for social media and search engines
-	 * - **API ID Path**: legal.meta_title
+	 * - **API ID Path**: page.meta_title
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */;
 	meta_title: prismic.KeyTextField;
 
 	/**
-	 * Meta Description field in *Legal*
+	 * Meta Description field in *page*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: A brief summary of the page
-	 * - **API ID Path**: legal.meta_description
+	 * - **API ID Path**: page.meta_description
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	meta_description: prismic.KeyTextField;
 
 	/**
-	 * Meta Image field in *Legal*
+	 * Meta Image field in *page*
 	 *
 	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: legal.meta_image
+	 * - **API ID Path**: page.meta_image
 	 * - **Tab**: SEO & Metadata
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
@@ -296,25 +280,21 @@ interface LegalDocumentData {
 }
 
 /**
- * Legal document from Prismic
+ * page document from Prismic
  *
- * - **API ID**: `legal`
+ * - **API ID**: `page`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/content-modeling
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type LegalDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
-	Simplify<LegalDocumentData>,
-	'legal',
+export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<PageDocumentData>,
+	'page',
 	Lang
 >;
 
-export type AllDocumentTypes =
-	| BlogPostDocument
-	| FooterDocument
-	| LandingPageDocument
-	| LegalDocument;
+export type AllDocumentTypes = BlogPostDocument | FooterDocument | HomepageDocument | PageDocument;
 
 /**
  * Item in *AudienceOverview → Standard → Primary → Audience Types*
@@ -1242,12 +1222,12 @@ declare module '@prismicio/client' {
 			FooterDocument,
 			FooterDocumentData,
 			FooterDocumentDataSlicesSlice,
-			LandingPageDocument,
-			LandingPageDocumentData,
-			LandingPageDocumentDataSlicesSlice,
-			LegalDocument,
-			LegalDocumentData,
-			LegalDocumentDataSlicesSlice,
+			HomepageDocument,
+			HomepageDocumentData,
+			HomepageDocumentDataSlicesSlice,
+			PageDocument,
+			PageDocumentData,
+			PageDocumentDataSlicesSlice,
 			AllDocumentTypes,
 			AudienceOverviewSlice,
 			AudienceOverviewSliceStandardPrimaryAudienceTypesItem,
