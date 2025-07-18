@@ -1,0 +1,37 @@
+{
+  "id": "recent_blog_posts",
+  "type": "SharedSlice",
+  "name": "RecentBlogPosts",
+  "description": "RecentBlogPosts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "blog_posts": {
+          "type": "Link",
+          "config": {
+            "label": "Blog Posts",
+            "select": "document",
+            "repeat": false,
+            "customtypes": [
+              {
+                "id": "blog_post",
+                "fields": [
+                  "meta_title",
+                  "meta_image",
+                  "meta_description"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

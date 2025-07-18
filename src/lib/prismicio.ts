@@ -12,11 +12,9 @@ export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || sm.rep
  *
  * {@link https://prismic.io/docs/route-resolver}
  */
-// TODO: Update the routes array to match your project's route structure.
 const routes: Route[] = [
-	// Examples:
-	// { type: "homepage", path: "/" },
-	// { type: "page", path: "/:uid" },
+	{ type: 'homepage', path: '/' },
+	{ type: 'page', path: '/:uid' }
 ];
 
 /**

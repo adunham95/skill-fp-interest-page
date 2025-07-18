@@ -1,0 +1,17 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"blog_posts": {
+				"__TYPE__": "LinkContent",
+				"key": "9d842a2d-2a0d-4e6c-9b4f-c22fbbc9d70a",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			}
+		},
+		"items": []
+	}
+]
