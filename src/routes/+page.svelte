@@ -33,7 +33,7 @@
 						interview or 1:1.
 					</p>
 					<div class="mt-10 flex items-center gap-x-6">
-						<a href="#signup" class="btn btn--primary">Build My Fingerprint</a>
+						<a href="/" class="btn btn--primary">Build My Fingerprint</a>
 					</div>
 				</div>
 			</div>
