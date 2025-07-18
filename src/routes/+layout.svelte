@@ -2,6 +2,8 @@
 	import SocialSheet from '$lib/Components/SocialSheet.svelte';
 	import '../app.css';
 	import '../button-variants.css';
+	import { PrismicPreview } from '@prismicio/svelte/kit';
+	import { repositoryName } from '$lib/prismicio';
 
 	let { children } = $props();
 </script>
@@ -19,6 +21,7 @@
 </header>
 
 {@render children()}
+<PrismicPreview {repositoryName} />
 
 <footer class="bg-secondary">
 	<div class="mx-auto max-w-7xl px-6 pt-16 pb-8 sm:pt-24 lg:px-8 lg:pt-32">
