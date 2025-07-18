@@ -1,0 +1,109 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "with_icon_features",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia consectetur minim voluptate."
+						}
+					}
+				]
+			},
+			"features": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"icon",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+										"width": 2747,
+										"height": 4120
+									},
+									"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+									"width": 2747,
+									"height": 4120,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "run",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"feature_desc",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem velit anim excepteur labore sit dolor esse."
+											}
+										}
+									]
+								}
+							],
+							[
+								"feature_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "vertical",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"side_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+					"width": 4172,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?rect=0%2C763%2C4172%2C2474&w=2432&h=1442",
+				"width": 2432,
+				"height": 1442,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 763
+					},
+					"background": "transparent"
+				},
+				"alt": "onto",
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			},
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"value": "talk",
+				"type": "Text"
+			},
+			"section_title": {
+				"__TYPE__": "FieldContent",
+				"value": "shape",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

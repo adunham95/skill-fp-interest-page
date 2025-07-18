@@ -1,0 +1,67 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_cards_grid",
+  "name": "FeatureCardsGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard layout: heading, description, and a group of image/feature cards in a grid.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "fields": {
+              "illustration": {
+                "type": "Image",
+                "config": {
+                  "label": "Illustration"
+                }
+              },
+              "feature_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Feature Title",
+                  "placeholder": ""
+                }
+              },
+              "feature_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Feature Description"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

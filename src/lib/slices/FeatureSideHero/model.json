@@ -1,0 +1,79 @@
+{
+  "type": "SharedSlice",
+  "id": "feature_side_hero",
+  "name": "FeatureSideHero",
+  "variations": [
+    {
+      "id": "with_icon_features",
+      "name": "With Icon Features",
+      "description": "Displays a headline, descriptive text, a list of features each with an icon and optional description, along with a main image/app screenshot on the right.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon"
+                }
+              },
+              "feature_title": {
+                "type": "Text",
+                "config": {
+                  "label": "Feature Title",
+                  "placeholder": ""
+                }
+              },
+              "feature_desc": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Feature Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph,strong,hyperlink,em"
+                }
+              }
+            }
+          }
+        },
+        "side_image": {
+          "type": "Image",
+          "config": {
+            "constraint": {
+              "height": 1442,
+              "width": 2432
+            },
+            "label": "Side Image"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "type": "SharedSlice",
+  "id": "section_with_subsections",
+  "name": "SectionWithSubsections",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Section with a main title and a repeatable group for as many subsections as needed. Each subsection has a heading and description.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "subsections": {
+          "type": "Group",
+          "config": {
+            "label": "Subsections",
+            "fields": {
+              "subsection_heading": {
+                "type": "Text",
+                "config": {
+                  "label": "Subsection Heading",
+                  "placeholder": ""
+                }
+              },
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Subsection Content",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

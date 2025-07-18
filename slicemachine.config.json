@@ -1,0 +1,6 @@
+{
+	"repositoryName": "career-fingerprint",
+	"adapter": "@slicemachine/adapter-sveltekit",
+	"libraries": ["./src/lib/slices"],
+	"localSliceSimulatorURL": "http://localhost:5111/slice-simulator"
+}

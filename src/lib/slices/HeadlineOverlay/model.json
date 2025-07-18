@@ -1,0 +1,38 @@
+{
+  "type": "SharedSlice",
+  "id": "headline_overlay",
+  "name": "HeadlineOverlay",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Primary variation with a headline, description, and image.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

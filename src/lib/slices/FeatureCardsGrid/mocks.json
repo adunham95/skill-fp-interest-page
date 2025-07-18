@@ -1,0 +1,87 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"eyebrow": {
+				"__TYPE__": "FieldContent",
+				"value": "pink",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Veniam ex minim dolor veniam irure officia in et elit laborum aute. Laboris veniam ullamco duis consequat nostrud pariatur ex. Ut minim magna culpa aute reprehenderit nostrud sit minim ullamco."
+						}
+					}
+				]
+			},
+			"features": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"illustration",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+										"width": 5616,
+										"height": 3744
+									},
+									"url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+									"width": 5616,
+									"height": 3744,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "fine",
+									"credits": null,
+									"__TYPE__": "ImageContent"
+								}
+							],
+							[
+								"feature_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sit proident non qui tempor adipisicing aute minim fugiat nostrud culpa commodo. Cupidatat id esse eu consectetur non qui velit reprehenderit adipisicing dolore consectetur tempor ea consequat ad."
+											}
+										}
+									]
+								}
+							],
+							[
+								"feature_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "ruler",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "volume",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,66 @@
+{
+  "type": "SharedSlice",
+  "id": "audience_overview",
+  "name": "AudienceOverview",
+  "variations": [
+    {
+      "id": "standard",
+      "name": "Standard",
+      "description": "Includes a pre-heading, main heading, supporting text, and a repeatable group for multiple audience types with icon, label, and description.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "preheading": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "section_title": {
+          "type": "Text",
+          "config": {
+            "label": "Section Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Description"
+          }
+        },
+        "audience_types": {
+          "type": "Group",
+          "config": {
+            "label": "Audience Types",
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon"
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Audience Label"
+                }
+              },
+              "audience_description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Audience Description"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

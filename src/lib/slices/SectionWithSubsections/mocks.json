@@ -1,0 +1,41 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subsections": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"content",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sit labore ad non velit ex mollit. Occaecat occaecat anim ullamco veniam est enim officia commodo dolor magna amet. Laborum occaecat dolor quis ipsum et nulla ex ut labore magna proident exercitation occaecat exercitation velit."
+											}
+										}
+									]
+								}
+							],
+							[
+								"subsection_heading",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "than",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

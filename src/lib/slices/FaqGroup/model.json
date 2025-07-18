@@ -1,0 +1,56 @@
+{
+  "type": "SharedSlice",
+  "id": "faq_group",
+  "name": "FaqGroup",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "FAQ list with introduction and questions/answers.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "intro": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Introduction",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink,preformatted"
+          }
+        },
+        "faqs": {
+          "type": "Group",
+          "config": {
+            "label": "FAQs",
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading4",
+                  "label": "Question"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "label": "Answer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
