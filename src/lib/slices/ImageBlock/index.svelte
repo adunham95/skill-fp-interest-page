@@ -10,7 +10,7 @@
 <section
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none"
+	class="mx-auto max-w-2xl lg:mx-0 xl:mx-auto xl:max-w-7xl"
 >
 	<div class="mt-32 sm:mt-40 xl:px-8">
 		<PrismicImage

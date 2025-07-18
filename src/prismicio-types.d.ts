@@ -224,6 +224,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| ImageBlockSlice
 	| FaqGroupSlice
 	| FeatureSideHeroSlice
 	| HeadlineOverlaySlice
