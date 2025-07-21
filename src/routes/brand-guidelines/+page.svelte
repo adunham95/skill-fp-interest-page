@@ -89,7 +89,7 @@
 		</div>
 	</div>
 	<section class="py-32">
-		<h2 class="font-title text-1 pb-5">Prohibited use of the logo</h2>
+		<h2 class="font-title text-1 pb-5">Logo Guidelines</h2>
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 			<div class=" flex w-full flex-col items-center justify-center">
 				<p>Do not rotate the logo</p>
