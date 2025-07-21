@@ -83,7 +83,7 @@
 			</div>
 		</div>
 	</section> -->
-	<div class="relative">
+	<!-- <div class="relative">
 		<div aria-hidden="true" class="absolute inset-0 flex items-center">
 			<div class="w-full border-t border-gray-300"></div>
 		</div>
@@ -104,7 +104,7 @@
 				<img class=" w-36 p-2 invert-[36]" src="/logo-brand.svg" alt="Brand Logo" />
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<div class="relative">
 		<div aria-hidden="true" class="absolute inset-0 flex items-center">
 			<div class="w-full border-t border-gray-300"></div>
