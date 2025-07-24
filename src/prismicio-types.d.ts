@@ -64,6 +64,50 @@ type BlogPostDocumentDataSlicesSlice = never;
  */
 interface BlogPostDocumentData {
 	/**
+	 * Featured Image field in *Blog Post*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.cover_image
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	cover_image: prismic.ImageField<never>;
+
+	/**
+	 * Title field in *Blog Post*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *Blog Post*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	description: prismic.KeyTextField;
+
+	/**
+	 * Publish Date field in *Blog Post*
+	 *
+	 * - **Field Type**: Date
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.publish_date
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/date
+	 */
+	publish_date: prismic.DateField;
+
+	/**
 	 * Slice Zone field in *Blog Post*
 	 *
 	 * - **Field Type**: Slice Zone
@@ -408,6 +452,68 @@ export type AudienceOverviewSlice = prismic.SharedSlice<
 	'audience_overview',
 	AudienceOverviewSliceVariation
 >;
+
+/**
+ * Primary content in *BasicHero → Default → Primary*
+ */
+export interface BasicHeroSliceDefaultPrimary {
+	/**
+	 * Title field in *BasicHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: basic_hero.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	title: prismic.RichTextField;
+
+	/**
+	 * Description field in *BasicHero → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: basic_hero.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *BasicHero → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: basic_hero.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for BasicHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BasicHeroSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<BasicHeroSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *BasicHero*
+ */
+type BasicHeroSliceVariation = BasicHeroSliceDefault;
+
+/**
+ * BasicHero Shared Slice
+ *
+ * - **API ID**: `basic_hero`
+ * - **Description**: BasicHero
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type BasicHeroSlice = prismic.SharedSlice<'basic_hero', BasicHeroSliceVariation>;
 
 /**
  * Item in *FaqGroup → Default → Primary → FAQs*
@@ -1070,6 +1176,48 @@ export type RecentBlogPostsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *RichText → Default → Primary*
+ */
+export interface RichTextSliceDefaultPrimary {
+	/**
+	 * Content field in *RichText → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: rich_text.default.primary.content
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	content: prismic.RichTextField;
+}
+
+/**
+ * Default variation for RichText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichTextSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<RichTextSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *RichText*
+ */
+type RichTextSliceVariation = RichTextSliceDefault;
+
+/**
+ * RichText Shared Slice
+ *
+ * - **API ID**: `rich_text`
+ * - **Description**: RichText
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type RichTextSlice = prismic.SharedSlice<'rich_text', RichTextSliceVariation>;
+
+/**
  * Item in *SectionWithSubsections → Default → Primary → Subsections*
  */
 export interface SectionWithSubsectionsSliceDefaultPrimarySubsectionsItem {
@@ -1277,6 +1425,10 @@ declare module '@prismicio/client' {
 			AudienceOverviewSliceStandardPrimary,
 			AudienceOverviewSliceVariation,
 			AudienceOverviewSliceStandard,
+			BasicHeroSlice,
+			BasicHeroSliceDefaultPrimary,
+			BasicHeroSliceVariation,
+			BasicHeroSliceDefault,
 			FaqGroupSlice,
 			FaqGroupSliceDefaultPrimaryFaqsItem,
 			FaqGroupSliceDefaultPrimary,
@@ -1314,6 +1466,10 @@ declare module '@prismicio/client' {
 			RecentBlogPostsSliceDefaultPrimary,
 			RecentBlogPostsSliceVariation,
 			RecentBlogPostsSliceDefault,
+			RichTextSlice,
+			RichTextSliceDefaultPrimary,
+			RichTextSliceVariation,
+			RichTextSliceDefault,
 			SectionWithSubsectionsSlice,
 			SectionWithSubsectionsSliceDefaultPrimarySubsectionsItem,
 			SectionWithSubsectionsSliceDefaultPrimary,
