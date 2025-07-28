@@ -2,7 +2,10 @@
 	import ColorCard from '$lib/Components/ColorCard.svelte';
 	import FontSample from '$lib/Components/FontSample.svelte';
 	import PageContainer from '$lib/Components/PageContainer.svelte';
+	import Seo from '$lib/Components/SEO.svelte';
 </script>
+
+<Seo pageName="Brand Guidelines" />
 
 <PageContainer className="text-base">
 	<section class="pb-32">
@@ -40,71 +43,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- <div class="relative">
-		<div aria-hidden="true" class="absolute inset-0 flex items-center">
-			<div class="w-full border-t border-gray-300"></div>
-		</div>
-	</div>
-	<section class="py-32">
-		<h2 class="font-title text-1">Secondary Logos</h2>
-		<p class="text-5 pb-5">
-			These logos are to be used where the primary logo icons cannot be recognized
-		</p>
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-			<div class="">
-				<p class="text-5">Primary Logo</p>
-				<div class="flex justify-center py-2">
-					<img src="/logo-sm-brand.png" alt="Brand Logo" class=" max-w-48" />
-				</div>
-			</div>
-			<div class="">
-				<p class="text-5">Secondary Logo</p>
-				<div class="flex justify-center py-2">
-					<img src="/logo-sm-secondary.png" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
-			</div>
-			<div class="">
-				<p class="text-5">Accent Logo</p>
-				<div class="flex justify-center py-2">
-					<img src="/logo-sm-accent.png" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
-			</div>
-			<div class="">
-				<p class="text-5">Light Logo</p>
-				<div class="flex justify-center bg-black py-2">
-					<img src="/logo-sm-white.png" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
-			</div>
-			<div class="">
-				<p class="text-5">Dark Logo</p>
-				<div class="flex justify-center py-2">
-					<img src="/logo-sm-black.png" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- <div class="relative">
-		<div aria-hidden="true" class="absolute inset-0 flex items-center">
-			<div class="w-full border-t border-gray-300"></div>
-		</div>
-	</div>
-	<section class="py-32">
-		<h2 class="font-title text-1 pb-5">Logo Guidelines</h2>
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
-			<div class=" flex w-full flex-col items-center justify-center">
-				<p>Do not rotate the logo</p>
-				<img class=" w-36 rotate-45 p-2" src="/logo-brand.svg" alt="Brand Logo" />
-			</div>
-			<div class=" flex w-full flex-col items-center justify-center">
-				<p>Do not skew or warp the logo</p>
-				<img class=" w-36 skew-6 p-2" src="/logo-brand.svg" alt="Brand Logo" />
-			</div>
-			<div class=" flex w-full flex-col items-center justify-center">
-				<p>Do not change colors</p>
-				<img class=" w-36 p-2 invert-[36]" src="/logo-brand.svg" alt="Brand Logo" />
-			</div>
-		</div>
-	</section> -->
 	<div class="relative">
 		<div aria-hidden="true" class="absolute inset-0 flex items-center">
 			<div class="w-full border-t border-gray-300"></div>
