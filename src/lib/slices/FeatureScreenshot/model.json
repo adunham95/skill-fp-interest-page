@@ -1,0 +1,74 @@
+{
+  "id": "feature_screenshot",
+  "type": "SharedSlice",
+  "name": "FeatureScreenshot",
+  "description": "FeatureScreenshot",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Screenshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "dark",
+      "name": "Dark",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Screenshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

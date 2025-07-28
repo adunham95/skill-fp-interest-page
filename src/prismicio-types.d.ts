@@ -199,6 +199,8 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| RecentBlogPostsSlice
+	| FeatureScreenshotSlice
 	| HeroSlice
 	| FeatureSideHeroSlice
 	| FeatureCardsGridSlice
@@ -713,6 +715,119 @@ export type FeatureCardsGridSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *FeatureScreenshot → Default → Primary*
+ */
+export interface FeatureScreenshotSliceDefaultPrimary {
+	/**
+	 * Section Label field in *FeatureScreenshot → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureScreenshot → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Screenshot field in *FeatureScreenshot → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.default.primary.screenshot
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	screenshot: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for FeatureScreenshot Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureScreenshotSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<FeatureScreenshotSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Primary content in *FeatureScreenshot → Dark → Primary*
+ */
+export interface FeatureScreenshotSliceDarkPrimary {
+	/**
+	 * Section Label field in *FeatureScreenshot → Dark → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.dark.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureScreenshot → Dark → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.dark.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Screenshot field in *FeatureScreenshot → Dark → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_screenshot.dark.primary.screenshot
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	screenshot: prismic.ImageField<never>;
+}
+
+/**
+ * Dark variation for FeatureScreenshot Slice
+ *
+ * - **API ID**: `dark`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureScreenshotSliceDark = prismic.SharedSliceVariation<
+	'dark',
+	Simplify<FeatureScreenshotSliceDarkPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *FeatureScreenshot*
+ */
+type FeatureScreenshotSliceVariation = FeatureScreenshotSliceDefault | FeatureScreenshotSliceDark;
+
+/**
+ * FeatureScreenshot Shared Slice
+ *
+ * - **API ID**: `feature_screenshot`
+ * - **Description**: FeatureScreenshot
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureScreenshotSlice = prismic.SharedSlice<
+	'feature_screenshot',
+	FeatureScreenshotSliceVariation
+>;
+
+/**
  * Item in *FeatureSideHero → With Icon Features → Primary → Features*
  */
 export interface FeatureSideHeroSliceWithIconFeaturesPrimaryFeaturesItem {
@@ -742,6 +857,41 @@ export interface FeatureSideHeroSliceWithIconFeaturesPrimaryFeaturesItem {
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: feature_side_hero.with_icon_features.primary.features[].feature_desc
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_desc: prismic.RichTextField;
+}
+
+/**
+ * Item in *FeatureSideHero → Left Image → Primary → Features*
+ */
+export interface FeatureSideHeroSliceLeftImagePrimaryFeaturesItem {
+	/**
+	 * Icon field in *FeatureSideHero → Left Image → Primary → Features*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.features[].icon
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	icon: prismic.ImageField<never>;
+
+	/**
+	 * Feature Title field in *FeatureSideHero → Left Image → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.features[].feature_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_title: prismic.KeyTextField;
+
+	/**
+	 * Feature Description field in *FeatureSideHero → Left Image → Primary → Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.features[].feature_desc
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	feature_desc: prismic.RichTextField;
@@ -816,9 +966,79 @@ export type FeatureSideHeroSliceWithIconFeatures = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *FeatureSideHero → Left Image → Primary*
+ */
+export interface FeatureSideHeroSliceLeftImagePrimary {
+	/**
+	 * Section Label field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Section Title field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.section_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Features field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.features[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	features: prismic.GroupField<Simplify<FeatureSideHeroSliceLeftImagePrimaryFeaturesItem>>;
+
+	/**
+	 * Side Image field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.side_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	side_image: prismic.ImageField<never>;
+}
+
+/**
+ * Left Image variation for FeatureSideHero Slice
+ *
+ * - **API ID**: `leftImage`
+ * - **Description**: Displays a headline, descriptive text, a list of features each with an icon and optional description, along with a main image/app screenshot on the right.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureSideHeroSliceLeftImage = prismic.SharedSliceVariation<
+	'leftImage',
+	Simplify<FeatureSideHeroSliceLeftImagePrimary>,
+	never
+>;
+
+/**
  * Slice variation for *FeatureSideHero*
  */
-type FeatureSideHeroSliceVariation = FeatureSideHeroSliceWithIconFeatures;
+type FeatureSideHeroSliceVariation =
+	| FeatureSideHeroSliceWithIconFeatures
+	| FeatureSideHeroSliceLeftImage;
 
 /**
  * FeatureSideHero Shared Slice
@@ -1439,11 +1659,20 @@ declare module '@prismicio/client' {
 			FeatureCardsGridSliceDefaultPrimary,
 			FeatureCardsGridSliceVariation,
 			FeatureCardsGridSliceDefault,
+			FeatureScreenshotSlice,
+			FeatureScreenshotSliceDefaultPrimary,
+			FeatureScreenshotSliceDarkPrimary,
+			FeatureScreenshotSliceVariation,
+			FeatureScreenshotSliceDefault,
+			FeatureScreenshotSliceDark,
 			FeatureSideHeroSlice,
 			FeatureSideHeroSliceWithIconFeaturesPrimaryFeaturesItem,
 			FeatureSideHeroSliceWithIconFeaturesPrimary,
+			FeatureSideHeroSliceLeftImagePrimaryFeaturesItem,
+			FeatureSideHeroSliceLeftImagePrimary,
 			FeatureSideHeroSliceVariation,
 			FeatureSideHeroSliceWithIconFeatures,
+			FeatureSideHeroSliceLeftImage,
 			FooterNavigationSlice,
 			FooterNavigationSliceDefaultPrimarySocialLinksItem,
 			FooterNavigationSliceDefaultPrimaryNavigationColumnsItem,

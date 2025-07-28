@@ -1,11 +1,11 @@
 import { createClient as baseCreateClient, type Route } from '@prismicio/client';
 import { type CreateClientConfig, enableAutoPreviews } from '@prismicio/svelte/kit';
-import sm from '../../slicemachine.config.json';
+// import sm from '../../slicemachine.config.json';
 
 /**
  * The project's Prismic repository name.
  */
-export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || sm.repositoryName;
+export const repositoryName = import.meta.env.VITE_PRISMIC_ENVIRONMENT || 'career-fingerprint';
 
 /**
  * A list of Route Resolver objects that define how a document's `url` field is resolved.

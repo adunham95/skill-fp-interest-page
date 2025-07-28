@@ -37,10 +37,14 @@
 						</dl>
 					</div>
 				</div>
-				<PrismicImage
-					class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
-					field={slice.primary.side_image}
-				/>
+				<div
+					class={` ${slice.variation === 'leftImage' ? 'flex items-start justify-end lg:order-first' : ''}`}
+				>
+					<PrismicImage
+						class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0"
+						field={slice.primary.side_image}
+					/>
+				</div>
 			</div>
 		</div>
 	</div>

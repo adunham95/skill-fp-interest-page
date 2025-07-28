@@ -1,0 +1,88 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Github supports many feaures"
+			},
+			"screenshot": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxzY3JlZW5zaG90fGVufDB8fHx8MTc1MzcyMDcxMnww&ixlib=rb-4.1.0&q=85",
+				"alt": "Github website on desktop",
+				"origin": {
+					"id": "LG8ToawE8WQ",
+					"url": "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxzY3JlZW5zaG90fGVufDB8fHx8MTc1MzcyMDcxMnww&ixlib=rb-4.1.0&q=85",
+					"width": 3316,
+					"height": 1894
+				},
+				"width": 3316,
+				"height": 1894,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"value": "crop",
+				"type": "Text"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "dark",
+		"primary": {
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"value": "jet",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "recall",
+				"type": "Text"
+			},
+			"screenshot": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+					"width": 3199,
+					"height": 3199
+				},
+				"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+				"width": 3199,
+				"height": 3199,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "great",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

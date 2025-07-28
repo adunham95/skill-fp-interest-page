@@ -4,6 +4,7 @@ import AudienceOverview from './AudienceOverview/index.svelte';
 import BasicHero from './BasicHero/index.svelte';
 import FaqGroup from './FaqGroup/index.svelte';
 import FeatureCardsGrid from './FeatureCardsGrid/index.svelte';
+import FeatureScreenshot from './FeatureScreenshot/index.svelte';
 import FeatureSideHero from './FeatureSideHero/index.svelte';
 import FooterNavigation from './FooterNavigation/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
@@ -19,6 +20,7 @@ export const components = {
 	basic_hero: BasicHero,
 	faq_group: FaqGroup,
 	feature_cards_grid: FeatureCardsGrid,
+	feature_screenshot: FeatureScreenshot,
 	feature_side_hero: FeatureSideHero,
 	footer_navigation: FooterNavigation,
 	headline_overlay: HeadlineOverlay,
