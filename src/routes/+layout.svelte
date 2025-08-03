@@ -107,7 +107,7 @@
 								>
 							</li> -->
 							<li>
-								<a href="/privacy-policy" class="text-sm/6 text-gray-400 hover:text-gray-300"
+								<a href="/privacy" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Privacy policy</a
 								>
 							</li>
