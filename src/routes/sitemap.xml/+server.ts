@@ -26,7 +26,7 @@ export const GET = async ({ fetch, cookies }) => {
 	  </url>`;
 	});
 
-	const blogUrls = documents.map((doc) => {
+	const blogUrls = blog.map((doc) => {
 		return `
 	  <url>
 	    <loc>https://career-fingerprint.com/blog/${doc.id}</loc>
