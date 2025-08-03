@@ -11,17 +11,17 @@ export const GET = async ({ fetch, cookies }) => {
 	const homepageData = homePage.map((doc) => {
 		return `<url>
         <loc>https://career-fingerprint.com/</loc>
-        <lastmod>${doc.last_publication_date}</lastmod>
+        <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
         <priority>1.00</priority>
     </url> `;
 	});
 
 	const urls = documents.map((doc) => {
-		return `
+		return `https://career-fingerprint.com/sitemap.xml
 	  <url>
 	    <loc>https://career-fingerprint.com${doc.url}</loc>
-	    <lastmod>${doc.last_publication_date}</lastmod>
-        <priority>0.8</priority>
+	    <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
+        <priority>0.80</priority>
 	  </url>`;
 	});
 
