@@ -17,7 +17,7 @@ export const GET = async ({ fetch, cookies }) => {
 	});
 
 	const urls = documents.map((doc) => {
-		return `https://career-fingerprint.com/sitemap.xml
+		return `
 	  <url>
 	    <loc>https://career-fingerprint.com${doc.url}</loc>
 	    <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
