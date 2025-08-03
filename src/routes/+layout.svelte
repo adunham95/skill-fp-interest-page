@@ -101,11 +101,11 @@
 					<div class="mt-10 md:mt-0">
 						<h3 class="text-sm/6 font-semibold text-white">Legal</h3>
 						<ul role="list" class="mt-6 space-y-4">
-							<!-- <li>
-								<a href="/terms-of-service" class="text-sm/6 text-gray-400 hover:text-gray-300"
+							<li>
+								<a href="/terms" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Terms of service</a
 								>
-							</li> -->
+							</li>
 							<li>
 								<a href="/privacy" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Privacy policy</a
