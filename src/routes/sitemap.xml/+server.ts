@@ -4,6 +4,7 @@ import { createClient } from '$lib/prismicio';
 export const GET = async ({ fetch, cookies }) => {
 	const client = createClient({ fetch, cookies });
 	const documents = await client.getAllByType('page');
+	const blog = await client.getAllByType('blog_post');
 	const homePage = await client.getAllByType('homepage');
 
 	console.log({ documents, homePage });
@@ -25,6 +26,15 @@ export const GET = async ({ fetch, cookies }) => {
 	  </url>`;
 	});
 
+	const blogUrls = documents.map((doc) => {
+		return `
+	  <url>
+	    <loc>https://career-fingerprint.com/blog/${doc.id}</loc>
+	    <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
+        <priority>0.80</priority>
+	  </url>`;
+	});
+
 	const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         ${homepageData}
@@ -34,6 +44,7 @@ export const GET = async ({ fetch, cookies }) => {
             <priority>0.80</priority>
         </url>
 	  ${urls.join('\n')}
+	  ${blogUrls.join('\n')}
 	</urlset>`;
 
 	return new Response(xml, {
