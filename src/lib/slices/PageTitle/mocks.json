@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "him",
+				"type": "Text"
+			},
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"value": "thought",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum qui deserunt laborum fugiat qui nostrud mollit aliquip minim. Do ex minim cupidatat. Eiusmod cillum nulla Lorem eiusmod enim tempor officia proident duis duis nisi aute."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

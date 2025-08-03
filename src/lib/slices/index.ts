@@ -10,6 +10,7 @@ import FooterNavigation from './FooterNavigation/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
+import PageTitle from './PageTitle/index.svelte';
 import RecentBlogPosts from './RecentBlogPosts/index.svelte';
 import RichText from './RichText/index.svelte';
 import SectionWithSubsections from './SectionWithSubsections/index.svelte';
@@ -26,6 +27,7 @@ export const components = {
 	headline_overlay: HeadlineOverlay,
 	hero: Hero,
 	image_block: ImageBlock,
+	page_title: PageTitle,
 	recent_blog_posts: RecentBlogPosts,
 	rich_text: RichText,
 	section_with_subsections: SectionWithSubsections,

@@ -57,7 +57,7 @@ type ContentRelationshipFieldWithData<
 	>;
 }[Exclude<TCustomType[number], string>['id']];
 
-type BlogPostDocumentDataSlicesSlice = never;
+type BlogPostDocumentDataSlicesSlice = PageTitleSlice | RichTextSlice;
 
 /**
  * Content for Blog Post documents
@@ -270,6 +270,8 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| PageTitleSlice
+	| RichTextSlice
 	| ImageBlockSlice
 	| FaqGroupSlice
 	| FeatureSideHeroSlice
@@ -1349,6 +1351,68 @@ type ImageBlockSliceVariation = ImageBlockSliceDefault;
 export type ImageBlockSlice = prismic.SharedSlice<'image_block', ImageBlockSliceVariation>;
 
 /**
+ * Primary content in *PageTitle → Default → Primary*
+ */
+export interface PageTitleSliceDefaultPrimary {
+	/**
+	 * Title field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Label field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Description field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PageTitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PageTitleSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<PageTitleSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *PageTitle*
+ */
+type PageTitleSliceVariation = PageTitleSliceDefault;
+
+/**
+ * PageTitle Shared Slice
+ *
+ * - **API ID**: `page_title`
+ * - **Description**: PageTitle
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PageTitleSlice = prismic.SharedSlice<'page_title', PageTitleSliceVariation>;
+
+/**
  * Primary content in *RecentBlogPosts → Default → Primary*
  */
 export interface RecentBlogPostsSliceDefaultPrimary {
@@ -1691,6 +1755,10 @@ declare module '@prismicio/client' {
 			ImageBlockSliceDefaultPrimary,
 			ImageBlockSliceVariation,
 			ImageBlockSliceDefault,
+			PageTitleSlice,
+			PageTitleSliceDefaultPrimary,
+			PageTitleSliceVariation,
+			PageTitleSliceDefault,
 			RecentBlogPostsSlice,
 			RecentBlogPostsSliceDefaultPrimary,
 			RecentBlogPostsSliceVariation,
