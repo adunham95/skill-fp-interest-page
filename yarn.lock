@@ -76,13 +76,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20250507.0":
-  version: 4.20250620.0
-  resolution: "@cloudflare/workers-types@npm:4.20250620.0"
-  checksum: 10c0/acb2cf3ef70565834612c067d0933ca75a6e58379caa01b717c9d711f1f0ce798c7003305949d09f3691981b3c5f3d807862f44909fedbc051dcd53d52efd454
-  languageName: node
-  linkType: hard
-
 "@emnapi/core@npm:^1.4.3":
   version: 1.4.3
   resolution: "@emnapi/core@npm:1.4.3"
@@ -1126,19 +1119,6 @@ __metadata:
   peerDependencies:
     "@sveltejs/kit": ^2.0.0
   checksum: 10c0/03811f82cda2f86913a7fc7c0e1d061b4fbf661454f48a560a11e089be789661a74b775832ebd28970499b45acd4a82095a3feb220cb8504f2b5b5444587d4ee
-  languageName: node
-  linkType: hard
-
-"@sveltejs/adapter-cloudflare@npm:^7.0.0":
-  version: 7.0.4
-  resolution: "@sveltejs/adapter-cloudflare@npm:7.0.4"
-  dependencies:
-    "@cloudflare/workers-types": "npm:^4.20250507.0"
-    worktop: "npm:0.8.0-next.18"
-  peerDependencies:
-    "@sveltejs/kit": ^2.0.0
-    wrangler: ^4.0.0
-  checksum: 10c0/cddfa2bbbccae3d61701ad9470f621d453688201efdff26a488e0639b81e554ff85fa9e645fcff379f43c6a70b506170d5acb635e0697cd8e20fd6076ee5bb80
   languageName: node
   linkType: hard
 
@@ -3230,7 +3210,6 @@ __metadata:
     "@prismicio/svelte": "npm:^2.0.0"
     "@slicemachine/adapter-sveltekit": "npm:^0.3.81"
     "@sveltejs/adapter-auto": "npm:^6.0.1"
-    "@sveltejs/adapter-cloudflare": "npm:^7.0.0"
     "@sveltejs/adapter-static": "npm:^3.0.8"
     "@sveltejs/kit": "npm:^2.16.0"
     "@sveltejs/vite-plugin-svelte": "npm:^5.0.0"
@@ -4876,13 +4855,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regexparam@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "regexparam@npm:3.0.0"
-  checksum: 10c0/a6430d7b97d5a7d5518f37a850b6b73aab479029d02f46af4fa0e8e4a1d7aad05b7a0d2d10c86ded21a14d5f0fa4c68525f873a5fca2efeefcccd93c36627459
-  languageName: node
-  linkType: hard
-
 "requires-port@npm:^1.0.0":
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
@@ -5865,16 +5837,6 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10c0/e0e4a1ca27599c92a6ca4c32260e8a92e8a44f4ef6ef93f803f8ed823f486e0889fc0b93be4db59c8d51b3064951d25e43d434e95dc8c960cc3a63d65d00ba20
-  languageName: node
-  linkType: hard
-
-"worktop@npm:0.8.0-next.18":
-  version: 0.8.0-next.18
-  resolution: "worktop@npm:0.8.0-next.18"
-  dependencies:
-    mrmime: "npm:^2.0.0"
-    regexparam: "npm:^3.0.0"
-  checksum: 10c0/b15e9efd140dcaa158fc59316ae4f174489b8f4b03d92db68aa1a3282fc60d47d4e2376411136647f5c12aa0dc25d4a0f1b23725ac483ca39046789edd3e2395
   languageName: node
   linkType: hard
 

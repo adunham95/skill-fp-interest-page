@@ -4,12 +4,15 @@
 	import '../button-variants.css';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { repositoryName } from '$lib/prismicio';
-	import { page } from '$app/state';
+	import { onMount } from 'svelte';
 
 	let mobileNabOpen = $state(false);
-	const enableSignIn = page.url.searchParams.get('alphaSignIn')?.toString() === 'true';
+	let enableSignIn = $state(false);
 
-	console.log({ enableSignIn });
+	onMount(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		enableSignIn = urlParams.get('alphaSignIn')?.toString() === 'true';
+	});
 
 	let { children } = $props();
 </script>
