@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
         "blog_posts": {
           "type": "Link",
           "config": {
@@ -22,12 +29,21 @@
               {
                 "id": "blog_post",
                 "fields": [
-                  "meta_title",
-                  "meta_image",
-                  "meta_description"
+                  "cover_image",
+                  "title",
+                  "description"
                 ]
               }
             ]
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink,image,embed"
           }
         }
       },

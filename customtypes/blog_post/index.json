@@ -41,14 +41,18 @@
 					"placeholder": ""
 				}
 			},
+			"label": {
+				"type": "Text",
+				"config": {
+					"label": "Label",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"page_title": {
-							"type": "SharedSlice"
-						},
 						"rich_text": {
 							"type": "SharedSlice"
 						}

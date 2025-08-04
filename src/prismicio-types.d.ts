@@ -57,7 +57,7 @@ type ContentRelationshipFieldWithData<
 	>;
 }[Exclude<TCustomType[number], string>['id']];
 
-type BlogPostDocumentDataSlicesSlice = PageTitleSlice | RichTextSlice;
+type BlogPostDocumentDataSlicesSlice = RichTextSlice;
 
 /**
  * Content for Blog Post documents
@@ -106,6 +106,17 @@ interface BlogPostDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/fields/date
 	 */
 	publish_date: prismic.DateField;
+
+	/**
+	 * Label field in *Blog Post*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
 
 	/**
 	 * Slice Zone field in *Blog Post*
@@ -1417,6 +1428,16 @@ export type PageTitleSlice = prismic.SharedSlice<'page_title', PageTitleSliceVar
  */
 export interface RecentBlogPostsSliceDefaultPrimary {
 	/**
+	 * Title field in *RecentBlogPosts → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: recent_blog_posts.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
 	 * Blog Posts field in *RecentBlogPosts → Default → Primary*
 	 *
 	 * - **Field Type**: Content Relationship
@@ -1425,8 +1446,18 @@ export interface RecentBlogPostsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
 	 */
 	blog_posts: ContentRelationshipFieldWithData<
-		[{ id: 'blog_post'; fields: ['meta_title', 'meta_image', 'meta_description'] }]
+		[{ id: 'blog_post'; fields: ['cover_image', 'title', 'description'] }]
 	>;
+
+	/**
+	 * Description field in *RecentBlogPosts → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: recent_blog_posts.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
 }
 
 /**

@@ -5,11 +5,27 @@
 		"primary": {
 			"blog_posts": {
 				"__TYPE__": "LinkContent",
-				"key": "9d842a2d-2a0d-4e6c-9b4f-c22fbbc9d70a",
+				"key": "254aa8f8-995a-443a-902a-8251f3f9c2bd",
 				"value": {
 					"__TYPE__": "DocumentLink",
 					"id": "mock_document_id"
 				}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "answer",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur anim elit ipsum et deserunt id sint ad. Voluptate do eiusmod culpa incididunt exercitation ea esse minim enim est. Aliqua velit velit esse non aute sint."
+						}
+					}
+				]
 			}
 		},
 		"items": []
