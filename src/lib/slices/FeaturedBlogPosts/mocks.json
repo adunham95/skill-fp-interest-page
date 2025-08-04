@@ -3,14 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"blog_posts": {
-				"__TYPE__": "LinkContent",
-				"key": "254aa8f8-995a-443a-902a-8251f3f9c2bd",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
-			},
 			"title": {
 				"__TYPE__": "FieldContent",
 				"value": "answer",
@@ -24,6 +16,27 @@
 						"content": {
 							"text": "Pariatur anim elit ipsum et deserunt id sint ad. Voluptate do eiusmod culpa incididunt exercitation ea esse minim enim est. Aliqua velit velit esse non aute sint."
 						}
+					}
+				]
+			},
+			"featured_posts": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"featured_post",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "64509fbc-f19b-458c-811d-3238f6d35985",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
 					}
 				]
 			}

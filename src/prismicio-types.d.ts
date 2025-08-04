@@ -210,7 +210,6 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
-	| RecentBlogPostsSlice
 	| FeatureScreenshotSlice
 	| HeroSlice
 	| FeatureSideHeroSlice
@@ -281,6 +280,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| RecentBlogPostsSlice
 	| PageTitleSlice
 	| RichTextSlice
 	| ImageBlockSlice
@@ -467,68 +467,6 @@ export type AudienceOverviewSlice = prismic.SharedSlice<
 	'audience_overview',
 	AudienceOverviewSliceVariation
 >;
-
-/**
- * Primary content in *BasicHero → Default → Primary*
- */
-export interface BasicHeroSliceDefaultPrimary {
-	/**
-	 * Title field in *BasicHero → Default → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: basic_hero.default.primary.title
-	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
-	 */
-	title: prismic.RichTextField;
-
-	/**
-	 * Description field in *BasicHero → Default → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: basic_hero.default.primary.description
-	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
-	 */
-	description: prismic.RichTextField;
-
-	/**
-	 * Image field in *BasicHero → Default → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: basic_hero.default.primary.image
-	 * - **Documentation**: https://prismic.io/docs/fields/image
-	 */
-	image: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for BasicHero Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type BasicHeroSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<BasicHeroSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *BasicHero*
- */
-type BasicHeroSliceVariation = BasicHeroSliceDefault;
-
-/**
- * BasicHero Shared Slice
- *
- * - **API ID**: `basic_hero`
- * - **Description**: BasicHero
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type BasicHeroSlice = prismic.SharedSlice<'basic_hero', BasicHeroSliceVariation>;
 
 /**
  * Item in *FaqGroup → Default → Primary → FAQs*
@@ -1424,11 +1362,153 @@ type PageTitleSliceVariation = PageTitleSliceDefault;
 export type PageTitleSlice = prismic.SharedSlice<'page_title', PageTitleSliceVariation>;
 
 /**
- * Primary content in *RecentBlogPosts → Default → Primary*
+ * Item in *PlanComparisonTable → Default → Primary → Plans*
+ */
+export interface PlanComparisonTableSliceDefaultPrimaryPlansItem {
+	/**
+	 * Plan Label field in *PlanComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.plans[].plan_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_label: prismic.KeyTextField;
+
+	/**
+	 * Call to Action field in *PlanComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.plans[].cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *PlanComparisonTable → Default → Primary → Features*
+ */
+export interface PlanComparisonTableSliceDefaultPrimaryFeaturesItem {
+	/**
+	 * Feature Label field in *PlanComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.features[].feature_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_label: prismic.KeyTextField;
+
+	/**
+	 * Plan 1 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_1_value
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_1_value: prismic.KeyTextField;
+
+	/**
+	 * Plan 2 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_2_value
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_2_value: prismic.KeyTextField;
+
+	/**
+	 * Plan 3 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_3_value
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_3_value: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PlanComparisonTable → Default → Primary*
+ */
+export interface PlanComparisonTableSliceDefaultPrimary {
+	/**
+	 * Plans field in *PlanComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.plans[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	plans: prismic.GroupField<Simplify<PlanComparisonTableSliceDefaultPrimaryPlansItem>>;
+
+	/**
+	 * Features field in *PlanComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: plan_comparison_table.default.primary.features[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	features: prismic.GroupField<Simplify<PlanComparisonTableSliceDefaultPrimaryFeaturesItem>>;
+}
+
+/**
+ * Default variation for PlanComparisonTable Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Standard comparison table layout for different plans with corresponding features and plan actions.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PlanComparisonTableSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<PlanComparisonTableSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *PlanComparisonTable*
+ */
+type PlanComparisonTableSliceVariation = PlanComparisonTableSliceDefault;
+
+/**
+ * PlanComparisonTable Shared Slice
+ *
+ * - **API ID**: `plan_comparison_table`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PlanComparisonTableSlice = prismic.SharedSlice<
+	'plan_comparison_table',
+	PlanComparisonTableSliceVariation
+>;
+
+/**
+ * Item in *FeaturedBlogPosts → Default → Primary → featured_posts*
+ */
+export interface RecentBlogPostsSliceDefaultPrimaryFeaturedPostsItem {
+	/**
+	 * featured_post field in *FeaturedBlogPosts → Default → Primary → featured_posts*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: recent_blog_posts.default.primary.featured_posts[].featured_post
+	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+	 */
+	featured_post: ContentRelationshipFieldWithData<
+		[{ id: 'blog_post'; fields: ['cover_image', 'title', 'description', 'publish_date', 'label'] }]
+	>;
+}
+
+/**
+ * Primary content in *FeaturedBlogPosts → Default → Primary*
  */
 export interface RecentBlogPostsSliceDefaultPrimary {
 	/**
-	 * Title field in *RecentBlogPosts → Default → Primary*
+	 * Title field in *FeaturedBlogPosts → Default → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -1438,19 +1518,7 @@ export interface RecentBlogPostsSliceDefaultPrimary {
 	title: prismic.KeyTextField;
 
 	/**
-	 * Blog Posts field in *RecentBlogPosts → Default → Primary*
-	 *
-	 * - **Field Type**: Content Relationship
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: recent_blog_posts.default.primary.blog_posts
-	 * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-	 */
-	blog_posts: ContentRelationshipFieldWithData<
-		[{ id: 'blog_post'; fields: ['cover_image', 'title', 'description'] }]
-	>;
-
-	/**
-	 * Description field in *RecentBlogPosts → Default → Primary*
+	 * Description field in *FeaturedBlogPosts → Default → Primary*
 	 *
 	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
@@ -1458,10 +1526,20 @@ export interface RecentBlogPostsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	description: prismic.RichTextField;
+
+	/**
+	 * featured_posts field in *FeaturedBlogPosts → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: recent_blog_posts.default.primary.featured_posts[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	featured_posts: prismic.GroupField<Simplify<RecentBlogPostsSliceDefaultPrimaryFeaturedPostsItem>>;
 }
 
 /**
- * Default variation for RecentBlogPosts Slice
+ * Default variation for FeaturedBlogPosts Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1474,12 +1552,12 @@ export type RecentBlogPostsSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *RecentBlogPosts*
+ * Slice variation for *FeaturedBlogPosts*
  */
 type RecentBlogPostsSliceVariation = RecentBlogPostsSliceDefault;
 
 /**
- * RecentBlogPosts Shared Slice
+ * FeaturedBlogPosts Shared Slice
  *
  * - **API ID**: `recent_blog_posts`
  * - **Description**: RecentBlogPosts
@@ -1740,10 +1818,6 @@ declare module '@prismicio/client' {
 			AudienceOverviewSliceStandardPrimary,
 			AudienceOverviewSliceVariation,
 			AudienceOverviewSliceStandard,
-			BasicHeroSlice,
-			BasicHeroSliceDefaultPrimary,
-			BasicHeroSliceVariation,
-			BasicHeroSliceDefault,
 			FaqGroupSlice,
 			FaqGroupSliceDefaultPrimaryFaqsItem,
 			FaqGroupSliceDefaultPrimary,
@@ -1790,7 +1864,14 @@ declare module '@prismicio/client' {
 			PageTitleSliceDefaultPrimary,
 			PageTitleSliceVariation,
 			PageTitleSliceDefault,
+			PlanComparisonTableSlice,
+			PlanComparisonTableSliceDefaultPrimaryPlansItem,
+			PlanComparisonTableSliceDefaultPrimaryFeaturesItem,
+			PlanComparisonTableSliceDefaultPrimary,
+			PlanComparisonTableSliceVariation,
+			PlanComparisonTableSliceDefault,
 			RecentBlogPostsSlice,
+			RecentBlogPostsSliceDefaultPrimaryFeaturedPostsItem,
 			RecentBlogPostsSliceDefaultPrimary,
 			RecentBlogPostsSliceVariation,
 			RecentBlogPostsSliceDefault,

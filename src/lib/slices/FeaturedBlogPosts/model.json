@@ -1,0 +1,64 @@
+{
+  "id": "recent_blog_posts",
+  "type": "SharedSlice",
+  "name": "FeaturedBlogPosts",
+  "description": "RecentBlogPosts",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink,image,embed"
+          }
+        },
+        "featured_posts": {
+          "type": "Group",
+          "config": {
+            "label": "featured_posts",
+            "repeat": true,
+            "fields": {
+              "featured_post": {
+                "type": "Link",
+                "config": {
+                  "label": "featured_post",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "blog_post",
+                      "fields": [
+                        "cover_image",
+                        "title",
+                        "description",
+                        "publish_date",
+                        "label"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

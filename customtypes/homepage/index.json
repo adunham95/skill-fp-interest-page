@@ -11,9 +11,6 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"recent_blog_posts": {
-							"type": "SharedSlice"
-						},
 						"feature_screenshot": {
 							"type": "SharedSlice"
 						},

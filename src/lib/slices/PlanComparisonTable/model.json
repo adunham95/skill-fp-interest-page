@@ -1,0 +1,72 @@
+{
+	"type": "SharedSlice",
+	"id": "plan_comparison_table",
+	"name": "PlanComparisonTable",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"description": "Standard comparison table layout for different plans with corresponding features and plan actions.",
+			"version": "initial",
+			"imageUrl": "",
+			"docURL": "...",
+			"primary": {
+				"plans": {
+					"type": "Group",
+					"config": {
+						"label": "Plans",
+						"fields": {
+							"plan_label": {
+								"type": "Text",
+								"config": {
+									"label": "Plan Label"
+								}
+							},
+							"cta": {
+								"type": "Link",
+								"config": {
+									"label": "Call to Action",
+									"allowText": true,
+									"repeat": false,
+									"select": null
+								}
+							}
+						}
+					}
+				},
+				"features": {
+					"type": "Group",
+					"config": {
+						"label": "Features",
+						"fields": {
+							"feature_label": {
+								"type": "Text",
+								"config": {
+									"label": "Feature Label"
+								}
+							},
+							"plan_1_value": {
+								"type": "Text",
+								"config": {
+									"label": "Plan 1 Value"
+								}
+							},
+							"plan_2_value": {
+								"type": "Text",
+								"config": {
+									"label": "Plan 2 Value"
+								}
+							},
+							"plan_3_value": {
+								"type": "Text",
+								"config": {
+									"label": "Plan 3 Value"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	]
+}
