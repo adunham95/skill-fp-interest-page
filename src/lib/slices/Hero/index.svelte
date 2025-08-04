@@ -30,19 +30,16 @@
 						<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 							{slice.primary.hero_subtext}
 						</p>
-						<div class="mt-10 flex items-center gap-x-6">
-							<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
-						</div>
+						{#if slice.primary.primary_click?.text}
+							<div class="mt-10 flex items-center gap-x-6">
+								<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
+							</div>
+						{/if}
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class=" relative lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-			<!-- <img
-				class="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
-				src="https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
-				alt="Guy sitting on a ledge working on a laptop"
-			/> -->
 			<PrismicImage
 				class="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
 				field={slice.primary.hero_image}
