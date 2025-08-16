@@ -207,7 +207,7 @@
 									>Switching Careers</a
 								>
 							</li>
-							<li>
+							<!-- <li>
 								<a href="/use-cases" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Educators (coming soon)</a
 								>
@@ -216,7 +216,7 @@
 								<a href="/use-cases" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Education Institutions(coming soon)</a
 								>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 					<div class="mt-10 md:mt-0">
