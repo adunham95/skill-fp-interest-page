@@ -5,6 +5,7 @@ import FaqGroup from './FaqGroup/index.svelte';
 import FeatureCardsGrid from './FeatureCardsGrid/index.svelte';
 import FeatureScreenshot from './FeatureScreenshot/index.svelte';
 import FeatureSideHero from './FeatureSideHero/index.svelte';
+import FeatureWIthImage from './FeatureWIthImage/index.svelte';
 import FooterNavigation from './FooterNavigation/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
@@ -22,6 +23,7 @@ export const components = {
 	feature_cards_grid: FeatureCardsGrid,
 	feature_screenshot: FeatureScreenshot,
 	feature_side_hero: FeatureSideHero,
+	feature_w_ith_image: FeatureWIthImage,
 	footer_navigation: FooterNavigation,
 	headline_overlay: HeadlineOverlay,
 	hero: Hero,

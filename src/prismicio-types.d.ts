@@ -1004,6 +1004,126 @@ export type FeatureSideHeroSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *FeatureWIthImage → Default → Primary → Features*
+ */
+export interface FeatureWIthImageSliceDefaultPrimaryFeaturesItem {
+	/**
+	 * Icon field in *FeatureWIthImage → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.features[].icon
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	icon: prismic.ImageField<never>;
+
+	/**
+	 * Feature Title field in *FeatureWIthImage → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.features[].feature_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_title: prismic.KeyTextField;
+
+	/**
+	 * Feature Description field in *FeatureWIthImage → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.features[].feature_desc
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_desc: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *FeatureWIthImage → Default → Primary*
+ */
+export interface FeatureWIthImageSliceDefaultPrimary {
+	/**
+	 * Tag field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.tag
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	tag: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Features field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.features[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	features: prismic.GroupField<Simplify<FeatureWIthImageSliceDefaultPrimaryFeaturesItem>>;
+}
+
+/**
+ * Default variation for FeatureWIthImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureWIthImageSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<FeatureWIthImageSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *FeatureWIthImage*
+ */
+type FeatureWIthImageSliceVariation = FeatureWIthImageSliceDefault;
+
+/**
+ * FeatureWIthImage Shared Slice
+ *
+ * - **API ID**: `feature_w_ith_image`
+ * - **Description**: FeatureWIthImage
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureWIthImageSlice = prismic.SharedSlice<
+	'feature_w_ith_image',
+	FeatureWIthImageSliceVariation
+>;
+
+/**
  * Item in *FooterNavigation → Default → Primary → Social Links*
  */
 export interface FooterNavigationSliceDefaultPrimarySocialLinksItem {
@@ -1842,6 +1962,11 @@ declare module '@prismicio/client' {
 			FeatureSideHeroSliceVariation,
 			FeatureSideHeroSliceWithIconFeatures,
 			FeatureSideHeroSliceLeftImage,
+			FeatureWIthImageSlice,
+			FeatureWIthImageSliceDefaultPrimaryFeaturesItem,
+			FeatureWIthImageSliceDefaultPrimary,
+			FeatureWIthImageSliceVariation,
+			FeatureWIthImageSliceDefault,
 			FooterNavigationSlice,
 			FooterNavigationSliceDefaultPrimarySocialLinksItem,
 			FooterNavigationSliceDefaultPrimaryNavigationColumnsItem,

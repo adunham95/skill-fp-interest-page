@@ -1030,13 +1030,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slicemachine/adapter-sveltekit@npm:^0.3.81":
-  version: 0.3.81
-  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.81"
+"@slicemachine/adapter-sveltekit@npm:^0.3.83":
+  version: 0.3.83
+  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.83"
   dependencies:
     "@prismicio/simulator": "npm:^0.1.4"
     "@prismicio/types-internal": "npm:3.11.2"
-    "@slicemachine/plugin-kit": "npm:0.4.79"
+    "@slicemachine/plugin-kit": "npm:0.4.81"
     common-tags: "npm:^1.8.2"
     fp-ts: "npm:^2.13.1"
     io-ts: "npm:^2.2.20"
@@ -1056,13 +1056,13 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/b7932bdd797d9d00c4d68c39a56bf01153799526c5884b398ae5a54839d0024f1da909aa1d76200c58300c53f30bb6cfe5265186d95c4be4782f2fda28efc64d
+  checksum: 10c0/33f297a8dcbb284e7ef3fe69ad1854916a6bf5dbf2597c81f65e3f3fd57ee268ab4fd33c9576d580469bdd23dbc5be0e08a9a5c0ca15d245bbfd7e93ce6b5d42
   languageName: node
   linkType: hard
 
-"@slicemachine/manager@npm:0.25.1":
-  version: 0.25.1
-  resolution: "@slicemachine/manager@npm:0.25.1"
+"@slicemachine/manager@npm:0.25.3":
+  version: 0.25.3
+  resolution: "@slicemachine/manager@npm:0.25.3"
   dependencies:
     "@antfu/ni": "npm:^0.20.0"
     "@prismicio/client": "npm:7.17.0"
@@ -1070,7 +1070,7 @@ __metadata:
     "@prismicio/mocks": "npm:2.14.0"
     "@prismicio/types-internal": "npm:3.11.2"
     "@segment/analytics-node": "npm:^2.1.2"
-    "@slicemachine/plugin-kit": "npm:0.4.79"
+    "@slicemachine/plugin-kit": "npm:0.4.81"
     cookie: "npm:^1.0.1"
     cors: "npm:^2.8.5"
     execa: "npm:^7.1.1"
@@ -1095,13 +1095,13 @@ __metadata:
   peerDependenciesMeta:
     msw:
       optional: true
-  checksum: 10c0/f0a86e6565af2f1ed66326ff5bb93ffde03708edfcb25efdb5e0b0dfd10e005cc6c77ee927e9c9fca9fc9549dd4d1d5d53d494adebbd04c2f2b08415d58147f1
+  checksum: 10c0/4cfb3977d5f8fde9f05d7a8dde38e7f96b85cd92c161470ff27af064f00ad329e732c678be40d82f67b6abb070b6f8c84726810696669c370df400a1c915c812
   languageName: node
   linkType: hard
 
-"@slicemachine/plugin-kit@npm:0.4.79":
-  version: 0.4.79
-  resolution: "@slicemachine/plugin-kit@npm:0.4.79"
+"@slicemachine/plugin-kit@npm:0.4.81":
+  version: 0.4.81
+  resolution: "@slicemachine/plugin-kit@npm:0.4.81"
   dependencies:
     "@prismicio/client": "npm:7.17.0"
     common-tags: "npm:^1.8.2"
@@ -1114,7 +1114,7 @@ __metadata:
     p-limit: "npm:^4.0.0"
     prettier: "npm:^3.0.3"
     prismic-ts-codegen: "npm:0.1.27"
-  checksum: 10c0/868f33b80df72347396a07612ddd45ea8d033846c3cf85e699ef00c7a06ae14fcd0ac047eaf0a5e1dc8071155a70ca0f83573d9aefd1ff021eec1a26b7bbcbe0
+  checksum: 10c0/0e07276d164223908f916b5323b8ffe68fca0d6f9ecd85c2982f76b242146e22880c4f8527e89cf75c4b8a942577beb823544ae344c079c2ef0c61fe8cb3b632
   languageName: node
   linkType: hard
 
@@ -3243,7 +3243,7 @@ __metadata:
     "@prisma/client": "npm:^6.12.0"
     "@prismicio/client": "npm:^7.18.0"
     "@prismicio/svelte": "npm:^2.0.0"
-    "@slicemachine/adapter-sveltekit": "npm:^0.3.81"
+    "@slicemachine/adapter-sveltekit": "npm:^0.3.83"
     "@sveltejs/adapter-auto": "npm:^6.0.1"
     "@sveltejs/adapter-static": "npm:^3.0.8"
     "@sveltejs/kit": "npm:^2.16.0"
@@ -3258,7 +3258,7 @@ __metadata:
     prettier-plugin-svelte: "npm:^3.3.3"
     prettier-plugin-tailwindcss: "npm:^0.6.11"
     prisma: "npm:^6.12.0"
-    slice-machine-ui: "npm:^2.17.1"
+    slice-machine-ui: "npm:^2.18.1"
     svelte: "npm:^5.0.0"
     svelte-check: "npm:^4.0.0"
     tailwindcss: "npm:^4.0.0"
@@ -5221,15 +5221,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slice-machine-ui@npm:^2.17.1":
-  version: 2.17.1
-  resolution: "slice-machine-ui@npm:2.17.1"
+"slice-machine-ui@npm:^2.18.1":
+  version: 2.18.1
+  resolution: "slice-machine-ui@npm:2.18.1"
   dependencies:
-    "@slicemachine/manager": "npm:0.25.1"
-    start-slicemachine: "npm:0.12.59"
+    "@slicemachine/manager": "npm:0.25.3"
+    start-slicemachine: "npm:0.12.61"
   bin:
     start-slicemachine: ./bin/start-slicemachine.cjs
-  checksum: 10c0/00edeb9f206ed7caf2b669a579551041ee1a2cd1f42dce5b51deaf41b0ea8437cee3a709dbd853a8d57f52a945d38cecb83942aba8a780410231585bd0f53b22
+  checksum: 10c0/1aba2a0ae84b64c66c5ab4e2401519b74b63f8f2a9c5c26c275bd3f7d10933238d1be9fa8e82ca925d672f8da9e2429afd462b92e0b53bb128e438199379aae7
   languageName: node
   linkType: hard
 
@@ -5318,13 +5318,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"start-slicemachine@npm:0.12.59":
-  version: 0.12.59
-  resolution: "start-slicemachine@npm:0.12.59"
+"start-slicemachine@npm:0.12.61":
+  version: 0.12.61
+  resolution: "start-slicemachine@npm:0.12.61"
   dependencies:
     "@prismicio/mocks": "npm:2.14.0"
     "@prismicio/types-internal": "npm:3.11.2"
-    "@slicemachine/manager": "npm:0.25.1"
+    "@slicemachine/manager": "npm:0.25.3"
     body-parser: "npm:^1.20.3"
     chalk: "npm:^4.1.2"
     cors: "npm:^2.8.5"
@@ -5341,7 +5341,7 @@ __metadata:
     serve-static: "npm:^1.15.0"
   bin:
     start-slicemachine: ./bin/start-slicemachine.js
-  checksum: 10c0/d22ec40f1c97d21e8be6b9bb4c6c729967a45aeef9abd3ad8ff1ae10394b289ab37790c270a62a67b6480e5bea66ccae0a5a2b9f45f2366dc30e38642602b9f7
+  checksum: 10c0/49c4551d2212165c99949a843af082681e87fe4c5d312e15bdb05c13c9a1de32efe67715adaf829147182db243292e229cc002f34880439d4c26e6a9a0dc5ecf
   languageName: node
   linkType: hard
 
