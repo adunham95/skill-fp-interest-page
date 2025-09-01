@@ -13,7 +13,7 @@
 		"format": "prettier --write .",
 		"postinstall": "svelte-kit sync && prisma generate",
 		"lint": "prettier --check . && eslint .",
-		"slicemachine": "start-slicemachine"
+		"slice": "start-slicemachine"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

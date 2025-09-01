@@ -210,6 +210,7 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| FeatureWIthImageSlice
 	| FeatureScreenshotSlice
 	| HeroSlice
 	| FeatureSideHeroSlice
@@ -1039,6 +1040,41 @@ export interface FeatureWIthImageSliceDefaultPrimaryFeaturesItem {
 }
 
 /**
+ * Item in *FeatureWIthImage → Dark → Primary → Features*
+ */
+export interface FeatureWIthImageSliceDarkPrimaryFeaturesItem {
+	/**
+	 * Icon field in *FeatureWIthImage → Dark → Primary → Features*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.features[].icon
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	icon: prismic.ImageField<never>;
+
+	/**
+	 * Feature Title field in *FeatureWIthImage → Dark → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.features[].feature_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_title: prismic.KeyTextField;
+
+	/**
+	 * Feature Description field in *FeatureWIthImage → Dark → Primary → Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.features[].feature_desc
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_desc: prismic.RichTextField;
+}
+
+/**
  * Primary content in *FeatureWIthImage → Default → Primary*
  */
 export interface FeatureWIthImageSliceDefaultPrimary {
@@ -1107,9 +1143,77 @@ export type FeatureWIthImageSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *FeatureWIthImage → Dark → Primary*
+ */
+export interface FeatureWIthImageSliceDarkPrimary {
+	/**
+	 * Tag field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.tag
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	tag: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Features field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.features[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	features: prismic.GroupField<Simplify<FeatureWIthImageSliceDarkPrimaryFeaturesItem>>;
+}
+
+/**
+ * Dark variation for FeatureWIthImage Slice
+ *
+ * - **API ID**: `dark`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureWIthImageSliceDark = prismic.SharedSliceVariation<
+	'dark',
+	Simplify<FeatureWIthImageSliceDarkPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *FeatureWIthImage*
  */
-type FeatureWIthImageSliceVariation = FeatureWIthImageSliceDefault;
+type FeatureWIthImageSliceVariation = FeatureWIthImageSliceDefault | FeatureWIthImageSliceDark;
 
 /**
  * FeatureWIthImage Shared Slice
@@ -1965,8 +2069,11 @@ declare module '@prismicio/client' {
 			FeatureWIthImageSlice,
 			FeatureWIthImageSliceDefaultPrimaryFeaturesItem,
 			FeatureWIthImageSliceDefaultPrimary,
+			FeatureWIthImageSliceDarkPrimaryFeaturesItem,
+			FeatureWIthImageSliceDarkPrimary,
 			FeatureWIthImageSliceVariation,
 			FeatureWIthImageSliceDefault,
+			FeatureWIthImageSliceDark,
 			FooterNavigationSlice,
 			FooterNavigationSliceDefaultPrimarySocialLinksItem,
 			FooterNavigationSliceDefaultPrimaryNavigationColumnsItem,

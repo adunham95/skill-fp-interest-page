@@ -11,6 +11,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"feature_w_ith_image": {
+							"type": "SharedSlice"
+						},
 						"feature_screenshot": {
 							"type": "SharedSlice"
 						},

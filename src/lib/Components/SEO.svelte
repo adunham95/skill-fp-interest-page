@@ -41,6 +41,7 @@
 	<meta property="og:title" content={siteName} />
 	<meta property="og:description" content={meta_description} />
 	<meta property="og:url" content={url} />
+	<meta property="og:site_name" content={siteName} />
 
 	<meta property="og:image" content={asImageSrc(meta_image)} />
 
