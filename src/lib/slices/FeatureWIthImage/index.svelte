@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Tag from '$lib/Components/Text/Tag.svelte';
 	import type { Content } from '@prismicio/client';
 	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 
@@ -15,9 +14,10 @@
 				<div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
 					<div class="px-6 lg:px-0 lg:pt-4 lg:pr-4">
 						<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-							<Tag>
+							<h2 class="text-primary text-base/7 font-semibold">
+								>
 								{slice.primary.tag}
-							</Tag>
+							</h2>
 							<p
 								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
 							>

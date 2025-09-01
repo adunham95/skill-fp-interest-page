@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Tag from '$lib/Components/Text/Tag.svelte';
 	import type { Content } from '@prismicio/client';
 	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 
@@ -16,9 +15,10 @@
 			>
 				<div class="lg:pt-4 lg:pr-8">
 					<div class="lg:max-w-lg">
-						<Tag>
+						<h2 class="text-primary text-base/7 font-semibold">
+							>
 							{slice.primary.section_label}
-						</Tag>
+						</h2>
 						<p
 							class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
 						>
