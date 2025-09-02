@@ -57,6 +57,70 @@ type ContentRelationshipFieldWithData<
 	>;
 }[Exclude<TCustomType[number], string>['id']];
 
+/**
+ * Content for Banner documents
+ */
+interface BannerDocumentData {
+	/**
+	 * Title field in *Banner*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: banner.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Message field in *Banner*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: banner.message
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	message: prismic.RichTextField;
+
+	/**
+	 * CTA field in *Banner*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: banner.cta
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Background Color field in *Banner*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: banner.background_color
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/color
+	 */
+	background_color: prismic.ColorField;
+}
+
+/**
+ * Banner document from Prismic
+ *
+ * - **API ID**: `banner`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BannerDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<BannerDocumentData>,
+	'banner',
+	Lang
+>;
+
 type BlogPostDocumentDataSlicesSlice = RichTextSlice;
 
 /**
@@ -355,7 +419,12 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
-export type AllDocumentTypes = BlogPostDocument | FooterDocument | HomepageDocument | PageDocument;
+export type AllDocumentTypes =
+	| BannerDocument
+	| BlogPostDocument
+	| FooterDocument
+	| HomepageDocument
+	| PageDocument;
 
 /**
  * Item in *AudienceOverview → Standard → Primary → Audience Types*
@@ -2024,6 +2093,8 @@ declare module '@prismicio/client' {
 
 	namespace Content {
 		export type {
+			BannerDocument,
+			BannerDocumentData,
 			BlogPostDocument,
 			BlogPostDocumentData,
 			BlogPostDocumentDataSlicesSlice,

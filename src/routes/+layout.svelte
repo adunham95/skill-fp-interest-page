@@ -5,6 +5,7 @@
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { repositoryName } from '$lib/prismicio';
 	import { onMount } from 'svelte';
+	import Banner from '$lib/Components/Banner.svelte';
 
 	let mobileNabOpen = $state(false);
 	let enableSignIn = $state(false);
@@ -14,8 +15,10 @@
 		enableSignIn = urlParams.get('alphaSignIn')?.toString() === 'true';
 	});
 
-	let { children } = $props();
+	let { children, data } = $props();
 </script>
+
+<Banner banner={data.banner} />
 
 <header class="bg-background">
 	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
