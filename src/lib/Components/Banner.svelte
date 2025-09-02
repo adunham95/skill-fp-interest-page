@@ -20,16 +20,24 @@
 		class={`flex items-center gap-x-6 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 ${colorIsDarkSimple() ? 'text-white' : 'text-black'}`}
 		style="background-color: {bgColor}"
 	>
-		<div class="flex items-center text-sm/6">
+		<div class="flex w-full flex-col items-center justify-center text-sm/6 sm:flex-row">
 			<strong class="font-semibold">{banner.data.title}</strong>
 			{#if banner.data.message}
-				<svg viewBox="0 0 2 2" aria-hidden="true" class="mx-2 inline size-0.5 fill-current">
+				<svg
+					viewBox="0 0 2 2"
+					aria-hidden="true"
+					class="mx-2 hidden size-0.5 fill-current sm:inline"
+				>
 					<circle r="1" cx="1" cy="1" />
 				</svg>
 				<PrismicRichText field={banner.data.message} />
 			{/if}
 			{#if banner.data.cta.url}
-				<svg viewBox="0 0 2 2" aria-hidden="true" class="mx-2 inline size-0.5 fill-current">
+				<svg
+					viewBox="0 0 2 2"
+					aria-hidden="true"
+					class="mx-2 hidden size-0.5 fill-current sm:inline"
+				>
 					<circle r="1" cx="1" cy="1" />
 				</svg>
 				<PrismicLink field={banner.data.cta} class="underline" />
