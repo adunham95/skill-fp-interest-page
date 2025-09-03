@@ -13,7 +13,7 @@
 			<div class="mx-auto max-w-2xl text-center">
 				<h2 class="text-primary text-base/7 font-semibold">{slice.primary.eyebrow}</h2>
 				<p
-					class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+					class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl sm:leading-14"
 				>
 					{slice.primary.title}
 				</p>

@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"cta_block": {
+							"type": "SharedSlice"
+						},
 						"hero_over_background_image": {
 							"type": "SharedSlice"
 						},

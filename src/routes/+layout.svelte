@@ -210,6 +210,11 @@
 									>Switching Careers</a
 								>
 							</li>
+							<li>
+								<a href="/organizations" class="text-sm/6 text-gray-400 hover:text-gray-300"
+									>Organizations</a
+								>
+							</li>
 							<!-- <li>
 								<a href="/use-cases" class="text-sm/6 text-gray-400 hover:text-gray-300"
 									>Educators (coming soon)</a

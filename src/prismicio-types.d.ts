@@ -346,6 +346,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| CtaBlockSlice
 	| HeroOverBackgroundImageSlice
 	| HeroSlice
 	| FeatureScreenshotSlice

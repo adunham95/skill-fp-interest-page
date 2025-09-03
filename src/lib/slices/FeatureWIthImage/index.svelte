@@ -15,7 +15,6 @@
 					<div class="px-6 lg:px-0 lg:pt-4 lg:pr-4">
 						<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
 							<h2 class="text-primary text-base/7 font-semibold">
-								>
 								{slice.primary.tag}
 							</h2>
 							<p
