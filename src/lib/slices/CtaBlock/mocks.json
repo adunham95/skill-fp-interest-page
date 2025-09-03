@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f",
+					"width": 6000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?rect=1000%2C0%2C4000%2C4000&w=600&h=600",
+				"width": 600,
+				"height": 600,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 1000,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "finest",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "count",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Enim qui esse ad duis magna anim sint voluptate nisi qui. Eu do cupidatat elit qui voluptate."
+						}
+					}
+				]
+			},
+			"cta": {
+				"key": "6c483b3a-4ab9-4bcb-a3d3-880c93fe415b",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "your"
+				}
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "chair",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -16,7 +16,6 @@
 				<div class="lg:pt-4 lg:pr-8">
 					<div class="lg:max-w-lg">
 						<h2 class="text-primary text-base/7 font-semibold">
-							>
 							{slice.primary.section_label}
 						</h2>
 						<p

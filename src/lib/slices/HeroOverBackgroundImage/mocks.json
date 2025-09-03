@@ -42,35 +42,27 @@
 					}
 				]
 			},
-			"primary_click": {
-				"key": "8b426821-27c7-4aff-b0d7-aa8d4395f806",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "FileLink",
-					"id": "mock_Media_link",
-					"kind": "file",
-					"name": "mock_name",
-					"url": "https://source.unsplash.com/daily",
-					"size": "0",
-					"text": "applied"
-				}
-			},
 			"tag": {
 				"__TYPE__": "FieldContent",
 				"value": "fighting",
 				"type": "Text"
 			},
-			"tagcta": {
-				"key": "2104e16e-8bb1-45b4-b7b4-95b305108993",
+			"primary_click": {
+				"key": "c1d0397a-f039-4b3e-90cd-f89f0d8a3bbc",
 				"__TYPE__": "LinkContent",
 				"value": {
-					"__TYPE__": "FileLink",
-					"id": "mock_Media_link",
-					"kind": "file",
-					"name": "mock_name",
-					"url": "https://source.unsplash.com/daily",
-					"size": "0",
-					"text": "lion"
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "flies"
+				}
+			},
+			"tagcta": {
+				"__TYPE__": "LinkContent",
+				"key": "c2b2f716-9e81-4eea-a967-6b6286455228",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "later"
 				}
 			}
 		},

@@ -544,6 +544,88 @@ export type AudienceOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *CtaBlock → Default → Primary*
+ */
+export interface CtaBlockSliceDefaultPrimary {
+	/**
+	 * Image field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+
+	/**
+	 * Label field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * CTA field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for CtaBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaBlockSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<CtaBlockSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *CtaBlock*
+ */
+type CtaBlockSliceVariation = CtaBlockSliceDefault;
+
+/**
+ * CtaBlock Shared Slice
+ *
+ * - **API ID**: `cta_block`
+ * - **Description**: CtaBlock
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CtaBlockSlice = prismic.SharedSlice<'cta_block', CtaBlockSliceVariation>;
+
+/**
  * Item in *FaqGroup → Default → Primary → FAQs*
  */
 export interface FaqGroupSliceDefaultPrimaryFaqsItem {
@@ -1590,16 +1672,6 @@ export interface HeroOverBackgroundImageSliceDefaultPrimary {
 	subtext: prismic.RichTextField;
 
 	/**
-	 * Primary Click field in *HeroOverBackgroundImage → Default → Primary*
-	 *
-	 * - **Field Type**: Link to Media
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_over_background_image.default.primary.primary_click
-	 * - **Documentation**: https://prismic.io/docs/fields/link-to-media
-	 */
-	primary_click: prismic.LinkToMediaField<prismic.FieldState, never>;
-
-	/**
 	 * Tag field in *HeroOverBackgroundImage → Default → Primary*
 	 *
 	 * - **Field Type**: Text
@@ -1610,14 +1682,24 @@ export interface HeroOverBackgroundImageSliceDefaultPrimary {
 	tag: prismic.KeyTextField;
 
 	/**
+	 * Primary Click field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.primary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
 	 * TagCTA field in *HeroOverBackgroundImage → Default → Primary*
 	 *
-	 * - **Field Type**: Link to Media
+	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: hero_over_background_image.default.primary.tagcta
-	 * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
-	tagcta: prismic.LinkToMediaField<prismic.FieldState, never>;
+	tagcta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -2213,6 +2295,10 @@ declare module '@prismicio/client' {
 			AudienceOverviewSliceStandardPrimary,
 			AudienceOverviewSliceVariation,
 			AudienceOverviewSliceStandard,
+			CtaBlockSlice,
+			CtaBlockSliceDefaultPrimary,
+			CtaBlockSliceVariation,
+			CtaBlockSliceDefault,
 			FaqGroupSlice,
 			FaqGroupSliceDefaultPrimaryFaqsItem,
 			FaqGroupSliceDefaultPrimary,

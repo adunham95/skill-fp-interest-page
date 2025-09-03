@@ -1,8 +1,8 @@
 {
-  "id": "hero_over_background_image",
+  "id": "cta_block",
   "type": "SharedSlice",
-  "name": "HeroOverBackgroundImage",
-  "description": "HeroOverBackgroundImage",
+  "name": "CtaBlock",
+  "description": "CtaBlock",
   "variations": [
     {
       "id": "default",
@@ -12,52 +12,44 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "backgroundimage": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "BackgroundImage",
-            "constraint": {},
+            "label": "Image",
+            "constraint": {
+              "width": 600,
+              "height": 600
+            },
             "thumbnails": []
           }
         },
-        "hero_text": {
+        "label": {
           "type": "Text",
           "config": {
-            "label": "Hero Text",
+            "label": "Label",
             "placeholder": ""
           }
         },
-        "subtext": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
           "type": "StructuredText",
           "config": {
-            "label": "Subtext",
+            "label": "Description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,o-list-item"
+            "multi": "paragraph,preformatted,strong,em,hyperlink,embed,list-item,o-list-item,rtl"
           }
         },
-        "tag": {
-          "type": "Text",
-          "config": {
-            "label": "Tag",
-            "placeholder": ""
-          }
-        },
-        "primary_click": {
+        "cta": {
           "type": "Link",
           "config": {
-            "label": "Primary Click",
-            "placeholder": "",
-            "select": null,
-            "allowTargetBlank": true,
-            "allowText": true,
-            "repeat": false
-          }
-        },
-        "tagcta": {
-          "type": "Link",
-          "config": {
-            "label": "TagCTA",
+            "label": "CTA",
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
