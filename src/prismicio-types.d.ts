@@ -274,6 +274,7 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| HeroOverBackgroundImageSlice
 	| FeatureWIthImageSlice
 	| FeatureScreenshotSlice
 	| HeroSlice
@@ -345,6 +346,10 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| HeroOverBackgroundImageSlice
+	| HeroSlice
+	| FeatureScreenshotSlice
+	| FeatureWIthImageSlice
 	| RecentBlogPostsSlice
 	| PageTitleSlice
 	| RichTextSlice
@@ -1551,6 +1556,101 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<'hero', HeroSliceVariation>;
 
 /**
+ * Primary content in *HeroOverBackgroundImage → Default → Primary*
+ */
+export interface HeroOverBackgroundImageSliceDefaultPrimary {
+	/**
+	 * BackgroundImage field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.backgroundimage
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	backgroundimage: prismic.ImageField<never>;
+
+	/**
+	 * Hero Text field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.hero_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_text: prismic.KeyTextField;
+
+	/**
+	 * Subtext field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.subtext
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	subtext: prismic.RichTextField;
+
+	/**
+	 * Primary Click field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.primary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+	 */
+	primary_click: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+	/**
+	 * Tag field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.tag
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	tag: prismic.KeyTextField;
+
+	/**
+	 * TagCTA field in *HeroOverBackgroundImage → Default → Primary*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_over_background_image.default.primary.tagcta
+	 * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+	 */
+	tagcta: prismic.LinkToMediaField<prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for HeroOverBackgroundImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroOverBackgroundImageSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<HeroOverBackgroundImageSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *HeroOverBackgroundImage*
+ */
+type HeroOverBackgroundImageSliceVariation = HeroOverBackgroundImageSliceDefault;
+
+/**
+ * HeroOverBackgroundImage Shared Slice
+ *
+ * - **API ID**: `hero_over_background_image`
+ * - **Description**: HeroOverBackgroundImage
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroOverBackgroundImageSlice = prismic.SharedSlice<
+	'hero_over_background_image',
+	HeroOverBackgroundImageSliceVariation
+>;
+
+/**
  * Primary content in *ImageBlock → Default → Primary*
  */
 export interface ImageBlockSliceDefaultPrimary {
@@ -2159,6 +2259,10 @@ declare module '@prismicio/client' {
 			HeroSliceDefaultPrimary,
 			HeroSliceVariation,
 			HeroSliceDefault,
+			HeroOverBackgroundImageSlice,
+			HeroOverBackgroundImageSliceDefaultPrimary,
+			HeroOverBackgroundImageSliceVariation,
+			HeroOverBackgroundImageSliceDefault,
 			ImageBlockSlice,
 			ImageBlockSliceDefaultPrimary,
 			ImageBlockSliceVariation,

@@ -9,6 +9,7 @@ import FeatureWIthImage from './FeatureWIthImage/index.svelte';
 import FooterNavigation from './FooterNavigation/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
+import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
 import PageTitle from './PageTitle/index.svelte';
 import PlanComparisonTable from './PlanComparisonTable/index.svelte';
@@ -27,6 +28,7 @@ export const components = {
 	footer_navigation: FooterNavigation,
 	headline_overlay: HeadlineOverlay,
 	hero: Hero,
+	hero_over_background_image: HeroOverBackgroundImage,
 	image_block: ImageBlock,
 	page_title: PageTitle,
 	plan_comparison_table: PlanComparisonTable,

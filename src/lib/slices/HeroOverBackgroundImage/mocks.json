@@ -1,0 +1,79 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"backgroundimage": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+					"width": 5616,
+					"height": 3744
+				},
+				"url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+				"width": 5616,
+				"height": 3744,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "turn",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"hero_text": {
+				"__TYPE__": "FieldContent",
+				"value": "ourselves",
+				"type": "Text"
+			},
+			"subtext": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Labore consequat adipisicing eiusmod duis exercitation et. Adipisicing nostrud anim irure eu commodo ad Lorem aliqua culpa Lorem mollit ex consequat excepteur. Labore ad esse cupidatat adipisicing do occaecat et enim eu commodo pariatur exercitation."
+						}
+					}
+				]
+			},
+			"primary_click": {
+				"key": "8b426821-27c7-4aff-b0d7-aa8d4395f806",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "applied"
+				}
+			},
+			"tag": {
+				"__TYPE__": "FieldContent",
+				"value": "fighting",
+				"type": "Text"
+			},
+			"tagcta": {
+				"key": "2104e16e-8bb1-45b4-b7b4-95b305108993",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "lion"
+				}
+			}
+		},
+		"items": []
+	}
+]

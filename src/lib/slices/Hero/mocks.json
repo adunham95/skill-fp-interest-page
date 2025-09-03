@@ -37,8 +37,8 @@
 				"type": "Text"
 			},
 			"primary_click": {
-				"__TYPE__": "LinkContent",
 				"key": "6873e65b-e14a-4d19-9aea-4c674ae1959a",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com",

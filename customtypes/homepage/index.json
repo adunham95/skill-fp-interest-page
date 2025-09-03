@@ -11,6 +11,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"hero_over_background_image": {
+							"type": "SharedSlice"
+						},
 						"feature_w_ith_image": {
 							"type": "SharedSlice"
 						},
