@@ -77,8 +77,8 @@
 		<li>
 			<p>
 				<strong>Website</strong> refers to Career Fingerprint, accessible from
-				<a href="https://career-fingerprint.com/" rel="external nofollow noopener" target="_blank"
-					>https://career-fingerprint.com/</a
+				<a href="https://mycareerfingerprint.com/" rel="external nofollow noopener" target="_blank"
+					>https://mycareerfingerprint.com/</a
 				>
 			</p>
 		</li>

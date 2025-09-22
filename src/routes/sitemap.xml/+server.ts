@@ -1,49 +1,53 @@
 import { createClient } from '$lib/prismicio';
+import { asLink } from '@prismicio/client';
 
 export const GET = async ({ fetch, cookies }) => {
+	const CANONICAL_DOMAIN = 'https://mycareerfingerprint.com';
 	const client = createClient({ fetch, cookies });
-	const documents = await client.getAllByType('page');
-	const blog = await client.getAllByType('blog_post');
-	const homePage = await client.getAllByType('homepage');
 
-	console.log({ documents, homePage });
+	const [documents, blog, homePage] = await Promise.all([
+		client.getAllByType('page'),
+		client.getAllByType('blog_post'),
+		client.getAllByType('homepage')
+	]);
 
-	const homepageData = homePage.map((doc) => {
-		return `<url>
-        <loc>https://career-fingerprint.com/</loc>
-        <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
-        <priority>1.00</priority>
-    </url> `;
-	});
+	const homepage = homePage[0];
 
-	const urls = documents.map((doc) => {
-		return `
-	  <url>
-	    <loc>https://career-fingerprint.com${doc.url}</loc>
-	    <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
-        <priority>0.80</priority>
-	  </url>`;
-	});
+	const homepageData = `
+		<url>
+			<loc>${CANONICAL_DOMAIN}/</loc>
+			<lastmod>${new Date(homepage.last_publication_date).toISOString()}</lastmod>
+			<priority>1.00</priority>
+		</url>`;
 
-	const blogUrls = blog.map((doc) => {
-		return `
-	  <url>
-	    <loc>https://career-fingerprint.com/blog/${doc.id}</loc>
-	    <lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
-        <priority>0.80</priority>
-	  </url>`;
-	});
+	const urls = documents.map(
+		(doc) => `
+		<url>
+			<loc>${CANONICAL_DOMAIN}${doc.url}</loc>
+			<lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
+			<priority>0.80</priority>
+		</url>`
+	);
+
+	const blogUrls = blog.map(
+		(doc) => `
+		<url>
+			<loc>${CANONICAL_DOMAIN}${asLink(doc)}</loc>
+			<lastmod>${new Date(doc.last_publication_date).toISOString()}</lastmod>
+			<priority>0.80</priority>
+		</url>`
+	);
 
 	const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        ${homepageData}
-        <url>
-            <loc>https://career-fingerprint.com/use-cases</loc>
-            <lastmod>2025-07-01T16:55:01+00:00</lastmod>
-            <priority>0.80</priority>
-        </url>
-	  ${urls.join('\n')}
-	  ${blogUrls.join('\n')}
+		${homepageData}
+		<url>
+			<loc>${CANONICAL_DOMAIN}/use-cases</loc>
+			<lastmod>2025-07-01T16:55:01+00:00</lastmod>
+			<priority>0.80</priority>
+		</url>
+		${urls.join('\n')}
+		${blogUrls.join('\n')}
 	</urlset>`;
 
 	return new Response(xml, {

@@ -1,2 +1,4 @@
 User-agent: *
-Sitemap: https://career-fingerprint.com/sitemap.xml
+Allow: /
+
+Sitemap: https://mycareerfingerprint.com/sitemap.xml
