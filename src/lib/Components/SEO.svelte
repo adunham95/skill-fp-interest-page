@@ -28,13 +28,14 @@
 		{
 			"@context": "http://schema.org",
 			"@type": "WebSite",
-			"name": "Career Fingerprint",
-			"url":  "https://career-fingerprint.com"
+			"name": siteName,
+			"url":  url
 		},
 	</script>
 {/snippet}
 
 <svelte:head>
+	<link rel="canonical" href={url} />
 	<!-- META TAGS -->
 	<title>{generatePageName(pageName)}</title>
 	<meta name="description" content={meta_description} />
