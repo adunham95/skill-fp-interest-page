@@ -1,0 +1,48 @@
+{
+	"redirects": [
+		{
+			"source": "/(.*)",
+			"has": [
+				{
+					"type": "host",
+					"value": "career-fingerprint.com"
+				}
+			],
+			"destination": "https://mycareerfingerprint.com/$1",
+			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"has": [
+				{
+					"type": "host",
+					"value": "www.career-fingerprint.com"
+				}
+			],
+			"destination": "https://mycareerfingerprint.com/$1",
+			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"has": [
+				{
+					"type": "host",
+					"value": "skillfingerprint.com"
+				}
+			],
+			"destination": "https://mycareerfingerprint.com/$1",
+			"permanent": true
+		},
+		{
+			"source": "/(.*)",
+			"has": [
+				{
+					"type": "host",
+					"value": "www.skillfingerprint.com"
+				}
+			],
+			"destination": "https://mycareerfingerprint.com/$1",
+			"permanent": true
+		}
+	]
+}
