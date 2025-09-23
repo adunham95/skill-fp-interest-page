@@ -122,6 +122,15 @@
                   "placeholder_true": "true",
                   "default_value": false
                 }
+              },
+              "feature_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Feature Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph,preformatted,strong,em,hyperlink"
+                }
               }
             }
           }

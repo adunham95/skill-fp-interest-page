@@ -274,6 +274,7 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| PricingComparisonTableSlice
 	| PricingOverviewSlice
 	| HeroOverBackgroundImageSlice
 	| FeatureWIthImageSlice
@@ -347,6 +348,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| PricingComparisonTableSlice
 	| PricingOverviewSlice
 	| CtaBlockSlice
 	| HeroOverBackgroundImageSlice
@@ -1950,6 +1952,16 @@ export interface PricingComparisonTableSliceVariantDefaultPrimaryFeaturesItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/boolean
 	 */
 	premium_included: prismic.BooleanField;
+
+	/**
+	 * Feature Description field in *PricingComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].feature_description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_description: prismic.RichTextField;
 }
 
 /**

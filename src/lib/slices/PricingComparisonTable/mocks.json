@@ -88,8 +88,8 @@
 							[
 								"cta",
 								{
-									"__TYPE__": "LinkContent",
 									"key": "83c7c9a9-c665-4cda-a07f-3020c981a365",
+									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "ExternalLink",
 										"url": "google.com",
@@ -97,8 +97,7 @@
 									}
 								}
 							]
-						],
-						"key": "9bb3cc81-be52-445c-9c4a-d1b2310e4145"
+						]
 					}
 				]
 			},
@@ -144,6 +143,20 @@
 								{
 									"__TYPE__": "BooleanContent",
 									"value": false
+								}
+							],
+							[
+								"feature_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Consequat sunt consectetur aliquip nostrud. Ipsum pariatur ea esse aliquip adipisicing quis nulla in ullamco anim aliqua laboris deserunt. Commodo aute quis aute consectetur adipisicing dolor qui sit aliquip."
+											}
+										}
+									]
 								}
 							]
 						]

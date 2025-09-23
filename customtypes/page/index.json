@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"pricing_comparison_table": {
+							"type": "SharedSlice"
+						},
 						"pricing_overview": {
 							"type": "SharedSlice"
 						},

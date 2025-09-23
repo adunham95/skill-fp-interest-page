@@ -10,7 +10,7 @@
 <section
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	class="bg-white py-24 sm:py-32"
+	class="py-24 sm:py-32"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-4xl text-center">
@@ -62,13 +62,20 @@
 											fill-rule="evenodd"
 										/>
 									</svg>
-									<span>
-										{feature.feature_name}
+									<div>
+										<span>
+											{feature.feature_name}
 
-										{#if feature.free_value}
-											<span class="text-sm/6 text-gray-500">({feature.free_value})</span>
+											{#if feature.free_value}
+												<span class="text-sm/6 text-gray-500">({feature.free_value})</span>
+											{/if}
+										</span>
+										{#if feature.feature_description}
+											<span class="text-sm/8 text-gray-500">
+												<PrismicRichText field={feature.feature_description} />
+											</span>
 										{/if}
-									</span>
+									</div>
 								</li>
 							{:else if item.type === 'premium' && feature.premium_included}
 								<li class="flex gap-x-3">
@@ -85,13 +92,20 @@
 											fill-rule="evenodd"
 										/>
 									</svg>
-									<span>
-										{feature.feature_name}
+									<div>
+										<span>
+											{feature.feature_name}
 
-										{#if feature.premium_value}
-											<span class="text-sm/6 text-gray-500">({feature.premium_value})</span>
+											{#if feature.premium_value}
+												<span class="text-sm/6 text-gray-500">({feature.premium_value})</span>
+											{/if}
+										</span>
+										{#if feature.feature_description}
+											<span class="text-sm/8 text-gray-500">
+												<PrismicRichText field={feature.feature_description} />
+											</span>
 										{/if}
-									</span>
+									</div>
 								</li>
 							{/if}
 						{/each}
@@ -121,7 +135,7 @@
 							{/each}
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="divide-y divide-gray-200">
 						<tr>
 							<th scope="row"><span class="sr-only">Price</span></th>
 							{#each slice.primary.plans as item}
@@ -159,7 +173,10 @@
 							<tr>
 								<th scope="row" class="py-4 text-sm/6 font-normal text-gray-900">
 									{item.feature_name}
-									<div class="absolute inset-x-8 mt-4 h-px bg-gray-900/5"></div>
+									<div class="b-0 absolute h-px bg-gray-900/5"></div>
+									<div class="text-sm/8 text-gray-500">
+										<PrismicRichText field={item.feature_description} />
+									</div>
 								</th>
 								<td class="px-6 py-4 xl:px-8">
 									{#if item.free_value}
