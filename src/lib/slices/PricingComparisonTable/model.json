@@ -1,0 +1,133 @@
+{
+  "type": "SharedSlice",
+  "id": "pricing_comparison_table",
+  "name": "PricingComparisonTable",
+  "variations": [
+    {
+      "id": "variant_default",
+      "name": "Default",
+      "description": "Standard table-based pricing comparison with summary heading, subtitle, and call-to-action buttons.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Subtitle"
+          }
+        },
+        "plans": {
+          "type": "Group",
+          "config": {
+            "label": "Plans",
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan name"
+                }
+              },
+              "price": {
+                "type": "Number",
+                "config": {
+                  "label": "Price"
+                }
+              },
+              "price_suffix": {
+                "type": "Text",
+                "config": {
+                  "label": "Price Suffix (e.g. /month)"
+                }
+              },
+              "cta": {
+                "type": "Link",
+                "config": {
+                  "label": "Call to Action",
+                  "allowText": true,
+                  "repeat": false,
+                  "select": null
+                }
+              },
+              "type": {
+                "type": "Select",
+                "config": {
+                  "label": "Type",
+                  "placeholder": "",
+                  "options": [
+                    "free",
+                    "premium",
+                    "organization"
+                  ],
+                  "default_value": "free"
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "fields": {
+              "feature_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Feature Name"
+                }
+              },
+              "free_value": {
+                "type": "Text",
+                "config": {
+                  "label": "Free Value",
+                  "placeholder": ""
+                }
+              },
+              "premium_value": {
+                "type": "Text",
+                "config": {
+                  "label": "Premium Value",
+                  "placeholder": ""
+                }
+              },
+              "free_included": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Free Included",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              },
+              "premium_included": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Premium Included",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

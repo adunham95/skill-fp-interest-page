@@ -1,0 +1,166 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "variant_default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ut in veniam ad esse eiusmod. Eu laborum proident aute officia quis eu irure dolore minim cillum aliqua velit eu id minim. Laborum ut dolor velit consectetur ad cillum ipsum ut labore."
+						}
+					}
+				]
+			},
+			"plans": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Starter"
+								}
+							],
+							[
+								"price",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "26",
+									"type": "Number"
+								}
+							],
+							[
+								"price_suffix",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "storm",
+									"type": "Text"
+								}
+							],
+							[
+								"cta",
+								{
+									"key": "bdddcc87-4e06-4482-bf29-1f68c1deb3bc",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "vast"
+									}
+								}
+							],
+							[
+								"type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "free",
+									"type": "Select"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "premium"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Premium"
+								}
+							],
+							[
+								"cta",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "83c7c9a9-c665-4cda-a07f-3020c981a365",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "google.com",
+										"text": "Testing"
+									}
+								}
+							]
+						],
+						"key": "9bb3cc81-be52-445c-9c4a-d1b2310e4145"
+					}
+				]
+			},
+			"features": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"feature_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "information",
+									"type": "Text"
+								}
+							],
+							[
+								"free_value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "exchange",
+									"type": "Text"
+								}
+							],
+							[
+								"premium_value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pour",
+									"type": "Text"
+								}
+							],
+							[
+								"free_included",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							],
+							[
+								"premium_included",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": false
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "simple",
+				"type": "Text"
+			},
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"value": "crop",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

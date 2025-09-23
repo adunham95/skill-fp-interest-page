@@ -274,6 +274,7 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| PricingOverviewSlice
 	| HeroOverBackgroundImageSlice
 	| FeatureWIthImageSlice
 	| FeatureScreenshotSlice
@@ -346,6 +347,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| PricingOverviewSlice
 	| CtaBlockSlice
 	| HeroOverBackgroundImageSlice
 	| HeroSlice
@@ -1838,129 +1840,219 @@ type PageTitleSliceVariation = PageTitleSliceDefault;
 export type PageTitleSlice = prismic.SharedSlice<'page_title', PageTitleSliceVariation>;
 
 /**
- * Item in *PlanComparisonTable → Default → Primary → Plans*
+ * Item in *PricingComparisonTable → Default → Primary → Plans*
  */
-export interface PlanComparisonTableSliceDefaultPrimaryPlansItem {
+export interface PricingComparisonTableSliceVariantDefaultPrimaryPlansItem {
 	/**
-	 * Plan Label field in *PlanComparisonTable → Default → Primary → Plans*
+	 * Plan name field in *PricingComparisonTable → Default → Primary → Plans*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.plans[].plan_label
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].name
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
-	plan_label: prismic.KeyTextField;
+	name: prismic.KeyTextField;
 
 	/**
-	 * Call to Action field in *PlanComparisonTable → Default → Primary → Plans*
+	 * Price field in *PricingComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].price
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	price: prismic.NumberField;
+
+	/**
+	 * Price Suffix (e.g. /month) field in *PricingComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].price_suffix
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	price_suffix: prismic.KeyTextField;
+
+	/**
+	 * Call to Action field in *PricingComparisonTable → Default → Primary → Plans*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.plans[].cta
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].cta
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Type field in *PricingComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: free
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].type
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	type: prismic.SelectField<'free' | 'premium' | 'organization', 'filled'>;
 }
 
 /**
- * Item in *PlanComparisonTable → Default → Primary → Features*
+ * Item in *PricingComparisonTable → Default → Primary → Features*
  */
-export interface PlanComparisonTableSliceDefaultPrimaryFeaturesItem {
+export interface PricingComparisonTableSliceVariantDefaultPrimaryFeaturesItem {
 	/**
-	 * Feature Label field in *PlanComparisonTable → Default → Primary → Features*
+	 * Feature Name field in *PricingComparisonTable → Default → Primary → Features*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.features[].feature_label
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].feature_name
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
-	feature_label: prismic.KeyTextField;
+	feature_name: prismic.KeyTextField;
 
 	/**
-	 * Plan 1 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 * Free Value field in *PricingComparisonTable → Default → Primary → Features*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_1_value
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].free_value
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
-	plan_1_value: prismic.KeyTextField;
+	free_value: prismic.KeyTextField;
 
 	/**
-	 * Plan 2 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 * Premium Value field in *PricingComparisonTable → Default → Primary → Features*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_2_value
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].premium_value
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
-	plan_2_value: prismic.KeyTextField;
+	premium_value: prismic.KeyTextField;
 
 	/**
-	 * Plan 3 Value field in *PlanComparisonTable → Default → Primary → Features*
+	 * Free Included field in *PricingComparisonTable → Default → Primary → Features*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.features[].plan_3_value
-	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 * - **Default Value**: false
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].free_included
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
 	 */
-	plan_3_value: prismic.KeyTextField;
+	free_included: prismic.BooleanField;
+
+	/**
+	 * Premium Included field in *PricingComparisonTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[].premium_included
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	premium_included: prismic.BooleanField;
 }
 
 /**
- * Primary content in *PlanComparisonTable → Default → Primary*
+ * Primary content in *PricingComparisonTable → Default → Primary*
  */
-export interface PlanComparisonTableSliceDefaultPrimary {
+export interface PricingComparisonTableSliceVariantDefaultPrimary {
 	/**
-	 * Plans field in *PlanComparisonTable → Default → Primary*
+	 * Section Label field in *PricingComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *PricingComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Subtitle field in *PricingComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	subtitle: prismic.RichTextField;
+
+	/**
+	 * Plans field in *PricingComparisonTable → Default → Primary*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.plans[]
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[]
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
-	plans: prismic.GroupField<Simplify<PlanComparisonTableSliceDefaultPrimaryPlansItem>>;
+	plans: prismic.GroupField<Simplify<PricingComparisonTableSliceVariantDefaultPrimaryPlansItem>>;
 
 	/**
-	 * Features field in *PlanComparisonTable → Default → Primary*
+	 * Features field in *PricingComparisonTable → Default → Primary*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: plan_comparison_table.default.primary.features[]
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.features[]
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
-	features: prismic.GroupField<Simplify<PlanComparisonTableSliceDefaultPrimaryFeaturesItem>>;
+	features: prismic.GroupField<
+		Simplify<PricingComparisonTableSliceVariantDefaultPrimaryFeaturesItem>
+	>;
 }
 
 /**
- * Default variation for PlanComparisonTable Slice
+ * Default variation for PricingComparisonTable Slice
  *
- * - **API ID**: `default`
- * - **Description**: Standard comparison table layout for different plans with corresponding features and plan actions.
+ * - **API ID**: `variant_default`
+ * - **Description**: Standard table-based pricing comparison with summary heading, subtitle, and call-to-action buttons.
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type PlanComparisonTableSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<PlanComparisonTableSliceDefaultPrimary>,
+export type PricingComparisonTableSliceVariantDefault = prismic.SharedSliceVariation<
+	'variant_default',
+	Simplify<PricingComparisonTableSliceVariantDefaultPrimary>,
 	never
 >;
 
 /**
- * Slice variation for *PlanComparisonTable*
+ * Slice variation for *PricingComparisonTable*
  */
-type PlanComparisonTableSliceVariation = PlanComparisonTableSliceDefault;
+type PricingComparisonTableSliceVariation = PricingComparisonTableSliceVariantDefault;
 
 /**
- * PlanComparisonTable Shared Slice
+ * PricingComparisonTable Shared Slice
  *
- * - **API ID**: `plan_comparison_table`
+ * - **API ID**: `pricing_comparison_table`
  * - **Description**: *None*
  * - **Documentation**: https://prismic.io/docs/slices
  */
-export type PlanComparisonTableSlice = prismic.SharedSlice<
-	'plan_comparison_table',
-	PlanComparisonTableSliceVariation
+export type PricingComparisonTableSlice = prismic.SharedSlice<
+	'pricing_comparison_table',
+	PricingComparisonTableSliceVariation
 >;
+
+/**
+ * Item in *PricingOverview → Default → Primary → Offers → Feature Set*
+ */
+export interface PricingOverviewSliceDefaultPrimaryOffersFeatureSetItem {
+	/**
+	 * Feature Item field in *PricingOverview → Default → Primary → Offers → Feature Set*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].feature_set[].feature_item
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_item: prismic.RichTextField;
+}
 
 /**
  * Item in *PricingOverview → Default → Primary → Offers*
@@ -2065,21 +2157,18 @@ export interface PricingOverviewSliceDefaultPrimaryOffersItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	features_title: prismic.KeyTextField;
-}
 
-/**
- * Item in *PricingOverview → Default → Primary → Feature Set*
- */
-export interface PricingOverviewSliceDefaultPrimaryFeatureSetItem {
 	/**
-	 * Feature Item field in *PricingOverview → Default → Primary → Feature Set*
+	 * Feature Set field in *PricingOverview → Default → Primary → Offers*
 	 *
-	 * - **Field Type**: Rich Text
+	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: pricing_overview.default.primary.feature_set[].feature_item
-	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].feature_set[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
-	feature_item: prismic.RichTextField;
+	feature_set: prismic.NestedGroupField<
+		Simplify<PricingOverviewSliceDefaultPrimaryOffersFeatureSetItem>
+	>;
 }
 
 /**
@@ -2115,16 +2204,6 @@ export interface PricingOverviewSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	title: prismic.KeyTextField;
-
-	/**
-	 * Feature Set field in *PricingOverview → Default → Primary*
-	 *
-	 * - **Field Type**: Group
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: pricing_overview.default.primary.feature_set[]
-	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-	 */
-	feature_set: prismic.GroupField<Simplify<PricingOverviewSliceDefaultPrimaryFeatureSetItem>>;
 }
 
 /**
@@ -2553,15 +2632,15 @@ declare module '@prismicio/client' {
 			PageTitleSliceDefaultPrimary,
 			PageTitleSliceVariation,
 			PageTitleSliceDefault,
-			PlanComparisonTableSlice,
-			PlanComparisonTableSliceDefaultPrimaryPlansItem,
-			PlanComparisonTableSliceDefaultPrimaryFeaturesItem,
-			PlanComparisonTableSliceDefaultPrimary,
-			PlanComparisonTableSliceVariation,
-			PlanComparisonTableSliceDefault,
+			PricingComparisonTableSlice,
+			PricingComparisonTableSliceVariantDefaultPrimaryPlansItem,
+			PricingComparisonTableSliceVariantDefaultPrimaryFeaturesItem,
+			PricingComparisonTableSliceVariantDefaultPrimary,
+			PricingComparisonTableSliceVariation,
+			PricingComparisonTableSliceVariantDefault,
 			PricingOverviewSlice,
+			PricingOverviewSliceDefaultPrimaryOffersFeatureSetItem,
 			PricingOverviewSliceDefaultPrimaryOffersItem,
-			PricingOverviewSliceDefaultPrimaryFeatureSetItem,
 			PricingOverviewSliceDefaultPrimary,
 			PricingOverviewSliceVariation,
 			PricingOverviewSliceDefault,

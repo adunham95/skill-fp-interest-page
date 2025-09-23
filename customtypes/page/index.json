@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"pricing_overview": {
+							"type": "SharedSlice"
+						},
 						"cta_block": {
 							"type": "SharedSlice"
 						},

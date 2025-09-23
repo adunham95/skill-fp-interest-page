@@ -13,7 +13,7 @@ import Hero from './Hero/index.svelte';
 import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
 import PageTitle from './PageTitle/index.svelte';
-import PlanComparisonTable from './PlanComparisonTable/index.svelte';
+import PricingComparisonTable from './PricingComparisonTable/index.svelte';
 import PricingOverview from './PricingOverview/index.svelte';
 import FeaturedBlogPosts from './FeaturedBlogPosts/index.svelte';
 import RichText from './RichText/index.svelte';
@@ -34,7 +34,7 @@ export const components = {
 	hero_over_background_image: HeroOverBackgroundImage,
 	image_block: ImageBlock,
 	page_title: PageTitle,
-	plan_comparison_table: PlanComparisonTable,
+	pricing_comparison_table: PricingComparisonTable,
 	pricing_overview: PricingOverview,
 	recent_blog_posts: FeaturedBlogPosts,
 	rich_text: RichText,
