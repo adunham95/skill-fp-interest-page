@@ -101,7 +101,7 @@
 											{/if}
 										</span>
 										{#if feature.feature_description}
-											<span class="text-sm/8 text-gray-500">
+											<span class="text-xs text-gray-500">
 												<PrismicRichText field={feature.feature_description} />
 											</span>
 										{/if}
@@ -174,7 +174,7 @@
 								<th scope="row" class="py-4 text-sm/6 font-normal text-gray-900">
 									{item.feature_name}
 									<div class="b-0 absolute h-px bg-gray-900/5"></div>
-									<div class="text-sm/8 text-gray-500">
+									<div class="text-xs text-gray-500">
 										<PrismicRichText field={item.feature_description} />
 									</div>
 								</th>
