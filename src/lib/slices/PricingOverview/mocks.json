@@ -1,0 +1,155 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sit amet dolore esse dolor in magna aliqua. Ullamco nostrud ut ex laboris consequat elit ad esse minim qui sint eiusmod dolor consequat. Ipsum minim culpa pariatur est sit dolor fugiat laborum nostrud do in minim nisi."
+						}
+					}
+				]
+			},
+			"offers": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"offer_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Reprehenderit ut incididunt commodo voluptate laborum veniam elit laboris consequat eiusmod. Aute mollit in commodo consequat eu eu eu sunt eiusmod aliqua magna est tempor irure."
+											}
+										}
+									]
+								}
+							],
+							[
+								"price_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "have",
+									"type": "Text"
+								}
+							],
+							[
+								"price_amount",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "84",
+									"type": "Number"
+								}
+							],
+							[
+								"price_note",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Est sunt incididunt cupidatat fugiat dolor proident excepteur."
+											}
+										}
+									]
+								}
+							],
+							[
+								"cta_button",
+								{
+									"key": "10b0803e-24dd-4de4-af64-cc22ce471cae",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "loss"
+									}
+								}
+							],
+							[
+								"cta_note",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "fly",
+									"type": "Text"
+								}
+							],
+							[
+								"features_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "faster",
+									"type": "Text"
+								}
+							],
+							[
+								"offer_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pet",
+									"type": "Text"
+								}
+							],
+							[
+								"included_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pass",
+									"type": "Text"
+								}
+							],
+							[
+								"price_timeframe",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "grandfather",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "women",
+				"type": "Text"
+			},
+			"feature_set": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"feature_item",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Dolor veniam labore laborum ea. Nulla fugiat duis sint adipisicing et dolore magna adipisicing occaecat commodo sit voluptate veniam dolor."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

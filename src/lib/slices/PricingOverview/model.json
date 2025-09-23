@@ -1,0 +1,127 @@
+{
+	"type": "SharedSlice",
+	"id": "pricing_overview",
+	"name": "PricingOverview",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"description": "Standard pricing section with headline, subheading, offer information, feature list, and a call-to-action for purchase.",
+			"version": "initial",
+			"imageUrl": "",
+			"docURL": "...",
+			"primary": {
+				"description": {
+					"type": "StructuredText",
+					"config": {
+						"multi": "paragraph,strong,em,hyperlink",
+						"label": "Description"
+					}
+				},
+				"offers": {
+					"type": "Group",
+					"config": {
+						"label": "Offers",
+						"fields": {
+							"offer_title": {
+								"type": "Text",
+								"config": {
+									"label": "Offer Title",
+									"placeholder": ""
+								}
+							},
+							"offer_description": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph,strong,em,hyperlink",
+									"label": "Offer Description"
+								}
+							},
+							"included_title": {
+								"type": "Text",
+								"config": {
+									"label": "Included Title",
+									"placeholder": ""
+								}
+							},
+							"price_label": {
+								"type": "Text",
+								"config": {
+									"label": "Price Label"
+								}
+							},
+							"price_amount": {
+								"type": "Number",
+								"config": {
+									"label": "Price Amount"
+								}
+							},
+							"price_timeframe": {
+								"type": "Text",
+								"config": {
+									"label": "Price Timeframe",
+									"placeholder": ""
+								}
+							},
+							"price_note": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph,strong,em",
+									"label": "Price Note"
+								}
+							},
+							"cta_button": {
+								"type": "Link",
+								"config": {
+									"label": "CTA Button",
+									"allowText": true,
+									"repeat": false,
+									"select": null
+								}
+							},
+							"cta_note": {
+								"type": "Text",
+								"config": {
+									"label": "CTA Note"
+								}
+							},
+							"features_title": {
+								"type": "Text",
+								"config": {
+									"label": "Features Title"
+								}
+							},
+							"feature_set": {
+								"type": "Group",
+								"config": {
+									"label": "Feature Set",
+									"repeat": true,
+									"fields": {
+										"feature_item": {
+											"type": "StructuredText",
+											"config": {
+												"label": "Feature Item",
+												"placeholder": "",
+												"allowTargetBlank": true,
+												"single": "paragraph,preformatted,heading5,heading6,strong,em,hyperlink"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				},
+
+				"title": {
+					"type": "Text",
+					"config": {
+						"label": "Title",
+						"placeholder": ""
+					}
+				}
+			},
+			"items": {}
+		}
+	]
+}

@@ -1963,6 +1963,201 @@ export type PlanComparisonTableSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *PricingOverview → Default → Primary → Offers*
+ */
+export interface PricingOverviewSliceDefaultPrimaryOffersItem {
+	/**
+	 * Offer Title field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].offer_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	offer_title: prismic.KeyTextField;
+
+	/**
+	 * Offer Description field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].offer_description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	offer_description: prismic.RichTextField;
+
+	/**
+	 * Included Title field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].included_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	included_title: prismic.KeyTextField;
+
+	/**
+	 * Price Label field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].price_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	price_label: prismic.KeyTextField;
+
+	/**
+	 * Price Amount field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].price_amount
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	price_amount: prismic.NumberField;
+
+	/**
+	 * Price Timeframe field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].price_timeframe
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	price_timeframe: prismic.KeyTextField;
+
+	/**
+	 * Price Note field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].price_note
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	price_note: prismic.RichTextField;
+
+	/**
+	 * CTA Button field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].cta_button
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta_button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * CTA Note field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].cta_note
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	cta_note: prismic.KeyTextField;
+
+	/**
+	 * Features Title field in *PricingOverview → Default → Primary → Offers*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[].features_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	features_title: prismic.KeyTextField;
+}
+
+/**
+ * Item in *PricingOverview → Default → Primary → Feature Set*
+ */
+export interface PricingOverviewSliceDefaultPrimaryFeatureSetItem {
+	/**
+	 * Feature Item field in *PricingOverview → Default → Primary → Feature Set*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.feature_set[].feature_item
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_item: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *PricingOverview → Default → Primary*
+ */
+export interface PricingOverviewSliceDefaultPrimary {
+	/**
+	 * Description field in *PricingOverview → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Offers field in *PricingOverview → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.offers[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	offers: prismic.GroupField<Simplify<PricingOverviewSliceDefaultPrimaryOffersItem>>;
+
+	/**
+	 * Title field in *PricingOverview → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Feature Set field in *PricingOverview → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_overview.default.primary.feature_set[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	feature_set: prismic.GroupField<Simplify<PricingOverviewSliceDefaultPrimaryFeatureSetItem>>;
+}
+
+/**
+ * Default variation for PricingOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Standard pricing section with headline, subheading, offer information, feature list, and a call-to-action for purchase.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingOverviewSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<PricingOverviewSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *PricingOverview*
+ */
+type PricingOverviewSliceVariation = PricingOverviewSliceDefault;
+
+/**
+ * PricingOverview Shared Slice
+ *
+ * - **API ID**: `pricing_overview`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingOverviewSlice = prismic.SharedSlice<
+	'pricing_overview',
+	PricingOverviewSliceVariation
+>;
+
+/**
  * Item in *FeaturedBlogPosts → Default → Primary → featured_posts*
  */
 export interface RecentBlogPostsSliceDefaultPrimaryFeaturedPostsItem {
@@ -2364,6 +2559,12 @@ declare module '@prismicio/client' {
 			PlanComparisonTableSliceDefaultPrimary,
 			PlanComparisonTableSliceVariation,
 			PlanComparisonTableSliceDefault,
+			PricingOverviewSlice,
+			PricingOverviewSliceDefaultPrimaryOffersItem,
+			PricingOverviewSliceDefaultPrimaryFeatureSetItem,
+			PricingOverviewSliceDefaultPrimary,
+			PricingOverviewSliceVariation,
+			PricingOverviewSliceDefault,
 			RecentBlogPostsSlice,
 			RecentBlogPostsSliceDefaultPrimaryFeaturedPostsItem,
 			RecentBlogPostsSliceDefaultPrimary,
