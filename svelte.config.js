@@ -5,12 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
-		vite: {
-			ssr: {
-				noExternal: ['mixpanel-browser'] // bundle this for SSR
-			}
-		}
+		adapter: adapter()
 	}
 };
 
