@@ -429,12 +429,44 @@ export type PageDocument<Lang extends string = string> = prismic.PrismicDocument
 	Lang
 >;
 
+/**
+ * Content for Vanity URL documents
+ */
+interface VanityUrlDocumentData {
+	/**
+	 * Redirect Target field in *Vanity URL*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: vanity_url.redirect_target
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	redirect_target: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Vanity URL document from Prismic
+ *
+ * - **API ID**: `vanity_url`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type VanityUrlDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+	Simplify<VanityUrlDocumentData>,
+	'vanity_url',
+	Lang
+>;
+
 export type AllDocumentTypes =
 	| BannerDocument
 	| BlogPostDocument
 	| FooterDocument
 	| HomepageDocument
-	| PageDocument;
+	| PageDocument
+	| VanityUrlDocument;
 
 /**
  * Item in *AudienceOverview → Standard → Primary → Audience Types*
@@ -2576,6 +2608,8 @@ declare module '@prismicio/client' {
 			PageDocument,
 			PageDocumentData,
 			PageDocumentDataSlicesSlice,
+			VanityUrlDocument,
+			VanityUrlDocumentData,
 			AllDocumentTypes,
 			AudienceOverviewSlice,
 			AudienceOverviewSliceStandardPrimaryAudienceTypesItem,
