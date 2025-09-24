@@ -1,0 +1,37 @@
+{
+	"format": "custom",
+	"id": "header",
+	"json": {
+		"Main": {
+			"logo": {
+				"type": "Image",
+				"config": {
+					"label": "Logo",
+					"constraint": { "width": null, "height": null },
+					"thumbnails": []
+				}
+			},
+			"tagline": {
+				"type": "Text",
+				"config": { "label": "Tagline" }
+			},
+			"nav_menu": {
+				"type": "Group",
+				"config": {
+					"label": "Navigation Menu",
+					"fields": {
+						"label": { "type": "Text", "config": { "label": "Menu Item Label" } },
+						"url": { "type": "Link", "config": { "label": "Menu Item URL" } }
+					}
+				}
+			},
+			"enable_sign_in": {
+				"type": "Boolean",
+				"config": { "label": "Enable Sign In", "default_value": true }
+			}
+		}
+	},
+	"label": "Header",
+	"repeatable": false,
+	"status": true
+}

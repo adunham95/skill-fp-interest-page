@@ -273,6 +273,23 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
+interface HeaderDocumentData {}
+
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<HeaderDocumentData>,
+	'header',
+	Lang
+>;
+
 type HomepageDocumentDataSlicesSlice =
 	| PricingComparisonTableSlice
 	| PricingOverviewSlice
@@ -464,6 +481,7 @@ export type AllDocumentTypes =
 	| BannerDocument
 	| BlogPostDocument
 	| FooterDocument
+	| HeaderDocument
 	| HomepageDocument
 	| PageDocument
 	| VanityUrlDocument;
@@ -2602,6 +2620,8 @@ declare module '@prismicio/client' {
 			FooterDocument,
 			FooterDocumentData,
 			FooterDocumentDataSlicesSlice,
+			HeaderDocument,
+			HeaderDocumentData,
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,

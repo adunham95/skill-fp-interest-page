@@ -5,8 +5,10 @@ export async function load({ fetch }) {
 	const client = createClient({ fetch });
 
 	const banner = await client.getSingle('banner').catch(() => null);
+	const header = await client.getSingle('header').catch(() => null);
 
 	return {
-		banner
+		banner,
+		header
 	};
 }
