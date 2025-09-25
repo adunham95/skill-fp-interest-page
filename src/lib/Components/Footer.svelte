@@ -5,6 +5,7 @@
 	interface Props {
 		logo?: prismic.ImageField;
 		site_name?: prismic.KeyTextField;
+		tagline?: prismic.KeyTextField;
 		description?: prismic.KeyTextField;
 		socials?: prismic.GroupField<{
 			platform: prismic.SelectField<'Twitter' | 'LinkedIn' | 'GitHub' | 'Facebook' | 'Instagram'>;
@@ -20,7 +21,15 @@
 		legal_text?: prismic.KeyTextField;
 	}
 
-	const { logo, site_name, description, socials = [], sections = [], legal_text }: Props = $props();
+	const {
+		logo,
+		site_name,
+		tagline,
+		description,
+		socials = [],
+		sections = [],
+		legal_text
+	}: Props = $props();
 </script>
 
 <footer class="bg-secondary">
@@ -29,7 +38,18 @@
 			<div class="space-y-8">
 				<div class="text-background flex items-center">
 					<PrismicImage field={logo} class="h-9 w-auto" />
-					<span class="ml-2 text-2xl">{site_name}</span>
+					<span class="ml-2">
+						<div>
+							<p class="p-0 text-2xl">
+								{site_name}
+							</p>
+							{#if tagline}
+								<p class="p-0 text-xs italic">
+									{tagline}
+								</p>
+							{/if}
+						</div>
+					</span>
 				</div>
 				<p class="text-sm/6 text-balance text-gray-400">{description}</p>
 

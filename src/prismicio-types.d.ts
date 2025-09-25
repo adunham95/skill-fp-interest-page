@@ -240,22 +240,125 @@ export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocu
 	Lang
 >;
 
-type FooterDocumentDataSlicesSlice = FooterNavigationSlice;
+/**
+ * Item in *Footer → Footer Sections → Links*
+ */
+export interface FooterDocumentDataSectionsLinksItem {
+	/**
+	 * Link Label field in *Footer → Footer Sections → Links*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Privacy Policy
+	 * - **API ID Path**: footer.sections[].links[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Link URL field in *Footer → Footer Sections → Links*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer.sections[].links[].url
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *Footer → Footer Sections*
+ */
+export interface FooterDocumentDataSectionsItem {
+	/**
+	 * Section Title field in *Footer → Footer Sections*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Solutions / Company / Legal
+	 * - **API ID Path**: footer.sections[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Links field in *Footer → Footer Sections*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer.sections[].links[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	links: prismic.NestedGroupField<Simplify<FooterDocumentDataSectionsLinksItem>>;
+}
 
 /**
  * Content for Footer documents
  */
 interface FooterDocumentData {
 	/**
-	 * Slice Zone field in *Footer*
+	 * Logo field in *Footer*
 	 *
-	 * - **Field Type**: Slice Zone
+	 * - **Field Type**: Image
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer.slices[]
+	 * - **API ID Path**: footer.logo
 	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/slices
+	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
-	slices: prismic.SliceZone<FooterDocumentDataSlicesSlice>;
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * Site Name field in *Footer*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Career Fingerprint
+	 * - **API ID Path**: footer.site_name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	site_name: prismic.KeyTextField;
+
+	/**
+	 * Tagline field in *Footer*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer.tagline
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	tagline: prismic.KeyTextField;
+
+	/**
+	 * Description field in *Footer*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A smart system for tracking your career, wins, and next big move
+	 * - **API ID Path**: footer.description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	description: prismic.KeyTextField;
+
+	/**
+	 * Footer Sections field in *Footer*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer.sections[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	sections: prismic.GroupField<Simplify<FooterDocumentDataSectionsItem>>;
+
+	/**
+	 * Legal Text field in *Footer*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: © Career Fingerprint LLC. All rights reserved.
+	 * - **API ID Path**: footer.legal_text
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	legal_text: prismic.KeyTextField;
 }
 
 /**
@@ -273,7 +376,91 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-interface HeaderDocumentData {}
+/**
+ * Item in *Header → Navigation Menu*
+ */
+export interface HeaderDocumentDataNavMenuItem {
+	/**
+	 * Menu Item Label field in *Header → Navigation Menu*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_menu[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Menu Item URL field in *Header → Navigation Menu*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_menu[].url
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Content for Header documents
+ */
+interface HeaderDocumentData {
+	/**
+	 * Logo field in *Header*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.logo
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * Tagline field in *Header*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.tagline
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	tagline: prismic.KeyTextField;
+
+	/**
+	 * App Name field in *Header*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.app_name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	app_name: prismic.KeyTextField;
+
+	/**
+	 * Navigation Menu field in *Header*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_menu[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	nav_menu: prismic.GroupField<Simplify<HeaderDocumentDataNavMenuItem>>;
+
+	/**
+	 * Enable Sign In field in *Header*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: header.enable_sign_in
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	enable_sign_in: prismic.BooleanField;
+}
 
 /**
  * Header document from Prismic
@@ -1439,123 +1626,6 @@ export type FeatureWIthImageSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *FooterNavigation → Default → Primary → Social Links*
- */
-export interface FooterNavigationSliceDefaultPrimarySocialLinksItem {
-	/**
-	 * Icon field in *FooterNavigation → Default → Primary → Social Links*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.social_links[].icon
-	 * - **Documentation**: https://prismic.io/docs/fields/image
-	 */
-	icon: prismic.ImageField<never>;
-
-	/**
-	 * URL field in *FooterNavigation → Default → Primary → Social Links*
-	 *
-	 * - **Field Type**: Link
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.social_links[].url
-	 * - **Documentation**: https://prismic.io/docs/fields/link
-	 */
-	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
-}
-
-/**
- * Item in *FooterNavigation → Default → Primary → Navigation Columns*
- */
-export interface FooterNavigationSliceDefaultPrimaryNavigationColumnsItem {
-	/**
-	 * Column Title field in *FooterNavigation → Default → Primary → Navigation Columns*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.navigation_columns[].column_title
-	 * - **Documentation**: https://prismic.io/docs/fields/text
-	 */
-	column_title: prismic.KeyTextField;
-
-	/**
-	 * Links field in *FooterNavigation → Default → Primary → Navigation Columns*
-	 *
-	 * - **Field Type**: Link
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.navigation_columns[].links
-	 * - **Documentation**: https://prismic.io/docs/fields/link
-	 */
-	links: prismic.Repeatable<prismic.LinkField<string, string, unknown, prismic.FieldState, never>>;
-}
-
-/**
- * Primary content in *FooterNavigation → Default → Primary*
- */
-export interface FooterNavigationSliceDefaultPrimary {
-	/**
-	 * Description field in *FooterNavigation → Default → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.description
-	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
-	 */
-	description: prismic.RichTextField;
-
-	/**
-	 * Social Links field in *FooterNavigation → Default → Primary*
-	 *
-	 * - **Field Type**: Group
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.social_links[]
-	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-	 */
-	social_links: prismic.GroupField<Simplify<FooterNavigationSliceDefaultPrimarySocialLinksItem>>;
-
-	/**
-	 * Navigation Columns field in *FooterNavigation → Default → Primary*
-	 *
-	 * - **Field Type**: Group
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: footer_navigation.default.primary.navigation_columns[]
-	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-	 */
-	navigation_columns: prismic.GroupField<
-		Simplify<FooterNavigationSliceDefaultPrimaryNavigationColumnsItem>
-	>;
-}
-
-/**
- * Default variation for FooterNavigation Slice
- *
- * - **API ID**: `default`
- * - **Description**: Base footer structure with branding, grouped navigation links, description, social icons, and disclaimer.
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type FooterNavigationSliceDefault = prismic.SharedSliceVariation<
-	'default',
-	Simplify<FooterNavigationSliceDefaultPrimary>,
-	never
->;
-
-/**
- * Slice variation for *FooterNavigation*
- */
-type FooterNavigationSliceVariation = FooterNavigationSliceDefault;
-
-/**
- * FooterNavigation Shared Slice
- *
- * - **API ID**: `footer_navigation`
- * - **Description**: *None*
- * - **Documentation**: https://prismic.io/docs/slices
- */
-export type FooterNavigationSlice = prismic.SharedSlice<
-	'footer_navigation',
-	FooterNavigationSliceVariation
->;
-
-/**
  * Primary content in *HeadlineOverlay → Default → Primary*
  */
 export interface HeadlineOverlaySliceDefaultPrimary {
@@ -2619,9 +2689,11 @@ declare module '@prismicio/client' {
 			BlogPostDocumentDataSlicesSlice,
 			FooterDocument,
 			FooterDocumentData,
-			FooterDocumentDataSlicesSlice,
+			FooterDocumentDataSectionsLinksItem,
+			FooterDocumentDataSectionsItem,
 			HeaderDocument,
 			HeaderDocumentData,
+			HeaderDocumentDataNavMenuItem,
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
@@ -2672,12 +2744,6 @@ declare module '@prismicio/client' {
 			FeatureWIthImageSliceVariation,
 			FeatureWIthImageSliceDefault,
 			FeatureWIthImageSliceDark,
-			FooterNavigationSlice,
-			FooterNavigationSliceDefaultPrimarySocialLinksItem,
-			FooterNavigationSliceDefaultPrimaryNavigationColumnsItem,
-			FooterNavigationSliceDefaultPrimary,
-			FooterNavigationSliceVariation,
-			FooterNavigationSliceDefault,
 			HeadlineOverlaySlice,
 			HeadlineOverlaySliceDefaultPrimary,
 			HeadlineOverlaySliceVariation,

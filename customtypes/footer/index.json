@@ -21,6 +21,12 @@
 					"placeholder": "Career Fingerprint"
 				}
 			},
+			"tagline": {
+				"type": "Text",
+				"config": {
+					"label": "Tagline"
+				}
+			},
 			"description": {
 				"type": "Text",
 				"config": {
@@ -55,7 +61,8 @@
 									"url": {
 										"type": "Link",
 										"config": {
-											"label": "Link URL"
+											"label": "Link URL",
+											"select": null
 										}
 									}
 								}

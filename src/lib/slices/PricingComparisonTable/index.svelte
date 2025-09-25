@@ -19,11 +19,11 @@
 				{slice.primary.title}
 			</p>
 		</div>
-		<p
+		<div
 			class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
 		>
 			<PrismicRichText field={slice.primary.subtitle} />
-		</p>
+		</div>
 
 		<!-- xs to lg -->
 		<div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">

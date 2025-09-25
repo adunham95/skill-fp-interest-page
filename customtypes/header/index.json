@@ -7,27 +7,52 @@
 				"type": "Image",
 				"config": {
 					"label": "Logo",
-					"constraint": { "width": null, "height": null },
+					"constraint": {
+						"width": null,
+						"height": null
+					},
 					"thumbnails": []
 				}
 			},
 			"tagline": {
 				"type": "Text",
-				"config": { "label": "Tagline" }
+				"config": {
+					"label": "Tagline"
+				}
+			},
+			"app_name": {
+				"type": "Text",
+				"config": {
+					"label": "App Name"
+				}
 			},
 			"nav_menu": {
 				"type": "Group",
 				"config": {
 					"label": "Navigation Menu",
 					"fields": {
-						"label": { "type": "Text", "config": { "label": "Menu Item Label" } },
-						"url": { "type": "Link", "config": { "label": "Menu Item URL" } }
+						"label": {
+							"type": "Text",
+							"config": {
+								"label": "Menu Item Label"
+							}
+						},
+						"url": {
+							"type": "Link",
+							"config": {
+								"label": "Menu Item URL",
+								"select": null
+							}
+						}
 					}
 				}
 			},
 			"enable_sign_in": {
 				"type": "Boolean",
-				"config": { "label": "Enable Sign In", "default_value": true }
+				"config": {
+					"label": "Enable Sign In",
+					"default_value": true
+				}
 			}
 		}
 	},

@@ -10,12 +10,7 @@
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
 
 	interface Props {
-		// logo?: ImageFieldImage;
-		// tagline?: string | null;
-		// nav_menu?: LinkField[];
-		// cta_text?: string | null;
-		// cta_url?: PrismicLink;
-		// enable_sign_in?: boolean;
+		app_name: KeyTextField;
 		logo?: ImageField;
 		tagline?: KeyTextField;
 		nav_menu?: GroupField<{
@@ -28,8 +23,9 @@
 	}
 
 	const {
+		app_name = 'Career Fingerprint',
 		logo,
-		tagline = 'Career Fingerprint',
+		tagline,
 		nav_menu = [],
 		cta_text,
 		cta_url,
@@ -43,8 +39,19 @@
 	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
 		<div class="flex lg:flex-1">
 			<a href="/" class="-m-1.5 flex items-center p-1.5">
-				<PrismicImage field={logo} class="h-8 w-auto" />
-				<span class="ml-2 text-2xl">{tagline}</span>
+				<PrismicImage field={logo} class="h-10 w-auto" />
+				<span class="ml-2">
+					<div>
+						<p class="p-0 text-2xl">
+							{app_name}
+						</p>
+						{#if tagline}
+							<p class="p-0 text-xs italic">
+								{tagline}
+							</p>
+						{/if}
+					</div>
+				</span>
 			</a>
 		</div>
 		{#if enable_sign_in}
