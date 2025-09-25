@@ -6,15 +6,69 @@
 	"status": true,
 	"json": {
 		"Main": {
-			"slices": {
-				"type": "Slices",
-				"fieldset": "Slice Zone",
+			"logo": {
+				"type": "Image",
 				"config": {
-					"choices": {
-						"footer_navigation": {
-							"type": "SharedSlice"
+					"label": "Logo",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"site_name": {
+				"type": "Text",
+				"config": {
+					"label": "Site Name",
+					"placeholder": "Career Fingerprint"
+				}
+			},
+			"description": {
+				"type": "Text",
+				"config": {
+					"label": "Description",
+					"placeholder": "A smart system for tracking your career, wins, and next big move"
+				}
+			},
+			"sections": {
+				"type": "Group",
+				"config": {
+					"label": "Footer Sections",
+					"fields": {
+						"title": {
+							"type": "Text",
+							"config": {
+								"label": "Section Title",
+								"placeholder": "Solutions / Company / Legal"
+							}
+						},
+						"links": {
+							"type": "Group",
+							"config": {
+								"label": "Links",
+								"fields": {
+									"label": {
+										"type": "Text",
+										"config": {
+											"label": "Link Label",
+											"placeholder": "Privacy Policy"
+										}
+									},
+									"url": {
+										"type": "Link",
+										"config": {
+											"label": "Link URL"
+										}
+									}
+								}
+							}
 						}
 					}
+				}
+			},
+			"legal_text": {
+				"type": "Text",
+				"config": {
+					"label": "Legal Text",
+					"placeholder": "© Career Fingerprint LLC. All rights reserved."
 				}
 			}
 		}
