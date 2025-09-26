@@ -42,7 +42,7 @@
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "Career Fingerprint",
-			"url": "https://mycareerfingerprint.com".
+			"url": "https://mycareerfingerprint.com",
 			"logo": "https://mycareerfingerprint.com/logo-brand.svg",
 			"sameAs": [
 				"https://www.instagram.com/careerfingerprint/",
