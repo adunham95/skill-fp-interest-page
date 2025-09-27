@@ -19,13 +19,11 @@
 				</p>
 			</div>
 			<div
-				class="relative mt-16 aspect-2432/1442 h-144 sm:h-auto sm:w-[calc(var(--container-7xl)-calc(var(--spacing)*16))]"
+				class="relative mt-16 aspect-16/9 sm:h-auto sm:w-[calc(var(--container-7xl)-calc(var(--spacing)*16))]"
 			>
 				<div class="video-container">
 					<PrismicEmbed field={slice.primary.video} />
 				</div>
-				<!-- <PrismicEmbed field={slice.primary.video}  /> -->
-				<!-- {@html slice.primary.video.html} -->
 			</div>
 		</div>
 	</div>
