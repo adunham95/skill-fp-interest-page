@@ -143,3 +143,12 @@ body {
 		@apply my-4 empty:hidden;
 	}
 }
+
+.youtube-video {
+	width: 100%;
+}
+
+.youtube-video > iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}

@@ -478,6 +478,8 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| RecentBlogPostsSlice
+	| FeatureVideoSlice
 	| PricingComparisonTableSlice
 	| PricingOverviewSlice
 	| HeroOverBackgroundImageSlice
@@ -552,6 +554,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| FeatureVideoSlice
 	| PricingComparisonTableSlice
 	| PricingOverviewSlice
 	| CtaBlockSlice
@@ -1401,6 +1404,68 @@ export type FeatureSideHeroSlice = prismic.SharedSlice<
 	'feature_side_hero',
 	FeatureSideHeroSliceVariation
 >;
+
+/**
+ * Primary content in *FeatureVideo → Default → Primary*
+ */
+export interface FeatureVideoSliceDefaultPrimary {
+	/**
+	 * Section Label field in *FeatureVideo → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_video.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureVideo → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_video.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Video field in *FeatureVideo → Default → Primary*
+	 *
+	 * - **Field Type**: Embed
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_video.default.primary.video
+	 * - **Documentation**: https://prismic.io/docs/fields/embed
+	 */
+	video: prismic.EmbedField;
+}
+
+/**
+ * Default variation for FeatureVideo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureVideoSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<FeatureVideoSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *FeatureVideo*
+ */
+type FeatureVideoSliceVariation = FeatureVideoSliceDefault;
+
+/**
+ * FeatureVideo Shared Slice
+ *
+ * - **API ID**: `feature_video`
+ * - **Description**: FeatureVideo
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureVideoSlice = prismic.SharedSlice<'feature_video', FeatureVideoSliceVariation>;
 
 /**
  * Item in *FeatureWIthImage → Default → Primary → Features*
@@ -2736,6 +2801,10 @@ declare module '@prismicio/client' {
 			FeatureSideHeroSliceVariation,
 			FeatureSideHeroSliceWithIconFeatures,
 			FeatureSideHeroSliceLeftImage,
+			FeatureVideoSlice,
+			FeatureVideoSliceDefaultPrimary,
+			FeatureVideoSliceVariation,
+			FeatureVideoSliceDefault,
 			FeatureWIthImageSlice,
 			FeatureWIthImageSliceDefaultPrimaryFeaturesItem,
 			FeatureWIthImageSliceDefaultPrimary,
