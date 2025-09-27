@@ -8,10 +8,11 @@
 	import Footer from '$lib/Components/Footer.svelte';
 	import CurtainReveal from '$lib/Components/CurtainReveal.svelte';
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 
 	let { children, data } = $props();
 	const showCurtain = $derived(() => {
-		if (!window) {
+		if (!browser) {
 			return;
 		}
 		const urlParams = new URLSearchParams(window && window.location.search);
