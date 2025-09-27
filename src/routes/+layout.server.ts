@@ -1,5 +1,6 @@
 export const prerender = 'auto';
 import { createClient } from '$lib/prismicio';
+import { VERCEL_ENV } from '$env/static/private';
 
 export async function load({ fetch }) {
 	const client = createClient({ fetch });
@@ -9,6 +10,7 @@ export async function load({ fetch }) {
 	const footer = await client.getSingle('footer').catch(() => null);
 
 	return {
+		env: VERCEL_ENV || 'dev',
 		banner,
 		header,
 		footer

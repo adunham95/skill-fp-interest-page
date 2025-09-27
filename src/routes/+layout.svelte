@@ -9,6 +9,7 @@
 	import CurtainReveal from '$lib/Components/CurtainReveal.svelte';
 	import { browser } from '$app/environment';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
 
 	injectSpeedInsights();
 
@@ -33,9 +34,11 @@
 {@render children()}
 <PrismicPreview {repositoryName} />
 
+<ScrollIndicator />
+
 <Footer {...data.footer?.data} />
 
-{#if process.env.VERCEL_ENV !== 'production'}
+{#if data.env !== 'production'}
 	<!-- By using this audio pixel code, the Customer hereby instructs AudioGO toProcess Personal Data in its quality as a sub-processor. The ownership and control of Personal Data remains with Customer, and Customer will always remain the Data Controller. Customer is responsible for compliance with its obligations as Data Controller under the Data Protection Laws, in particular for justification of any transmission of Personal Data to AudioGO (including but not limited providing any required notices and obtaining any required consents from the data subjects), and for its decisions concerning the Processing and use of the Personal Data. -->
 	<img
 		alt="audio-go"

@@ -8,7 +8,7 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="bg-background relative">
+	<div class="relative">
 		<div class="mx-auto max-w-7xl">
 			<div class="relative z-10 pt-14 lg:w-full lg:max-w-2xl">
 				<svg
