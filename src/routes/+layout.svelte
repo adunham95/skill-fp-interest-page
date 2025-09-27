@@ -6,9 +6,16 @@
 	import Banner from '$lib/Components/Banner.svelte';
 	import Header from '$lib/Components/Header.svelte';
 	import Footer from '$lib/Components/Footer.svelte';
+	import CurtainReveal from '$lib/Components/CurtainReveal.svelte';
+	import { page } from '$app/state';
 
 	let { children, data } = $props();
+	const showCurtain = $derived(() => page.url.searchParams.get('launch') === 'true');
 </script>
+
+{#if showCurtain()}
+	<CurtainReveal />
+{/if}
 
 <Banner banner={data.banner} />
 
