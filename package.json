@@ -48,6 +48,7 @@
 		"@prismicio/client": "^7.18.0",
 		"@prismicio/svelte": "^2.0.0",
 		"@sveltejs/adapter-auto": "^6.0.1",
+		"@vercel/speed-insights": "^1.2.0",
 		"canvas-confetti": "^1.9.3",
 		"mixpanel-browser": "^2.67.0"
 	}
