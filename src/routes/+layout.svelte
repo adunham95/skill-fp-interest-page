@@ -10,7 +10,13 @@
 	import { page } from '$app/state';
 
 	let { children, data } = $props();
-	const showCurtain = $derived(() => page.url.searchParams.get('launch') === 'true');
+	const showCurtain = $derived(() => {
+		if (!window) {
+			return;
+		}
+		const urlParams = new URLSearchParams(window && window.location.search);
+		return urlParams.get('launch') === 'true';
+	});
 </script>
 
 {#if showCurtain()}
