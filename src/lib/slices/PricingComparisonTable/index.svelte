@@ -151,7 +151,7 @@
 									{#if item.cta?.text}
 										<PrismicLink
 											field={item.cta}
-											class="bg-primary hover:bg-primary-700 focus-visible:outline-primary mt-8 inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+											class="bg-accent hover:bg-accent-700 focus-visible:outline-accent border-secondary mt-10 inline-flex rounded-md border-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
 										/>
 									{/if}
 								</td>
