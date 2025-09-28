@@ -14,33 +14,31 @@
 </script>
 
 {#if visible}
-	<div
-		class="scroll-indicator bg-primary border-secondary"
-		aria-label="Scroll"
-		transition:fade={{ duration: 400 }}
-	>
-		<div class="arrow"></div>
+	<div class="scroll-wrapper">
+		<div
+			class="scroll-indicator bg-primary border-secondary"
+			aria-label="Scroll"
+			transition:fade={{ duration: 400 }}
+		>
+			<div class="arrow"></div>
+		</div>
 	</div>
 {/if}
 
 <style>
-	.scroll-indicator {
-		position: absolute;
+	.scroll-wrapper {
+		position: sticky;
 		bottom: 2rem;
-		left: 50%;
-		transform: translateX(-50%);
-		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		z-index: 50;
+	}
+	.scroll-indicator {
 		animation: bounce 2s infinite;
 		opacity: 0.8;
-		/* background-color: green; */
 		border-radius: 100%;
-		z-index: 50;
 		padding: 10px;
 		border: 2px solid;
-	}
-
-	.scroll-indicator:hover {
-		opacity: 1;
 	}
 
 	.arrow {
