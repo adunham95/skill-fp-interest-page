@@ -27,7 +27,9 @@
 	<CurtainReveal />
 {/if}
 
-<Banner banner={data.banner} />
+{#if data.banner}
+	<Banner banner={data.banner} />
+{/if}
 
 <Header {...data.header?.data} />
 
