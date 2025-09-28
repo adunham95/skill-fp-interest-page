@@ -82,12 +82,6 @@
 								field={item.cta_button}
 								class="bg-primary hover:bg-primary-700 focus-visible:outline-primary mt-10 inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
 							/>
-							<a
-								href="#"
-								class="bg-accent hover:bg-accent-700 focus-visible:outline-accent mt-10 inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
-							>
-								Hello World
-							</a>
 							<p class="mt-6 text-xs/5 text-gray-600">
 								{item.cta_note}
 							</p>

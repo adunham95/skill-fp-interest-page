@@ -49,10 +49,6 @@
 								class="bg-primary hover:bg-primary-700 focus-visible:outline-primary rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
 							/>
 						{/if}
-						<!-- <a href="#">Get started</a>
-						<a href="#" class="text-sm/6 font-semibold text-gray-900"
-							>Learn more <span aria-hidden="true">→</span></a
-						> -->
 					</div>
 				</div>
 			</div>
