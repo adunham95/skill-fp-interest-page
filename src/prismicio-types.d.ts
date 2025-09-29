@@ -121,7 +121,12 @@ export type BannerDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-type BlogPostDocumentDataSlicesSlice = RichTextSlice;
+type BlogPostDocumentDataSlicesSlice =
+	| CtaBlockSlice
+	| RecentBlogPostsSlice
+	| NewsletterSignUpSlice
+	| GradientCtaSlice
+	| RichTextSlice;
 
 /**
  * Content for Blog Post documents

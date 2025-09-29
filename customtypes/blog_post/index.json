@@ -53,6 +53,18 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"cta_block": {
+							"type": "SharedSlice"
+						},
+						"recent_blog_posts": {
+							"type": "SharedSlice"
+						},
+						"newsletter_sign_up": {
+							"type": "SharedSlice"
+						},
+						"gradient_cta": {
+							"type": "SharedSlice"
+						},
 						"rich_text": {
 							"type": "SharedSlice"
 						}
