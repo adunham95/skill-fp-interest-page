@@ -10,15 +10,15 @@
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
 
 	interface Props {
-		app_name: KeyTextField;
+		app_name?: KeyTextField;
 		logo?: ImageField;
 		tagline?: KeyTextField;
 		nav_menu?: GroupField<{
 			label: KeyTextField;
 			url: LinkField;
 		}>;
-		cta_text?: KeyTextField;
-		cta_url?: LinkField;
+		cta_text?: KeyTextField; // now optional
+		cta_url?: LinkField; // now optional
 		enable_sign_in?: BooleanField;
 	}
 
