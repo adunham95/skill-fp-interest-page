@@ -478,6 +478,9 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| CtaBlockSlice
+	| NewsletterSignUpSlice
+	| GradientCtaSlice
 	| RecentBlogPostsSlice
 	| FeatureVideoSlice
 	| PricingComparisonTableSlice
@@ -554,6 +557,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| NewsletterSignUpSlice
 	| GradientCtaSlice
 	| UseCaseSlice
 	| FeatureVideoSlice
@@ -2117,6 +2121,71 @@ type ImageBlockSliceVariation = ImageBlockSliceDefault;
 export type ImageBlockSlice = prismic.SharedSlice<'image_block', ImageBlockSliceVariation>;
 
 /**
+ * Primary content in *NewsletterSignUp → Default → Primary*
+ */
+export interface NewsletterSignUpSliceDefaultPrimary {
+	/**
+	 * Title field in *NewsletterSignUp → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: newsletter_sign_up.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * CTA field in *NewsletterSignUp → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: newsletter_sign_up.default.primary.cta
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	cta: prismic.KeyTextField;
+
+	/**
+	 * FormID field in *NewsletterSignUp → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: newsletter_sign_up.default.primary.formid
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	formid: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for NewsletterSignUp Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsletterSignUpSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<NewsletterSignUpSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *NewsletterSignUp*
+ */
+type NewsletterSignUpSliceVariation = NewsletterSignUpSliceDefault;
+
+/**
+ * NewsletterSignUp Shared Slice
+ *
+ * - **API ID**: `newsletter_sign_up`
+ * - **Description**: NewsletterSignUp
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type NewsletterSignUpSlice = prismic.SharedSlice<
+	'newsletter_sign_up',
+	NewsletterSignUpSliceVariation
+>;
+
+/**
  * Primary content in *PageTitle → Default → Primary*
  */
 export interface PageTitleSliceDefaultPrimary {
@@ -3129,6 +3198,10 @@ declare module '@prismicio/client' {
 			ImageBlockSliceDefaultPrimary,
 			ImageBlockSliceVariation,
 			ImageBlockSliceDefault,
+			NewsletterSignUpSlice,
+			NewsletterSignUpSliceDefaultPrimary,
+			NewsletterSignUpSliceVariation,
+			NewsletterSignUpSliceDefault,
 			PageTitleSlice,
 			PageTitleSliceDefaultPrimary,
 			PageTitleSliceVariation,

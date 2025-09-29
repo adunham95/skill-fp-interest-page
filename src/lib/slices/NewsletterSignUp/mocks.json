@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "fair",
+				"type": "Text"
+			},
+			"cta": {
+				"__TYPE__": "FieldContent",
+				"value": "friend",
+				"type": "Text"
+			},
+			"formid": {
+				"__TYPE__": "FieldContent",
+				"value": "develop",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

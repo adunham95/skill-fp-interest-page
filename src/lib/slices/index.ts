@@ -13,6 +13,7 @@ import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
 import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
+import NewsletterSignUp from './NewsletterSignUp/index.svelte';
 import PageTitle from './PageTitle/index.svelte';
 import PricingComparisonTable from './PricingComparisonTable/index.svelte';
 import PricingOverview from './PricingOverview/index.svelte';
@@ -36,6 +37,7 @@ export const components = {
 	hero: Hero,
 	hero_over_background_image: HeroOverBackgroundImage,
 	image_block: ImageBlock,
+	newsletter_sign_up: NewsletterSignUp,
 	page_title: PageTitle,
 	pricing_comparison_table: PricingComparisonTable,
 	pricing_overview: PricingOverview,

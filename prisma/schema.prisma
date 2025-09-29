@@ -17,4 +17,5 @@ datasource db {
 model Email{
   id String @id @default(uuid())
   email String
+  formID String?
 }

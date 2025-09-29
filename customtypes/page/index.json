@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"newsletter_sign_up": {
+							"type": "SharedSlice"
+						},
 						"gradient_cta": {
 							"type": "SharedSlice"
 						},

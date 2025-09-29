@@ -1,0 +1,40 @@
+{
+  "id": "newsletter_sign_up",
+  "type": "SharedSlice",
+  "name": "NewsletterSignUp",
+  "description": "NewsletterSignUp",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "cta": {
+          "type": "Text",
+          "config": {
+            "label": "CTA",
+            "placeholder": ""
+          }
+        },
+        "formid": {
+          "type": "Text",
+          "config": {
+            "label": "FormID",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
