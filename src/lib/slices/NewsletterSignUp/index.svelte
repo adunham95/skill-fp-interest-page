@@ -63,7 +63,7 @@
 				</div>
 				<p class="mt-4 text-sm/6 text-gray-300">
 					We care about your data. Read our <a
-						href="/policy"
+						href="/privacy"
 						class="font-semibold whitespace-nowrap text-white hover:text-indigo-50"
 					>
 						privacy policy
