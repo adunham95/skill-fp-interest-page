@@ -1,0 +1,112 @@
+{
+  "id": "use_case",
+  "type": "SharedSlice",
+  "name": "UseCase",
+  "description": "UseCase",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "preformatted,strong,em,hyperlink,rtl,paragraph,embed"
+          }
+        },
+        "problem_title": {
+          "type": "Text",
+          "config": {
+            "label": "Problem Title",
+            "placeholder": ""
+          }
+        },
+        "problem_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Problem Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink,embed"
+          }
+        },
+        "solution_title": {
+          "type": "Text",
+          "config": {
+            "label": "Solution Title",
+            "placeholder": ""
+          }
+        },
+        "solution_description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Solution Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,hyperlink,embed,list-item,o-list-item,strong,em"
+          }
+        },
+        "testimonial": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Testimonial",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,hyperlink,embed,image,o-list-item,list-item,strong,em"
+          }
+        },
+        "testimonial_name": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Name",
+            "placeholder": ""
+          }
+        },
+        "testimonial_job_title": {
+          "type": "Text",
+          "config": {
+            "label": "Testimonial Job Title",
+            "placeholder": ""
+          }
+        },
+        "primary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Primary CTA",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "secondary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary CTA",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non dolore officia in laborum magna. Eiusmod sit magna mollit aute cupidatat deserunt."
+						}
+					}
+				]
+			},
+			"problem_title": {
+				"__TYPE__": "FieldContent",
+				"value": "lack",
+				"type": "Text"
+			},
+			"problem_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Dolore sint excepteur ea laborum mollit sint esse mollit aliquip cillum aliqua et duis. Cillum proident quis officia sint occaecat."
+						}
+					}
+				]
+			},
+			"solution_title": {
+				"__TYPE__": "FieldContent",
+				"value": "long",
+				"type": "Text"
+			},
+			"solution_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ex ea cillum culpa mollit sint ipsum. Nisi Lorem irure aute. Aliqua deserunt exercitation enim adipisicing eiusmod."
+						}
+					}
+				]
+			},
+			"testimonial": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laborum do laboris irure officia. Mollit sunt occaecat ut et quis deserunt laboris ea sunt veniam irure."
+						}
+					}
+				]
+			},
+			"testimonial_name": {
+				"__TYPE__": "FieldContent",
+				"value": "broad",
+				"type": "Text"
+			},
+			"testimonial_job_title": {
+				"__TYPE__": "FieldContent",
+				"value": "sitting",
+				"type": "Text"
+			},
+			"primary_cta": {
+				"key": "fa8acad0-f29f-4172-b21e-7e092f70d6d0",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "every"
+				}
+			},
+			"secondary_cta": {
+				"key": "26fd5c4e-4d00-4c93-84df-4fb136865b9a",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "drop"
+				}
+			}
+		},
+		"items": []
+	}
+]

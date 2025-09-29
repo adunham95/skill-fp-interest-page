@@ -17,6 +17,12 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"gradient_cta": {
+							"type": "SharedSlice"
+						},
+						"use_case": {
+							"type": "SharedSlice"
+						},
 						"feature_video": {
 							"type": "SharedSlice"
 						},

@@ -8,6 +8,7 @@ import FeatureScreenshot from './FeatureScreenshot/index.svelte';
 import FeatureSideHero from './FeatureSideHero/index.svelte';
 import FeatureVideo from './FeatureVideo/index.svelte';
 import FeatureWIthImage from './FeatureWIthImage/index.svelte';
+import GradientCta from './GradientCta/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
 import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
@@ -19,6 +20,7 @@ import FeaturedBlogPosts from './FeaturedBlogPosts/index.svelte';
 import RichText from './RichText/index.svelte';
 import SectionWithSubsections from './SectionWithSubsections/index.svelte';
 import TeamOverview from './TeamOverview/index.svelte';
+import UseCase from './UseCase/index.svelte';
 
 export const components = {
 	audience_overview: AudienceOverview,
@@ -29,6 +31,7 @@ export const components = {
 	feature_side_hero: FeatureSideHero,
 	feature_video: FeatureVideo,
 	feature_w_ith_image: FeatureWIthImage,
+	gradient_cta: GradientCta,
 	headline_overlay: HeadlineOverlay,
 	hero: Hero,
 	hero_over_background_image: HeroOverBackgroundImage,
@@ -39,5 +42,6 @@ export const components = {
 	recent_blog_posts: FeaturedBlogPosts,
 	rich_text: RichText,
 	section_with_subsections: SectionWithSubsections,
-	team_overview: TeamOverview
+	team_overview: TeamOverview,
+	use_case: UseCase
 };

@@ -554,6 +554,8 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| GradientCtaSlice
+	| UseCaseSlice
 	| FeatureVideoSlice
 	| PricingComparisonTableSlice
 	| PricingOverviewSlice
@@ -1691,6 +1693,98 @@ export type FeatureWIthImageSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *GradientCta → Default → Primary*
+ */
+export interface GradientCtaSliceDefaultPrimary {
+	/**
+	 * Title field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gradient_cta.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gradient_cta.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Primary CTA field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gradient_cta.default.primary.primary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary CTA field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gradient_cta.default.primary.secondary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Gradient Start field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: #7775D6
+	 * - **API ID Path**: gradient_cta.default.primary.gradient_start
+	 * - **Documentation**: https://prismic.io/docs/fields/color
+	 */
+	gradient_start: prismic.ColorField;
+
+	/**
+	 * Gradient Stop field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: #E935C1
+	 * - **API ID Path**: gradient_cta.default.primary.gradient_stop
+	 * - **Documentation**: https://prismic.io/docs/fields/color
+	 */
+	gradient_stop: prismic.ColorField;
+}
+
+/**
+ * Default variation for GradientCta Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type GradientCtaSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<GradientCtaSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *GradientCta*
+ */
+type GradientCtaSliceVariation = GradientCtaSliceDefault;
+
+/**
+ * GradientCta Shared Slice
+ *
+ * - **API ID**: `gradient_cta`
+ * - **Description**: GradientCta
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type GradientCtaSlice = prismic.SharedSlice<'gradient_cta', GradientCtaSliceVariation>;
+
+/**
  * Primary content in *HeadlineOverlay → Default → Primary*
  */
 export interface HeadlineOverlaySliceDefaultPrimary {
@@ -1814,9 +1908,67 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → Offset Image → Primary*
+ */
+export interface HeroSliceOffsetImagePrimary {
+	/**
+	 * Hero Image field in *Hero → Offset Image → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.offsetImage.primary.hero_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	hero_image: prismic.ImageField<never>;
+
+	/**
+	 * Hero Text field in *Hero → Offset Image → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.offsetImage.primary.hero_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_text: prismic.KeyTextField;
+
+	/**
+	 * Hero Subtext field in *Hero → Offset Image → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.offsetImage.primary.hero_subtext
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_subtext: prismic.KeyTextField;
+
+	/**
+	 * Primary Click field in *Hero → Offset Image → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.offsetImage.primary.primary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Offset Image variation for Hero Slice
+ *
+ * - **API ID**: `offsetImage`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroSliceOffsetImage = prismic.SharedSliceVariation<
+	'offsetImage',
+	Simplify<HeroSliceOffsetImagePrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceOffsetImage;
 
 /**
  * Hero Shared Slice
@@ -2726,6 +2878,148 @@ type TeamOverviewSliceVariation = TeamOverviewSliceDefault;
  */
 export type TeamOverviewSlice = prismic.SharedSlice<'team_overview', TeamOverviewSliceVariation>;
 
+/**
+ * Primary content in *UseCase → Default → Primary*
+ */
+export interface UseCaseSliceDefaultPrimary {
+	/**
+	 * Section Label field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	title: prismic.RichTextField;
+
+	/**
+	 * Problem Title field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.problem_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	problem_title: prismic.KeyTextField;
+
+	/**
+	 * Problem Description field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.problem_description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	problem_description: prismic.RichTextField;
+
+	/**
+	 * Solution Title field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.solution_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	solution_title: prismic.KeyTextField;
+
+	/**
+	 * Solution Description field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.solution_description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	solution_description: prismic.RichTextField;
+
+	/**
+	 * Testimonial field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.testimonial
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	testimonial: prismic.RichTextField;
+
+	/**
+	 * Testimonial Name field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.testimonial_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	testimonial_name: prismic.KeyTextField;
+
+	/**
+	 * Testimonial Job Title field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.testimonial_job_title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	testimonial_job_title: prismic.KeyTextField;
+
+	/**
+	 * Primary CTA field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.primary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary CTA field in *UseCase → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: use_case.default.primary.secondary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for UseCase Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type UseCaseSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<UseCaseSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *UseCase*
+ */
+type UseCaseSliceVariation = UseCaseSliceDefault;
+
+/**
+ * UseCase Shared Slice
+ *
+ * - **API ID**: `use_case`
+ * - **Description**: UseCase
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type UseCaseSlice = prismic.SharedSlice<'use_case', UseCaseSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -2813,14 +3107,20 @@ declare module '@prismicio/client' {
 			FeatureWIthImageSliceVariation,
 			FeatureWIthImageSliceDefault,
 			FeatureWIthImageSliceDark,
+			GradientCtaSlice,
+			GradientCtaSliceDefaultPrimary,
+			GradientCtaSliceVariation,
+			GradientCtaSliceDefault,
 			HeadlineOverlaySlice,
 			HeadlineOverlaySliceDefaultPrimary,
 			HeadlineOverlaySliceVariation,
 			HeadlineOverlaySliceDefault,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
+			HeroSliceOffsetImagePrimary,
 			HeroSliceVariation,
 			HeroSliceDefault,
+			HeroSliceOffsetImage,
 			HeroOverBackgroundImageSlice,
 			HeroOverBackgroundImageSliceDefaultPrimary,
 			HeroOverBackgroundImageSliceVariation,
@@ -2863,7 +3163,11 @@ declare module '@prismicio/client' {
 			TeamOverviewSliceDefaultPrimaryMembersItem,
 			TeamOverviewSliceDefaultPrimary,
 			TeamOverviewSliceVariation,
-			TeamOverviewSliceDefault
+			TeamOverviewSliceDefault,
+			UseCaseSlice,
+			UseCaseSliceDefaultPrimary,
+			UseCaseSliceVariation,
+			UseCaseSliceDefault
 		};
 	}
 }

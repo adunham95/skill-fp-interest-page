@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "shelter",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi aute Lorem culpa elit reprehenderit officia magna occaecat est."
+						}
+					}
+				]
+			},
+			"primary_cta": {
+				"key": "0eba31ad-ae92-4da8-9916-b45a6d091b0c",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "disease"
+				}
+			},
+			"secondary_cta": {
+				"key": "15c77fa4-2191-4e54-875e-459aad89f058",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "community"
+				}
+			},
+			"gradient_start": {
+				"__TYPE__": "FieldContent",
+				"value": "#9e744f",
+				"type": "Color"
+			},
+			"gradient_stop": {
+				"__TYPE__": "FieldContent",
+				"value": "#285e06",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]

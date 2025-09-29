@@ -47,6 +47,52 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "offsetImage",
+      "name": "Offset Image",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {
+              "width": 1280
+            },
+            "thumbnails": []
+          }
+        },
+        "hero_text": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": ""
+          }
+        },
+        "hero_subtext": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Subtext",
+            "placeholder": ""
+          }
+        },
+        "primary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

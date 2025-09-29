@@ -1,0 +1,71 @@
+{
+  "id": "gradient_cta",
+  "type": "SharedSlice",
+  "name": "GradientCta",
+  "description": "GradientCta",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink"
+          }
+        },
+        "primary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Primary CTA",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "secondary_cta": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary CTA",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "gradient_start": {
+          "type": "Color",
+          "config": {
+            "label": "Gradient Start",
+            "placeholder": "#7775D6"
+          }
+        },
+        "gradient_stop": {
+          "type": "Color",
+          "config": {
+            "label": "Gradient Stop",
+            "placeholder": "#E935C1"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -47,5 +47,59 @@
 			}
 		},
 		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "offsetImage",
+		"primary": {
+			"hero_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
+					"width": 5848,
+					"height": 3899
+				},
+				"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?rect=0%2C1%2C5848%2C3897&w=1280&h=853",
+				"width": 1280,
+				"height": 853,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 1
+					},
+					"background": "transparent"
+				},
+				"alt": "saved",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"hero_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "How Career Fingerprint Solves Real Problems"
+			},
+			"hero_subtext": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Confidence is Habit — and Career Fingerprint helps you build it, one achievement at a time"
+			},
+			"primary_click": {
+				"__TYPE__": "LinkContent",
+				"key": "aec4dfad-7c18-434e-b846-e1d71c7275bf",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "Get Started"
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
 	}
 ]
