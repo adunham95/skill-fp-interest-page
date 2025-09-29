@@ -1,3 +1,4 @@
+import prisma from '$lib/Server/prisma';
 import type { RequestHandler } from './$types';
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -7,6 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	// Example: send to Mailchimp, ConvertKit, or your backend
 	console.log('New newsletter signup:', email);
+	prisma.email.create({ data: { email } });
 
 	return new Response(JSON.stringify({ success: true }), { status: 200 });
 };
