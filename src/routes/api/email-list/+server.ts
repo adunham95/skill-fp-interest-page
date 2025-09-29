@@ -8,7 +8,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	// Example: send to Mailchimp, ConvertKit, or your backend
 	console.log('New newsletter signup:', email);
-	prisma.email.create({ data: { email } });
+	await prisma.email.create({ data: { email } });
 
 	return new Response(JSON.stringify({ success: true }), { status: 200 });
 };
