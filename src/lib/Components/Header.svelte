@@ -3,7 +3,6 @@
 		BooleanField,
 		GroupField,
 		ImageField,
-		ImageFieldImage,
 		KeyTextField,
 		LinkField
 	} from '@prismicio/client';
