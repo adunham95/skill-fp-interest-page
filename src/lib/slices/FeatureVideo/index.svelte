@@ -18,9 +18,7 @@
 					{slice.primary.title}
 				</p>
 			</div>
-			<div
-				class="relative mt-16 aspect-16/9 sm:h-auto sm:w-[calc(var(--container-7xl)-calc(var(--spacing)*16))]"
-			>
+			<div class="relative mt-16 aspect-16/9 sm:h-auto">
 				<div class="video-container">
 					<PrismicEmbed field={slice.primary.video} />
 				</div>
