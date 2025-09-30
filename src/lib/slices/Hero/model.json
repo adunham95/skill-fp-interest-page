@@ -93,6 +93,53 @@
         }
       },
       "items": {}
+    },
+    {
+      "id": "withPhoneScreenShot",
+      "name": "WithPhoneScreenShot",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero_text": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": ""
+          }
+        },
+        "hero_subtext": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Subtext",
+            "placeholder": ""
+          }
+        },
+        "primary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Screenshot",
+            "constraint": {
+              "width": 1170,
+              "height": 2532
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
     }
   ]
 }

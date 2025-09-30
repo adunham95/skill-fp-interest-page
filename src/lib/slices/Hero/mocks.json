@@ -86,13 +86,67 @@
 				"value": "Confidence is Habit — and Career Fingerprint helps you build it, one achievement at a time"
 			},
 			"primary_click": {
-				"__TYPE__": "LinkContent",
 				"key": "aec4dfad-7c18-434e-b846-e1d71c7275bf",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com",
 					"text": "Get Started"
 				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "withPhoneScreenShot",
+		"primary": {
+			"hero_text": {
+				"__TYPE__": "FieldContent",
+				"value": "alive",
+				"type": "Text"
+			},
+			"hero_subtext": {
+				"__TYPE__": "FieldContent",
+				"value": "closely",
+				"type": "Text"
+			},
+			"primary_click": {
+				"key": "224c1d96-0956-46ef-b24a-d07c779c31a0",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "piano"
+				}
+			},
+			"screenshot": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
+					"width": 5000,
+					"height": 4613
+				},
+				"url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?rect=1434%2C0%2C2132%2C4613&w=1170&h=2532",
+				"width": 1170,
+				"height": 2532,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 1434,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "shop",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
 			}
 		},
 		"items": [

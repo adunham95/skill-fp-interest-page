@@ -1975,9 +1975,67 @@ export type HeroSliceOffsetImage = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → WithPhoneScreenShot → Primary*
+ */
+export interface HeroSliceWithPhoneScreenShotPrimary {
+	/**
+	 * Hero Text field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.hero_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_text: prismic.KeyTextField;
+
+	/**
+	 * Hero Subtext field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.hero_subtext
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_subtext: prismic.KeyTextField;
+
+	/**
+	 * Primary Click field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.primary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Screenshot field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.screenshot
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	screenshot: prismic.ImageField<never>;
+}
+
+/**
+ * WithPhoneScreenShot variation for Hero Slice
+ *
+ * - **API ID**: `withPhoneScreenShot`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroSliceWithPhoneScreenShot = prismic.SharedSliceVariation<
+	'withPhoneScreenShot',
+	Simplify<HeroSliceWithPhoneScreenShotPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault | HeroSliceOffsetImage;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceOffsetImage | HeroSliceWithPhoneScreenShot;
 
 /**
  * Hero Shared Slice
@@ -3192,9 +3250,11 @@ declare module '@prismicio/client' {
 			HeroSlice,
 			HeroSliceDefaultPrimary,
 			HeroSliceOffsetImagePrimary,
+			HeroSliceWithPhoneScreenShotPrimary,
 			HeroSliceVariation,
 			HeroSliceDefault,
 			HeroSliceOffsetImage,
+			HeroSliceWithPhoneScreenShot,
 			HeroOverBackgroundImageSlice,
 			HeroOverBackgroundImageSliceDefaultPrimary,
 			HeroOverBackgroundImageSliceVariation,
