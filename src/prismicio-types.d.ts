@@ -1901,6 +1901,16 @@ export interface HeroSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary Click field in *Hero → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.default.primary.secondary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**

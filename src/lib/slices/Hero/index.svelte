@@ -31,11 +31,17 @@
 							<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 								{slice.primary.hero_subtext}
 							</p>
-							{#if slice.primary.primary_click?.text}
-								<div class="mt-10 flex items-center gap-x-6">
+							<div class="mt-10 flex items-center gap-x-6">
+								{#if slice.primary.primary_click?.text}
 									<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
-								</div>
-							{/if}
+								{/if}
+								{#if slice.primary.secondary_click?.text}
+									<PrismicLink
+										class="btn btn-text--secondary"
+										field={slice.primary.secondary_click}
+									/>
+								{/if}
+							</div>
 						</div>
 					</div>
 				</div>
@@ -66,11 +72,17 @@
 						<p class="text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 							{slice.primary.hero_subtext}
 						</p>
-						{#if slice.primary.primary_click?.text}
-							<div class="mt-10 flex items-center gap-x-6">
+						<div class="mt-10 flex items-center gap-x-6">
+							{#if slice.primary.primary_click?.text}
 								<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
-							</div>
-						{/if}
+							{/if}
+							{#if slice.primary.secondary_click?.text}
+								<PrismicLink
+									class="btn btn-text--secondary"
+									field={slice.primary.secondary_click}
+								/>
+							{/if}
+						</div>
 					</div>
 					<PrismicImage
 						class="mt-10 aspect-6/5 w-full max-w-lg rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5 sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
@@ -98,9 +110,10 @@
 					</div>
 					<div class="mt-10 flex items-center gap-x-6">
 						{#if slice.primary.primary_click?.text}
-							<div class="mt-10 flex items-center gap-x-6">
-								<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
-							</div>
+							<PrismicLink class="btn btn--primary" field={slice.primary.primary_click} />
+						{/if}
+						{#if slice.primary.secondary_click?.text}
+							<PrismicLink class="btn btn-text--secondary" field={slice.primary.secondary_click} />
 						{/if}
 					</div>
 				</div>

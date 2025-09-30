@@ -44,6 +44,15 @@
 					"url": "http://google.com",
 					"text": "put"
 				}
+			},
+			"secondary_click": {
+				"__TYPE__": "LinkContent",
+				"key": "2fe0bdd2-52ef-4638-9803-006e50e60acd",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "quietly"
+				}
 			}
 		},
 		"items": []

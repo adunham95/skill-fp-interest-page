@@ -13,7 +13,7 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="relative bg-white">
+	<div class="relative">
 		<div
 			class="bg-primary relative h-80 overflow-hidden md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2"
 		>
