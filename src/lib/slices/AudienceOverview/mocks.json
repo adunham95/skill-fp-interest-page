@@ -71,6 +71,18 @@
 										}
 									]
 								}
+							],
+							[
+								"cta",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "a0b81193-1648-4727-8a2b-b4a3a2f24222",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "ten"
+									}
+								}
 							]
 						]
 					}

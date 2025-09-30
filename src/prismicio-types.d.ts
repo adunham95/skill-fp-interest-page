@@ -720,6 +720,16 @@ export interface AudienceOverviewSliceStandardPrimaryAudienceTypesItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	audience_description: prismic.RichTextField;
+
+	/**
+	 * CTA field in *AudienceOverview → Standard → Primary → Audience Types*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: audience_overview.standard.primary.audience_types[].cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1314,6 +1324,16 @@ export interface FeatureSideHeroSliceWithIconFeaturesPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
 	side_image: prismic.ImageField<never>;
+
+	/**
+	 * CTA field in *FeatureSideHero → With Icon Features → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.with_icon_features.primary.cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1382,6 +1402,16 @@ export interface FeatureSideHeroSliceLeftImagePrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
 	side_image: prismic.ImageField<never>;
+
+	/**
+	 * CTA field in *FeatureSideHero → Left Image → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -1969,6 +1999,16 @@ export interface HeroSliceOffsetImagePrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary Click field in *Hero → Offset Image → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.offsetImage.primary.secondary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -2017,6 +2057,16 @@ export interface HeroSliceWithPhoneScreenShotPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	primary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary Click field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.secondary_click
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_click: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 
 	/**
 	 * Screenshot field in *Hero → WithPhoneScreenShot → Primary*

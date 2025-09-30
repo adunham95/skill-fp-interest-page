@@ -102,6 +102,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "shape",
 				"type": "Text"
+			},
+			"cta": {
+				"key": "409bec6b-2e2c-4c95-82de-09ca2e867d1b",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "cabin"
+				}
 			}
 		},
 		"items": []
@@ -209,6 +218,15 @@
 				"alt": "captain",
 				"credits": null,
 				"__TYPE__": "ImageContent"
+			},
+			"cta": {
+				"__TYPE__": "LinkContent",
+				"key": "b3a14193-0948-46ed-b3c4-1b80b4241fb8",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "inside"
+				}
 			}
 		},
 		"items": [

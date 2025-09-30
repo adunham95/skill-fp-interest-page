@@ -1,6 +1,11 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
-	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
+	import {
+		PrismicImage,
+		PrismicLink,
+		PrismicRichText,
+		type SliceComponentProps
+	} from '@prismicio/svelte';
 
 	type Props = SliceComponentProps<Content.AudienceOverviewSlice>;
 
@@ -34,6 +39,9 @@
 							</dt>
 							<dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">
 								<PrismicRichText field={item.audience_description} />
+								{#if item.cta?.text}
+									<PrismicLink field={item.cta} />
+								{/if}
 							</dd>
 						</div>
 					{/each}

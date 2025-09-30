@@ -1,6 +1,11 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
-	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
+	import {
+		PrismicImage,
+		PrismicLink,
+		PrismicRichText,
+		type SliceComponentProps
+	} from '@prismicio/svelte';
 
 	type Props = SliceComponentProps<Content.FeatureSideHeroSlice>;
 
@@ -25,6 +30,9 @@
 						</p>
 						<div class="mt-6 text-lg/8 text-gray-100">
 							<PrismicRichText field={slice.primary.description} />
+							{#if slice.primary.cta?.text}
+								<PrismicLink field={slice.primary.cta} />
+							{/if}
 						</div>
 						<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 							{#each slice.primary.features as item}
