@@ -11,7 +11,7 @@ mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
 		click: true, // click tracking enabled
 		scroll: true,
 		submit: true,
-		capture_text_content: false,
+		capture_text_content: true,
 		block_url_regexes: [
 			/\/preview/, // Prismic preview route
 			/\/api\/preview/, // Preview API endpoint (if you use it)
