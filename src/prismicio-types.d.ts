@@ -1326,14 +1326,16 @@ export interface FeatureSideHeroSliceWithIconFeaturesPrimary {
 	side_image: prismic.ImageField<never>;
 
 	/**
-	 * CTA field in *FeatureSideHero → With Icon Features → Primary*
+	 * CTA Options field in *FeatureSideHero → With Icon Features → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: feature_side_hero.with_icon_features.primary.cta
+	 * - **API ID Path**: feature_side_hero.with_icon_features.primary.cta_options
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
-	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	cta_options: prismic.Repeatable<
+		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
+	>;
 }
 
 /**
@@ -1404,14 +1406,16 @@ export interface FeatureSideHeroSliceLeftImagePrimary {
 	side_image: prismic.ImageField<never>;
 
 	/**
-	 * CTA field in *FeatureSideHero → Left Image → Primary*
+	 * CTA Options field in *FeatureSideHero → Left Image → Primary*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: feature_side_hero.leftImage.primary.cta
+	 * - **API ID Path**: feature_side_hero.leftImage.primary.cta_options
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
-	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	cta_options: prismic.Repeatable<
+		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
+	>;
 }
 
 /**

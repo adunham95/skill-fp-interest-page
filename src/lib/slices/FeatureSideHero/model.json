@@ -72,15 +72,19 @@
             "label": "Side Image"
           }
         },
-        "cta": {
+        "cta_options": {
           "type": "Link",
           "config": {
-            "label": "CTA",
+            "label": "CTA Options",
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
             "allowText": true,
-            "repeat": false
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
           }
         }
       },
@@ -155,15 +159,19 @@
             "label": "Side Image"
           }
         },
-        "cta": {
+        "cta_options": {
           "type": "Link",
           "config": {
-            "label": "CTA",
+            "label": "CTA Options",
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,
             "allowText": true,
-            "repeat": false
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
           }
         }
       },

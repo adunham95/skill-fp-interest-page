@@ -30,9 +30,14 @@
 						</p>
 						<div class="mt-6 text-lg/8 text-gray-100">
 							<PrismicRichText field={slice.primary.description} />
-							{#if slice.primary.cta?.text}
-								<PrismicLink field={slice.primary.cta} />
-							{/if}
+							<div class="mt-2 flex space-x-1">
+								{#each slice.primary.cta_options as link (link.key)}
+									<PrismicLink
+										field={link}
+										class={`btn ${link.variant === 'Secondary' ? 'btn-text--accent' : 'btn--primary'}`}
+									/>
+								{/each}
+							</div>
 						</div>
 						<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 							{#each slice.primary.features as item}

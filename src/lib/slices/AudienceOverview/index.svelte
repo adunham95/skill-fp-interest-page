@@ -40,7 +40,7 @@
 							<dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">
 								<PrismicRichText field={item.audience_description} />
 								{#if item.cta?.text}
-									<PrismicLink field={item.cta} />
+									<PrismicLink field={item.cta} class="btn btn-text--primary mt-2" />
 								{/if}
 							</dd>
 						</div>
