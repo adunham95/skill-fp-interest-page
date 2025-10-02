@@ -5,6 +5,7 @@
 	import type { PageProps } from './$types';
 	import Seo from '$lib/Components/SEO.svelte';
 	import Button from '$lib/Components/Button.svelte';
+	import { isEmptyPageField } from '$lib/Utils/isEmptyPrismic';
 
 	const { data }: PageProps = $props();
 </script>
@@ -32,14 +33,14 @@
 				</div>
 			</div>
 
-			{#if data.page.data.screen_shot}
+			{#if !isEmptyPageField(data.page.data, 'screen_shot')}
 				<PrismicImage
 					field={data.page.data.screen_shot}
 					class="mt-16 rounded-md bg-gray-50 shadow-xl ring-1 ring-gray-900/10 sm:mt-24"
 				/>
 			{/if}
 
-			{#if data.page.data.video_embed}
+			{#if !isEmptyPageField(data.page.data, 'video_embed')}
 				<div class="relative mt-16 aspect-16/9 sm:h-auto">
 					<div class="video-container">
 						<PrismicEmbed field={data.page.data.video_embed} />
