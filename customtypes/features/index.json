@@ -12,30 +12,61 @@
 					"label": "UID"
 				}
 			},
+			"feature_name": {
+				"type": "Text",
+				"config": {
+					"label": "Feature Name",
+					"placeholder": ""
+				}
+			},
+			"feature_description": {
+				"type": "StructuredText",
+				"config": {
+					"label": "Feature Description",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"multi": "paragraph,preformatted,strong,em,hyperlink,image,rtl"
+				}
+			},
+			"ctas": {
+				"type": "Link",
+				"config": {
+					"label": "CTAs",
+					"placeholder": "",
+					"select": null,
+					"allowTargetBlank": true,
+					"allowText": true,
+					"repeat": true,
+					"variants": ["Primary", "Secondary", "Accent"]
+				}
+			},
+			"screen_shot": {
+				"type": "Image",
+				"config": {
+					"label": "Screen Shot",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"video_embed": {
+				"type": "Embed",
+				"config": {
+					"label": "Video Embed",
+					"placeholder": ""
+				}
+			},
 			"slices": {
 				"type": "Slices",
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"hero_with_screenshot": {
-							"type": "SharedSlice"
-						},
-						"hero_over_background_image": {
-							"type": "SharedSlice"
-						},
 						"cta_block": {
-							"type": "SharedSlice"
-						},
-						"headline_overlay": {
 							"type": "SharedSlice"
 						},
 						"recent_blog_posts": {
 							"type": "SharedSlice"
 						},
 						"feature_video": {
-							"type": "SharedSlice"
-						},
-						"hero": {
 							"type": "SharedSlice"
 						},
 						"use_case": {

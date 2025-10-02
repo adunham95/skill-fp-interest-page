@@ -246,13 +246,9 @@ export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type FeaturesDocumentDataSlicesSlice =
-	| HeroWithScreenshotSlice
-	| HeroOverBackgroundImageSlice
 	| CtaBlockSlice
-	| HeadlineOverlaySlice
 	| RecentBlogPostsSlice
 	| FeatureVideoSlice
-	| HeroSlice
 	| UseCaseSlice
 	| TeamOverviewSlice
 	| SectionWithSubsectionsSlice
@@ -273,6 +269,69 @@ type FeaturesDocumentDataSlicesSlice =
  * Content for Features documents
  */
 interface FeaturesDocumentData {
+	/**
+	 * Feature Name field in *Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: features.feature_name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_name: prismic.KeyTextField;
+
+	/**
+	 * Feature Description field in *Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: features.feature_description
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_description: prismic.RichTextField;
+
+	/**
+	 * CTAs field in *Features*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: features.ctas
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	ctas: prismic.Repeatable<
+		prismic.LinkField<
+			string,
+			string,
+			unknown,
+			prismic.FieldState,
+			'Primary' | 'Secondary' | 'Accent'
+		>
+	>;
+
+	/**
+	 * Screen Shot field in *Features*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: features.screen_shot
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	screen_shot: prismic.ImageField<never>;
+
+	/**
+	 * Video Embed field in *Features*
+	 *
+	 * - **Field Type**: Embed
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: features.video_embed
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/embed
+	 */
+	video_embed: prismic.EmbedField;
+
 	/**
 	 * Slice Zone field in *Features*
 	 *
