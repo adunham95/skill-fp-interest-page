@@ -8,10 +8,24 @@
 	import Footer from '$lib/Components/Footer.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
+	import { PUBLIC_GTAG } from '$env/static/public';
+	import { onMount } from 'svelte';
 
 	injectSpeedInsights();
 
 	let { children, data } = $props();
+
+	onMount(async () => {
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', PUBLIC_GTAG);
+		var s = document.createElement('script');
+		s.src = `https://www.googletagmanager.com/gtm.js?id=${PUBLIC_GTAG}`;
+		document.head.append(s);
+	});
 </script>
 
 {#if data.banner}
