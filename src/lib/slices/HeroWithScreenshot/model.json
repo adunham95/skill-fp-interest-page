@@ -1,0 +1,59 @@
+{
+  "id": "hero_with_screenshot",
+  "type": "SharedSlice",
+  "name": "HeroWithScreenshot",
+  "description": "HeroWithScreenshot",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,strong,em,hyperlink,image,embed,rtl"
+          }
+        },
+        "ctas": {
+          "type": "Link",
+          "config": {
+            "label": "CTAs",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary",
+              "Accent"
+            ]
+          }
+        },
+        "screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Screenshot",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
