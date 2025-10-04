@@ -114,7 +114,7 @@
 			{#if enable_sign_in}
 				<a
 					href="https://careerfingerprint.app/register"
-					class="mr-2 text-sm/6 font-semibold text-gray-900">Get started</a
+					class="mr-2 text-sm/6 font-semibold text-gray-900">Create Account</a
 				>
 				<div class=" h-[1.5rem] w-0.5 bg-gray-900"></div>
 				<a
@@ -192,7 +192,7 @@
 								onclick={() => (mobileNabOpen = !mobileNabOpen)}
 								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
 							>
-								Get Started
+								Create Account
 							</a>
 							<a
 								href="https://careerfingerprint.app/dashboard"
