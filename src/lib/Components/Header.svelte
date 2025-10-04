@@ -137,7 +137,11 @@
             From: "opacity-100"
             To: "opacity-0"
         -->
-		<div class="fixed inset-0 z-20 bg-black/25" aria-hidden="true"></div>
+		<div
+			class="fixed inset-0 z-20 bg-black/25"
+			aria-hidden="true"
+			onclick={() => (mobileNabOpen = false)}
+		></div>
 
 		<!--
           Mobile menu, show/hide based on mobile menu state.
