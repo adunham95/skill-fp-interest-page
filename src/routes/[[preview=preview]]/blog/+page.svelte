@@ -26,7 +26,7 @@
 			class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3"
 		>
 			{#each data.posts as post}
-				<article class="flex flex-col items-start justify-between">
+				<article class="relative flex flex-col items-start justify-between">
 					<div class="relative w-full">
 						<PrismicImage
 							field={post.data.cover_image}
@@ -36,7 +36,7 @@
 						<div class="absolute inset-0 rounded-2xl inset-ring inset-ring-gray-900/10"></div>
 					</div>
 					<div class="flex max-w-xl grow flex-col justify-between">
-						<div class="group relative grow">
+						<div class="group grow">
 							<h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
 								<a href={post.url}>
 									<span class="absolute inset-0"></span>
