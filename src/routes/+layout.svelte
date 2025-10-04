@@ -9,24 +9,30 @@
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
 	import { PUBLIC_GTAG } from '$env/static/public';
-	import { onMount } from 'svelte';
 
 	injectSpeedInsights();
 
 	let { children, data } = $props();
-
-	onMount(async () => {
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', PUBLIC_GTAG);
-		var s = document.createElement('script');
-		s.src = `https://www.googletagmanager.com/gtm.js?id=${PUBLIC_GTAG}`;
-		document.head.append(s);
-	});
 </script>
+
+<svelte:head>
+	<!-- Google Tag Manager -->
+	{#if PUBLIC_GTAG}
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', PUBLIC_GTAG);
+		</script>
+	{/if}
+	<!-- End Google Tag Manager -->
+</svelte:head>
 
 {#if data.banner}
 	<Banner banner={data.banner} />
