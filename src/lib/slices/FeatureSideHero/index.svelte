@@ -23,11 +23,20 @@
 						<h2 class="text-primary text-base/7 font-semibold">
 							{slice.primary.section_label}
 						</h2>
-						<p
-							class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
-						>
-							{slice.primary.section_title}
-						</p>
+						{#if slice.primary.section_title_link?.url}
+							<PrismicLink
+								field={slice.primary.section_title_link}
+								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
+							>
+								{slice.primary.section_title}
+							</PrismicLink>
+						{:else}
+							<p
+								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
+							>
+								{slice.primary.section_title}
+							</p>
+						{/if}
 						<div class="mt-6 text-lg/8 text-gray-100">
 							<PrismicRichText field={slice.primary.description} />
 							<div class="mt-2 flex space-x-1">

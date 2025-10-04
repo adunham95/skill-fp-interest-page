@@ -1442,6 +1442,16 @@ export interface FeatureSideHeroSliceWithIconFeaturesPrimary {
 	section_title: prismic.KeyTextField;
 
 	/**
+	 * Section Title Link field in *FeatureSideHero → With Icon Features → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_side_hero.with_icon_features.primary.section_title_link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	section_title_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
 	 * Description field in *FeatureSideHero → With Icon Features → Primary*
 	 *
 	 * - **Field Type**: Rich Text

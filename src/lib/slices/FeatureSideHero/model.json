@@ -25,6 +25,17 @@
             "placeholder": ""
           }
         },
+        "section_title_link": {
+          "type": "Link",
+          "config": {
+            "label": "Section Title Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": false,
+            "allowText": false,
+            "repeat": false
+          }
+        },
         "description": {
           "type": "StructuredText",
           "config": {

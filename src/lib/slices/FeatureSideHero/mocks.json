@@ -118,6 +118,14 @@
 						}
 					}
 				]
+			},
+			"section_title_link": {
+				"__TYPE__": "LinkContent",
+				"key": "d05daf61-4616-48b8-b680-33da81780450",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io"
+				}
 			}
 		},
 		"items": []
