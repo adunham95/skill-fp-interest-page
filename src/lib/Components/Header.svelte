@@ -62,7 +62,7 @@
 					aria-controls="mobile-menu"
 					aria-expanded="false"
 				>
-					<span class="absolute -inset-0.5"></span>
+					<span class="absolute -inset-0.5" data-name="Open Menu"></span>
 					<span class="sr-only">Open menu</span>
 					<!--
 					Icon when menu is closed.
@@ -169,7 +169,7 @@
 								onclick={() => (mobileNabOpen = !mobileNabOpen)}
 								class="focus:ring-primaryfocus:outline-none relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-inset"
 							>
-								<span class="absolute -inset-0.5"></span>
+								<span class="absolute -inset-0.5" data-name="Close Menu"></span>
 								<span class="sr-only">Close menu</span>
 								<svg
 									class="size-6"
