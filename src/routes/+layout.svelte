@@ -8,7 +8,7 @@
 	import Footer from '$lib/Components/Footer.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
-	import { PUBLIC_GTAG } from '$env/static/public';
+	import { PUBLIC_GTAG, PUBLIC_MITA_ID } from '$env/static/public';
 
 	injectSpeedInsights();
 
@@ -27,6 +27,30 @@
 			</script>
 		`}
 	{/if}
+
+	<script>
+		var timeout = 3000; // Timeout value to remove the flicker (in milliseconds)
+		!(function (h, i, d, e) {
+			var t,
+				n = h.createElement('style');
+			(n.id = e),
+				(n.innerHTML = 'body{opacity:0}'),
+				h.head.appendChild(n),
+				(t = d),
+				(i.rmfk = function () {
+					var t = h.getElementById(e);
+					t && t.parentNode.removeChild(t);
+				}),
+				setTimeout(i.rmfk, t);
+		})(document, window, timeout, 'abhide');
+	</script>
+
+	<!-- Mida A/B Testing Script (Place in <HEAD> for speed & no flicker) -->
+	<script
+		type="text/javascript"
+		async
+		src={`https://cdn.mida.so/js/optimize.js?key=${PUBLIC_MITA_ID}`}
+	></script>
 </svelte:head>
 
 {#if data.banner}
