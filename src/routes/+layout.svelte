@@ -8,11 +8,35 @@
 	import Footer from '$lib/Components/Footer.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
-	import { PUBLIC_GTAG, PUBLIC_MITA_ID } from '$env/static/public';
+	import { PUBLIC_GTAG, PUBLIC_MITA_ID, PUBLIC_MIXPANEL_TOKEN } from '$env/static/public';
+	import mixpanel from 'mixpanel-browser';
 
 	injectSpeedInsights();
 
 	let { children, data } = $props();
+
+	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
+		debug: false,
+		track_pageview: true,
+		autocapture: {
+			pageview: 'full-url',
+			click: true, // click tracking enabled
+			scroll: true,
+			submit: true,
+			capture_text_content: true,
+			block_url_regexes: [
+				/\/preview/, // Prismic preview route
+				/\/api\/preview/, // Preview API endpoint (if you use it)
+				/\/slice-simulator/ // Slice Simulator route
+			]
+		},
+
+		record_sessions_percent: 1
+	});
+
+	mixpanel.register({
+		property_name: 'property_value'
+	});
 </script>
 
 <svelte:head>
