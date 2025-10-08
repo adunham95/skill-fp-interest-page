@@ -13,8 +13,7 @@
 		PUBLIC_MITA_ID,
 		PUBLIC_MIXPANEL_TOKEN,
 		PUBLIC_TWAK_ID,
-		PUBLIC_TWAK_WIDGET_ID,
-		PUBLIC_VERCEL_ENV
+		PUBLIC_TWAK_WIDGET_ID
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
 
@@ -22,7 +21,7 @@
 
 	let { children, data } = $props();
 
-	let isProd = PUBLIC_VERCEL_ENV === 'production';
+	let isProd = data.env === 'production';
 
 	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
 		debug: false,
