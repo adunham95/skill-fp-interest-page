@@ -8,28 +8,39 @@
 	import Footer from '$lib/Components/Footer.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
-	import { PUBLIC_GTAG, PUBLIC_MITA_ID, PUBLIC_MIXPANEL_TOKEN } from '$env/static/public';
+	import {
+		PUBLIC_GTAG,
+		PUBLIC_MITA_ID,
+		PUBLIC_MIXPANEL_TOKEN,
+		PUBLIC_TWAK_ID,
+		PUBLIC_TWAK_WIDGET_ID,
+		PUBLIC_VERCEL_ENV
+	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
 
 	injectSpeedInsights();
 
 	let { children, data } = $props();
 
+	let isProd = PUBLIC_VERCEL_ENV === 'production';
+
 	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
 		debug: false,
-		track_pageview: true,
-		autocapture: {
-			pageview: 'full-url',
-			click: true, // click tracking enabled
-			scroll: true,
-			submit: true,
-			capture_text_content: true,
-			block_url_regexes: [
-				/\/preview/, // Prismic preview route
-				/\/api\/preview/, // Preview API endpoint (if you use it)
-				/\/slice-simulator/ // Slice Simulator route
-			]
-		},
+		track_pageview: isProd ? true : false,
+		autocapture: isProd
+			? {
+					pageview: 'full-url',
+					click: true, // click tracking enabled
+					scroll: true,
+					submit: true,
+					capture_text_content: true,
+					block_url_regexes: [
+						/\/preview/, // Prismic preview route
+						/\/api\/preview/, // Preview API endpoint (if you use it)
+						/\/slice-simulator/ // Slice Simulator route
+					]
+				}
+			: {},
 
 		record_sessions_percent: 1
 	});
@@ -90,7 +101,7 @@
 
 <Footer {...data.footer?.data} />
 
-{#if data.env !== 'production'}
+{#if isProd}
 	<!-- By using this audio pixel code, the Customer hereby instructs AudioGO toProcess Personal Data in its quality as a sub-processor. The ownership and control of Personal Data remains with Customer, and Customer will always remain the Data Controller. Customer is responsible for compliance with its obligations as Data Controller under the Data Protection Laws, in particular for justification of any transmission of Personal Data to AudioGO (including but not limited providing any required notices and obtaining any required consents from the data subjects), and for its decisions concerning the Processing and use of the Personal Data. -->
 	<img
 		alt="audio-go"
@@ -101,3 +112,35 @@
 		style="display: none; visibility: hidden;"
 	/>
 {/if}
+
+<!--Start of Tawk.to Script-->
+{@html `
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {},
+			Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement('script'),
+				s0 = document.getElementsByTagName('script')[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/${PUBLIC_TWAK_ID}/${PUBLIC_TWAK_WIDGET_ID}';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+	`}
+<!--End of Tawk.to Script-->
+
+<!-- {@html `
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68e6716d7651d7194ef43c8c/1j722m53v';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+`} -->
