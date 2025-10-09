@@ -11,6 +11,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"single_testimonial": {
+							"type": "SharedSlice"
+						},
 						"cta_block": {
 							"type": "SharedSlice"
 						},

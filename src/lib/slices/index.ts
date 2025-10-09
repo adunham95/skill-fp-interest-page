@@ -21,6 +21,7 @@ import PricingOverview from './PricingOverview/index.svelte';
 import FeaturedBlogPosts from './FeaturedBlogPosts/index.svelte';
 import RichText from './RichText/index.svelte';
 import SectionWithSubsections from './SectionWithSubsections/index.svelte';
+import SingleTestimonial from './SingleTestimonial/index.svelte';
 import TeamOverview from './TeamOverview/index.svelte';
 import UseCase from './UseCase/index.svelte';
 
@@ -46,6 +47,7 @@ export const components = {
 	recent_blog_posts: FeaturedBlogPosts,
 	rich_text: RichText,
 	section_with_subsections: SectionWithSubsections,
+	single_testimonial: SingleTestimonial,
 	team_overview: TeamOverview,
 	use_case: UseCase
 };

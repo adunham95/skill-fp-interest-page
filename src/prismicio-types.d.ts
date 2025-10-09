@@ -628,6 +628,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| SingleTestimonialSlice
 	| CtaBlockSlice
 	| NewsletterSignUpSlice
 	| GradientCtaSlice
@@ -707,6 +708,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| SingleTestimonialSlice
 	| NewsletterSignUpSlice
 	| GradientCtaSlice
 	| UseCaseSlice
@@ -3217,6 +3219,81 @@ export type SectionWithSubsectionsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *SingleTestimonial → Default → Primary*
+ */
+export interface SingleTestimonialSliceDefaultPrimary {
+	/**
+	 * Quote field in *SingleTestimonial → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_testimonial.default.primary.quote
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	quote: prismic.RichTextField;
+
+	/**
+	 * User Image field in *SingleTestimonial → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_testimonial.default.primary.user_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	user_image: prismic.ImageField<never>;
+
+	/**
+	 * Name field in *SingleTestimonial → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_testimonial.default.primary.name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * Position field in *SingleTestimonial → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: single_testimonial.default.primary.position
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	position: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for SingleTestimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SingleTestimonialSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<SingleTestimonialSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *SingleTestimonial*
+ */
+type SingleTestimonialSliceVariation = SingleTestimonialSliceDefault;
+
+/**
+ * SingleTestimonial Shared Slice
+ *
+ * - **API ID**: `single_testimonial`
+ * - **Description**: SingleTestimonial
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type SingleTestimonialSlice = prismic.SharedSlice<
+	'single_testimonial',
+	SingleTestimonialSliceVariation
+>;
+
+/**
  * Item in *TeamOverview → Default → Primary → Members*
  */
 export interface TeamOverviewSliceDefaultPrimaryMembersItem {
@@ -3607,6 +3684,10 @@ declare module '@prismicio/client' {
 			SectionWithSubsectionsSliceDefaultPrimary,
 			SectionWithSubsectionsSliceVariation,
 			SectionWithSubsectionsSliceDefault,
+			SingleTestimonialSlice,
+			SingleTestimonialSliceDefaultPrimary,
+			SingleTestimonialSliceVariation,
+			SingleTestimonialSliceDefault,
 			TeamOverviewSlice,
 			TeamOverviewSliceDefaultPrimaryMembersItem,
 			TeamOverviewSliceDefaultPrimary,

@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"single_testimonial": {
+							"type": "SharedSlice"
+						},
 						"newsletter_sign_up": {
 							"type": "SharedSlice"
 						},

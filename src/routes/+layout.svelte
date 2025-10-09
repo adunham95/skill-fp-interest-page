@@ -23,30 +23,27 @@
 
 	let isProd = data.env === 'production';
 
-	mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
-		debug: false,
-		track_pageview: isProd ? true : false,
-		autocapture: isProd
-			? {
-					pageview: 'full-url',
-					click: true, // click tracking enabled
-					scroll: true,
-					submit: true,
-					capture_text_content: true,
-					block_url_regexes: [
-						/\/preview/, // Prismic preview route
-						/\/api\/preview/, // Preview API endpoint (if you use it)
-						/\/slice-simulator/ // Slice Simulator route
-					]
-				}
-			: {},
+	isProd &&
+		mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
+			debug: false,
+			track_pageview: isProd ? true : false,
+			autocapture: isProd
+				? {
+						pageview: 'full-url',
+						click: true, // click tracking enabled
+						scroll: true,
+						submit: true,
+						capture_text_content: true,
+						block_url_regexes: [
+							/\/preview/, // Prismic preview route
+							/\/api\/preview/, // Preview API endpoint (if you use it)
+							/\/slice-simulator/ // Slice Simulator route
+						]
+					}
+				: {},
 
-		record_sessions_percent: 1
-	});
-
-	mixpanel.register({
-		property_name: 'property_value'
-	});
+			record_sessions_percent: 1
+		});
 </script>
 
 <svelte:head>
