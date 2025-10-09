@@ -23,6 +23,7 @@ import RichText from './RichText/index.svelte';
 import SectionWithSubsections from './SectionWithSubsections/index.svelte';
 import SingleTestimonial from './SingleTestimonial/index.svelte';
 import TeamOverview from './TeamOverview/index.svelte';
+import TheWhy from './TheWhy/index.svelte';
 import UseCase from './UseCase/index.svelte';
 
 export const components = {
@@ -49,5 +50,6 @@ export const components = {
 	section_with_subsections: SectionWithSubsections,
 	single_testimonial: SingleTestimonial,
 	team_overview: TeamOverview,
+	the_why: TheWhy,
 	use_case: UseCase
 };

@@ -552,6 +552,31 @@ export interface HeaderDocumentDataNavMenuItem {
 }
 
 /**
+ * Item in *Header → Mobile Navigation Menu*
+ */
+export interface HeaderDocumentDataMobileNavMenuItem {
+	/**
+	 * Menu Item Label field in *Header → Mobile Navigation Menu*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_menu[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Menu Item URL field in *Header → Mobile Navigation Menu*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_menu[].url
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
  * Content for Header documents
  */
 interface HeaderDocumentData {
@@ -600,6 +625,17 @@ interface HeaderDocumentData {
 	nav_menu: prismic.GroupField<Simplify<HeaderDocumentDataNavMenuItem>>;
 
 	/**
+	 * Mobile Navigation Menu field in *Header*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_menu[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	mobile_nav_menu: prismic.GroupField<Simplify<HeaderDocumentDataMobileNavMenuItem>>;
+
+	/**
 	 * Enable Sign In field in *Header*
 	 *
 	 * - **Field Type**: Boolean
@@ -628,6 +664,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| TheWhySlice
 	| SingleTestimonialSlice
 	| CtaBlockSlice
 	| NewsletterSignUpSlice
@@ -3411,6 +3448,98 @@ type TeamOverviewSliceVariation = TeamOverviewSliceDefault;
 export type TeamOverviewSlice = prismic.SharedSlice<'team_overview', TeamOverviewSliceVariation>;
 
 /**
+ * Primary content in *TheWhy → Default → Primary*
+ */
+export interface TheWhySliceDefaultPrimary {
+	/**
+	 * Section Label field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Quote field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.quote
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	quote: prismic.RichTextField;
+
+	/**
+	 * User Image field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.user_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	user_image: prismic.ImageField<never>;
+
+	/**
+	 * Name field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * Position field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.position
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	position: prismic.KeyTextField;
+
+	/**
+	 * Video field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Embed
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.video
+	 * - **Documentation**: https://prismic.io/docs/fields/embed
+	 */
+	video: prismic.EmbedField;
+}
+
+/**
+ * Default variation for TheWhy Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TheWhySliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<TheWhySliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *TheWhy*
+ */
+type TheWhySliceVariation = TheWhySliceDefault;
+
+/**
+ * TheWhy Shared Slice
+ *
+ * - **API ID**: `the_why`
+ * - **Description**: TheWhy
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TheWhySlice = prismic.SharedSlice<'the_why', TheWhySliceVariation>;
+
+/**
  * Primary content in *UseCase → Default → Primary*
  */
 export interface UseCaseSliceDefaultPrimary {
@@ -3588,6 +3717,7 @@ declare module '@prismicio/client' {
 			HeaderDocument,
 			HeaderDocumentData,
 			HeaderDocumentDataNavMenuItem,
+			HeaderDocumentDataMobileNavMenuItem,
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
@@ -3713,6 +3843,10 @@ declare module '@prismicio/client' {
 			TeamOverviewSliceDefaultPrimary,
 			TeamOverviewSliceVariation,
 			TeamOverviewSliceDefault,
+			TheWhySlice,
+			TheWhySliceDefaultPrimary,
+			TheWhySliceVariation,
+			TheWhySliceDefault,
 			UseCaseSlice,
 			UseCaseSliceDefaultPrimary,
 			UseCaseSliceVariation,
