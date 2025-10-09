@@ -30,6 +30,9 @@
 			{#each slice.primary.plans as item}
 				<section class="p-8">
 					<h3 id="tier-starter" class="text-sm/6 font-semibold text-gray-900">{item.name}</h3>
+					<div class="text-gray-600">
+						<PrismicRichText field={item.description} />
+					</div>
 					<p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
 						{#if (item.price || 0) > 0}
 							<span class="text-4xl font-semibold">${item.price}</span>
@@ -147,6 +150,9 @@
 											<span class="text-4xl font-semibold">Free</span>
 										{/if}
 										<span class="text-sm/6 font-semibold">{item.price_suffix}</span>
+									</div>
+									<div class="text-sm text-gray-600">
+										<PrismicRichText field={item.description} />
 									</div>
 									{#if item.cta?.text}
 										<PrismicLink

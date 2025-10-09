@@ -43,6 +43,15 @@
                   "label": "Plan name"
                 }
               },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "strong,em,paragraph"
+                }
+              },
               "price": {
                 "type": "Number",
                 "config": {

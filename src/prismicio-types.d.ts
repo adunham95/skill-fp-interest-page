@@ -2630,6 +2630,16 @@ export interface PricingComparisonTableSliceVariantDefaultPrimaryPlansItem {
 	name: prismic.KeyTextField;
 
 	/**
+	 * Description field in *PricingComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
 	 * Price field in *PricingComparisonTable → Default → Primary → Plans*
 	 *
 	 * - **Field Type**: Number

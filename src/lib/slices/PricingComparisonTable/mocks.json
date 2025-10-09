@@ -63,6 +63,20 @@
 									"value": "free",
 									"type": "Select"
 								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Lorem irure in adipisicing proident laboris enim est. Anim tempor velit amet dolore cupidatat pariatur eu cupidatat aute quis fugiat eu tempor voluptate laborum."
+											}
+										}
+									]
+								}
 							]
 						]
 					},
@@ -95,6 +109,20 @@
 										"url": "google.com",
 										"text": "Testing"
 									}
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Pariatur dolore ipsum fugiat exercitation aute ullamco pariatur dolor. Velit ex proident ipsum fugiat reprehenderit voluptate nostrud laborum minim sunt. Magna ut nisi ipsum exercitation occaecat aliquip quis aliquip nostrud ad magna pariatur in qui consectetur."
+											}
+										}
+									]
 								}
 							]
 						]
