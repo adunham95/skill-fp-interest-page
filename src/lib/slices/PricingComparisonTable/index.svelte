@@ -14,13 +14,15 @@
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="mx-auto max-w-4xl text-center">
-			<h2 class="text-primary text-base/7 font-semibold">{slice.primary.section_label}</h2>
+			<h2 class="text-primary font-title text-base/7 font-semibold">
+				{slice.primary.section_label}
+			</h2>
 			<p class="mt-2 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
 				{slice.primary.title}
 			</p>
 		</div>
 		<div
-			class="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
+			class="font-body mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8"
 		>
 			<PrismicRichText field={slice.primary.subtitle} />
 		</div>
@@ -30,9 +32,11 @@
 			{#each slice.primary.plans as item}
 				<section class="p-8">
 					<h3 id="tier-starter" class="text-sm/6 font-semibold text-gray-900">{item.name}</h3>
-					<div class="text-gray-600">
-						<PrismicRichText field={item.description} />
-					</div>
+					{#if item.description}
+						<div class="text-gray-600">
+							<PrismicRichText field={item.description} />
+						</div>
+					{/if}
 					<p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
 						{#if (item.price || 0) > 0}
 							<span class="text-4xl font-semibold">${item.price}</span>
@@ -151,9 +155,11 @@
 										{/if}
 										<span class="text-sm/6 font-semibold">{item.price_suffix}</span>
 									</div>
-									<div class="text-sm text-gray-600">
-										<PrismicRichText field={item.description} />
-									</div>
+									{#if item.description}
+										<div class="text-sm text-gray-600">
+											<PrismicRichText field={item.description} />
+										</div>
+									{/if}
 									{#if item.cta?.text}
 										<PrismicLink
 											field={item.cta}

@@ -2239,6 +2239,16 @@ export interface HeroSliceWithPhoneScreenShotPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/image
 	 */
 	screenshot: prismic.ImageField<never>;
+
+	/**
+	 * CTA Attribute field in *Hero → WithPhoneScreenShot → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withPhoneScreenShot.primary.cta_attribute
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	cta_attribute: prismic.KeyTextField;
 }
 
 /**

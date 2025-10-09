@@ -11,7 +11,9 @@
 	<div class="bg-background overflow-hidden py-24 sm:py-32">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div class="max-w-2xl">
-				<h2 class="text-primary text-base/7 font-semibold">{slice.primary.section_label}</h2>
+				<h2 class="text-primary font-title text-base/7 font-semibold">
+					{slice.primary.section_label}
+				</h2>
 				<p
 					class="mt-2 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl sm:text-balance"
 				>

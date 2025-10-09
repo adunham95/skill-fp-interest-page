@@ -93,18 +93,18 @@
 			<div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-linear-to-t from-white sm:h-32"></div>
 		</div>
 	{:else if slice.variation == 'withPhoneScreenShot'}
-		<div class="relative isolate md:pt-14">
+		<div class="relative isolate md:pt-1">
 			<div
 				class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pt-15 sm:pb-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:pt-20 lg:pb-40"
 			>
 				<div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
 					<h1
-						class="mt-10 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
+						class=" mt-10 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl"
 					>
 						{slice.primary.hero_text}
 					</h1>
 					<div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-						<p class="text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+						<p class="font-body text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 							{slice.primary.hero_subtext}
 						</p>
 					</div>
@@ -115,6 +115,9 @@
 						{#if slice.primary.secondary_click?.text}
 							<PrismicLink class="btn btn-text--secondary" field={slice.primary.secondary_click} />
 						{/if}
+					</div>
+					<div class="pt-2 text-xs text-gray-400">
+						{slice.primary.cta_attribute}
 					</div>
 				</div>
 				<div class="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">

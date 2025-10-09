@@ -16,13 +16,15 @@
 	<div class="bg-background py-24 sm:py-32">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div class="mx-auto max-w-2xl lg:text-center">
-				<h2 class="text-primary text-base/7 font-semibold">{slice.primary.preheading}</h2>
+				<h2 class="text-primary font-title text-base/7 font-semibold">
+					{slice.primary.preheading}
+				</h2>
 				<p
-					class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance"
+					class=" mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance"
 				>
 					{slice.primary.section_title}
 				</p>
-				<div class="mt-6 text-lg/8 text-gray-600">
+				<div class="font-body mt-6 text-lg/8 text-gray-600">
 					<PrismicRichText field={slice.primary.description} />
 				</div>
 			</div>
@@ -38,7 +40,9 @@
 								{item.label}
 							</dt>
 							<dd class="mt-4 flex flex-auto flex-col text-base/7 text-gray-600">
-								<PrismicRichText field={item.audience_description} />
+								<div class="font-body">
+									<PrismicRichText field={item.audience_description} />
+								</div>
 								{#if item.cta?.text}
 									<PrismicLink field={item.cta} class="btn btn-text--primary mt-2" />
 								{/if}

@@ -20,25 +20,27 @@
 			>
 				<div class="lg:pt-4 lg:pr-8">
 					<div class="lg:max-w-lg">
-						<h2 class="text-primary text-base/7 font-semibold">
+						<h2 class="text-primary font-title text-base/7 font-semibold">
 							{slice.primary.section_label}
 						</h2>
 						{#if slice.primary.section_title_link?.url}
 							<PrismicLink
 								field={slice.primary.section_title_link}
-								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
+								class=" mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
 							>
 								{slice.primary.section_title}
 							</PrismicLink>
 						{:else}
 							<p
-								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
+								class=" mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
 							>
 								{slice.primary.section_title}
 							</p>
 						{/if}
 						<div class="mt-6 text-lg/8 text-gray-100">
-							<PrismicRichText field={slice.primary.description} />
+							<div class="font-body">
+								<PrismicRichText field={slice.primary.description} />
+							</div>
 							<div class="mt-2 flex space-x-1">
 								{#each slice.primary.cta_options as link (link.key)}
 									<PrismicLink
@@ -51,11 +53,11 @@
 						<dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-300 lg:max-w-none">
 							{#each slice.primary.features as item}
 								<div class="relative pl-9">
-									<dt class="inline font-semibold text-gray-50">
+									<dt class=" inline font-semibold text-gray-50">
 										<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} />
 										{item.feature_title}
 									</dt>
-									<dd class="inline"><PrismicRichText field={item.feature_desc} /></dd>
+									<dd class="font-body inline"><PrismicRichText field={item.feature_desc} /></dd>
 								</div>
 							{/each}
 						</dl>

@@ -46,8 +46,8 @@
 				}
 			},
 			"secondary_click": {
-				"__TYPE__": "LinkContent",
 				"key": "2fe0bdd2-52ef-4638-9803-006e50e60acd",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "https://prismic.io",
@@ -156,6 +156,11 @@
 				"credits": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"cta_attribute": {
+				"__TYPE__": "FieldContent",
+				"value": "movement",
+				"type": "Text"
 			}
 		},
 		"items": [

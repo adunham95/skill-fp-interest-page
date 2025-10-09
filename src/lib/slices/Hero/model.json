@@ -1,178 +1,185 @@
 {
-	"id": "hero",
-	"type": "SharedSlice",
-	"name": "Hero",
-	"description": "Hero",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"hero_image": {
-					"type": "Image",
-					"config": {
-						"label": "Hero Image",
-						"constraint": {},
-						"thumbnails": []
-					}
-				},
-				"hero_text": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Text",
-						"placeholder": ""
-					}
-				},
-				"hero_subtext": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Subtext",
-						"placeholder": ""
-					}
-				},
-				"primary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Primary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				},
-				"secondary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Secondary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				}
-			},
-			"items": {}
-		},
-		{
-			"id": "offsetImage",
-			"name": "Offset Image",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"hero_image": {
-					"type": "Image",
-					"config": {
-						"label": "Hero Image",
-						"constraint": {
-							"width": 1280
-						},
-						"thumbnails": []
-					}
-				},
-				"hero_text": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Text",
-						"placeholder": ""
-					}
-				},
-				"hero_subtext": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Subtext",
-						"placeholder": ""
-					}
-				},
-				"primary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Primary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				},
-				"secondary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Secondary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				}
-			},
-			"items": {}
-		},
-		{
-			"id": "withPhoneScreenShot",
-			"name": "WithPhoneScreenShot",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"hero_text": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Text",
-						"placeholder": ""
-					}
-				},
-				"hero_subtext": {
-					"type": "Text",
-					"config": {
-						"label": "Hero Subtext",
-						"placeholder": ""
-					}
-				},
-				"primary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Primary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				},
-				"secondary_click": {
-					"type": "Link",
-					"config": {
-						"label": "Secondary Click",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": false
-					}
-				},
-				"screenshot": {
-					"type": "Image",
-					"config": {
-						"label": "Screenshot",
-						"constraint": {
-							"width": 1170,
-							"height": 2532
-						},
-						"thumbnails": []
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "hero_text": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": ""
+          }
+        },
+        "hero_subtext": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Subtext",
+            "placeholder": ""
+          }
+        },
+        "primary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "secondary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "offsetImage",
+      "name": "Offset Image",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero_image": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {
+              "width": 1280
+            },
+            "thumbnails": []
+          }
+        },
+        "hero_text": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": ""
+          }
+        },
+        "hero_subtext": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Subtext",
+            "placeholder": ""
+          }
+        },
+        "primary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "secondary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "withPhoneScreenShot",
+      "name": "WithPhoneScreenShot",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "hero_text": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Text",
+            "placeholder": ""
+          }
+        },
+        "hero_subtext": {
+          "type": "Text",
+          "config": {
+            "label": "Hero Subtext",
+            "placeholder": ""
+          }
+        },
+        "primary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Primary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "secondary_click": {
+          "type": "Link",
+          "config": {
+            "label": "Secondary Click",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "screenshot": {
+          "type": "Image",
+          "config": {
+            "label": "Screenshot",
+            "constraint": {
+              "width": 1170,
+              "height": 2532
+            },
+            "thumbnails": []
+          }
+        },
+        "cta_attribute": {
+          "type": "Text",
+          "config": {
+            "label": "CTA Attribute",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }
