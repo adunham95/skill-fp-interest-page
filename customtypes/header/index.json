@@ -47,6 +47,27 @@
 					}
 				}
 			},
+			"mobile_nav_menu": {
+				"type": "Group",
+				"config": {
+					"label": "Mobile Navigation Menu",
+					"fields": {
+						"label": {
+							"type": "Text",
+							"config": {
+								"label": "Menu Item Label"
+							}
+						},
+						"url": {
+							"type": "Link",
+							"config": {
+								"label": "Menu Item URL",
+								"select": null
+							}
+						}
+					}
+				}
+			},
 			"enable_sign_in": {
 				"type": "Boolean",
 				"config": {

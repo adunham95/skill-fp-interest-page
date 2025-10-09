@@ -16,6 +16,10 @@
 			label: KeyTextField;
 			url: LinkField;
 		}>;
+		mobile_nav_menu?: GroupField<{
+			label: KeyTextField;
+			url: LinkField;
+		}>;
 		cta_text?: KeyTextField; // now optional
 		cta_url?: LinkField; // now optional
 		enable_sign_in?: BooleanField;
@@ -26,6 +30,7 @@
 		logo,
 		tagline,
 		nav_menu = [],
+		mobile_nav_menu = [],
 		cta_text,
 		cta_url,
 		enable_sign_in = false
@@ -105,9 +110,9 @@
 		{/if}
 		<div class="hidden lg:flex lg:gap-x-12">
 			{#each nav_menu as nav}
-				<PrismicLink field={nav.url} class="text-sm/6 font-semibold text-gray-900"
-					>{nav.label}</PrismicLink
-				>
+				<PrismicLink field={nav.url} class="text-sm/6 font-semibold text-gray-900">
+					{nav.label}
+				</PrismicLink>
 			{/each}
 		</div>
 		<div class="hidden items-center md:flex md:flex-1 md:flex-row md:justify-end">
@@ -202,6 +207,14 @@
 								Login
 							</a>
 						{/if}
+						{#each mobile_nav_menu as nav}
+							<PrismicLink
+								field={nav.url}
+								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
+							>
+								{nav.label}
+							</PrismicLink>
+						{/each}
 						{#each nav_menu as nav}
 							<PrismicLink
 								field={nav.url}
