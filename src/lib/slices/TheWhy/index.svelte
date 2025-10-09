@@ -19,9 +19,9 @@
 				{slice.primary.section_label}
 			</h2>
 			<div
-				class="lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8"
+				class="md:mx-0 md:grid md:max-w-none md:grid-cols-2 md:gap-x-16 md:gap-y-8 xl:grid-rows-1 xl:gap-x-8"
 			>
-				<div class="mt-6 lg:mt-0 xl:col-end-1 xl:row-start-1">
+				<div class="mt-6 lg:mt-0">
 					<figure class="">
 						<blockquote class="font-body text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
 							<PrismicRichText field={slice.primary.quote} />
