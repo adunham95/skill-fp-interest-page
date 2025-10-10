@@ -25,7 +25,7 @@
 				<h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-7xl">
 					{slice.primary.title}
 				</h1>
-				<div class="mt-8 text-lg font-medium text-pretty text-gray-200 sm:text-xl/8">
+				<div class="font-body mt-8 text-lg font-medium text-pretty text-gray-200 sm:text-xl/8">
 					<PrismicRichText field={slice.primary.description} />
 				</div>
 			</div>

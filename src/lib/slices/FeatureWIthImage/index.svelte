@@ -14,15 +14,15 @@
 				<div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
 					<div class="px-6 lg:px-0 lg:pt-4 lg:pr-4">
 						<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-							<h2 class="text-primary text-base/7 font-semibold">
+							<h2 class="text-primary font-title text-base/7 font-semibold">
 								{slice.primary.tag}
 							</h2>
 							<p
-								class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
+								class="font-paragraph mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-50 sm:text-5xl"
 							>
 								{slice.primary.title}
 							</p>
-							<div class="mt-6 text-lg/8 text-gray-100">
+							<div class="font-body mt-6 text-lg/8 text-gray-100">
 								<PrismicRichText field={slice.primary.description} />
 							</div>
 
@@ -33,7 +33,7 @@
 											<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} />
 											{item.feature_title}
 										</dt>
-										<dd class="inline"><PrismicRichText field={item.feature_desc} /></dd>
+										<dd class="font-body inline"><PrismicRichText field={item.feature_desc} /></dd>
 									</div>
 								{/each}
 							</dl>

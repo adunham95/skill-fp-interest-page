@@ -12,11 +12,11 @@
 		<div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
 			{#each slice.primary.subsections as item}
 				<h3
-					class="font-title pb-6 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl"
+					class="pb-6 text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-3xl"
 				>
 					{item.subsection_heading}
 				</h3>
-				<div class="prose">
+				<div class="prose font-body">
 					<PrismicRichText field={item.content} />
 				</div>
 			{/each}

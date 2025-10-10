@@ -41,7 +41,7 @@
 							<div class="font-body">
 								<PrismicRichText field={slice.primary.description} />
 							</div>
-							<div class="mt-2 flex space-x-1">
+							<div class="mt-2 flex flex-col space-y-2 space-x-1 md:flex-row md:space-y-0">
 								{#each slice.primary.cta_options as link (link.key)}
 									<PrismicLink
 										field={link}

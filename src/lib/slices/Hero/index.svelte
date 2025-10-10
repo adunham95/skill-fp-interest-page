@@ -28,7 +28,7 @@
 							>
 								{slice.primary.hero_text}
 							</h1>
-							<p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+							<p class="font-body mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 								{slice.primary.hero_subtext}
 							</p>
 							<div class="mt-10 flex items-center gap-x-6">
@@ -69,7 +69,7 @@
 						{slice.primary.hero_text}
 					</h1>
 					<div class="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-						<p class="text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
+						<p class="font-body text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 							{slice.primary.hero_subtext}
 						</p>
 						<div class="mt-10 flex items-center gap-x-6">

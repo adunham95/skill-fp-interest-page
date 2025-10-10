@@ -11,13 +11,13 @@
 	<div class="bg-background py-24 sm:py-32">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 			<div class="mx-auto max-w-2xl text-center">
-				<h2 class="text-primary text-base/7 font-semibold">{slice.primary.eyebrow}</h2>
+				<h2 class="text-primary font-title text-base/7 font-semibold">{slice.primary.eyebrow}</h2>
 				<p
-					class="font-title mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl sm:leading-14"
+					class="font-paragraph mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl sm:leading-14"
 				>
 					{slice.primary.title}
 				</p>
-				<div class="mt-6 text-lg/8 text-gray-900">
+				<div class="font-body mt-6 text-lg/8 text-gray-900">
 					<PrismicRichText field={slice.primary.description} />
 				</div>
 			</div>

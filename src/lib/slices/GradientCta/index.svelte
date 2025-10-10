@@ -14,7 +14,7 @@
 				<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
 					{slice.primary.title}
 				</h2>
-				<div class="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-600">
+				<div class="font-body mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-600">
 					<PrismicRichText field={slice.primary.description} />
 				</div>
 				<div class="mt-10 flex items-center justify-center gap-x-6">

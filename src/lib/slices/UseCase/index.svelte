@@ -24,7 +24,7 @@
 				<dl class="col-span-3 grid grid-cols-1 gap-8 sm:grid-cols-2">
 					<div>
 						<dt class="text-base/7 font-semibold text-gray-900">{slice.primary.problem_title}</dt>
-						<dd class="mt-1 text-base/7 text-gray-600">
+						<dd class="font-body mt-1 text-base/7 text-gray-600">
 							<PrismicRichText field={slice.primary.problem_description} />
 						</dd>
 					</div>
@@ -32,7 +32,7 @@
 						<dt class="text-base/7 font-semibold text-gray-900">
 							{slice.primary.solution_title}
 						</dt>
-						<dd class="mt-1 text-base/7 text-gray-600">
+						<dd class="font-body mt-1 text-base/7 text-gray-600">
 							<PrismicRichText field={slice.primary.solution_description} />
 						</dd>
 					</div>

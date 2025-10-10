@@ -7,6 +7,10 @@
 	const { slice }: Props = $props();
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} class="prose">
+<section
+	data-slice-type={slice.slice_type}
+	data-slice-variation={slice.variation}
+	class="prose font-body mx-auto max-w-7xl"
+>
 	<PrismicRichText field={slice.primary.content} />
 </section>
