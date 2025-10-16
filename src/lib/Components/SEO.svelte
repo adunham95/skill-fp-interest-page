@@ -13,6 +13,7 @@
 		url?: string;
 		index?: boolean;
 		meta_image?: ImageFieldImage;
+		meta_image_url?: string;
 	};
 
 	let {
@@ -21,7 +22,8 @@
 		meta_description = 'Career Fingerprint helps professionals and students organize accomplishments, prepare for interviews, and create impactful resumes.',
 		url = `${CANONICAL_DOMAIN}${page.url.pathname}`,
 		index = page.data.index ?? true,
-		meta_image
+		meta_image,
+		meta_image_url
 	}: SeoData = $props();
 </script>
 
@@ -63,7 +65,7 @@
 	<meta property="og:url" content={url} />
 	<meta property="og:site_name" content={siteName} />
 
-	<meta property="og:image" content={asImageSrc(meta_image)} />
+	<meta property="og:image" content={meta_image_url || asImageSrc(meta_image)} />
 
 	<!-- SCHEMA JSONLD -->
 	{@render jsonLdWebsite()}
