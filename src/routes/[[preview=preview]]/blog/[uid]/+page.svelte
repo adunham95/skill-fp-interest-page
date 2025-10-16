@@ -9,7 +9,7 @@
 </script>
 
 <Seo
-	meta_image_url={`https://mycareerginfingerprint.com/api/og?message=${data.page.data.meta_title?.toString()}`}
+	meta_image_url={`https://mycareerfingerprint.com/api/og?message=${data.page.data.meta_title?.toString()}`}
 	pageName={data.page.data.meta_title?.toString()}
 	meta_description={data.page.data.meta_description?.toString()}
 />
