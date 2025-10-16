@@ -8,7 +8,7 @@
 </script>
 
 <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<div class="relative isolate overflow-hidden bg-white">
+	<div class="relative isolate overflow-hidden">
 		<div class="px-6 py-24 sm:py-32 lg:px-8">
 			<div class="mx-auto max-w-2xl text-center">
 				<h2 class="text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
