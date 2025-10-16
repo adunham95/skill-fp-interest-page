@@ -14,7 +14,7 @@
 	meta_description={data.page.data.meta_description?.toString()}
 />
 
-<div class="mx-auto max-w-5xl p-6 text-base/7 text-gray-700 lg:px-8">
+<div class="mx-auto max-w-5xl px-0 pt-6 text-base/7 text-gray-700 lg:px-8">
 	<p class="text-primary text-base/7 font-semibold">{data.page.data.label}</p>
 	<h1 class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
 		{data.page.data.title}
