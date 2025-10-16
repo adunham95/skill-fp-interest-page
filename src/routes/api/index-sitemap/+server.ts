@@ -1,6 +1,5 @@
-import { PUBLIC_VERCEL_URL } from '$env/static/public';
-
 export const GET = async () => {
-	await fetch(`https://www.google.com/ping?sitemap=${PUBLIC_VERCEL_URL}`);
+	const sitemapUrl = 'https://mycareerfingerprint.com/sitemap.xml';
+	await fetch(`https://www.google.com/ping?sitemap=${sitemapUrl}`);
 	return new Response('Pinged Google Sitemap');
 };
