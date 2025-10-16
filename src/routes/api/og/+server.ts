@@ -7,13 +7,21 @@ import Card from '$lib/Components/OGCard.svelte';
 import { html as toReactNode } from 'satori-html';
 import { render } from 'svelte/server';
 
-const fontData = read(JosefinSans).arrayBuffer();
+let fontDataPromise: Promise<ArrayBuffer> | null = null;
+function getFont() {
+	if (!fontDataPromise) {
+		fontDataPromise = read(JosefinSans).arrayBuffer();
+	}
+	return fontDataPromise;
+}
+
+const cache = new Map<string, Uint8Array>();
 
 const height = 630;
 const width = 1200;
 
 export const GET = async ({ url }) => {
-	const message = url.searchParams.get('message') ?? undefined;
+	const message = url.searchParams.get('message') ?? '';
 	const renderOutput = render(Card, {
 		props: {
 			message
@@ -28,7 +36,7 @@ export const GET = async ({ url }) => {
 		fonts: [
 			{
 				name: 'Josefin Sans',
-				data: await fontData,
+				data: await getFont(),
 				style: 'normal'
 			}
 		],
@@ -37,19 +45,17 @@ export const GET = async ({ url }) => {
 	});
 
 	const resvg = new Resvg(svg, {
-		fitTo: {
-			mode: 'width',
-			value: width
-		}
+		fitTo: { mode: 'width', value: width }
 	});
 
-	const image = resvg.render();
+	const png = new Uint8Array(resvg.render().asPng());
+	cache.set(message, png);
 
-	return new Response(new Uint8Array(image.asPng()), {
+	return new Response(png, {
 		headers: {
 			'content-type': 'image/png',
 			// Cache in CDN for 1 day, allow serving stale up to 1 week if revalidation fails
-			'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800'
+			'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800'
 		}
 	});
 };
