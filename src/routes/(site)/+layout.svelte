@@ -27,7 +27,7 @@
 
 	onMount(async () => {
 		const clarity = await import('@microsoft/clarity');
-		clarity.init(projectId);
+		clarity.default(projectId);
 	});
 
 	isProd &&
