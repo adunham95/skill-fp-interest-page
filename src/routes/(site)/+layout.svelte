@@ -26,7 +26,7 @@
 	let isProd = data.env === 'production';
 
 	onMount(async () => {
-		const clarity = await '@microsoft/clarity';
+		const clarity = await import('@microsoft/clarity');
 		clarity.init(projectId);
 	});
 
