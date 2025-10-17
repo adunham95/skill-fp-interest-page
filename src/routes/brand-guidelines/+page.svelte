@@ -205,12 +205,27 @@
 		<h2 class="font-title text-1 pb-5">Photos Assets</h2>
 		<p class="text-5 pb-5">This is a set of pre-made assets to use</p>
 		<div class="grid grid-cols-3 gap-2">
-			<a href="/assets/dashboard-on-laptop.png">
-				<img src="/assets/dashboard-on-laptop.png" alt="Dashboard on laptop" class="object-cover" />
-			</a>
-			<a href="/assets/sign-in-screenshot.png">
-				<img src="/assets/sign-in-screenshot.png" alt="Sing in screenshot" class="object-cover" />
-			</a>
+			{@render assetImageDownload('/assets/dashboard-on-laptop.png', 'Dashboard on Laptop')}
+			{@render assetImageDownload('/assets/sign-in-screenshot.png', 'Sign in screenshot')}
+			{@render assetImageDownload(
+				'/assets/finger-background-square.png',
+				'Fingerprint Background Square'
+			)}
+			{@render assetImageDownload(
+				'/assets/finger-background-wide.png',
+				'Fingerprint Background Wide'
+			)}
 		</div>
 	</section>
 </PageContainer>
+
+{#snippet assetImageDownload(src: string, name: string)}
+	<a href={src} download class="group relative aspect-square overflow-hidden rounded-sm">
+		<div style={`background-image: url(${src});`} class="h-full w-full bg-cover bg-center">
+			<span
+				class=" absolute bottom-full w-full bg-gray-800/50 p-2 text-white transition group-hover:bottom-0"
+				>{name}</span
+			>
+		</div>
+	</a>
+{/snippet}
