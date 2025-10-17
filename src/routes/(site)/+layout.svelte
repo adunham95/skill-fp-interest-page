@@ -15,20 +15,12 @@
 		PUBLIC_CLARITY_ID
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
-	import { onMount } from 'svelte';
-
-	const projectId = PUBLIC_CLARITY_ID || '';
 
 	injectSpeedInsights();
 
 	let { children, data } = $props();
 
 	let isProd = data.env === 'production';
-
-	onMount(async () => {
-		const clarity = await import('@microsoft/clarity');
-		clarity.default(projectId);
-	});
 
 	isProd &&
 		mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
