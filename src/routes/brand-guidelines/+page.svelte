@@ -13,33 +13,33 @@
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 			<div class="md:col-span-3">
 				<p class="text-5">Primary Logo</p>
-				<div class="flex justify-center py-2">
+				<a href="/logo-brand.svg" download class="flex justify-center py-2">
 					<img src="/logo-brand.svg" alt="Brand Logo" />
-				</div>
+				</a>
 			</div>
 			<div class="">
 				<p class="text-5">Secondary Logo</p>
-				<div class="flex justify-center py-2">
+				<a href="/logo-secondary.svg" download class="flex justify-center py-2">
 					<img src="/logo-secondary.svg" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
+				</a>
 			</div>
 			<div class="">
 				<p class="text-5">Accent Logo</p>
-				<div class="flex justify-center py-2">
+				<a href="/logo-accent.svg" download class="flex justify-center py-2">
 					<img src="/logo-accent.svg" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
+				</a>
 			</div>
 			<div class="">
 				<p class="text-5">Light Logo</p>
-				<div class="flex justify-center bg-black py-2">
+				<a href="/logo-light.svg" download class="flex justify-center bg-black py-2">
 					<img src="/logo-light.svg" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
+				</a>
 			</div>
 			<div class="">
 				<p class="text-5">Dark Logo</p>
-				<div class="flex justify-center py-2">
+				<a href="/logo-dark.svg" download class="flex justify-center py-2">
 					<img src="/logo-dark.svg" alt="Secondary Brand Logo" class=" max-w-48" />
-				</div>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -194,6 +194,23 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing
 				</p>
 			</div>
+		</div>
+	</section>
+	<div class="relative">
+		<div aria-hidden="true" class="absolute inset-0 flex items-center">
+			<div class="w-full border-t border-gray-300"></div>
+		</div>
+	</div>
+	<section class="py-32">
+		<h2 class="font-title text-1 pb-5">Photos Assets</h2>
+		<p class="text-5 pb-5">This is a set of pre-made assets to use</p>
+		<div class="grid grid-cols-3 gap-2">
+			<a href="/assets/dashboard-on-laptop.png">
+				<img src="/assets/dashboard-on-laptop.png" alt="Dashboard on laptop" class="object-cover" />
+			</a>
+			<a href="/assets/sign-in-screenshot.png">
+				<img src="/assets/sign-in-screenshot.png" alt="Sing in screenshot" class="object-cover" />
+			</a>
 		</div>
 	</section>
 </PageContainer>
