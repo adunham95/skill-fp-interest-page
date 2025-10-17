@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import '../button-variants.css';
+	import Clarity from '@microsoft/clarity';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { repositoryName } from '$lib/prismicio';
 	import Banner from '$lib/Components/Banner.svelte';
@@ -13,11 +14,16 @@
 		PUBLIC_MITA_ID,
 		PUBLIC_MIXPANEL_TOKEN,
 		PUBLIC_TWAK_ID,
-		PUBLIC_TWAK_WIDGET_ID
+		PUBLIC_TWAK_WIDGET_ID,
+		PUBLIC_CLARITY_ID
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
 
+	const projectId = PUBLIC_CLARITY_ID || '';
+
 	injectSpeedInsights();
+
+	Clarity.init(projectId);
 
 	let { children, data } = $props();
 
