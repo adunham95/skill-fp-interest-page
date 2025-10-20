@@ -215,6 +215,8 @@
 				'/assets/finger-background-wide.png',
 				'Fingerprint Background Wide'
 			)}
+			{@render assetImageDownload('/assets/banner-image-v2.png', 'Logo Banner Wide')}
+			{@render assetImageDownload('/assets/square-image-v2.png', 'Square Banner Wide')}
 		</div>
 	</section>
 </PageContainer>
