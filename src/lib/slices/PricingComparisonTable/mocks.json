@@ -77,6 +77,13 @@
 										}
 									]
 								}
+							],
+							[
+								"show_prices",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
 							]
 						]
 					},
@@ -123,6 +130,13 @@
 											}
 										}
 									]
+								}
+							],
+							[
+								"show_prices",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
 								}
 							]
 						]
@@ -200,6 +214,22 @@
 				"__TYPE__": "FieldContent",
 				"value": "crop",
 				"type": "Text"
+			},
+			"section_ctas": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"key": "0ad7f2a1-9e77-4e5c-9b75-b31facea3a5d",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "ExternalLink",
+							"url": "http://google.com",
+							"text": "please",
+							"variant": "Secondary"
+						}
+					}
+				]
 			}
 		},
 		"items": []

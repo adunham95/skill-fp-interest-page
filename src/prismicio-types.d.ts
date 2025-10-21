@@ -2697,6 +2697,17 @@ export interface PricingComparisonTableSliceVariantDefaultPrimaryPlansItem {
 	price: prismic.NumberField;
 
 	/**
+	 * Show Prices field in *PricingComparisonTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.plans[].show_prices
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	show_prices: prismic.BooleanField;
+
+	/**
 	 * Price Suffix (e.g. /month) field in *PricingComparisonTable → Default → Primary → Plans*
 	 *
 	 * - **Field Type**: Text
@@ -2828,6 +2839,18 @@ export interface PricingComparisonTableSliceVariantDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	subtitle: prismic.RichTextField;
+
+	/**
+	 * Section CTAs field in *PricingComparisonTable → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_comparison_table.variant_default.primary.section_ctas
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	section_ctas: prismic.Repeatable<
+		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
+	>;
 
 	/**
 	 * Plans field in *PricingComparisonTable → Default → Primary*

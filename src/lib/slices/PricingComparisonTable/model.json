@@ -32,6 +32,21 @@
             "label": "Subtitle"
           }
         },
+        "section_ctas": {
+          "type": "Link",
+          "config": {
+            "label": "Section CTAs",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
         "plans": {
           "type": "Group",
           "config": {
@@ -56,6 +71,15 @@
                 "type": "Number",
                 "config": {
                   "label": "Price"
+                }
+              },
+              "show_prices": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Show Prices",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": true
                 }
               },
               "price_suffix": {

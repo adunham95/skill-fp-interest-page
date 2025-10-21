@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/Components/Button.svelte';
 	import type { Content } from '@prismicio/client';
 	import { PrismicLink, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 
@@ -27,9 +28,16 @@
 			<PrismicRichText field={slice.primary.subtitle} />
 		</div>
 
+		<div class="flex justify-center">
+			{#each slice.primary.section_ctas as link (link.key)}
+				<Button {...link} />
+			{/each}
+		</div>
+
 		<!-- xs to lg -->
 		<div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
 			{#each slice.primary.plans as item}
+				{console.log({ item })}
 				<section class="p-8">
 					<h3 id="tier-starter" class="text-sm/6 font-semibold text-gray-900">{item.name}</h3>
 					{#if item.description}
@@ -37,14 +45,16 @@
 							<PrismicRichText field={item.description} />
 						</div>
 					{/if}
-					<p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
-						{#if (item.price || 0) > 0}
-							<span class="text-4xl font-semibold">${item.price}</span>
-						{:else}
-							<span class="text-4xl font-semibold">Free</span>
-						{/if}
-						<span class="text-sm font-semibold">{item.price_suffix}</span>
-					</p>
+					{#if item.show_prices}
+						<p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
+							{#if (item.price || 0) > 0}
+								<span class="text-4xl font-semibold">${item.price}</span>
+							{:else}
+								<span class="text-4xl font-semibold">Free</span>
+							{/if}
+							<span class="text-sm font-semibold">{item.price_suffix}</span>
+						</p>
+					{/if}
 					{#if item.cta?.text}
 						<PrismicLink
 							field={item.cta}
@@ -54,7 +64,7 @@
 
 					<ul role="list" class="mt-10 space-y-4 text-sm/6 text-gray-900">
 						{#each slice.primary.features as feature}
-							{#if item.type === 'free' && feature.free_included}
+							{#if item.type === 'free' && (feature.free_included || feature.free_value)}
 								<li class="flex gap-x-3">
 									<svg
 										viewBox="0 0 20 20"
@@ -84,7 +94,7 @@
 										{/if}
 									</div>
 								</li>
-							{:else if item.type === 'premium' && feature.premium_included}
+							{:else if item.type === 'premium' && (feature.premium_included || feature.premium_value)}
 								<li class="flex gap-x-3">
 									<svg
 										viewBox="0 0 20 20"
@@ -147,14 +157,16 @@
 							<th scope="row"><span class="sr-only">Price</span></th>
 							{#each slice.primary.plans as item}
 								<td class="px-6 pt-2 xl:px-8">
-									<div class="flex items-baseline gap-x-1 text-gray-900">
-										{#if (item.price || 0) > 0}
-											<span class="text-4xl font-semibold">${item.price}</span>
-										{:else}
-											<span class="text-4xl font-semibold">Free</span>
-										{/if}
-										<span class="text-sm/6 font-semibold">{item.price_suffix}</span>
-									</div>
+									{#if item.show_prices}
+										<div class="flex items-baseline gap-x-1 text-gray-900">
+											{#if (item.price || 0) > 0}
+												<span class="text-4xl font-semibold">${item.price}</span>
+											{:else}
+												<span class="text-4xl font-semibold">Free</span>
+											{/if}
+											<span class="text-sm/6 font-semibold">{item.price_suffix}</span>
+										</div>
+									{/if}
 									{#if item.description}
 										<div class="text-sm text-gray-600">
 											<PrismicRichText field={item.description} />
