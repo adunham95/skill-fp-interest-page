@@ -10,7 +10,7 @@
 <section
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	class="prose font-body mx-auto max-w-7xl"
+	class="prose font-body mx-auto max-w-7xl px-2"
 >
 	<PrismicRichText field={slice.primary.content} />
 </section>
