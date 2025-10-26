@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
-	import { PrismicImage, type SliceComponentProps } from '@prismicio/svelte';
+	import { PrismicImage, PrismicLink, type SliceComponentProps } from '@prismicio/svelte';
 
 	type Props = SliceComponentProps<Content.TeamOverviewSlice>;
 
@@ -24,15 +24,29 @@
 		<ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
 			{#each slice.primary.members as item}
 				<li>
-					<div class="flex items-center gap-x-6">
-						<PrismicImage class="size-16 rounded-full" field={item.avatar} />
-						<div>
-							<h3 class="text-lg font-semibold tracking-tight text-gray-900">
-								{item.name}
-							</h3>
-							<p class="text-primary text-sm/6 font-semibold">{item.role}</p>
+					{#if item.user_link}
+						<PrismicLink field={item.user_link}>
+							<div class="flex items-center gap-x-6">
+								<PrismicImage class="size-16 rounded-full" field={item.avatar} />
+								<div>
+									<h3 class="text-lg font-semibold tracking-tight text-gray-900">
+										{item.name}
+									</h3>
+									<p class="text-primary text-sm/6 font-semibold">{item.role}</p>
+								</div>
+							</div>
+						</PrismicLink>
+					{:else}
+						<div class="flex items-center gap-x-6">
+							<PrismicImage class="size-16 rounded-full" field={item.avatar} />
+							<div>
+								<h3 class="text-lg font-semibold tracking-tight text-gray-900">
+									{item.name}
+								</h3>
+								<p class="text-primary text-sm/6 font-semibold">{item.role}</p>
+							</div>
 						</div>
-					</div>
+					{/if}
 				</li>
 			{/each}
 		</ul>

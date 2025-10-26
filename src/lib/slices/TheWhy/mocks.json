@@ -7,6 +7,15 @@
 				"__TYPE__": "FieldContent",
 				"value": "mouse",
 				"type": "Text"
+			},
+			"user_link": {
+				"__TYPE__": "LinkContent",
+				"key": "7af20f7e-f8cb-43ce-a596-1c47353508e2",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com",
+					"text": "pet"
+				}
 			}
 		},
 		"items": []

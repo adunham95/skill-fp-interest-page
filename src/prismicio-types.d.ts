@@ -3406,6 +3406,16 @@ export interface TeamOverviewSliceDefaultPrimaryMembersItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	role: prismic.KeyTextField;
+
+	/**
+	 * User Link field in *TeamOverview → Default → Primary → Members*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: team_overview.default.primary.members[].user_link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	user_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
@@ -3533,6 +3543,16 @@ export interface TheWhySliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/embed
 	 */
 	video: prismic.EmbedField;
+
+	/**
+	 * User Link field in *TheWhy → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: the_why.default.primary.user_link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	user_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**

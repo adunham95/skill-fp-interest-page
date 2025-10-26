@@ -3,6 +3,7 @@
 	import {
 		PrismicEmbed,
 		PrismicImage,
+		PrismicLink,
 		PrismicRichText,
 		type SliceComponentProps
 	} from '@prismicio/svelte';
@@ -27,21 +28,47 @@
 							<PrismicRichText field={slice.primary.quote} />
 						</blockquote>
 						<figcaption class="mt-10">
-							<PrismicImage field={slice.primary.user_image} class="mx-auto size-10 rounded-full" />
+							{#if slice.primary.user_link}
+								<PrismicLink field={slice.primary.user_link}>
+									<PrismicImage
+										field={slice.primary.user_image}
+										class="mx-auto size-10 rounded-full"
+									/>
 
-							<div class="mt-4 flex items-center justify-center space-x-3 text-base">
-								<div class="font-semibold text-gray-900">{slice.primary.name}</div>
-								<svg
-									viewBox="0 0 2 2"
-									width="3"
-									height="3"
-									aria-hidden="true"
-									class="fill-gray-900"
-								>
-									<circle r="1" cx="1" cy="1" />
-								</svg>
-								<div class="text-gray-600">{slice.primary.position}</div>
-							</div>
+									<div class="mt-4 flex items-center justify-center space-x-3 text-base">
+										<div class="font-semibold text-gray-900">{slice.primary.name}</div>
+										<svg
+											viewBox="0 0 2 2"
+											width="3"
+											height="3"
+											aria-hidden="true"
+											class="fill-gray-900"
+										>
+											<circle r="1" cx="1" cy="1" />
+										</svg>
+										<div class="text-gray-600">{slice.primary.position}</div>
+									</div>
+								</PrismicLink>
+							{:else}
+								<PrismicImage
+									field={slice.primary.user_image}
+									class="mx-auto size-10 rounded-full"
+								/>
+
+								<div class="mt-4 flex items-center justify-center space-x-3 text-base">
+									<div class="font-semibold text-gray-900">{slice.primary.name}</div>
+									<svg
+										viewBox="0 0 2 2"
+										width="3"
+										height="3"
+										aria-hidden="true"
+										class="fill-gray-900"
+									>
+										<circle r="1" cx="1" cy="1" />
+									</svg>
+									<div class="text-gray-600">{slice.primary.position}</div>
+								</div>
+							{/if}
 						</figcaption>
 					</figure>
 				</div>

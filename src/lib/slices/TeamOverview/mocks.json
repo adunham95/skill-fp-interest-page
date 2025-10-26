@@ -49,6 +49,18 @@
 									"value": "account",
 									"type": "Text"
 								}
+							],
+							[
+								"user_link",
+								{
+									"__TYPE__": "LinkContent",
+									"key": "568c0f90-0b3d-4d7a-861f-d97e516ee094",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io",
+										"text": "skill"
+									}
+								}
 							]
 						]
 					}

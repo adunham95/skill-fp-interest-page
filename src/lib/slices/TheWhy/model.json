@@ -56,6 +56,17 @@
             "label": "Video",
             "placeholder": ""
           }
+        },
+        "user_link": {
+          "type": "Link",
+          "config": {
+            "label": "User Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
         }
       },
       "items": {}
