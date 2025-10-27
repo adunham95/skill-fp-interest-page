@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"video_hero": {
+							"type": "SharedSlice"
+						},
 						"single_testimonial": {
 							"type": "SharedSlice"
 						},

@@ -664,6 +664,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| VideoHeroSlice
 	| TheWhySlice
 	| SingleTestimonialSlice
 	| CtaBlockSlice
@@ -745,6 +746,7 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| VideoHeroSlice
 	| SingleTestimonialSlice
 	| NewsletterSignUpSlice
 	| GradientCtaSlice
@@ -3724,6 +3726,80 @@ type UseCaseSliceVariation = UseCaseSliceDefault;
  */
 export type UseCaseSlice = prismic.SharedSlice<'use_case', UseCaseSliceVariation>;
 
+/**
+ * Primary content in *VideoHero → Default → Primary*
+ */
+export interface VideoHeroSliceDefaultPrimary {
+	/**
+	 * Hero Text field in *VideoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: video_hero.default.primary.hero_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_text: prismic.KeyTextField;
+
+	/**
+	 * Hero Subtext field in *VideoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: video_hero.default.primary.hero_subtext
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	hero_subtext: prismic.KeyTextField;
+
+	/**
+	 * Video field in *VideoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Link to Media
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: video_hero.default.primary.video
+	 * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+	 */
+	video: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+	/**
+	 * CTAs field in *VideoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: video_hero.default.primary.ctas
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	ctas: prismic.Repeatable<
+		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
+	>;
+}
+
+/**
+ * Default variation for VideoHero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VideoHeroSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<VideoHeroSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *VideoHero*
+ */
+type VideoHeroSliceVariation = VideoHeroSliceDefault;
+
+/**
+ * VideoHero Shared Slice
+ *
+ * - **API ID**: `video_hero`
+ * - **Description**: VideoHero
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type VideoHeroSlice = prismic.SharedSlice<'video_hero', VideoHeroSliceVariation>;
+
 declare module '@prismicio/client' {
 	interface CreateClient {
 		(
@@ -3893,7 +3969,11 @@ declare module '@prismicio/client' {
 			UseCaseSlice,
 			UseCaseSliceDefaultPrimary,
 			UseCaseSliceVariation,
-			UseCaseSliceDefault
+			UseCaseSliceDefault,
+			VideoHeroSlice,
+			VideoHeroSliceDefaultPrimary,
+			VideoHeroSliceVariation,
+			VideoHeroSliceDefault
 		};
 	}
 }

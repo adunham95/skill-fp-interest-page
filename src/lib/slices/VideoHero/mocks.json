@@ -1,0 +1,66 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"video": {
+				"key": "6b330cc7-1ed1-47c5-bde7-ec50d62ea2b9",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ImageLink",
+					"id": "YSA1IRkGAsg",
+					"name": "sliced fruit on white surface",
+					"kind": "image",
+					"url": "https://images.unsplash.com/photo-1517260739337-6799d239ce83?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw2fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjE1ODEwOTN8MA&ixlib=rb-4.1.0&q=85",
+					"size": "0",
+					"height": "3840",
+					"width": "5760",
+					"text": "related"
+				}
+			},
+			"ctas": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"key": "8b19851b-8fe4-4b7c-b794-f918590ebfa3",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "ExternalLink",
+							"url": "https://prismic.io",
+							"text": "dot",
+							"variant": "Primary"
+						}
+					},
+					{
+						"key": "a1df1dc1-fc05-46f3-9dc3-47e75bd57b00",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "ImageLink",
+							"id": "sQi9FM6NYVY",
+							"name": "sliced orange fruit on brown wooden table",
+							"kind": "image",
+							"url": "https://images.unsplash.com/photo-1587366317133-62e39082c34d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NjE1ODEwOTN8MA&ixlib=rb-4.1.0&q=85",
+							"size": "0",
+							"height": "6000",
+							"width": "4000",
+							"text": "SOme more text",
+							"variant": "Secondary"
+						}
+					}
+				]
+			},
+			"hero_text": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "This is primary text"
+			},
+			"hero_subtext": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "This is subtitle text"
+			}
+		},
+		"items": []
+	}
+]

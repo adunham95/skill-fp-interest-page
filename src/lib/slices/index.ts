@@ -25,6 +25,7 @@ import SingleTestimonial from './SingleTestimonial/index.svelte';
 import TeamOverview from './TeamOverview/index.svelte';
 import TheWhy from './TheWhy/index.svelte';
 import UseCase from './UseCase/index.svelte';
+import VideoHero from './VideoHero/index.svelte';
 
 export const components = {
 	audience_overview: AudienceOverview,
@@ -51,5 +52,6 @@ export const components = {
 	single_testimonial: SingleTestimonial,
 	team_overview: TeamOverview,
 	the_why: TheWhy,
-	use_case: UseCase
+	use_case: UseCase,
+	video_hero: VideoHero
 };

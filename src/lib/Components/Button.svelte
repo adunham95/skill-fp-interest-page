@@ -23,7 +23,7 @@
 
 			default:
 				if (index > 0) {
-					return 'btn-text--accent';
+					return 'btn-text--secondary';
 				}
 				return 'btn--primary';
 		}
