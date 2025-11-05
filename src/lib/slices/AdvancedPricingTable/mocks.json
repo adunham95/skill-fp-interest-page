@@ -1,0 +1,422 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"plans": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"type_key",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "starter"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Starter"
+								}
+							],
+							[
+								"price",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "14.99"
+								}
+							],
+							[
+								"price_suffix",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "/month"
+								}
+							],
+							[
+								"show_prices",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"show_prices",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Growth"
+								}
+							],
+							[
+								"price",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "49.99"
+								}
+							],
+							[
+								"type_key",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "growth"
+								}
+							],
+							[
+								"price_suffix",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "/month"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"show_prices",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"price_suffix",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "/month"
+								}
+							],
+							[
+								"price",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Number",
+									"value": "199.99"
+								}
+							],
+							[
+								"name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Agency"
+								}
+							],
+							[
+								"type_key",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "agency"
+								}
+							]
+						]
+					}
+				]
+			},
+			"section_label": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Pricing"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Consultant Pricing"
+			},
+			"section_ctas": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"key": "5f921a69-ae1b-4647-9de1-cddc1ac0cf6f",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "AnyLink",
+							"kind": "any",
+							"text": "Book A Demo"
+						}
+					},
+					{
+						"key": "e18a193f-2e93-4603-a593-d8d00796bf30",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "AnyLink",
+							"kind": "any",
+							"text": "My Demo",
+							"variant": "Secondary"
+						}
+					}
+				]
+			},
+			"features": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"feature_name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Per Seat Cost"
+								}
+							],
+							[
+								"feature_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "How much it will cost per seat",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"plan_values",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": [
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"plan_key",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "starter"
+													}
+												],
+												[
+													"value_type",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Select",
+														"value": "text"
+													}
+												],
+												[
+													"text_value",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "$6/seat/month"
+													}
+												]
+											],
+											"key": "ca562269-2f96-4a90-abdf-f52f2ed40b05"
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"plan_key",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "growth"
+													}
+												],
+												[
+													"value_type",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Select",
+														"value": "text"
+													}
+												],
+												[
+													"text_value",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "$5/seat/month"
+													}
+												]
+											],
+											"key": "dcda930a-41e8-4ec4-b3b2-9e3c460d4634"
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"plan_key",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "agency"
+													}
+												],
+												[
+													"value_type",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Select",
+														"value": "text"
+													}
+												],
+												[
+													"text_value",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "$3.49/seat/month"
+													}
+												]
+											],
+											"key": "054712e9-329a-4588-b0f1-33108c5b38e7"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"plan_values",
+								{
+									"__TYPE__": "GroupContentType",
+									"value": [
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"plan_key",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "growth"
+													}
+												],
+												[
+													"value_type",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Select",
+														"value": "yes_no"
+													}
+												],
+												[
+													"bool_value",
+													{
+														"__TYPE__": "BooleanContent",
+														"value": true
+													}
+												]
+											],
+											"key": "928ef8de-c70f-4045-bae3-b5dca3a10df5"
+										},
+										{
+											"__TYPE__": "GroupItemContent",
+											"value": [
+												[
+													"plan_key",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Text",
+														"value": "agency"
+													}
+												],
+												[
+													"value_type",
+													{
+														"__TYPE__": "FieldContent",
+														"type": "Select",
+														"value": "yes_no"
+													}
+												],
+												[
+													"bool_value",
+													{
+														"__TYPE__": "BooleanContent",
+														"value": true
+													}
+												]
+											],
+											"key": "3820f0c7-7990-412d-886a-bde6953caa34"
+										}
+									]
+								}
+							],
+							[
+								"feature_name",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Additional Admins"
+								}
+							],
+							[
+								"feature_description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Allow other to be on your team",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							]
+						],
+						"key": "52859229-2218-4169-bf62-70c222145c9a"
+					}
+				]
+			},
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Get custom pricing for you ",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

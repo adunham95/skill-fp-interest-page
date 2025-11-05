@@ -664,6 +664,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| AdvancedPricingTableSlice
 	| VideoHeroSlice
 	| TheWhySlice
 	| SingleTestimonialSlice
@@ -746,6 +747,9 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| HeroWithScreenshotSlice
+	| TheWhySlice
+	| AdvancedPricingTableSlice
 	| VideoHeroSlice
 	| SingleTestimonialSlice
 	| NewsletterSignUpSlice
@@ -873,6 +877,251 @@ export type AllDocumentTypes =
 	| HomepageDocument
 	| PageDocument
 	| VanityUrlDocument;
+
+/**
+ * Item in *AdvancedPricingTable → Default → Primary → Plans*
+ */
+export interface AdvancedPricingTableSliceDefaultPrimaryPlansItem {
+	/**
+	 * Plan name field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * Type Key field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].type_key
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	type_key: prismic.KeyTextField;
+
+	/**
+	 * Description field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Price field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].price
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	price: prismic.NumberField;
+
+	/**
+	 * Show Prices field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].show_prices
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	show_prices: prismic.BooleanField;
+
+	/**
+	 * Price Suffix (e.g. /month) field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].price_suffix
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	price_suffix: prismic.KeyTextField;
+
+	/**
+	 * Call to Action field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *AdvancedPricingTable → Default → Primary → Features → Plan Values*
+ */
+export interface AdvancedPricingTableSliceDefaultPrimaryFeaturesPlanValuesItem {
+	/**
+	 * Plan Type Key (must match plan.type_key) field in *AdvancedPricingTable → Default → Primary → Features → Plan Values*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].plan_values[].plan_key
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_key: prismic.KeyTextField;
+
+	/**
+	 * Value Type field in *AdvancedPricingTable → Default → Primary → Features → Plan Values*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].plan_values[].value_type
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	value_type: prismic.SelectField<'yes_no' | 'text'>;
+
+	/**
+	 * Yes/No field in *AdvancedPricingTable → Default → Primary → Features → Plan Values*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].plan_values[].bool_value
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	bool_value: prismic.BooleanField;
+
+	/**
+	 * Text Value (e.g. '10 seats', 'Unlimited') field in *AdvancedPricingTable → Default → Primary → Features → Plan Values*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].plan_values[].text_value
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	text_value: prismic.KeyTextField;
+}
+
+/**
+ * Item in *AdvancedPricingTable → Default → Primary → Features*
+ */
+export interface AdvancedPricingTableSliceDefaultPrimaryFeaturesItem {
+	/**
+	 * Feature Name field in *AdvancedPricingTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].feature_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	feature_name: prismic.KeyTextField;
+
+	/**
+	 * Plan Values field in *AdvancedPricingTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].plan_values[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	plan_values: prismic.NestedGroupField<
+		Simplify<AdvancedPricingTableSliceDefaultPrimaryFeaturesPlanValuesItem>
+	>;
+}
+
+/**
+ * Primary content in *AdvancedPricingTable → Default → Primary*
+ */
+export interface AdvancedPricingTableSliceDefaultPrimary {
+	/**
+	 * Section Label field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.section_label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	section_label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Subtitle field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	subtitle: prismic.RichTextField;
+
+	/**
+	 * Section CTAs field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.section_ctas
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	section_ctas: prismic.Repeatable<
+		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
+	>;
+
+	/**
+	 * Plans field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	plans: prismic.GroupField<Simplify<AdvancedPricingTableSliceDefaultPrimaryPlansItem>>;
+
+	/**
+	 * Features field in *AdvancedPricingTable → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	features: prismic.GroupField<Simplify<AdvancedPricingTableSliceDefaultPrimaryFeaturesItem>>;
+}
+
+/**
+ * Default variation for AdvancedPricingTable Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AdvancedPricingTableSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<AdvancedPricingTableSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *AdvancedPricingTable*
+ */
+type AdvancedPricingTableSliceVariation = AdvancedPricingTableSliceDefault;
+
+/**
+ * AdvancedPricingTable Shared Slice
+ *
+ * - **API ID**: `advanced_pricing_table`
+ * - **Description**: AdvancedPricingTable
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type AdvancedPricingTableSlice = prismic.SharedSlice<
+	'advanced_pricing_table',
+	AdvancedPricingTableSliceVariation
+>;
 
 /**
  * Item in *AudienceOverview → Standard → Primary → Audience Types*
@@ -3846,6 +4095,13 @@ declare module '@prismicio/client' {
 			VanityUrlDocument,
 			VanityUrlDocumentData,
 			AllDocumentTypes,
+			AdvancedPricingTableSlice,
+			AdvancedPricingTableSliceDefaultPrimaryPlansItem,
+			AdvancedPricingTableSliceDefaultPrimaryFeaturesPlanValuesItem,
+			AdvancedPricingTableSliceDefaultPrimaryFeaturesItem,
+			AdvancedPricingTableSliceDefaultPrimary,
+			AdvancedPricingTableSliceVariation,
+			AdvancedPricingTableSliceDefault,
 			AudienceOverviewSlice,
 			AudienceOverviewSliceStandardPrimaryAudienceTypesItem,
 			AudienceOverviewSliceStandardPrimary,

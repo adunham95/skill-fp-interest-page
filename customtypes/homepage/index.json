@@ -11,6 +11,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"advanced_pricing_table": {
+							"type": "SharedSlice"
+						},
 						"video_hero": {
 							"type": "SharedSlice"
 						},
