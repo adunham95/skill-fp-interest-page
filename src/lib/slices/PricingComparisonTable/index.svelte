@@ -28,9 +28,9 @@
 			<PrismicRichText field={slice.primary.subtitle} />
 		</div>
 
-		<div class="flex justify-center">
-			{#each slice.primary.section_ctas as link (link.key)}
-				<Button {...link} />
+		<div class="flex justify-center gap-x-2">
+			{#each slice.primary.section_ctas as link, idx}
+				<Button {...link} index={idx} />
 			{/each}
 		</div>
 
