@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ButtonRow from '$lib/Components/ButtonRow.svelte';
 	import type { Content } from '@prismicio/client';
 	import {
 		PrismicImage,
@@ -35,6 +36,8 @@
 							class="bg-primary hover:bg-primary-700 focus-visible:outline-primary inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
 						/>
 					{/if}
+
+					<ButtonRow buttons={slice.primary.cta_row} />
 				</div>
 			</div>
 		</div>

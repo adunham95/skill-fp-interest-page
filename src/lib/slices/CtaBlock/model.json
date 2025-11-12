@@ -56,6 +56,22 @@
             "allowText": true,
             "repeat": false
           }
+        },
+        "cta_row": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Row",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary",
+              "Accent"
+            ]
+          }
         }
       },
       "items": {}

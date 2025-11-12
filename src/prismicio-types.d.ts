@@ -1014,6 +1014,16 @@ export interface AdvancedPricingTableSliceDefaultPrimaryFeaturesItem {
 	feature_name: prismic.KeyTextField;
 
 	/**
+	 * Feature Description field in *AdvancedPricingTable → Default → Primary → Features*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.features[].feature_description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	feature_description: prismic.RichTextField;
+
+	/**
 	 * Plan Values field in *AdvancedPricingTable → Default → Primary → Features*
 	 *
 	 * - **Field Type**: Group
@@ -1298,6 +1308,24 @@ export interface CtaBlockSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * CTA Row field in *CtaBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_block.default.primary.cta_row
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta_row: prismic.Repeatable<
+		prismic.LinkField<
+			string,
+			string,
+			unknown,
+			prismic.FieldState,
+			'Primary' | 'Secondary' | 'Accent'
+		>
+	>;
 }
 
 /**
