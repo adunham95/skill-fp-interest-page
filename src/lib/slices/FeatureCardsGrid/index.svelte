@@ -21,13 +21,9 @@
 					<PrismicRichText field={slice.primary.description} />
 				</div>
 			</div>
-			<div
-				class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-4"
-			>
+			<div class="auto-fit-250 mx-auto mt-16 grid max-w-2xl gap-4 lg:mx-0 lg:max-w-none">
 				{#each slice.primary.features as item}
-					<article
-						class="hover:bg-secondary/10 flex flex-col items-start justify-between rounded-2xl p-4"
-					>
+					<article class=" flex flex-col items-start justify-between">
 						<div class="border-secondary relative w-full rounded-2xl border-2">
 							<PrismicImage
 								class="bg-background aspect-video w-full rounded-2xl object-cover sm:aspect-2/1 lg:aspect-3/2"

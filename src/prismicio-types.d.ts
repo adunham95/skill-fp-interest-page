@@ -664,6 +664,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| MultiActionsSlice
 	| AdvancedPricingTableSlice
 	| VideoHeroSlice
 	| TheWhySlice
@@ -747,6 +748,8 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| PricingCalculatorSlice
+	| MultiActionsSlice
 	| HeroWithScreenshotSlice
 	| TheWhySlice
 	| AdvancedPricingTableSlice
@@ -921,6 +924,16 @@ export interface AdvancedPricingTableSliceDefaultPrimaryPlansItem {
 	 * - **Documentation**: https://prismic.io/docs/fields/number
 	 */
 	price: prismic.NumberField;
+
+	/**
+	 * PriceText field in *AdvancedPricingTable → Default → Primary → Plans*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: advanced_pricing_table.default.primary.plans[].pricetext
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	pricetext: prismic.KeyTextField;
 
 	/**
 	 * Show Prices field in *AdvancedPricingTable → Default → Primary → Plans*
@@ -2815,6 +2828,123 @@ type ImageBlockSliceVariation = ImageBlockSliceDefault;
 export type ImageBlockSlice = prismic.SharedSlice<'image_block', ImageBlockSliceVariation>;
 
 /**
+ * Item in *MultiActions → Default → Primary → ActionBlock*
+ */
+export interface MultiActionsSliceDefaultPrimaryActionblockItem {
+	/**
+	 * BlockLink field in *MultiActions → Default → Primary → ActionBlock*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.actionblock[].blocklink
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	blocklink: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * BlockTitle field in *MultiActions → Default → Primary → ActionBlock*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.actionblock[].blocktitle
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	blocktitle: prismic.KeyTextField;
+
+	/**
+	 * Description field in *MultiActions → Default → Primary → ActionBlock*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.actionblock[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * CTA Text field in *MultiActions → Default → Primary → ActionBlock*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Learn More
+	 * - **API ID Path**: multi_actions.default.primary.actionblock[].cta_text
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	cta_text: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *MultiActions → Default → Primary*
+ */
+export interface MultiActionsSliceDefaultPrimary {
+	/**
+	 * Label field in *MultiActions → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Title field in *MultiActions → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *MultiActions → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * ActionBlock field in *MultiActions → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: multi_actions.default.primary.actionblock[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	actionblock: prismic.GroupField<Simplify<MultiActionsSliceDefaultPrimaryActionblockItem>>;
+}
+
+/**
+ * Default variation for MultiActions Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MultiActionsSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<MultiActionsSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *MultiActions*
+ */
+type MultiActionsSliceVariation = MultiActionsSliceDefault;
+
+/**
+ * MultiActions Shared Slice
+ *
+ * - **API ID**: `multi_actions`
+ * - **Description**: MultiActions
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type MultiActionsSlice = prismic.SharedSlice<'multi_actions', MultiActionsSliceVariation>;
+
+/**
  * Primary content in *NewsletterSignUp → Default → Primary*
  */
 export interface NewsletterSignUpSliceDefaultPrimary {
@@ -2940,6 +3070,178 @@ type PageTitleSliceVariation = PageTitleSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slices
  */
 export type PageTitleSlice = prismic.SharedSlice<'page_title', PageTitleSliceVariation>;
+
+/**
+ * Primary content in *PricingCalculator → Default → Primary*
+ */
+export interface PricingCalculatorSliceDefaultPrimary {
+	/**
+	 * Title field in *PricingCalculator → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_calculator.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	title: prismic.RichTextField;
+
+	/**
+	 * Subtitle field in *PricingCalculator → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_calculator.default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	subtitle: prismic.RichTextField;
+
+	/**
+	 * Default Billing Cycle field in *PricingCalculator → Default → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: monthly
+	 * - **API ID Path**: pricing_calculator.default.primary.default_billing_cycle
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	default_billing_cycle: prismic.SelectField<'monthly' | 'yearly', 'filled'>;
+}
+
+/**
+ * Primary content in *PricingCalculator → Items*
+ */
+export interface PricingCalculatorSliceDefaultItem {
+	/**
+	 * Plan Name field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Starter, Growth, Agency, Basic, Pro, etc.
+	 * - **API ID Path**: pricing_calculator.items[].plan_name
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	plan_name: prismic.KeyTextField;
+
+	/**
+	 * Billing Cycle Supported field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: both
+	 * - **API ID Path**: pricing_calculator.items[].billing_cycle
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	billing_cycle: prismic.SelectField<'monthly' | 'yearly' | 'both', 'filled'>;
+
+	/**
+	 * Base Price (Monthly) field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 14.99
+	 * - **API ID Path**: pricing_calculator.items[].base_price_monthly
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	base_price_monthly: prismic.NumberField;
+
+	/**
+	 * Base Price (Yearly) field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 149.99
+	 * - **API ID Path**: pricing_calculator.items[].base_price_yearly
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	base_price_yearly: prismic.NumberField;
+
+	/**
+	 * Price Per Seat (Monthly) field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 6
+	 * - **API ID Path**: pricing_calculator.items[].price_per_seat_monthly
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	price_per_seat_monthly: prismic.NumberField;
+
+	/**
+	 * Price Per Seat (Yearly) field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 60
+	 * - **API ID Path**: pricing_calculator.items[].price_per_seat_yearly
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	price_per_seat_yearly: prismic.NumberField;
+
+	/**
+	 * Minimum Seats Allowed field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 1
+	 * - **API ID Path**: pricing_calculator.items[].min_seats
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	min_seats: prismic.NumberField;
+
+	/**
+	 * Maximum Seats Allowed field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: 50000
+	 * - **API ID Path**: pricing_calculator.items[].max_seats
+	 * - **Documentation**: https://prismic.io/docs/fields/number
+	 */
+	max_seats: prismic.NumberField;
+
+	/**
+	 * Plan Description field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: pricing_calculator.items[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * CTA Link field in *PricingCalculator → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: Select a page or URL
+	 * - **API ID Path**: pricing_calculator.items[].cta_link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Default variation for PricingCalculator Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingCalculatorSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<PricingCalculatorSliceDefaultPrimary>,
+	Simplify<PricingCalculatorSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PricingCalculator*
+ */
+type PricingCalculatorSliceVariation = PricingCalculatorSliceDefault;
+
+/**
+ * PricingCalculator Shared Slice
+ *
+ * - **API ID**: `pricing_calculator`
+ * - **Description**: PricingCalculator
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type PricingCalculatorSlice = prismic.SharedSlice<
+	'pricing_calculator',
+	PricingCalculatorSliceVariation
+>;
 
 /**
  * Item in *PricingComparisonTable → Default → Primary → Plans*
@@ -4203,6 +4505,11 @@ declare module '@prismicio/client' {
 			ImageBlockSliceDefaultPrimary,
 			ImageBlockSliceVariation,
 			ImageBlockSliceDefault,
+			MultiActionsSlice,
+			MultiActionsSliceDefaultPrimaryActionblockItem,
+			MultiActionsSliceDefaultPrimary,
+			MultiActionsSliceVariation,
+			MultiActionsSliceDefault,
 			NewsletterSignUpSlice,
 			NewsletterSignUpSliceDefaultPrimary,
 			NewsletterSignUpSliceVariation,
@@ -4211,6 +4518,11 @@ declare module '@prismicio/client' {
 			PageTitleSliceDefaultPrimary,
 			PageTitleSliceVariation,
 			PageTitleSliceDefault,
+			PricingCalculatorSlice,
+			PricingCalculatorSliceDefaultPrimary,
+			PricingCalculatorSliceDefaultItem,
+			PricingCalculatorSliceVariation,
+			PricingCalculatorSliceDefault,
 			PricingComparisonTableSlice,
 			PricingComparisonTableSliceVariantDefaultPrimaryPlansItem,
 			PricingComparisonTableSliceVariantDefaultPrimaryFeaturesItem,

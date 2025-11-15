@@ -1,0 +1,144 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "composed",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do eu et adipisicing do exercitation nostrud id sunt proident velit qui aute. Reprehenderit voluptate eu enim. Tempor et qui aliquip consectetur eiusmod mollit anim voluptate."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"cta_link",
+						{
+							"key": "f4326a43-a3a3-4de7-89e3-55b5e869371a",
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io",
+								"text": "answer"
+							}
+						}
+					],
+					[
+						"plan_name",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Starter"
+						}
+					],
+					[
+						"base_price_monthly",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "14.99"
+						}
+					],
+					[
+						"price_per_seat_monthly",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "6"
+						}
+					],
+					[
+						"min_seats",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "1"
+						}
+					],
+					[
+						"max_seats",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "1000"
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"billing_cycle",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Select",
+							"value": "monthly"
+						}
+					],
+					[
+						"is_default",
+						{
+							"__TYPE__": "BooleanContent",
+							"value": false
+						}
+					],
+					[
+						"min_seats",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "1001"
+						}
+					],
+					[
+						"max_seats",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "10000"
+						}
+					],
+					[
+						"plan_name",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Text",
+							"value": "Growth"
+						}
+					],
+					[
+						"base_price_monthly",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "49.99"
+						}
+					],
+					[
+						"price_per_seat_monthly",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Number",
+							"value": "5"
+						}
+					]
+				],
+				"key": "47899475-c999-4443-8299-2b981e31e5aa"
+			}
+		]
+	}
+]

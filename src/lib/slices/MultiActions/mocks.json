@@ -1,0 +1,81 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"label": {
+				"__TYPE__": "FieldContent",
+				"value": "manner",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "know",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ullamco cupidatat voluptate ipsum tempor. Aute nisi in ipsum in voluptate ullamco. Ipsum est reprehenderit labore culpa cupidatat id duis elit consequat eu in est velit sint."
+						}
+					}
+				]
+			},
+			"actionblock": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"blocklink",
+								{
+									"key": "ad7fb19f-6653-4c6e-9da5-dedc15241cd0",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"blocktitle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cross",
+									"type": "Text"
+								}
+							],
+							[
+								"description",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Laboris do Lorem ullamco pariatur ipsum nostrud duis consequat eiusmod voluptate."
+											}
+										}
+									]
+								}
+							],
+							[
+								"cta_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "minute",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

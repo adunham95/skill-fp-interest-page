@@ -51,36 +51,84 @@
 		</div>
 
 		<!-- Mobile View -->
-		<!-- TODO -->
-		<!-- <div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
+		<div class="mx-auto mt-12 max-w-md space-y-8 sm:mt-16 lg:hidden">
 			{#each slice.primary.plans as item}
-				{console.log({ item })}
-				<section class="p-8">
-					<h3 id="tier-starter" class="text-sm/6 font-semibold text-gray-900">{item.name}</h3>
+				<section class="rounded-lg border border-gray-200 p-8 shadow-sm">
+					<h3 class="text-sm/6 font-semibold text-gray-900">{item.name}</h3>
+
 					{#if item.description}
-						<div class="text-gray-600">
+						<div class="mt-2 text-sm text-gray-600">
 							<PrismicRichText field={item.description} />
 						</div>
 					{/if}
+
 					{#if item.show_prices}
-						<p class="mt-2 flex items-baseline gap-x-1 text-gray-900">
+						<p class="mt-4 flex items-baseline gap-x-1 text-gray-900">
 							{#if (item.price || 0) > 0}
 								<span class="text-4xl font-semibold">${item.price}</span>
+							{:else if item.pricetext}
+								<span class="text-4xl font-semibold">{item.pricetext}</span>
 							{:else}
 								<span class="text-4xl font-semibold">Free</span>
 							{/if}
 							<span class="text-sm font-semibold">{item.price_suffix}</span>
 						</p>
 					{/if}
+
 					{#if item.cta?.text}
 						<PrismicLink
 							field={item.cta}
-							class="bg-primary hover:bg-primary-700 focus-visible:outline-primary mt-8 inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+							class="bg-primary hover:bg-primary-700 focus-visible:outline-primary mt-8 inline-flex w-full justify-center rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
 						/>
+					{/if}
+
+					<!-- Feature list for this one plan -->
+					{#if slice.primary.features?.length > 0}
+						<ul class="mt-8 space-y-3 border-t border-gray-200 pt-6">
+							{#each slice.primary.features as feature}
+								{@const cell = getPlanCell(feature, item.type_key)}
+
+								<li class="flex items-start justify-between">
+									<div>
+										<div class="text-sm font-medium text-gray-900">
+											{feature.feature_name}
+										</div>
+										{#if feature.feature_description}
+											<div class="text-xs text-gray-500">
+												<PrismicRichText field={feature.feature_description} />
+											</div>
+										{/if}
+									</div>
+
+									<!-- Reuse desktop cell logic -->
+									<div class="ml-4">
+										{#if cell.type === 'text'}
+											<div class="text-sm text-gray-500">{cell.value}</div>
+										{:else if cell.type === 'yes'}
+											<svg viewBox="0 0 20 20" fill="currentColor" class="text-accent size-5">
+												<path
+													d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+													clip-rule="evenodd"
+													fill-rule="evenodd"
+												/>
+											</svg>
+										{:else}
+											<svg viewBox="0 0 20 20" fill="currentColor" class="size-5 text-gray-400">
+												<path
+													d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+													clip-rule="evenodd"
+													fill-rule="evenodd"
+												/>
+											</svg>
+										{/if}
+									</div>
+								</li>
+							{/each}
+						</ul>
 					{/if}
 				</section>
 			{/each}
-		</div> -->
+		</div>
 
 		<div class="isolate mt-20 hidden lg:block">
 			<div class="relative -mx-8">
@@ -110,6 +158,8 @@
 										<div class="flex items-baseline gap-x-1 text-gray-900">
 											{#if (item.price || 0) > 0}
 												<span class="text-4xl font-semibold">${item.price}</span>
+											{:else if item.pricetext}
+												<span class="text-4xl font-semibold">{item.pricetext}</span>
 											{:else}
 												<span class="text-4xl font-semibold">Free</span>
 											{/if}
@@ -124,7 +174,7 @@
 									{#if item.cta?.text}
 										<PrismicLink
 											field={item.cta}
-											class="bg-accent hover:bg-accent-700 focus-visible:outline-accent border-secondary mt-10 inline-flex rounded-md border-2 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
+											class="bg-accent hover:bg-accent-700 focus-visible:outline-accent border-secondary mt-10 inline-flex rounded-md border px-2.5 py-1 text-xs font-semibold text-white shadow-xs focus-visible:outline-1 focus-visible:outline-offset-1"
 										/>
 									{/if}
 								</td>

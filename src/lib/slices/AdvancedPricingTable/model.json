@@ -1,168 +1,181 @@
 {
-	"id": "advanced_pricing_table",
-	"type": "SharedSlice",
-	"name": "AdvancedPricingTable",
-	"description": "AdvancedPricingTable",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"section_label": {
-					"type": "Text",
-					"config": {
-						"label": "Section Label",
-						"placeholder": ""
-					}
-				},
-				"title": {
-					"type": "Text",
-					"config": {
-						"label": "Title",
-						"placeholder": ""
-					}
-				},
-				"subtitle": {
-					"type": "StructuredText",
-					"config": {
-						"multi": "paragraph,strong,em,hyperlink",
-						"label": "Subtitle"
-					}
-				},
-				"section_ctas": {
-					"type": "Link",
-					"config": {
-						"label": "Section CTAs",
-						"placeholder": "",
-						"select": null,
-						"allowTargetBlank": true,
-						"allowText": true,
-						"repeat": true,
-						"variants": ["Primary", "Secondary"]
-					}
-				},
-				"plans": {
-					"type": "Group",
-					"config": {
-						"label": "Plans",
-						"fields": {
-							"name": {
-								"type": "Text",
-								"config": {
-									"label": "Plan name"
-								}
-							},
-							"type_key": {
-								"type": "Text",
-								"config": {
-									"label": "Type Key",
-									"placeholder": ""
-								}
-							},
-							"description": {
-								"type": "StructuredText",
-								"config": {
-									"label": "Description",
-									"placeholder": "",
-									"allowTargetBlank": true,
-									"single": "strong,em,paragraph"
-								}
-							},
-							"price": {
-								"type": "Number",
-								"config": {
-									"label": "Price"
-								}
-							},
-							"show_prices": {
-								"type": "Boolean",
-								"config": {
-									"label": "Show Prices",
-									"placeholder_false": "false",
-									"placeholder_true": "true",
-									"default_value": true
-								}
-							},
-							"price_suffix": {
-								"type": "Text",
-								"config": {
-									"label": "Price Suffix (e.g. /month)"
-								}
-							},
-							"cta": {
-								"type": "Link",
-								"config": {
-									"label": "Call to Action",
-									"allowText": true,
-									"repeat": false,
-									"select": null
-								}
-							}
-						}
-					}
-				},
-				"features": {
-					"type": "Group",
-					"config": {
-						"label": "Features",
-						"fields": {
-							"feature_name": {
-								"type": "Text",
-								"config": {
-									"label": "Feature Name"
-								}
-							},
-							"feature_description": {
-								"type": "StructuredText",
-								"config": {
-									"label": "Feature Description",
-									"placeholder": "",
-									"allowTargetBlank": true,
-									"single": "paragraph,preformatted,strong,em,hyperlink"
-								}
-							},
-							"plan_values": {
-								"type": "Group",
-								"config": {
-									"label": "Plan Values",
-									"fields": {
-										"plan_key": {
-											"type": "Text",
-											"config": {
-												"label": "Plan Type Key (must match plan.type_key)"
-											}
-										},
-										"value_type": {
-											"type": "Select",
-											"config": {
-												"label": "Value Type",
-												"options": ["yes_no", "text"]
-											}
-										},
-										"bool_value": {
-											"type": "Boolean",
-											"config": {
-												"label": "Yes/No"
-											}
-										},
-										"text_value": {
-											"type": "Text",
-											"config": {
-												"label": "Text Value (e.g. '10 seats', 'Unlimited')"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			},
-			"items": {}
-		}
-	]
+  "id": "advanced_pricing_table",
+  "type": "SharedSlice",
+  "name": "AdvancedPricingTable",
+  "description": "AdvancedPricingTable",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section_label": {
+          "type": "Text",
+          "config": {
+            "label": "Section Label",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Subtitle"
+          }
+        },
+        "section_ctas": {
+          "type": "Link",
+          "config": {
+            "label": "Section CTAs",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
+        "plans": {
+          "type": "Group",
+          "config": {
+            "label": "Plans",
+            "fields": {
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Plan name"
+                }
+              },
+              "type_key": {
+                "type": "Text",
+                "config": {
+                  "label": "Type Key",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "strong,em,paragraph"
+                }
+              },
+              "price": {
+                "type": "Number",
+                "config": {
+                  "label": "Price"
+                }
+              },
+              "pricetext": {
+                "type": "Text",
+                "config": {
+                  "label": "PriceText",
+                  "placeholder": ""
+                }
+              },
+              "show_prices": {
+                "type": "Boolean",
+                "config": {
+                  "label": "Show Prices",
+                  "placeholder_false": "false",
+                  "placeholder_true": "true",
+                  "default_value": true
+                }
+              },
+              "price_suffix": {
+                "type": "Text",
+                "config": {
+                  "label": "Price Suffix (e.g. /month)"
+                }
+              },
+              "cta": {
+                "type": "Link",
+                "config": {
+                  "label": "Call to Action",
+                  "allowText": true,
+                  "repeat": false,
+                  "select": null
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "fields": {
+              "feature_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Feature Name"
+                }
+              },
+              "feature_description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Feature Description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph,preformatted,strong,em,hyperlink"
+                }
+              },
+              "plan_values": {
+                "type": "Group",
+                "config": {
+                  "label": "Plan Values",
+                  "fields": {
+                    "plan_key": {
+                      "type": "Text",
+                      "config": {
+                        "label": "Plan Type Key (must match plan.type_key)"
+                      }
+                    },
+                    "value_type": {
+                      "type": "Select",
+                      "config": {
+                        "label": "Value Type",
+                        "options": [
+                          "yes_no",
+                          "text"
+                        ]
+                      }
+                    },
+                    "bool_value": {
+                      "type": "Boolean",
+                      "config": {
+                        "label": "Yes/No"
+                      }
+                    },
+                    "text_value": {
+                      "type": "Text",
+                      "config": {
+                        "label": "Text Value (e.g. '10 seats', 'Unlimited')"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
 }

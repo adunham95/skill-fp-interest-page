@@ -47,6 +47,14 @@
 									"__TYPE__": "BooleanContent",
 									"value": true
 								}
+							],
+							[
+								"pricetext",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "leave",
+									"type": "Text"
+								}
 							]
 						]
 					},
@@ -91,6 +99,14 @@
 									"type": "Text",
 									"value": "/month"
 								}
+							],
+							[
+								"pricetext",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "globe",
+									"type": "Text"
+								}
 							]
 						]
 					},
@@ -134,6 +150,14 @@
 									"__TYPE__": "FieldContent",
 									"type": "Text",
 									"value": "agency"
+								}
+							],
+							[
+								"pricetext",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "shoot",
+									"type": "Text"
 								}
 							]
 						]
@@ -237,8 +261,7 @@
 														"value": "$6/seat/month"
 													}
 												]
-											],
-											"key": "ca562269-2f96-4a90-abdf-f52f2ed40b05"
+											]
 										},
 										{
 											"__TYPE__": "GroupItemContent",
@@ -267,8 +290,7 @@
 														"value": "$5/seat/month"
 													}
 												]
-											],
-											"key": "dcda930a-41e8-4ec4-b3b2-9e3c460d4634"
+											]
 										},
 										{
 											"__TYPE__": "GroupItemContent",
@@ -297,8 +319,7 @@
 														"value": "$3.49/seat/month"
 													}
 												]
-											],
-											"key": "054712e9-329a-4588-b0f1-33108c5b38e7"
+											]
 										}
 									]
 								}
@@ -339,8 +360,7 @@
 														"value": true
 													}
 												]
-											],
-											"key": "928ef8de-c70f-4045-bae3-b5dca3a10df5"
+											]
 										},
 										{
 											"__TYPE__": "GroupItemContent",
@@ -368,8 +388,7 @@
 														"value": true
 													}
 												]
-											],
-											"key": "3820f0c7-7990-412d-886a-bde6953caa34"
+											]
 										}
 									]
 								}
@@ -398,8 +417,7 @@
 									]
 								}
 							]
-						],
-						"key": "52859229-2218-4169-bf62-70c222145c9a"
+						]
 					}
 				]
 			},

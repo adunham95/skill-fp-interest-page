@@ -15,8 +15,10 @@ import Hero from './Hero/index.svelte';
 import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
 import HeroWithScreenshot from './HeroWithScreenshot/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
+import MultiActions from './MultiActions/index.svelte';
 import NewsletterSignUp from './NewsletterSignUp/index.svelte';
 import PageTitle from './PageTitle/index.svelte';
+import PricingCalculator from './PricingCalculator/index.svelte';
 import PricingComparisonTable from './PricingComparisonTable/index.svelte';
 import PricingOverview from './PricingOverview/index.svelte';
 import FeaturedBlogPosts from './FeaturedBlogPosts/index.svelte';
@@ -44,8 +46,10 @@ export const components = {
 	hero_over_background_image: HeroOverBackgroundImage,
 	hero_with_screenshot: HeroWithScreenshot,
 	image_block: ImageBlock,
+	multi_actions: MultiActions,
 	newsletter_sign_up: NewsletterSignUp,
 	page_title: PageTitle,
+	pricing_calculator: PricingCalculator,
 	pricing_comparison_table: PricingComparisonTable,
 	pricing_overview: PricingOverview,
 	recent_blog_posts: FeaturedBlogPosts,
