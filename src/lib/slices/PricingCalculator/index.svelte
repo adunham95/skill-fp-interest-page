@@ -7,6 +7,7 @@
 	const { slice }: Props = $props();
 
 	const tiers = slice.items ?? [];
+	const allowOverflow = slice.primary.allow_overflow ?? false;
 
 	// Sort tiers by min_seats for safe boundaries
 	tiers.sort((a, b) => (a.min_seats || 0) - (b.min_seats || 0));
@@ -19,25 +20,35 @@
 	let billingCycle = $state(slice.primary.default_billing_cycle || 'monthly');
 	let seats = $state(sliderMin);
 
-	// Helper: find tier by seat count
-	function getTier(seatCount: number) {
-		return tiers.find(
+	function getTier(seatCount) {
+		// If overflow allowed → use highest tier beyond max
+		if (allowOverflow && seatCount > tiers[tiers.length - 1].max_seats) {
+			return tiers[tiers.length - 1];
+		}
+
+		// Standard match
+		const match = tiers.find(
 			(tier) => seatCount >= (tier.min_seats || 0) && seatCount <= (tier.max_seats || 999999)
 		);
+
+		// If overflow disabled and no match → clamp to highest tier
+		return match || tiers[tiers.length - 1];
 	}
 
-	// Derived selected tier (REPLACES `$:`)
 	const selectedTier = $derived(getTier(seats));
 
 	function calculatePrice(tier, seatCount, cycle) {
 		if (!tier) return 0;
+
+		const effectiveSeats =
+			!allowOverflow && seatCount > (tier.max_seats ?? seatCount) ? tier.max_seats : seatCount;
 
 		const base = cycle === 'monthly' ? tier.base_price_monthly || 0 : tier.base_price_yearly || 0;
 
 		const perSeat =
 			cycle === 'monthly' ? tier.price_per_seat_monthly || 0 : tier.price_per_seat_yearly || 0;
 
-		return base + seatCount * perSeat;
+		return base + effectiveSeats * perSeat;
 	}
 
 	// Derived total price (REPLACES `$:`)
@@ -127,7 +138,9 @@
 					class="accent-primary w-full cursor-pointer"
 				/>
 
-				<div class="w-16 text-right text-lg font-semibold"><input bind:value={seats} /></div>
+				<div class="w-16 text-right text-lg font-semibold">
+					<input bind:value={seats} min={sliderMin} max={sliderMax} type="number" />
+				</div>
 			</div>
 
 			<div class="mt-1 flex justify-between text-xs text-gray-500">
@@ -170,10 +183,7 @@
 			<!-- CTA only if supported -->
 			{#if tierSupportsCycle() && selectedTier.cta_link && selectedTier.cta_link.text}
 				<div class="mt-6 flex justify-center">
-					<PrismicLink
-						field={selectedTier.cta_link}
-						class="rounded-full bg-black px-6 py-2 text-sm font-medium text-white"
-					/>
+					<PrismicLink field={selectedTier.cta_link} class="btn btn--primary" />
 				</div>
 			{/if}
 		{/if}

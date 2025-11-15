@@ -18,6 +18,10 @@
 						}
 					}
 				]
+			},
+			"allow_overflow": {
+				"__TYPE__": "BooleanContent",
+				"value": false
 			}
 		},
 		"items": [
@@ -136,8 +140,7 @@
 							"value": "5"
 						}
 					]
-				],
-				"key": "47899475-c999-4443-8299-2b981e31e5aa"
+				]
 			}
 		]
 	}

@@ -1,116 +1,132 @@
 {
-	"id": "pricing_calculator",
-	"type": "SharedSlice",
-	"name": "PricingCalculator",
-	"description": "PricingCalculator",
-	"variations": [
-		{
-			"id": "default",
-			"name": "Default",
-			"docURL": "...",
-			"version": "initial",
-			"description": "Default",
-			"imageUrl": "",
-			"primary": {
-				"title": {
-					"type": "StructuredText",
-					"config": {
-						"label": "Title",
-						"single": "heading2"
-					}
-				},
-				"subtitle": {
-					"type": "StructuredText",
-					"config": {
-						"label": "Subtitle",
-						"multi": "paragraph"
-					}
-				},
-				"default_billing_cycle": {
-					"type": "Select",
-					"config": {
-						"label": "Default Billing Cycle",
-						"options": ["monthly", "yearly"],
-						"default_value": "monthly"
-					}
-				}
-			},
-			"items": {
-				"plan_name": {
-					"type": "Text",
-					"config": {
-						"label": "Plan Name",
-						"placeholder": "Starter, Growth, Agency, Basic, Pro, etc."
-					}
-				},
-				"billing_cycle": {
-					"type": "Select",
-					"config": {
-						"label": "Billing Cycle Supported",
-						"options": ["monthly", "yearly", "both"],
-						"default_value": "both"
-					}
-				},
-				"base_price_monthly": {
-					"type": "Number",
-					"config": {
-						"label": "Base Price (Monthly)",
-						"placeholder": "14.99"
-					}
-				},
-				"base_price_yearly": {
-					"type": "Number",
-					"config": {
-						"label": "Base Price (Yearly)",
-						"placeholder": "149.99"
-					}
-				},
-				"price_per_seat_monthly": {
-					"type": "Number",
-					"config": {
-						"label": "Price Per Seat (Monthly)",
-						"placeholder": "6"
-					}
-				},
-				"price_per_seat_yearly": {
-					"type": "Number",
-					"config": {
-						"label": "Price Per Seat (Yearly)",
-						"placeholder": "60"
-					}
-				},
-				"min_seats": {
-					"type": "Number",
-					"config": {
-						"label": "Minimum Seats Allowed",
-						"placeholder": "1"
-					}
-				},
-				"max_seats": {
-					"type": "Number",
-					"config": {
-						"label": "Maximum Seats Allowed",
-						"placeholder": "50000"
-					}
-				},
-				"description": {
-					"type": "StructuredText",
-					"config": {
-						"label": "Plan Description",
-						"multi": "paragraph"
-					}
-				},
-				"cta_link": {
-					"type": "Link",
-					"config": {
-						"label": "CTA Link",
-						"placeholder": "Select a page or URL",
-						"select": null,
-						"allowText": true,
-						"allowTargetBlank": true
-					}
-				}
-			}
-		}
-	]
+  "id": "pricing_calculator",
+  "type": "SharedSlice",
+  "name": "PricingCalculator",
+  "description": "PricingCalculator",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "single": "heading2"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Subtitle",
+            "multi": "paragraph"
+          }
+        },
+        "default_billing_cycle": {
+          "type": "Select",
+          "config": {
+            "label": "Default Billing Cycle",
+            "options": [
+              "monthly",
+              "yearly"
+            ],
+            "default_value": "monthly"
+          }
+        },
+        "allow_overflow": {
+          "type": "Boolean",
+          "config": {
+            "label": "Allow Overflow",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "plan_name": {
+          "type": "Text",
+          "config": {
+            "label": "Plan Name",
+            "placeholder": "Starter, Growth, Agency, Basic, Pro, etc."
+          }
+        },
+        "billing_cycle": {
+          "type": "Select",
+          "config": {
+            "label": "Billing Cycle Supported",
+            "options": [
+              "monthly",
+              "yearly",
+              "both"
+            ],
+            "default_value": "both"
+          }
+        },
+        "base_price_monthly": {
+          "type": "Number",
+          "config": {
+            "label": "Base Price (Monthly)",
+            "placeholder": "14.99"
+          }
+        },
+        "base_price_yearly": {
+          "type": "Number",
+          "config": {
+            "label": "Base Price (Yearly)",
+            "placeholder": "149.99"
+          }
+        },
+        "price_per_seat_monthly": {
+          "type": "Number",
+          "config": {
+            "label": "Price Per Seat (Monthly)",
+            "placeholder": "6"
+          }
+        },
+        "price_per_seat_yearly": {
+          "type": "Number",
+          "config": {
+            "label": "Price Per Seat (Yearly)",
+            "placeholder": "60"
+          }
+        },
+        "min_seats": {
+          "type": "Number",
+          "config": {
+            "label": "Minimum Seats Allowed",
+            "placeholder": "1"
+          }
+        },
+        "max_seats": {
+          "type": "Number",
+          "config": {
+            "label": "Maximum Seats Allowed",
+            "placeholder": "50000"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Plan Description",
+            "multi": "paragraph"
+          }
+        },
+        "cta_link": {
+          "type": "Link",
+          "config": {
+            "label": "CTA Link",
+            "placeholder": "Select a page or URL",
+            "select": null,
+            "allowText": true,
+            "allowTargetBlank": true
+          }
+        }
+      }
+    }
+  ]
 }

@@ -3105,6 +3105,17 @@ export interface PricingCalculatorSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/select
 	 */
 	default_billing_cycle: prismic.SelectField<'monthly' | 'yearly', 'filled'>;
+
+	/**
+	 * Allow Overflow field in *PricingCalculator → Default → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: pricing_calculator.default.primary.allow_overflow
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	allow_overflow: prismic.BooleanField;
 }
 
 /**
