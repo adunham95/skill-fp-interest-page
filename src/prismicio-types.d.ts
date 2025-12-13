@@ -664,6 +664,8 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| RichTextSlice
+	| UseCaseSlice
 	| MultiActionsSlice
 	| AdvancedPricingTableSlice
 	| VideoHeroSlice
@@ -2285,6 +2287,16 @@ export interface GradientCtaSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/color
 	 */
 	gradient_stop: prismic.ColorField;
+
+	/**
+	 * Micro Copy field in *GradientCta → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gradient_cta.default.primary.micro_copy
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	micro_copy: prismic.KeyTextField;
 }
 
 /**
@@ -4361,6 +4373,16 @@ export interface VideoHeroSliceDefaultPrimary {
 	ctas: prismic.Repeatable<
 		prismic.LinkField<string, string, unknown, prismic.FieldState, 'Primary' | 'Secondary'>
 	>;
+
+	/**
+	 * Micro Copy field in *VideoHero → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: video_hero.default.primary.micro_copy
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	micro_copy: prismic.KeyTextField;
 }
 
 /**

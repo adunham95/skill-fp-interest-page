@@ -24,6 +24,11 @@
 							<Button {...link} index={idx} />
 						{/each}
 					</div>
+					{#if slice.primary.micro_copy}
+						<p class="text-sx mt-2 text-pretty text-gray-500">
+							{slice.primary.micro_copy}
+						</p>
+					{/if}
 				</div>
 				{#if slice.primary.video.link_type === 'Media'}
 					<video

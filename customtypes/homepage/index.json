@@ -11,6 +11,12 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"rich_text": {
+							"type": "SharedSlice"
+						},
+						"use_case": {
+							"type": "SharedSlice"
+						},
 						"multi_actions": {
 							"type": "SharedSlice"
 						},

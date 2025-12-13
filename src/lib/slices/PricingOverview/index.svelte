@@ -78,6 +78,11 @@
 									>{item.price_timeframe}</span
 								>
 							</p>
+							{#if item.price_note}
+								<div class="text-xs/5 text-gray-600">
+									<PrismicRichText field={item.price_note} />
+								</div>
+							{/if}
 							<PrismicLink
 								field={item.cta_button}
 								class="bg-primary hover:bg-primary-700 focus-visible:outline-primary mt-10 inline-flex rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"

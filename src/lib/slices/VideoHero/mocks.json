@@ -59,6 +59,11 @@
 				"__TYPE__": "FieldContent",
 				"type": "Text",
 				"value": "This is subtitle text"
+			},
+			"micro_copy": {
+				"__TYPE__": "FieldContent",
+				"value": "farther",
+				"type": "Text"
 			}
 		},
 		"items": []

@@ -46,6 +46,11 @@
 				"__TYPE__": "FieldContent",
 				"value": "#285e06",
 				"type": "Color"
+			},
+			"micro_copy": {
+				"__TYPE__": "FieldContent",
+				"value": "wagon",
+				"type": "Text"
 			}
 		},
 		"items": []

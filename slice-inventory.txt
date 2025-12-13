@@ -1,0 +1,568 @@
+PRISMIC SLICE INVENTORY
+========================
+
+SLICE: AdvancedPricingTable
+------------------------
+ID: advanced_pricing_table
+Type: SharedSlice
+Description: AdvancedPricingTable
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (Text) — Title
+      - subtitle (StructuredText) — Subtitle
+      - section_ctas (Link) (repeating) — Section CTAs
+      - plans (Group) — Plans
+        - name (Text) — Plan name
+        - type_key (Text) — Type Key
+        - description (StructuredText) — Description
+        - price (Number) — Price
+        - pricetext (Text) — PriceText
+        - show_prices (Boolean) — Show Prices
+        - price_suffix (Text) — Price Suffix (e.g. /month)
+        - cta (Link) — Call to Action
+      - features (Group) — Features
+        - feature_name (Text) — Feature Name
+        - feature_description (StructuredText) — Feature Description
+        - plan_values (Group) — Plan Values
+          - plan_key (Text) — Plan Type Key (must match plan.type_key)
+          - value_type (Select) — Value Type
+          - bool_value (Boolean) — Yes/No
+          - text_value (Text) — Text Value (e.g. '10 seats', 'Unlimited')
+
+
+
+SLICE: AudienceOverview
+------------------------
+ID: audience_overview
+Type: SharedSlice
+Description: —
+
+  VARIATION: Standard (standard)
+    Primary Fields:
+      - preheading (Text) — Section Label
+      - section_title (Text) — Section Title
+      - description (StructuredText) — Description
+      - audience_types (Group) — Audience Types
+        - icon (Image) — Icon
+        - label (Text) — Audience Label
+        - audience_description (StructuredText) — Audience Description
+        - cta (Link) — CTA
+
+
+
+SLICE: CtaBlock
+------------------------
+ID: cta_block
+Type: SharedSlice
+Description: CtaBlock
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - image (Image) — Image
+      - label (Text) — Label
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - cta (Link) — CTA
+      - cta_row (Link) (repeating) — CTA Row
+
+
+
+SLICE: FaqGroup
+------------------------
+ID: faq_group
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - intro (StructuredText) — Introduction
+      - faqs (Group) — FAQs
+        - question (StructuredText) — Question
+        - answer (StructuredText) — Answer
+
+
+
+SLICE: FeatureCardsGrid
+------------------------
+ID: feature_cards_grid
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - eyebrow (Text) — Section Label
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - features (Group) — Features
+        - illustration (Image) — Illustration
+        - feature_title (Text) — Feature Title
+        - feature_description (StructuredText) — Feature Description
+
+
+
+SLICE: FeatureScreenshot
+------------------------
+ID: feature_screenshot
+Type: SharedSlice
+Description: FeatureScreenshot
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (Text) — Title
+      - screenshot (Image) — Screenshot
+
+  VARIATION: Dark (dark)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (Text) — Title
+      - screenshot (Image) — Screenshot
+
+
+
+SLICE: FeatureSideHero
+------------------------
+ID: feature_side_hero
+Type: SharedSlice
+Description: —
+
+  VARIATION: With Icon Features (with_icon_features)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - section_title (Text) — Section Title
+      - section_title_link (Link) — Section Title Link
+      - description (StructuredText) — Description
+      - features (Group) — Features
+        - icon (Image) — Icon
+        - feature_title (Text) — Feature Title
+        - feature_desc (StructuredText) — Feature Description
+      - side_image (Image) — Side Image
+      - cta_options (Link) (repeating) — CTA Options
+
+  VARIATION: Left Image (leftImage)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - section_title (Text) — Section Title
+      - description (StructuredText) — Description
+      - features (Group) — Features
+        - icon (Image) — Icon
+        - feature_title (Text) — Feature Title
+        - feature_desc (StructuredText) — Feature Description
+      - side_image (Image) — Side Image
+      - cta_options (Link) (repeating) — CTA Options
+
+
+
+SLICE: FeatureVideo
+------------------------
+ID: feature_video
+Type: SharedSlice
+Description: FeatureVideo
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (Text) — Title
+      - video (Embed) — Video
+
+
+
+SLICE: FeatureWIthImage
+------------------------
+ID: feature_w_ith_image
+Type: SharedSlice
+Description: FeatureWIthImage
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - tag (Text) — Tag
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - image (Image) — Image
+      - features (Group) — Features
+        - icon (Image) — Icon
+        - feature_title (Text) — Feature Title
+        - feature_desc (StructuredText) — Feature Description
+
+  VARIATION: Dark (dark)
+    Primary Fields:
+      - tag (Text) — Tag
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - image (Image) — Image
+      - features (Group) — Features
+        - icon (Image) — Icon
+        - feature_title (Text) — Feature Title
+        - feature_desc (StructuredText) — Feature Description
+
+
+
+SLICE: FeaturedBlogPosts
+------------------------
+ID: recent_blog_posts
+Type: SharedSlice
+Description: RecentBlogPosts
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - featured_posts (Group) (repeating) — featured_posts
+        - featured_post (Link) — featured_post
+
+
+
+SLICE: GradientCta
+------------------------
+ID: gradient_cta
+Type: SharedSlice
+Description: GradientCta
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - primary_cta (Link) — Primary CTA
+      - secondary_cta (Link) — Secondary CTA
+      - gradient_start (Color) — Gradient Start
+      - gradient_stop (Color) — Gradient Stop
+
+
+
+SLICE: HeadlineOverlay
+------------------------
+ID: headline_overlay
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - background_image (Image) — Background Image
+      - title (Text) — Title
+      - description (StructuredText) — Description
+
+
+
+SLICE: Hero
+------------------------
+ID: hero
+Type: SharedSlice
+Description: Hero
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - hero_image (Image) — Hero Image
+      - hero_text (Text) — Hero Text
+      - hero_subtext (Text) — Hero Subtext
+      - primary_click (Link) — Primary Click
+      - secondary_click (Link) — Secondary Click
+
+  VARIATION: Offset Image (offsetImage)
+    Primary Fields:
+      - hero_image (Image) — Hero Image
+      - hero_text (Text) — Hero Text
+      - hero_subtext (Text) — Hero Subtext
+      - primary_click (Link) — Primary Click
+      - secondary_click (Link) — Secondary Click
+
+  VARIATION: WithPhoneScreenShot (withPhoneScreenShot)
+    Primary Fields:
+      - hero_text (Text) — Hero Text
+      - hero_subtext (Text) — Hero Subtext
+      - primary_click (Link) — Primary Click
+      - secondary_click (Link) — Secondary Click
+      - screenshot (Image) — Screenshot
+      - cta_attribute (Text) — CTA Attribute
+
+
+
+SLICE: HeroOverBackgroundImage
+------------------------
+ID: hero_over_background_image
+Type: SharedSlice
+Description: HeroOverBackgroundImage
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - backgroundimage (Image) — BackgroundImage
+      - hero_text (Text) — Hero Text
+      - subtext (StructuredText) — Subtext
+      - tag (Text) — Tag
+      - primary_click (Link) — Primary Click
+      - tagcta (Link) — TagCTA
+
+
+
+SLICE: HeroWithScreenshot
+------------------------
+ID: hero_with_screenshot
+Type: SharedSlice
+Description: HeroWithScreenshot
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - ctas (Link) (repeating) — CTAs
+      - screenshot (Image) — Screenshot
+
+
+
+SLICE: ImageBlock
+------------------------
+ID: image_block
+Type: SharedSlice
+Description: ImageBlock
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - image (Image) — Image
+
+
+
+SLICE: MultiActions
+------------------------
+ID: multi_actions
+Type: SharedSlice
+Description: MultiActions
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - label (Text) — Label
+      - title (Text) — Title
+      - description (StructuredText) — Description
+      - actionblock (Group) (repeating) — ActionBlock
+        - blocklink (Link) — BlockLink
+        - blocktitle (Text) — BlockTitle
+        - description (StructuredText) — Description
+        - cta_text (Text) — CTA Text
+
+
+
+SLICE: NewsletterSignUp
+------------------------
+ID: newsletter_sign_up
+Type: SharedSlice
+Description: NewsletterSignUp
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - cta (Text) — CTA
+      - formid (Text) — FormID
+
+
+
+SLICE: PageTitle
+------------------------
+ID: page_title
+Type: SharedSlice
+Description: PageTitle
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - section_label (Text) — Label
+      - description (StructuredText) — Description
+
+
+
+SLICE: PricingCalculator
+------------------------
+ID: pricing_calculator
+Type: SharedSlice
+Description: PricingCalculator
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (StructuredText) — Title
+      - subtitle (StructuredText) — Subtitle
+      - default_billing_cycle (Select) — Default Billing Cycle
+      - allow_overflow (Boolean) — Allow Overflow
+
+    Items (Repeating Slice Fields):
+      - plan_name (Text) — Plan Name
+      - billing_cycle (Select) — Billing Cycle Supported
+      - base_price_monthly (Number) — Base Price (Monthly)
+      - base_price_yearly (Number) — Base Price (Yearly)
+      - price_per_seat_monthly (Number) — Price Per Seat (Monthly)
+      - price_per_seat_yearly (Number) — Price Per Seat (Yearly)
+      - min_seats (Number) — Minimum Seats Allowed
+      - max_seats (Number) — Maximum Seats Allowed
+      - description (StructuredText) — Plan Description
+      - cta_link (Link) — CTA Link
+
+
+
+SLICE: PricingComparisonTable
+------------------------
+ID: pricing_comparison_table
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (variant_default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (Text) — Title
+      - subtitle (StructuredText) — Subtitle
+      - section_ctas (Link) (repeating) — Section CTAs
+      - plans (Group) — Plans
+        - name (Text) — Plan name
+        - description (StructuredText) — Description
+        - price (Number) — Price
+        - show_prices (Boolean) — Show Prices
+        - price_suffix (Text) — Price Suffix (e.g. /month)
+        - cta (Link) — Call to Action
+        - type (Select) — Type
+      - features (Group) — Features
+        - feature_name (Text) — Feature Name
+        - free_value (Text) — Free Value
+        - premium_value (Text) — Premium Value
+        - free_included (Boolean) — Free Included
+        - premium_included (Boolean) — Premium Included
+        - feature_description (StructuredText) — Feature Description
+
+
+
+SLICE: PricingOverview
+------------------------
+ID: pricing_overview
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - description (StructuredText) — Description
+      - offers (Group) — Offers
+        - offer_title (Text) — Offer Title
+        - offer_description (StructuredText) — Offer Description
+        - included_title (Text) — Included Title
+        - price_label (Text) — Price Label
+        - price_amount (Number) — Price Amount
+        - price_timeframe (Text) — Price Timeframe
+        - price_note (StructuredText) — Price Note
+        - cta_button (Link) — CTA Button
+        - cta_note (Text) — CTA Note
+        - features_title (Text) — Features Title
+        - feature_set (Group) (repeating) — Feature Set
+          - feature_item (StructuredText) — Feature Item
+      - title (Text) — Title
+
+
+
+SLICE: RichText
+------------------------
+ID: rich_text
+Type: SharedSlice
+Description: RichText
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - content (StructuredText) — Content
+
+
+
+SLICE: SectionWithSubsections
+------------------------
+ID: section_with_subsections
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - subsections (Group) — Subsections
+        - subsection_heading (Text) — Subsection Heading
+        - content (StructuredText) — Subsection Content
+
+
+
+SLICE: SingleTestimonial
+------------------------
+ID: single_testimonial
+Type: SharedSlice
+Description: SingleTestimonial
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - quote (StructuredText) — Quote
+      - user_image (Image) — User Image
+      - name (Text) — Name
+      - position (Text) — Position
+
+
+
+SLICE: TeamOverview
+------------------------
+ID: team_overview
+Type: SharedSlice
+Description: —
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - title (Text) — Title
+      - description (Text) — Description
+      - members (Group) — Members
+        - avatar (Image) — Avatar
+        - name (Text) — Name
+        - role (Text) — Role
+        - user_link (Link) — User Link
+
+
+
+SLICE: TheWhy
+------------------------
+ID: the_why
+Type: SharedSlice
+Description: TheWhy
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - quote (StructuredText) — Quote
+      - user_image (Image) — User Image
+      - name (Text) — Name
+      - position (Text) — Position
+      - video (Embed) — Video
+      - user_link (Link) — User Link
+
+
+
+SLICE: UseCase
+------------------------
+ID: use_case
+Type: SharedSlice
+Description: UseCase
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - section_label (Text) — Section Label
+      - title (StructuredText) — Title
+      - problem_title (Text) — Problem Title
+      - problem_description (StructuredText) — Problem Description
+      - solution_title (Text) — Solution Title
+      - solution_description (StructuredText) — Solution Description
+      - testimonial (StructuredText) — Testimonial
+      - testimonial_name (Text) — Testimonial Name
+      - testimonial_job_title (Text) — Testimonial Job Title
+      - primary_cta (Link) — Primary CTA
+      - secondary_cta (Link) — Secondary CTA
+
+
+
+SLICE: VideoHero
+------------------------
+ID: video_hero
+Type: SharedSlice
+Description: VideoHero
+
+  VARIATION: Default (default)
+    Primary Fields:
+      - hero_text (Text) — Hero Text
+      - hero_subtext (Text) — Hero Subtext
+      - video (Link) — Video
+      - ctas (Link) (repeating) — CTAs
+
+

@@ -49,6 +49,13 @@
               "Secondary"
             ]
           }
+        },
+        "micro_copy": {
+          "type": "Text",
+          "config": {
+            "label": "Micro Copy",
+            "placeholder": ""
+          }
         }
       },
       "items": {}

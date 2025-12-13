@@ -63,6 +63,13 @@
             "label": "Gradient Stop",
             "placeholder": "#E935C1"
           }
+        },
+        "micro_copy": {
+          "type": "Text",
+          "config": {
+            "label": "Micro Copy",
+            "placeholder": ""
+          }
         }
       },
       "items": {}
