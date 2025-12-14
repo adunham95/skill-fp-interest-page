@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ButtonRow from '$lib/Components/ButtonRow.svelte';
 	import type { Content } from '@prismicio/client';
 	import { PrismicImage, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 
@@ -37,6 +38,9 @@
 									</div>
 								{/each}
 							</dl>
+							<div class="mt-4">
+								<ButtonRow buttons={slice.primary.cta_row} />
+							</div>
 						</div>
 					</div>
 					<div class="sm:px-6 lg:px-0">
@@ -81,6 +85,9 @@
 									</div>
 								{/each}
 							</dl>
+							<div class="mt-4">
+								<ButtonRow buttons={slice.primary.cta_row} />
+							</div>
 						</div>
 					</div>
 					<div class="sm:px-6 lg:px-0">
