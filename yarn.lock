@@ -20,6 +20,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@anthropic-ai/claude-agent-sdk@npm:0.1.37":
+  version: 0.1.37
+  resolution: "@anthropic-ai/claude-agent-sdk@npm:0.1.37"
+  dependencies:
+    "@img/sharp-darwin-arm64": "npm:^0.33.5"
+    "@img/sharp-darwin-x64": "npm:^0.33.5"
+    "@img/sharp-linux-arm": "npm:^0.33.5"
+    "@img/sharp-linux-arm64": "npm:^0.33.5"
+    "@img/sharp-linux-x64": "npm:^0.33.5"
+    "@img/sharp-win32-x64": "npm:^0.33.5"
+  peerDependencies:
+    zod: ^3.24.1
+  dependenciesMeta:
+    "@img/sharp-darwin-arm64":
+      optional: true
+    "@img/sharp-darwin-x64":
+      optional: true
+    "@img/sharp-linux-arm":
+      optional: true
+    "@img/sharp-linux-arm64":
+      optional: true
+    "@img/sharp-linux-x64":
+      optional: true
+    "@img/sharp-win32-x64":
+      optional: true
+  checksum: 10c0/38674ac7a54e425e25f55b94b12da4363e992de05d9e8223c32dc025900610b64a773cdb6a3e82cd2e0cf5fb51126a870cfe9549d50c44b98a32116c3e4b3b83
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0":
   version: 7.27.1
   resolution: "@babel/code-frame@npm:7.27.1"
@@ -627,6 +656,108 @@ __metadata:
   version: 0.4.3
   resolution: "@humanwhocodes/retry@npm:0.4.3"
   checksum: 10c0/3775bb30087d4440b3f7406d5a057777d90e4b9f435af488a4923ef249e93615fb78565a85f173a186a076c7706a81d0d57d563a2624e4de2c5c9c66c486ce42
+  languageName: node
+  linkType: hard
+
+"@img/sharp-darwin-arm64@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-darwin-arm64@npm:0.33.5"
+  dependencies:
+    "@img/sharp-libvips-darwin-arm64": "npm:1.0.4"
+  dependenciesMeta:
+    "@img/sharp-libvips-darwin-arm64":
+      optional: true
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@img/sharp-darwin-x64@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-darwin-x64@npm:0.33.5"
+  dependencies:
+    "@img/sharp-libvips-darwin-x64": "npm:1.0.4"
+  dependenciesMeta:
+    "@img/sharp-libvips-darwin-x64":
+      optional: true
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@img/sharp-libvips-darwin-arm64@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@img/sharp-libvips-darwin-arm64@npm:1.0.4"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@img/sharp-libvips-darwin-x64@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@img/sharp-libvips-darwin-x64@npm:1.0.4"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@img/sharp-libvips-linux-arm64@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@img/sharp-libvips-linux-arm64@npm:1.0.4"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-libvips-linux-arm@npm:1.0.5":
+  version: 1.0.5
+  resolution: "@img/sharp-libvips-linux-arm@npm:1.0.5"
+  conditions: os=linux & cpu=arm & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-libvips-linux-x64@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@img/sharp-libvips-linux-x64@npm:1.0.4"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-linux-arm64@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-linux-arm64@npm:0.33.5"
+  dependencies:
+    "@img/sharp-libvips-linux-arm64": "npm:1.0.4"
+  dependenciesMeta:
+    "@img/sharp-libvips-linux-arm64":
+      optional: true
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-linux-arm@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-linux-arm@npm:0.33.5"
+  dependencies:
+    "@img/sharp-libvips-linux-arm": "npm:1.0.5"
+  dependenciesMeta:
+    "@img/sharp-libvips-linux-arm":
+      optional: true
+  conditions: os=linux & cpu=arm & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-linux-x64@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-linux-x64@npm:0.33.5"
+  dependencies:
+    "@img/sharp-libvips-linux-x64": "npm:1.0.4"
+  dependenciesMeta:
+    "@img/sharp-libvips-linux-x64":
+      optional: true
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@img/sharp-win32-x64@npm:^0.33.5":
+  version: 0.33.5
+  resolution: "@img/sharp-win32-x64@npm:0.33.5"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1430,13 +1561,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slicemachine/adapter-sveltekit@npm:^0.3.86":
-  version: 0.3.86
-  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.86"
+"@slicemachine/adapter-sveltekit@npm:^0.3.90":
+  version: 0.3.90
+  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.90"
   dependencies:
     "@prismicio/simulator": "npm:^0.1.4"
     "@prismicio/types-internal": "npm:3.11.2"
-    "@slicemachine/plugin-kit": "npm:0.4.84"
+    "@slicemachine/plugin-kit": "npm:0.4.88"
     common-tags: "npm:^1.8.2"
     fp-ts: "npm:^2.13.1"
     io-ts: "npm:^2.2.20"
@@ -1456,21 +1587,22 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/b4accdaadcacf8e001dcfa7a6047fb1161bb2f5ffcce06b156e15e227883b64eb7d53d26db800f4dd18484f9f0e1b7da4f23c706060f639ff452b0927e640d10
+  checksum: 10c0/638d8e21f649ce0e53d389a0db5fccb865d33554e615bcd8579dc464193408ac4f98aced40feecf1b80aed298d0e9644e28aa73935fc5d22744d73f97088f298
   languageName: node
   linkType: hard
 
-"@slicemachine/manager@npm:0.25.6":
-  version: 0.25.6
-  resolution: "@slicemachine/manager@npm:0.25.6"
+"@slicemachine/manager@npm:0.26.3":
+  version: 0.26.3
+  resolution: "@slicemachine/manager@npm:0.26.3"
   dependencies:
     "@antfu/ni": "npm:^0.20.0"
+    "@anthropic-ai/claude-agent-sdk": "npm:0.1.37"
     "@prismicio/client": "npm:7.17.0"
     "@prismicio/custom-types-client": "npm:2.1.0"
     "@prismicio/mocks": "npm:2.14.0"
     "@prismicio/types-internal": "npm:3.11.2"
     "@segment/analytics-node": "npm:^2.1.2"
-    "@slicemachine/plugin-kit": "npm:0.4.84"
+    "@slicemachine/plugin-kit": "npm:0.4.88"
     cookie: "npm:^1.0.1"
     cors: "npm:^2.8.5"
     execa: "npm:^7.1.1"
@@ -1495,13 +1627,13 @@ __metadata:
   peerDependenciesMeta:
     msw:
       optional: true
-  checksum: 10c0/af756815c950b68db5943a77034c10ea38b0594afd95a524a1d78eec3e2144a57f45f348cb656d36cce9dd3eb4a60a05fbc11acb36b082884132ab003a2d354d
+  checksum: 10c0/4b9b750e0a2283d9d316bd275e69c9a43234c2a579df76dad2aa089e0538316cb560fc378b7d43568064a305b00e45bd3a6ca1cf1dbc57af1f0a1d786c823a06
   languageName: node
   linkType: hard
 
-"@slicemachine/plugin-kit@npm:0.4.84":
-  version: 0.4.84
-  resolution: "@slicemachine/plugin-kit@npm:0.4.84"
+"@slicemachine/plugin-kit@npm:0.4.88":
+  version: 0.4.88
+  resolution: "@slicemachine/plugin-kit@npm:0.4.88"
   dependencies:
     "@prismicio/client": "npm:7.17.0"
     common-tags: "npm:^1.8.2"
@@ -1514,7 +1646,7 @@ __metadata:
     p-limit: "npm:^4.0.0"
     prettier: "npm:^3.0.3"
     prismic-ts-codegen: "npm:0.1.27"
-  checksum: 10c0/2d5a83cc4240dee193a4bb9a1f0a57de0f82f2c133da02fb5731568e2450c094a08177fbc35a7da602acb21e279a71c3d7bef09da69ee2fc919387d434ff8762
+  checksum: 10c0/08334250738b391d4d9fbb7259ebb1ef6b6dea5d88d6317c961219dc5912a776aa28c0da64b9bcbcbdf6edd8b2bb52d867f6605c1c6c1249b45853867c5bb40b
   languageName: node
   linkType: hard
 
@@ -4058,7 +4190,7 @@ __metadata:
     "@prismicio/client": "npm:^7.21.0"
     "@prismicio/svelte": "npm:^2.0.0"
     "@resvg/resvg-js": "npm:^2.6.2"
-    "@slicemachine/adapter-sveltekit": "npm:^0.3.86"
+    "@slicemachine/adapter-sveltekit": "npm:^0.3.90"
     "@sveltejs/adapter-auto": "npm:^6.1.1"
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/adapter-vercel": "npm:^5.10.3"
@@ -4080,10 +4212,10 @@ __metadata:
     prisma: "npm:^6.19.0"
     satori: "npm:^0.18.3"
     satori-html: "npm:^0.3.2"
-    slice-machine-ui: "npm:^2.19.1"
+    slice-machine-ui: "npm:^2.20.3"
     svelte: "npm:^5.43.4"
     svelte-check: "npm:^4.3.3"
-    tailwindcss: "npm:^4.1.17"
+    tailwindcss: "npm:^4.1.18"
     typescript: "npm:^5.0.0"
     typescript-eslint: "npm:^8.20.0"
     vite: "npm:^6.4.1"
@@ -6237,15 +6369,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slice-machine-ui@npm:^2.19.1":
-  version: 2.19.1
-  resolution: "slice-machine-ui@npm:2.19.1"
+"slice-machine-ui@npm:^2.20.3":
+  version: 2.20.3
+  resolution: "slice-machine-ui@npm:2.20.3"
   dependencies:
-    "@slicemachine/manager": "npm:0.25.6"
-    start-slicemachine: "npm:0.12.64"
+    "@slicemachine/manager": "npm:0.26.3"
+    start-slicemachine: "npm:0.12.68"
   bin:
     start-slicemachine: ./bin/start-slicemachine.cjs
-  checksum: 10c0/ea632284821a3b3c3e51286c2ee6d71f5ab65b6b9ed26f9590047e2176fd3eab056a3cfa9d386f02bc18f5956b4232f726feef01281639a385fc91427d189a78
+  checksum: 10c0/71822970df41e0a05448d34f17002a787a1ef0332457e15368d09cf2a893633926b3845373264fedf6814bda500b48c59eba96d8f9752c2ec0141fa4e1dfbaa6
   languageName: node
   linkType: hard
 
@@ -6334,13 +6466,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"start-slicemachine@npm:0.12.64":
-  version: 0.12.64
-  resolution: "start-slicemachine@npm:0.12.64"
+"start-slicemachine@npm:0.12.68":
+  version: 0.12.68
+  resolution: "start-slicemachine@npm:0.12.68"
   dependencies:
     "@prismicio/mocks": "npm:2.14.0"
     "@prismicio/types-internal": "npm:3.11.2"
-    "@slicemachine/manager": "npm:0.25.6"
+    "@slicemachine/manager": "npm:0.26.3"
     body-parser: "npm:^1.20.3"
     chalk: "npm:^4.1.2"
     cors: "npm:^2.8.5"
@@ -6357,7 +6489,7 @@ __metadata:
     serve-static: "npm:^1.15.0"
   bin:
     start-slicemachine: ./bin/start-slicemachine.js
-  checksum: 10c0/3e346e73bf087e03756fe1a5cd06e241e2f51dfdd26ae871121dea318193bd37d92771621c5213d31fb99c905c550c7a0e2ca72535e918c0e790bdd6fcbc7751
+  checksum: 10c0/cdd7947c71b2f7356bdc0acca02b42af8a1066b22f4f417a0303612ae8459266f12ff55ff70ccf9fa3176c6e08a28bddb531fcd13301ff47817bb6aed591a14b
   languageName: node
   linkType: hard
 
@@ -6532,10 +6664,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.1.17, tailwindcss@npm:^4.1.17":
+"tailwindcss@npm:4.1.17":
   version: 4.1.17
   resolution: "tailwindcss@npm:4.1.17"
   checksum: 10c0/1fecf618ba9895e068e5a6d842b978f56a815bc849a28338cebbcb07b13df763715c2f8848def938403c73d59f08ffff33a4b83a977a9e38fa56adc60d1d56c8
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:^4.1.18":
+  version: 4.1.18
+  resolution: "tailwindcss@npm:4.1.18"
+  checksum: 10c0/c79263cea0b2c577859b02f28284caa4eb3844e4d0f563686726ca97817c045c5c395a55bc776daaa351ba9e4aefa9a75bfbb43c22d86f3c573eecc2b87d6bf1
   languageName: node
   linkType: hard
 
