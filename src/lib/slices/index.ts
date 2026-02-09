@@ -13,6 +13,7 @@ import GradientCta from './GradientCta/index.svelte';
 import HeadlineOverlay from './HeadlineOverlay/index.svelte';
 import Hero from './Hero/index.svelte';
 import HeroOverBackgroundImage from './HeroOverBackgroundImage/index.svelte';
+import HeroWithCtaAndNavigationPreview from './HeroWithCtaAndNavigationPreview/index.svelte';
 import HeroWithScreenshot from './HeroWithScreenshot/index.svelte';
 import ImageBlock from './ImageBlock/index.svelte';
 import MultiActions from './MultiActions/index.svelte';
@@ -44,6 +45,7 @@ export const components = {
 	headline_overlay: HeadlineOverlay,
 	hero: Hero,
 	hero_over_background_image: HeroOverBackgroundImage,
+	hero_with_cta_and_navigation_preview: HeroWithCtaAndNavigationPreview,
 	hero_with_screenshot: HeroWithScreenshot,
 	image_block: ImageBlock,
 	multi_actions: MultiActions,

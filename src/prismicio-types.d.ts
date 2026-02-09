@@ -664,6 +664,7 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| HeroWithCtaAndNavigationPreviewSlice
 	| RichTextSlice
 	| UseCaseSlice
 	| MultiActionsSlice
@@ -2124,6 +2125,24 @@ export interface FeatureWIthImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
 	features: prismic.GroupField<Simplify<FeatureWIthImageSliceDefaultPrimaryFeaturesItem>>;
+
+	/**
+	 * CTA Row field in *FeatureWIthImage → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.default.primary.cta_row
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta_row: prismic.Repeatable<
+		prismic.LinkField<
+			string,
+			string,
+			unknown,
+			prismic.FieldState,
+			'Primary' | 'Secondary' | 'Accent'
+		>
+	>;
 }
 
 /**
@@ -2192,6 +2211,24 @@ export interface FeatureWIthImageSliceDarkPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
 	features: prismic.GroupField<Simplify<FeatureWIthImageSliceDarkPrimaryFeaturesItem>>;
+
+	/**
+	 * CTA Row field in *FeatureWIthImage → Dark → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_w_ith_image.dark.primary.cta_row
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	cta_row: prismic.Repeatable<
+		prismic.LinkField<
+			string,
+			string,
+			unknown,
+			prismic.FieldState,
+			'Primary' | 'Secondary' | 'Accent'
+		>
+	>;
 }
 
 /**
@@ -2712,6 +2749,112 @@ type HeroOverBackgroundImageSliceVariation = HeroOverBackgroundImageSliceDefault
 export type HeroOverBackgroundImageSlice = prismic.SharedSlice<
 	'hero_over_background_image',
 	HeroOverBackgroundImageSliceVariation
+>;
+
+/**
+ * Primary content in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+ */
+export interface HeroWithCtaAndNavigationPreviewSliceDefaultWithPreviewPrimary {
+	/**
+	 * Logo field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.logo
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	logo: prismic.ImageField<never>;
+
+	/**
+	 * Title field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Primary CTA field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.primary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary CTA field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.secondary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Preview Image field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.preview_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	preview_image: prismic.ImageField<never>;
+
+	/**
+	 * Micro Copy field in *HeroWithCtaAndNavigationPreview → Default with Preview → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero_with_cta_and_navigation_preview.default_with_preview.primary.micro_copy
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	micro_copy: prismic.KeyTextField;
+}
+
+/**
+ * Default with Preview variation for HeroWithCtaAndNavigationPreview Slice
+ *
+ * - **API ID**: `default_with_preview`
+ * - **Description**: Hero with two badges, prominent title, description, two CTAs, and an optional UI/dashboard/app preview image on the right.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroWithCtaAndNavigationPreviewSliceDefaultWithPreview = prismic.SharedSliceVariation<
+	'default_with_preview',
+	Simplify<HeroWithCtaAndNavigationPreviewSliceDefaultWithPreviewPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *HeroWithCtaAndNavigationPreview*
+ */
+type HeroWithCtaAndNavigationPreviewSliceVariation =
+	HeroWithCtaAndNavigationPreviewSliceDefaultWithPreview;
+
+/**
+ * HeroWithCtaAndNavigationPreview Shared Slice
+ *
+ * - **API ID**: `hero_with_cta_and_navigation_preview`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type HeroWithCtaAndNavigationPreviewSlice = prismic.SharedSlice<
+	'hero_with_cta_and_navigation_preview',
+	HeroWithCtaAndNavigationPreviewSliceVariation
 >;
 
 /**
@@ -4530,6 +4673,10 @@ declare module '@prismicio/client' {
 			HeroOverBackgroundImageSliceDefaultPrimary,
 			HeroOverBackgroundImageSliceVariation,
 			HeroOverBackgroundImageSliceDefault,
+			HeroWithCtaAndNavigationPreviewSlice,
+			HeroWithCtaAndNavigationPreviewSliceDefaultWithPreviewPrimary,
+			HeroWithCtaAndNavigationPreviewSliceVariation,
+			HeroWithCtaAndNavigationPreviewSliceDefaultWithPreview,
 			HeroWithScreenshotSlice,
 			HeroWithScreenshotSliceDefaultPrimary,
 			HeroWithScreenshotSliceVariation,

@@ -1,0 +1,71 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default_with_preview",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit adipisicing ut Lorem fugiat do fugiat do eu duis in ipsum sint ullamco sit qui. Est anim reprehenderit qui eu ipsum ipsum nostrud adipisicing nisi deserunt."
+						}
+					}
+				]
+			},
+			"primary_cta": {
+				"key": "cbe2a36b-c986-4d9b-a3c2-1477339240e3",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "Click Me"
+				}
+			},
+			"secondary_cta": {
+				"key": "0115d5c3-8d7d-4921-b1ba-f10031a41be7",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "Click Me Too"
+				}
+			},
+			"preview_image": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NzA2MzEzMDV8MA&ixlib=rb-4.1.0&q=85",
+				"alt": "orange fruits under blue sky during daytime",
+				"origin": {
+					"id": "eaOjEz8746k",
+					"url": "https://images.unsplash.com/photo-1597714026720-8f74c62310ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxjaXRydXMlMjBmcnVpdHxlbnwwfHx8fDE3NzA2MzEzMDV8MA&ixlib=rb-4.1.0&q=85",
+					"width": 5688,
+					"height": 3792
+				},
+				"width": 5688,
+				"height": 3792,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					}
+				},
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Test Title"
+			},
+			"micro_copy": {
+				"__TYPE__": "FieldContent",
+				"value": "easy",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

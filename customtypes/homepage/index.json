@@ -11,6 +11,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"hero_with_cta_and_navigation_preview": {
+							"type": "SharedSlice"
+						},
 						"rich_text": {
 							"type": "SharedSlice"
 						},
