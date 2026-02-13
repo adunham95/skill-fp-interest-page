@@ -2,7 +2,7 @@
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { repositoryName } from '$lib/prismicio';
 	import Banner from '$lib/Components/Banner.svelte';
-	import Header from '$lib/Components/Header.svelte';
+	import Header from '$lib/Components/Header/Header.svelte';
 	import Footer from '$lib/Components/Footer.svelte';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
@@ -43,6 +43,8 @@
 
 			record_sessions_percent: 1
 		});
+
+	console.log(data.header?.data);
 </script>
 
 <svelte:head>

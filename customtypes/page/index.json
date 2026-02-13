@@ -17,6 +17,12 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"feature_bento_box": {
+							"type": "SharedSlice"
+						},
+						"step_by_step": {
+							"type": "SharedSlice"
+						},
 						"pricing_calculator": {
 							"type": "SharedSlice"
 						},

@@ -246,6 +246,7 @@ export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type FeaturesDocumentDataSlicesSlice =
+	| FeatureBentoBoxSlice
 	| CtaBlockSlice
 	| RecentBlogPostsSlice
 	| FeatureVideoSlice
@@ -527,54 +528,190 @@ export type FooterDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 /**
- * Item in *Header → Navigation Menu*
+ * Item in *Header → Navigation Items → Dropdown Items (when item_type=dropdown)*
  */
-export interface HeaderDocumentDataNavMenuItem {
+export interface HeaderDocumentDataNavItemsDropdownItemsItem {
 	/**
-	 * Menu Item Label field in *Header → Navigation Menu*
+	 * Label field in *Header → Navigation Items → Dropdown Items (when item_type=dropdown)*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.nav_menu[].label
+	 * - **API ID Path**: header.nav_items[].dropdown_items[].label
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	label: prismic.KeyTextField;
 
 	/**
-	 * Menu Item URL field in *Header → Navigation Menu*
+	 * Description (optional) field in *Header → Navigation Items → Dropdown Items (when item_type=dropdown)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_items[].dropdown_items[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	description: prismic.KeyTextField;
+
+	/**
+	 * Icon field in *Header → Navigation Items → Dropdown Items (when item_type=dropdown)*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**:
+	 * - **API ID Path**: header.nav_items[].dropdown_items[].icon
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	icon: prismic.SelectField<
+		| 'target'
+		| 'trophy'
+		| 'notebook'
+		| 'arrowRightLeft'
+		| 'flag'
+		| 'square2x2'
+		| 'star'
+		| 'documentText'
+	>;
+
+	/**
+	 * Link field in *Header → Navigation Items → Dropdown Items (when item_type=dropdown)*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.nav_menu[].url
+	 * - **API ID Path**: header.nav_items[].dropdown_items[].link
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
-	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
 }
 
 /**
- * Item in *Header → Mobile Navigation Menu*
+ * Item in *Header → Navigation Items*
  */
-export interface HeaderDocumentDataMobileNavMenuItem {
+export interface HeaderDocumentDataNavItemsItem {
 	/**
-	 * Menu Item Label field in *Header → Mobile Navigation Menu*
+	 * Item Type field in *Header → Navigation Items*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: link
+	 * - **API ID Path**: header.nav_items[].item_type
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	item_type: prismic.SelectField<'link' | 'dropdown', 'filled'>;
+
+	/**
+	 * Label field in *Header → Navigation Items*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.mobile_nav_menu[].label
+	 * - **API ID Path**: header.nav_items[].label
 	 * - **Documentation**: https://prismic.io/docs/fields/text
 	 */
 	label: prismic.KeyTextField;
 
 	/**
-	 * Menu Item URL field in *Header → Mobile Navigation Menu*
+	 * Link (when item_type=link) field in *Header → Navigation Items*
 	 *
 	 * - **Field Type**: Link
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.mobile_nav_menu[].url
+	 * - **API ID Path**: header.nav_items[].link
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
-	url: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Dropdown Items (when item_type=dropdown) field in *Header → Navigation Items*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_items[].dropdown_items[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	dropdown_items: prismic.NestedGroupField<Simplify<HeaderDocumentDataNavItemsDropdownItemsItem>>;
+
+	/**
+	 * Key field in *Header → Navigation Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.nav_items[].key
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	key: prismic.KeyTextField;
 }
+
+/**
+ * Item in *Header → Mobile Navigation Items (optional override) → Dropdown Items (when item_type=dropdown)*
+ */
+export interface HeaderDocumentDataMobileNavItemsDropdownItemsItem {
+	/**
+	 * Label field in *Header → Mobile Navigation Items (optional override) → Dropdown Items (when item_type=dropdown)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_items[].dropdown_items[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Link field in *Header → Mobile Navigation Items (optional override) → Dropdown Items (when item_type=dropdown)*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_items[].dropdown_items[].link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+}
+
+/**
+ * Item in *Header → Mobile Navigation Items (optional override)*
+ */
+export interface HeaderDocumentDataMobileNavItemsItem {
+	/**
+	 * Item Type field in *Header → Mobile Navigation Items (optional override)*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: link
+	 * - **API ID Path**: header.mobile_nav_items[].item_type
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	item_type: prismic.SelectField<'link' | 'dropdown', 'filled'>;
+
+	/**
+	 * Label field in *Header → Mobile Navigation Items (optional override)*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_items[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Link (when item_type=link) field in *Header → Mobile Navigation Items (optional override)*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_items[].link
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Dropdown Items (when item_type=dropdown) field in *Header → Mobile Navigation Items (optional override)*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.mobile_nav_items[].dropdown_items[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	dropdown_items: prismic.NestedGroupField<
+		Simplify<HeaderDocumentDataMobileNavItemsDropdownItemsItem>
+	>;
+}
+
+type HeaderDocumentDataSlicesSlice = never;
 
 /**
  * Content for Header documents
@@ -614,26 +751,38 @@ interface HeaderDocumentData {
 	app_name: prismic.KeyTextField;
 
 	/**
-	 * Navigation Menu field in *Header*
+	 * Navigation Items field in *Header*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.nav_menu[]
+	 * - **API ID Path**: header.nav_items[]
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
-	nav_menu: prismic.GroupField<Simplify<HeaderDocumentDataNavMenuItem>>;
+	nav_items: prismic.GroupField<Simplify<HeaderDocumentDataNavItemsItem>>;
 
 	/**
-	 * Mobile Navigation Menu field in *Header*
+	 * Use same nav items for mobile field in *Header*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: true
+	 * - **API ID Path**: header.use_same_nav_for_mobile
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/boolean
+	 */
+	use_same_nav_for_mobile: prismic.BooleanField;
+
+	/**
+	 * Mobile Navigation Items (optional override) field in *Header*
 	 *
 	 * - **Field Type**: Group
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: header.mobile_nav_menu[]
+	 * - **API ID Path**: header.mobile_nav_items[]
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
 	 */
-	mobile_nav_menu: prismic.GroupField<Simplify<HeaderDocumentDataMobileNavMenuItem>>;
+	mobile_nav_items: prismic.GroupField<Simplify<HeaderDocumentDataMobileNavItemsItem>>;
 
 	/**
 	 * Enable Sign In field in *Header*
@@ -646,6 +795,39 @@ interface HeaderDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/fields/boolean
 	 */
 	enable_sign_in: prismic.BooleanField;
+
+	/**
+	 * Sign In Label field in *Header*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: Log in
+	 * - **API ID Path**: header.sign_in_label
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	sign_in_label: prismic.KeyTextField;
+
+	/**
+	 * Sign In Link field in *Header*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.sign_in_link
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	sign_in_link: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Slice Zone field in *Header*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/slices
+	 */
+	slices: prismic.SliceZone<HeaderDocumentDataSlicesSlice>;
 }
 
 /**
@@ -664,6 +846,8 @@ export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocume
 >;
 
 type HomepageDocumentDataSlicesSlice =
+	| FeatureBentoBoxSlice
+	| StepByStepSlice
 	| HeroWithCtaAndNavigationPreviewSlice
 	| RichTextSlice
 	| UseCaseSlice
@@ -751,6 +935,8 @@ export type HomepageDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| FeatureBentoBoxSlice
+	| StepByStepSlice
 	| PricingCalculatorSlice
 	| MultiActionsSlice
 	| HeroWithScreenshotSlice
@@ -1457,6 +1643,129 @@ type FaqGroupSliceVariation = FaqGroupSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slices
  */
 export type FaqGroupSlice = prismic.SharedSlice<'faq_group', FaqGroupSliceVariation>;
+
+/**
+ * Item in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+ */
+export interface FeatureBentoBoxSliceDefaultGridPrimaryFeatureCardsItem {
+	/**
+	 * Icon or Image field in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[].icon_or_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	icon_or_image: prismic.ImageField<never>;
+
+	/**
+	 * Card Title field in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[].card_title
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	card_title: prismic.RichTextField;
+
+	/**
+	 * Label field in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[].label
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	label: prismic.KeyTextField;
+
+	/**
+	 * Description field in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Size field in *FeatureBentoBox → Default Grid → Primary → Feature Cards*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: sm
+	 * - **Default Value**: Small
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[].size
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	size: prismic.SelectField<'Small' | 'Medium' | 'Large', 'filled'>;
+}
+
+/**
+ * Primary content in *FeatureBentoBox → Default Grid → Primary*
+ */
+export interface FeatureBentoBoxSliceDefaultGridPrimary {
+	/**
+	 * Eyebrow field in *FeatureBentoBox → Default Grid → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.eyebrow
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	eyebrow: prismic.KeyTextField;
+
+	/**
+	 * Title field in *FeatureBentoBox → Default Grid → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Feature Cards field in *FeatureBentoBox → Default Grid → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: feature_bento_box.default_grid.primary.feature_cards[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	feature_cards: prismic.GroupField<
+		Simplify<FeatureBentoBoxSliceDefaultGridPrimaryFeatureCardsItem>
+	>;
+}
+
+/**
+ * Default Grid variation for FeatureBentoBox Slice
+ *
+ * - **API ID**: `default_grid`
+ * - **Description**: A visually segmented, grid-style layout with a main header, supporting intro, and multiple feature/info cards or modules below.
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureBentoBoxSliceDefaultGrid = prismic.SharedSliceVariation<
+	'default_grid',
+	Simplify<FeatureBentoBoxSliceDefaultGridPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *FeatureBentoBox*
+ */
+type FeatureBentoBoxSliceVariation = FeatureBentoBoxSliceDefaultGrid;
+
+/**
+ * FeatureBentoBox Shared Slice
+ *
+ * - **API ID**: `feature_bento_box`
+ * - **Description**: FeatureBentoBox
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type FeatureBentoBoxSlice = prismic.SharedSlice<
+	'feature_bento_box',
+	FeatureBentoBoxSliceVariation
+>;
 
 /**
  * Item in *FeatureCardsGrid → Default → Primary → Features*
@@ -4121,6 +4430,113 @@ export type SingleTestimonialSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *StepByStep → Default → Primary → Steps*
+ */
+export interface StepByStepSliceDefaultPrimaryStepsItem {
+	/**
+	 * Title field in *StepByStep → Default → Primary → Steps*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.steps[].title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *StepByStep → Default → Primary → Steps*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.steps[].description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Image field in *StepByStep → Default → Primary → Steps*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.steps[].image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *StepByStep → Default → Primary*
+ */
+export interface StepByStepSliceDefaultPrimary {
+	/**
+	 * Eyebrow field in *StepByStep → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.eyebrow
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	eyebrow: prismic.KeyTextField;
+
+	/**
+	 * Title field in *StepByStep → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	title: prismic.KeyTextField;
+
+	/**
+	 * Description field in *StepByStep → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	description: prismic.RichTextField;
+
+	/**
+	 * Steps field in *StepByStep → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: step_by_step.default.primary.steps[]
+	 * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+	 */
+	steps: prismic.GroupField<Simplify<StepByStepSliceDefaultPrimaryStepsItem>>;
+}
+
+/**
+ * Default variation for StepByStep Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type StepByStepSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<StepByStepSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *StepByStep*
+ */
+type StepByStepSliceVariation = StepByStepSliceDefault;
+
+/**
+ * StepByStep Shared Slice
+ *
+ * - **API ID**: `step_by_step`
+ * - **Description**: StepByStep
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type StepByStepSlice = prismic.SharedSlice<'step_by_step', StepByStepSliceVariation>;
+
+/**
  * Item in *TeamOverview → Default → Primary → Members*
  */
 export interface TeamOverviewSliceDefaultPrimaryMembersItem {
@@ -4590,8 +5006,11 @@ declare module '@prismicio/client' {
 			FooterDocumentDataSectionsItem,
 			HeaderDocument,
 			HeaderDocumentData,
-			HeaderDocumentDataNavMenuItem,
-			HeaderDocumentDataMobileNavMenuItem,
+			HeaderDocumentDataNavItemsDropdownItemsItem,
+			HeaderDocumentDataNavItemsItem,
+			HeaderDocumentDataMobileNavItemsDropdownItemsItem,
+			HeaderDocumentDataMobileNavItemsItem,
+			HeaderDocumentDataSlicesSlice,
 			HomepageDocument,
 			HomepageDocumentData,
 			HomepageDocumentDataSlicesSlice,
@@ -4622,6 +5041,11 @@ declare module '@prismicio/client' {
 			FaqGroupSliceDefaultPrimary,
 			FaqGroupSliceVariation,
 			FaqGroupSliceDefault,
+			FeatureBentoBoxSlice,
+			FeatureBentoBoxSliceDefaultGridPrimaryFeatureCardsItem,
+			FeatureBentoBoxSliceDefaultGridPrimary,
+			FeatureBentoBoxSliceVariation,
+			FeatureBentoBoxSliceDefaultGrid,
 			FeatureCardsGridSlice,
 			FeatureCardsGridSliceDefaultPrimaryFeaturesItem,
 			FeatureCardsGridSliceDefaultPrimary,
@@ -4733,6 +5157,11 @@ declare module '@prismicio/client' {
 			SingleTestimonialSliceDefaultPrimary,
 			SingleTestimonialSliceVariation,
 			SingleTestimonialSliceDefault,
+			StepByStepSlice,
+			StepByStepSliceDefaultPrimaryStepsItem,
+			StepByStepSliceDefaultPrimary,
+			StepByStepSliceVariation,
+			StepByStepSliceDefault,
 			TeamOverviewSlice,
 			TeamOverviewSliceDefaultPrimaryMembersItem,
 			TeamOverviewSliceDefaultPrimary,

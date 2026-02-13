@@ -1,6 +1,9 @@
 {
 	"format": "custom",
 	"id": "header",
+	"label": "Header",
+	"repeatable": false,
+	"status": true,
 	"json": {
 		"Main": {
 			"logo": {
@@ -26,43 +29,138 @@
 					"label": "App Name"
 				}
 			},
-			"nav_menu": {
+			"nav_items": {
 				"type": "Group",
 				"config": {
-					"label": "Navigation Menu",
+					"label": "Navigation Items",
 					"fields": {
+						"item_type": {
+							"type": "Select",
+							"config": {
+								"label": "Item Type",
+								"options": ["link", "dropdown"],
+								"default_value": "link"
+							}
+						},
 						"label": {
 							"type": "Text",
 							"config": {
-								"label": "Menu Item Label"
+								"label": "Label"
 							}
 						},
-						"url": {
+						"link": {
 							"type": "Link",
 							"config": {
-								"label": "Menu Item URL",
+								"label": "Link (when item_type=link)",
 								"select": null
+							}
+						},
+						"dropdown_items": {
+							"type": "Group",
+							"config": {
+								"label": "Dropdown Items (when item_type=dropdown)",
+								"fields": {
+									"label": {
+										"type": "Text",
+										"config": {
+											"label": "Label"
+										}
+									},
+									"description": {
+										"type": "Text",
+										"config": {
+											"label": "Description (optional)"
+										}
+									},
+									"icon": {
+										"type": "Select",
+										"config": {
+											"label": "Icon",
+											"options": [
+												"target",
+												"trophy",
+												"notebook",
+												"arrowRightLeft",
+												"flag",
+												"square2x2",
+												"star",
+												"documentText"
+											],
+											"default_value": ""
+										}
+									},
+									"link": {
+										"type": "Link",
+										"config": {
+											"label": "Link",
+											"select": null
+										}
+									}
+								}
+							}
+						},
+						"key": {
+							"type": "Text",
+							"config": {
+								"label": "Key",
+								"placeholder": ""
 							}
 						}
 					}
 				}
 			},
-			"mobile_nav_menu": {
+			"use_same_nav_for_mobile": {
+				"type": "Boolean",
+				"config": {
+					"label": "Use same nav items for mobile",
+					"default_value": true
+				}
+			},
+			"mobile_nav_items": {
 				"type": "Group",
 				"config": {
-					"label": "Mobile Navigation Menu",
+					"label": "Mobile Navigation Items (optional override)",
 					"fields": {
+						"item_type": {
+							"type": "Select",
+							"config": {
+								"label": "Item Type",
+								"options": ["link", "dropdown"],
+								"default_value": "link"
+							}
+						},
 						"label": {
 							"type": "Text",
 							"config": {
-								"label": "Menu Item Label"
+								"label": "Label"
 							}
 						},
-						"url": {
+						"link": {
 							"type": "Link",
 							"config": {
-								"label": "Menu Item URL",
+								"label": "Link (when item_type=link)",
 								"select": null
+							}
+						},
+						"dropdown_items": {
+							"type": "Group",
+							"config": {
+								"label": "Dropdown Items (when item_type=dropdown)",
+								"fields": {
+									"label": {
+										"type": "Text",
+										"config": {
+											"label": "Label"
+										}
+									},
+									"link": {
+										"type": "Link",
+										"config": {
+											"label": "Link",
+											"select": null
+										}
+									}
+								}
 							}
 						}
 					}
@@ -74,10 +172,28 @@
 					"label": "Enable Sign In",
 					"default_value": true
 				}
+			},
+			"sign_in_label": {
+				"type": "Text",
+				"config": {
+					"label": "Sign In Label",
+					"placeholder": "Log in"
+				}
+			},
+			"sign_in_link": {
+				"type": "Link",
+				"config": {
+					"label": "Sign In Link",
+					"select": null
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {}
+				}
 			}
 		}
-	},
-	"label": "Header",
-	"repeatable": false,
-	"status": true
+	}
 }

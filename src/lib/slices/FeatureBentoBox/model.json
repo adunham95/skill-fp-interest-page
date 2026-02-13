@@ -1,0 +1,76 @@
+{
+	"id": "feature_bento_box",
+	"type": "SharedSlice",
+	"name": "FeatureBentoBox",
+	"description": "FeatureBentoBox",
+	"variations": [
+		{
+			"id": "default_grid",
+			"name": "Default Grid",
+			"description": "A visually segmented, grid-style layout with a main header, supporting intro, and multiple feature/info cards or modules below.",
+			"version": "initial",
+			"imageUrl": "",
+			"docURL": "...",
+			"primary": {
+				"eyebrow": {
+					"type": "Text",
+					"config": {
+						"label": "Eyebrow",
+						"placeholder": ""
+					}
+				},
+				"title": {
+					"type": "Text",
+					"config": {
+						"label": "Title",
+						"placeholder": ""
+					}
+				},
+				"feature_cards": {
+					"type": "Group",
+					"config": {
+						"label": "Feature Cards",
+						"fields": {
+							"icon_or_image": {
+								"type": "Image",
+								"config": {
+									"label": "Icon or Image"
+								}
+							},
+							"card_title": {
+								"type": "StructuredText",
+								"config": {
+									"single": "heading3",
+									"label": "Card Title"
+								}
+							},
+							"label": {
+								"type": "Text",
+								"config": {
+									"label": "Label"
+								}
+							},
+							"description": {
+								"type": "StructuredText",
+								"config": {
+									"multi": "paragraph,strong,em",
+									"label": "Description"
+								}
+							},
+							"size": {
+								"type": "Select",
+								"config": {
+									"label": "Size",
+									"placeholder": "sm",
+									"options": ["Small", "Medium", "Large"],
+									"default_value": "Small"
+								}
+							}
+						}
+					}
+				}
+			},
+			"items": {}
+		}
+	]
+}

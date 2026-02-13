@@ -1,40 +1,19 @@
 <script lang="ts">
-	import type {
-		BooleanField,
-		GroupField,
-		ImageField,
-		KeyTextField,
-		LinkField
-	} from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-
-	interface Props {
-		app_name?: KeyTextField;
-		logo?: ImageField;
-		tagline?: KeyTextField;
-		nav_menu?: GroupField<{
-			label: KeyTextField;
-			url: LinkField;
-		}>;
-		mobile_nav_menu?: GroupField<{
-			label: KeyTextField;
-			url: LinkField;
-		}>;
-		cta_text?: KeyTextField; // now optional
-		cta_url?: LinkField; // now optional
-		enable_sign_in?: BooleanField;
-	}
+	import HeaderItem from './HeaderItem.svelte';
+	import type { NavHeader } from './types';
+	import MobileHeaderItem from './MobileHeaderItem.svelte';
 
 	const {
 		app_name = 'Career Fingerprint',
 		logo,
 		tagline,
-		nav_menu = [],
-		mobile_nav_menu = [],
-		cta_text,
-		cta_url,
+		nav_items = [],
+		mobile_nav_items = [],
 		enable_sign_in = false
-	}: Props = $props();
+	}: NavHeader = $props();
+
+	console.log(nav_items);
 
 	let mobileNabOpen = $state(false);
 </script>
@@ -58,70 +37,66 @@
 				</span>
 			</a>
 		</div>
-		{#if enable_sign_in}
-			<div class="flex md:hidden">
-				<button
-					type="button"
-					onclick={() => (mobileNabOpen = !mobileNabOpen)}
-					class="text-content-2 hover:bg-content-2 hover:text-content-3 focus:ring-primary relative inline-flex items-center justify-center rounded-md p-2 focus:ring-2 focus:outline-none focus:ring-inset"
-					aria-controls="mobile-menu"
-					aria-expanded="false"
-				>
-					<span class="absolute -inset-0.5" data-name="Open Menu"></span>
-					<span class="sr-only">Open menu</span>
-					<!--
+		<div class="flex md:hidden">
+			<button
+				type="button"
+				onclick={() => (mobileNabOpen = !mobileNabOpen)}
+				class="text-content-2 hover:bg-content-2 hover:text-content-3 focus:ring-primary relative inline-flex items-center justify-center rounded-md p-2 focus:ring-2 focus:outline-none focus:ring-inset"
+				aria-controls="mobile-menu"
+				aria-expanded="false"
+			>
+				<span class="absolute -inset-0.5" data-name="Open Menu"></span>
+				<span class="sr-only">Open menu</span>
+				<!--
 					Icon when menu is closed.
 					
 					Menu open: "hidden", Menu closed: "block"
 					-->
-					<svg
-						class={`${mobileNabOpen ? 'hidden' : 'block'} size-6`}
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						aria-hidden="true"
-						data-slot="icon"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-						/>
-					</svg>
-					<!--
+				<svg
+					class={`${mobileNabOpen ? 'hidden' : 'block'} size-6`}
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					aria-hidden="true"
+					data-slot="icon"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+					/>
+				</svg>
+				<!--
 					Icon when menu is open.
 					
 					Menu open: "block", Menu closed: "hidden"
             -->
-					<svg
-						class={`${mobileNabOpen ? 'block' : 'hidden'} size-6`}
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						aria-hidden="true"
-						data-slot="icon"
-					>
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-					</svg>
-				</button>
-			</div>
-		{/if}
-		<div class="hidden lg:flex lg:gap-x-12">
-			{#each nav_menu as nav}
-				<PrismicLink field={nav.url} class="text-sm/6 font-semibold text-gray-900">
-					{nav.label}
-				</PrismicLink>
-			{/each}
+				<svg
+					class={`${mobileNabOpen ? 'block' : 'hidden'} size-6`}
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					aria-hidden="true"
+					data-slot="icon"
+				>
+					<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+				</svg>
+			</button>
 		</div>
+		<el-popover-group class="hidden lg:flex lg:gap-x-12">
+			{#each nav_items as nav}
+				<HeaderItem {...nav} />
+			{/each}
+		</el-popover-group>
 		<div class="hidden items-center md:flex md:flex-1 md:flex-row md:justify-end">
 			{#if enable_sign_in}
 				<a
 					href="https://careerfingerprint.app/register"
-					class="mr-2 text-sm/6 font-semibold text-gray-900">Create Account</a
+					class="btn--primary btn mr-2 text-sm/6 font-semibold">Create Account</a
 				>
-				<div class=" h-[1.5rem] w-0.5 bg-gray-900"></div>
+				<!-- <div class="h-6 w-0.5 bg-gray-900"></div> -->
 				<a
 					href="https://careerfingerprint.app/dashboard"
 					class="ml-2 text-sm/6 font-semibold text-gray-900"
@@ -190,39 +165,30 @@
 							</button>
 						</div>
 					</div>
-					<div class="mt-3 space-y-1 px-2">
+					<div class="mt-3 space-y-1 divide-y divide-gray-500/10 px-2">
+						<div class="space-y-1">
+							{#each nav_items as nav}
+								<MobileHeaderItem {...nav} />
+							{/each}
+						</div>
 						{#if enable_sign_in}
-							<a
-								href="https://careerfingerprint.app/register"
-								onclick={() => (mobileNabOpen = !mobileNabOpen)}
-								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-							>
-								Create Account
-							</a>
-							<a
-								href="https://careerfingerprint.app/dashboard"
-								onclick={() => (mobileNabOpen = !mobileNabOpen)}
-								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-							>
-								Login
-							</a>
+							<div class="space-y-1">
+								<a
+									href="https://careerfingerprint.app/register"
+									onclick={() => (mobileNabOpen = !mobileNabOpen)}
+									class="btn btn--primary my-2 block"
+								>
+									Create Account
+								</a>
+								<a
+									href="https://careerfingerprint.app/dashboard"
+									onclick={() => (mobileNabOpen = !mobileNabOpen)}
+									class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
+								>
+									Login
+								</a>
+							</div>
 						{/if}
-						{#each mobile_nav_menu as nav}
-							<PrismicLink
-								field={nav.url}
-								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-							>
-								{nav.label}
-							</PrismicLink>
-						{/each}
-						{#each nav_menu as nav}
-							<PrismicLink
-								field={nav.url}
-								class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
-							>
-								{nav.label}
-							</PrismicLink>
-						{/each}
 					</div>
 				</div>
 			</div>

@@ -11,6 +11,12 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"feature_bento_box": {
+							"type": "SharedSlice"
+						},
+						"step_by_step": {
+							"type": "SharedSlice"
+						},
 						"hero_with_cta_and_navigation_preview": {
 							"type": "SharedSlice"
 						},

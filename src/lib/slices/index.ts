@@ -4,6 +4,7 @@ import AdvancedPricingTable from './AdvancedPricingTable/index.svelte';
 import AudienceOverview from './AudienceOverview/index.svelte';
 import CtaBlock from './CtaBlock/index.svelte';
 import FaqGroup from './FaqGroup/index.svelte';
+import FeatureBentoBox from './FeatureBentoBox/index.svelte';
 import FeatureCardsGrid from './FeatureCardsGrid/index.svelte';
 import FeatureScreenshot from './FeatureScreenshot/index.svelte';
 import FeatureSideHero from './FeatureSideHero/index.svelte';
@@ -26,6 +27,7 @@ import FeaturedBlogPosts from './FeaturedBlogPosts/index.svelte';
 import RichText from './RichText/index.svelte';
 import SectionWithSubsections from './SectionWithSubsections/index.svelte';
 import SingleTestimonial from './SingleTestimonial/index.svelte';
+import StepByStep from './StepByStep/index.svelte';
 import TeamOverview from './TeamOverview/index.svelte';
 import TheWhy from './TheWhy/index.svelte';
 import UseCase from './UseCase/index.svelte';
@@ -36,6 +38,7 @@ export const components = {
 	audience_overview: AudienceOverview,
 	cta_block: CtaBlock,
 	faq_group: FaqGroup,
+	feature_bento_box: FeatureBentoBox,
 	feature_cards_grid: FeatureCardsGrid,
 	feature_screenshot: FeatureScreenshot,
 	feature_side_hero: FeatureSideHero,
@@ -58,6 +61,7 @@ export const components = {
 	rich_text: RichText,
 	section_with_subsections: SectionWithSubsections,
 	single_testimonial: SingleTestimonial,
+	step_by_step: StepByStep,
 	team_overview: TeamOverview,
 	the_why: TheWhy,
 	use_case: UseCase,

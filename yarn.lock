@@ -1096,12 +1096,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prismicio/client@npm:^7.21.0":
-  version: 7.21.0
-  resolution: "@prismicio/client@npm:7.21.0"
+"@prismicio/client@npm:^7.21.6":
+  version: 7.21.6
+  resolution: "@prismicio/client@npm:7.21.6"
   dependencies:
     imgix-url-builder: "npm:^0.0.6"
-  checksum: 10c0/63275f7a94b9a7f3da98f2726cbcfcfd6fa354ac8c57cd7469a3f9f2abfb08548e5543ac11fb576feae707c648a2cae7501b7a95eeea0247b69bfecc41de68c4
+  checksum: 10c0/8a41d1fb0d66a960ce9666a39d237bed8e79661853273d522fda02d3a61f9f5150bce97aa863c8f672b377c864f391c24307798a762db0fe11182c954c7c9d27
   languageName: node
   linkType: hard
 
@@ -1152,10 +1152,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prismicio/svelte@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@prismicio/svelte@npm:2.0.0"
+"@prismicio/simulator@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@prismicio/simulator@npm:0.2.0"
+  peerDependencies:
+    "@prismicio/client": ^7
+  checksum: 10c0/237aa19b5d95da32e01bce076312c96fe065255bcb03b7c201c3e6435686e9ede4aa9a0ed83e8a9bf9dd0605dc39d8c805cd3d846017f75b014ed67e7eb181a2
+  languageName: node
+  linkType: hard
+
+"@prismicio/svelte@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@prismicio/svelte@npm:2.2.0"
   dependencies:
+    "@prismicio/simulator": "npm:^0.2.0"
     esm-env: "npm:^1.2.2"
   peerDependencies:
     "@prismicio/client": ">=7"
@@ -1164,7 +1174,7 @@ __metadata:
   peerDependenciesMeta:
     "@sveltejs/kit":
       optional: true
-  checksum: 10c0/0f1dee5470e8b575f3c58a48cb49744d3747cef8a813d687237892df7d89d63876d77fd627013d7e381c6f217eb047937bacf8e3137cb8df579e44d33a27d5c2
+  checksum: 10c0/ec10c3a6615e52b4898719386a31e9bf639c45cbefa73f95759e64978694a1d766248345c8c56bcc69413ea88771465950ac9e48141832c48f115be2ed4c6752
   languageName: node
   linkType: hard
 
@@ -1619,13 +1629,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slicemachine/adapter-sveltekit@npm:^0.3.90":
-  version: 0.3.90
-  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.90"
+"@slicemachine/adapter-sveltekit@npm:^0.3.95":
+  version: 0.3.95
+  resolution: "@slicemachine/adapter-sveltekit@npm:0.3.95"
   dependencies:
     "@prismicio/simulator": "npm:^0.1.4"
     "@prismicio/types-internal": "npm:3.11.2"
-    "@slicemachine/plugin-kit": "npm:0.4.88"
+    "@slicemachine/plugin-kit": "npm:0.4.93"
     common-tags: "npm:^1.8.2"
     fp-ts: "npm:^2.13.1"
     io-ts: "npm:^2.2.20"
@@ -1645,7 +1655,7 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/638d8e21f649ce0e53d389a0db5fccb865d33554e615bcd8579dc464193408ac4f98aced40feecf1b80aed298d0e9644e28aa73935fc5d22744d73f97088f298
+  checksum: 10c0/4c925f04e9679bd9ca9295130f95ff241d2255eecf21141636354867a1f3c0c2e4fc9c10fb342db8e7391fab188cc73ef34e6fb4a570118c0d1a19c9d2851e1d
   languageName: node
   linkType: hard
 
@@ -1686,25 +1696,6 @@ __metadata:
     msw:
       optional: true
   checksum: 10c0/c3dc4e46167190670968d18e58b6d4663f4cd66a675a8b99b7ab2d2141810bf4e08fc48c84c9b17439d7eec9914fea1fcb414e12731d436fc52ef3f88ec7e96a
-  languageName: node
-  linkType: hard
-
-"@slicemachine/plugin-kit@npm:0.4.88":
-  version: 0.4.88
-  resolution: "@slicemachine/plugin-kit@npm:0.4.88"
-  dependencies:
-    "@prismicio/client": "npm:7.17.0"
-    common-tags: "npm:^1.8.2"
-    defu: "npm:^6.1.2"
-    dotenv: "npm:16.3.1"
-    fp-ts: "npm:^2.13.1"
-    fs-extra: "npm:11.1.1"
-    io-ts: "npm:^2.2.20"
-    io-ts-reporters: "npm:^2.0.1"
-    p-limit: "npm:^4.0.0"
-    prettier: "npm:^3.0.3"
-    prismic-ts-codegen: "npm:0.1.27"
-  checksum: 10c0/08334250738b391d4d9fbb7259ebb1ef6b6dea5d88d6317c961219dc5912a776aa28c0da64b9bcbcbdf6edd8b2bb52d867f6605c1c6c1249b45853867c5bb40b
   languageName: node
   linkType: hard
 
@@ -1997,6 +1988,13 @@ __metadata:
   peerDependencies:
     vite: ^5.2.0 || ^6 || ^7
   checksum: 10c0/7605364d29cd5683948f7b74f22c5f3b39b89b54d25b3b1094f8300ec6fe9f053f73246170debad86e01080f858d0bf6d0ef8e398a9dc0ce1f5a02c34447726b
+  languageName: node
+  linkType: hard
+
+"@tailwindplus/elements@npm:^1.0.22":
+  version: 1.0.22
+  resolution: "@tailwindplus/elements@npm:1.0.22"
+  checksum: 10c0/e7a6cd26777d88c9fae4c9c0a656860d4b9d5a3af13798e121c7006f5324b468d2cf07e5cbf9ce32296ba088d06db88b651e0ada8cd23a6a0314926f413212e4
   languageName: node
   linkType: hard
 
@@ -4292,16 +4290,17 @@ __metadata:
     "@eslint/js": "npm:^9.39.1"
     "@neondatabase/serverless": "npm:^1.0.1"
     "@prisma/client": "npm:^6.19.0"
-    "@prismicio/client": "npm:^7.21.0"
-    "@prismicio/svelte": "npm:^2.0.0"
+    "@prismicio/client": "npm:^7.21.6"
+    "@prismicio/svelte": "npm:^2.2.0"
     "@resvg/resvg-js": "npm:^2.6.2"
-    "@slicemachine/adapter-sveltekit": "npm:^0.3.90"
+    "@slicemachine/adapter-sveltekit": "npm:^0.3.95"
     "@sveltejs/adapter-auto": "npm:^7.0.0"
     "@sveltejs/adapter-static": "npm:^3.0.10"
     "@sveltejs/adapter-vercel": "npm:^6.3.1"
     "@sveltejs/kit": "npm:^2.50.2"
     "@sveltejs/vite-plugin-svelte": "npm:^6.2.4"
     "@tailwindcss/vite": "npm:^4.1.18"
+    "@tailwindplus/elements": "npm:^1.0.22"
     "@types/canvas-confetti": "npm:^1"
     "@vercel/og": "npm:^0.8.6"
     "@vercel/speed-insights": "npm:^1.3.1"
