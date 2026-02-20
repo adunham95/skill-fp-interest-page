@@ -12,7 +12,8 @@
 		PUBLIC_MIXPANEL_TOKEN,
 		PUBLIC_TWAK_ID,
 		PUBLIC_TWAK_WIDGET_ID,
-		PUBLIC_CLARITY_ID
+		PUBLIC_CLARITY_ID,
+		PUBLIC_GTM_ID
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
 
@@ -48,16 +49,21 @@
 </script>
 
 <svelte:head>
-	{#if PUBLIC_GTAG}
-		<script async src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GTAG}`}></script>
-		{@html `
-			<script>
-				window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', '${PUBLIC_GTAG}');
-			</script>
-		`}
+	{#if PUBLIC_GTM_ID}
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', PUBLIC_GTM_ID);
+		</script>
+		<!-- End Google Tag Manager -->
 	{/if}
 
 	{#if PUBLIC_CLARITY_ID}
@@ -134,3 +140,16 @@
 		})();
 	</script>
 	`}
+
+{#if PUBLIC_GTM_ID}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript
+		><iframe
+			src={`https://www.googletagmanager.com/ns.html?id=${PUBLIC_GTM_ID}`}
+			height="0"
+			width="0"
+			style="display:none;visibility:hidden"
+		></iframe></noscript
+	>
+	<!-- End Google Tag Manager (noscript) -->
+{/if}
