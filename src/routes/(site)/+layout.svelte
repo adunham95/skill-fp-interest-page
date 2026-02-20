@@ -50,7 +50,7 @@
 
 <svelte:head>
 	{#if PUBLIC_GTM_ID}
-		<!-- Google Tag Manager -->
+		{@html `
 		<script>
 			(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
@@ -61,9 +61,10 @@
 				j.async = true;
 				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', `${PUBLIC_GTM_ID}`);
+			})(window, document, 'script', 'dataLayer', ${PUBLIC_GTM_ID});
 		</script>
 		<!-- End Google Tag Manager -->
+	`}
 	{/if}
 
 	{#if PUBLIC_CLARITY_ID}
