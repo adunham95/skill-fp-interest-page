@@ -7,7 +7,6 @@
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import ScrollIndicator from '$lib/Components/ScrollIndicator.svelte';
 	import {
-		PUBLIC_GTAG,
 		PUBLIC_MITA_ID,
 		PUBLIC_MIXPANEL_TOKEN,
 		PUBLIC_TWAK_ID,
