@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Content } from '@prismicio/client';
-	import { PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
+	import { PrismicLink, PrismicRichText, type SliceComponentProps } from '@prismicio/svelte';
 
 	type Props = SliceComponentProps<Content.PageTitleSlice>;
 
@@ -22,5 +22,21 @@
 		<div class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
 			<PrismicRichText field={slice.primary.description} />
 		</div>
+		<div class="mt-10 flex items-center justify-center gap-x-6">
+			{#if slice.primary.primary_cta?.text}
+				<PrismicLink class="btn btn--primary" field={slice.primary.primary_cta} />
+			{/if}
+			{#if slice.primary.secondary_cta?.text}
+				<PrismicLink class="btn btn-text--secondary" field={slice.primary.secondary_cta} />
+			{/if}
+		</div>
+
+		{#if slice.primary.micro_copy}
+			<div class="mt-5">
+				<p class="text-sm text-pretty text-gray-500">
+					{slice.primary.micro_copy}
+				</p>
+			</div>
+		{/if}
 	</div>
 </section>

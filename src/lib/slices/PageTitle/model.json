@@ -1,42 +1,67 @@
 {
-  "id": "page_title",
-  "type": "SharedSlice",
-  "name": "PageTitle",
-  "description": "PageTitle",
-  "variations": [
-    {
-      "id": "default",
-      "name": "Default",
-      "docURL": "...",
-      "version": "initial",
-      "description": "Default",
-      "imageUrl": "",
-      "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "section_label": {
-          "type": "Text",
-          "config": {
-            "label": "Label",
-            "placeholder": ""
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,strong,em,hyperlink"
-          }
-        }
-      },
-      "items": {}
-    }
-  ]
+	"id": "page_title",
+	"type": "SharedSlice",
+	"name": "PageTitle",
+	"description": "PageTitle",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": "",
+			"primary": {
+				"title": {
+					"type": "Text",
+					"config": {
+						"label": "Title",
+						"placeholder": ""
+					}
+				},
+				"section_label": {
+					"type": "Text",
+					"config": {
+						"label": "Label",
+						"placeholder": ""
+					}
+				},
+				"description": {
+					"type": "StructuredText",
+					"config": {
+						"label": "Description",
+						"placeholder": "",
+						"allowTargetBlank": true,
+						"single": "paragraph,strong,em,hyperlink"
+					}
+				},
+				"primary_cta": {
+					"type": "Link",
+					"config": {
+						"label": "Primary CTA",
+						"allowText": true,
+						"repeat": false,
+						"select": null
+					}
+				},
+				"secondary_cta": {
+					"type": "Link",
+					"config": {
+						"label": "Secondary CTA",
+						"allowText": true,
+						"repeat": false,
+						"select": null
+					}
+				},
+				"micro_copy": {
+					"type": "Text",
+					"config": {
+						"label": "Micro Copy",
+						"placeholder": ""
+					}
+				}
+			},
+			"items": {}
+		}
+	]
 }
