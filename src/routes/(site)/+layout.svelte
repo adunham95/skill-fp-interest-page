@@ -15,6 +15,10 @@
 		PUBLIC_GTM_ID
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
+	import MpTargetHighlighter from '$lib/Components/MpTargetHighlighter.svelte';
+	import { page } from '$app/state';
+
+	const show = $derived(page.url.searchParams.get('showMixPanelDevTools') === 'true');
 
 	injectSpeedInsights();
 
@@ -113,6 +117,10 @@
 <ScrollIndicator />
 
 <Footer {...data.footer?.data} />
+
+{#if show}
+	<MpTargetHighlighter />
+{/if}
 
 {#if isProd}
 	<img
