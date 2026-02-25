@@ -17,8 +17,9 @@
 	import mixpanel from 'mixpanel-browser';
 	import MpTargetHighlighter from '$lib/Components/MpTargetHighlighter.svelte';
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 
-	const show = $derived(page.url.searchParams.get('showMixPanelDevTools') === 'true');
+	const show = $derived(browser && page.url.searchParams.get('showMixPanelDevTools') === 'true');
 
 	injectSpeedInsights();
 
