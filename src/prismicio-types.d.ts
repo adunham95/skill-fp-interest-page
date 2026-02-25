@@ -25,16 +25,16 @@ type PickContentRelationshipFieldData<
 			TSubRelationship['customtypes'],
 			TLang
 		>;
-	} & // Group
-	{
+	} & {
+		// Group
 		[TGroup in Extract<
 			TRelationship['fields'][number],
 			prismic.CustomTypeModelFetchGroupLevel1 | prismic.CustomTypeModelFetchGroupLevel2
 		> as TGroup['id']]: TData[TGroup['id']] extends prismic.GroupField<infer TGroupData>
 			? prismic.GroupField<PickContentRelationshipFieldData<TGroup, TGroupData, TLang>>
 			: never;
-	} & // Other fields
-	{
+	} & {
+		// Other fields
 		[TFieldKey in Extract<TRelationship['fields'][number], string>]: TFieldKey extends keyof TData
 			? TData[TFieldKey]
 			: never;
@@ -3507,6 +3507,36 @@ export interface PageTitleSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
 	 */
 	description: prismic.RichTextField;
+
+	/**
+	 * Primary CTA field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.primary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	primary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Secondary CTA field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.secondary_cta
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	secondary_cta: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Micro Copy field in *PageTitle → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: page_title.default.primary.micro_copy
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	micro_copy: prismic.KeyTextField;
 }
 
 /**
@@ -5052,6 +5082,13 @@ declare module '@prismicio/client' {
 			FeatureCardsGridSliceDefaultPrimary,
 			FeatureCardsGridSliceVariation,
 			FeatureCardsGridSliceDefault,
+			FeatureComparisonSlice,
+			FeatureComparisonSliceDefaultPrimaryPlansItem,
+			FeatureComparisonSliceDefaultPrimaryFeatureItemsValuesItem,
+			FeatureComparisonSliceDefaultPrimaryFeatureItemsItem,
+			FeatureComparisonSliceDefaultPrimary,
+			FeatureComparisonSliceVariation,
+			FeatureComparisonSliceDefault,
 			FeatureScreenshotSlice,
 			FeatureScreenshotSliceDefaultPrimary,
 			FeatureScreenshotSliceDarkPrimary,

@@ -17,6 +17,9 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
+						"feature_comparison": {
+							"type": "SharedSlice"
+						},
 						"feature_bento_box": {
 							"type": "SharedSlice"
 						},
