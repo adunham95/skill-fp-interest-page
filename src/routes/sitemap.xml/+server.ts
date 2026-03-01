@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { createClient } from '$lib/prismicio';
 import { asLink } from '@prismicio/client';
 
@@ -58,8 +60,7 @@ export const GET = async ({ fetch, cookies }) => {
 
 	return new Response(xml, {
 		headers: {
-			'Content-Type': 'application/xml',
-			'Cache-Control': 'public, max-age=0, s-maxage=3600, stale-while-revalidate=60'
+			'Content-Type': 'application/xml'
 		}
 	});
 };
