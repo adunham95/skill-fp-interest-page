@@ -31,6 +31,7 @@
 		mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
 			debug: false,
 			track_pageview: isProd ? true : false,
+			cookie_domain: '.mycareerfingerprint.com', // note the leading dot,
 			autocapture: isProd
 				? {
 						pageview: 'full-url',
