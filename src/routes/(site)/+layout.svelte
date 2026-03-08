@@ -18,6 +18,9 @@
 	import MpTargetHighlighter from '$lib/Components/MpTargetHighlighter.svelte';
 	import { page } from '$app/state';
 	import { browser } from '$app/environment';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import { startPageTimer, flushPageTimer } from '$lib/tracking';
 
 	const show = $derived(browser && page.url.searchParams.get('showMixPanelDevTools') === 'true');
 
@@ -51,6 +54,21 @@
 		});
 
 	console.log(data.header?.data);
+
+	afterNavigate(({ to }) => {
+		const pagePath = to?.url?.pathname ?? '';
+		const pageTitle = browser ? document.title : '';
+		startPageTimer(pagePath, pageTitle);
+	});
+
+	beforeNavigate(() => {
+		flushPageTimer();
+	});
+
+	onMount(() => {
+		window.addEventListener('beforeunload', flushPageTimer);
+		return () => window.removeEventListener('beforeunload', flushPageTimer);
+	});
 </script>
 
 <svelte:head>
