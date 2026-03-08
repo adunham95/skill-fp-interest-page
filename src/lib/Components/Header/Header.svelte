@@ -93,12 +93,12 @@
 		<div class="hidden items-center md:flex md:flex-1 md:flex-row md:justify-end">
 			{#if enable_sign_in}
 				<a
-					href="https://careerfingerprint.app/register"
+					href="https://app.mycareerfingerprint.com/register"
 					class="btn--primary btn mr-2 text-sm/6 font-semibold">Start Free Trial</a
 				>
 				<!-- <div class="h-6 w-0.5 bg-gray-900"></div> -->
 				<a
-					href="https://careerfingerprint.app/dashboard"
+					href="https://app.mycareerfingerprint.com/dashboard"
 					class="ml-2 text-sm/6 font-semibold text-gray-900"
 					>Log in <span aria-hidden="true">&rarr;</span></a
 				>
@@ -174,14 +174,14 @@
 						{#if enable_sign_in}
 							<div class="space-y-1">
 								<a
-									href="https://careerfingerprint.app/register"
+									href="https://app.mycareerfingerprint.com/register"
 									onclick={() => (mobileNabOpen = !mobileNabOpen)}
 									class="btn btn--primary my-2 block"
 								>
 									Start Free Trial
 								</a>
 								<a
-									href="https://careerfingerprint.app/dashboard"
+									href="https://app.mycareerfingerprint.com/dashboard"
 									onclick={() => (mobileNabOpen = !mobileNabOpen)}
 									class="block rounded-md px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-gray-800"
 								>
