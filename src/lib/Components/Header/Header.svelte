@@ -94,7 +94,7 @@
 			{#if enable_sign_in}
 				<a
 					href="https://careerfingerprint.app/register"
-					class="btn--primary btn mr-2 text-sm/6 font-semibold">Create Account</a
+					class="btn--primary btn mr-2 text-sm/6 font-semibold">Start Free Trial</a
 				>
 				<!-- <div class="h-6 w-0.5 bg-gray-900"></div> -->
 				<a
@@ -178,7 +178,7 @@
 									onclick={() => (mobileNabOpen = !mobileNabOpen)}
 									class="btn btn--primary my-2 block"
 								>
-									Create Account
+									Start Free Trial
 								</a>
 								<a
 									href="https://careerfingerprint.app/dashboard"
