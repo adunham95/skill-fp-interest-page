@@ -125,13 +125,19 @@
 	></script>
 </svelte:head>
 
+<a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4">
+	Skip to main content
+</a>
+
 {#if data.banner}
 	<Banner banner={data.banner} />
 {/if}
 
 <Header {...data.header?.data} />
 
-{@render children()}
+<main id="main">
+	{@render children()}
+</main>
 <PrismicPreview {repositoryName} />
 
 <ScrollIndicator />

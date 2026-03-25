@@ -22,7 +22,7 @@
 	<nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
 		<div class="flex lg:flex-1">
 			<a href="/" class="-m-1.5 flex items-center p-1.5">
-				<PrismicImage field={logo} class="h-10 w-auto" />
+				<PrismicImage field={logo} class="h-10 w-auto" alt="" />
 				<span class="ml-2">
 					<div>
 						<p class="p-0 text-2xl">
@@ -43,10 +43,10 @@
 				onclick={() => (mobileNabOpen = !mobileNabOpen)}
 				class="text-content-2 hover:bg-content-2 hover:text-content-3 focus:ring-primary relative inline-flex items-center justify-center rounded-md p-2 focus:ring-2 focus:outline-none focus:ring-inset"
 				aria-controls="mobile-menu"
-				aria-expanded="false"
+				aria-expanded={mobileNabOpen}
 			>
 				<span class="absolute -inset-0.5" data-name="Open Menu"></span>
-				<span class="sr-only">Open menu</span>
+				<span class="sr-only">{mobileNabOpen ? 'Close menu' : 'Open menu'}</span>
 				<!--
 					Icon when menu is closed.
 					
@@ -147,7 +147,7 @@
 							<button
 								type="button"
 								onclick={() => (mobileNabOpen = !mobileNabOpen)}
-								class="focus:ring-primaryfocus:outline-none relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-inset"
+								class="focus:ring-primary relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:outline-none focus:ring-inset"
 							>
 								<span class="absolute -inset-0.5" data-name="Close Menu"></span>
 								<span class="sr-only">Close menu</span>

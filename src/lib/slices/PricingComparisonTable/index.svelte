@@ -79,6 +79,7 @@
 											fill-rule="evenodd"
 										/>
 									</svg>
+									<span class="sr-only">Included in Free</span>
 									<div>
 										<span>
 											{feature.feature_name}
@@ -109,6 +110,7 @@
 											fill-rule="evenodd"
 										/>
 									</svg>
+									<span class="sr-only">Included in Premium</span>
 									<div>
 										<span>
 											{feature.feature_name}

@@ -37,7 +37,7 @@
 		<div class="xl:grid xl:grid-cols-3 xl:gap-8">
 			<div class="space-y-8">
 				<div class="text-background flex items-center">
-					<PrismicImage field={logo} class="h-9 w-auto" />
+					<PrismicImage field={logo} class="h-9 w-auto" alt="" />
 					<span class="ml-2">
 						<div>
 							<p class="p-0 text-2xl">

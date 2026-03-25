@@ -31,7 +31,7 @@
 								{#each slice.primary.features as item}
 									<div class="relative pl-9">
 										<dt class="inline font-semibold text-gray-50">
-											<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} />
+											<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} alt="" />
 											{item.feature_title}
 										</dt>
 										<dd class="font-body inline"><PrismicRichText field={item.feature_desc} /></dd>
@@ -51,6 +51,7 @@
 								<PrismicImage
 									class="size-full object-cover object-top"
 									field={slice.primary.image}
+									alt={slice.primary.image.alt ?? ''}
 								/>
 							</div>
 						</div>
@@ -78,7 +79,7 @@
 								{#each slice.primary.features as item}
 									<div class="relative pl-9">
 										<dt class="inline font-semibold text-gray-800">
-											<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} />
+											<PrismicImage class="absolute top-1 left-1 size-5" field={item.icon} alt="" />
 											{item.feature_title}
 										</dt>
 										<dd class="inline"><PrismicRichText field={item.feature_desc} /></dd>
@@ -98,6 +99,7 @@
 								<PrismicImage
 									class="size-full object-cover object-top"
 									field={slice.primary.image}
+									alt={slice.primary.image.alt ?? ''}
 								/>
 							</div>
 						</div>

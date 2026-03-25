@@ -50,6 +50,7 @@
 				<PrismicImage
 					class="aspect-3/2 object-cover lg:aspect-auto lg:size-full"
 					field={slice.primary.hero_image}
+					alt={slice.primary.hero_image.alt ?? ''}
 				/>
 			</div>
 		</div>
@@ -87,6 +88,7 @@
 					<PrismicImage
 						class="mt-10 w-full max-w-lg rounded-2xl object-cover outline-1 -outline-offset-1 outline-black/5 sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
 						field={slice.primary.hero_image}
+						alt={slice.primary.hero_image.alt ?? ''}
 					/>
 				</div>
 			</div>
@@ -142,7 +144,7 @@
 							clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
 							transform="translate(24 24)"
 						>
-							<PrismicImage field={slice.primary.screenshot} />
+							<PrismicImage field={slice.primary.screenshot} alt="" />
 						</foreignObject>
 					</svg>
 				</div>

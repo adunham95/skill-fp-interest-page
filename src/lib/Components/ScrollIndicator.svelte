@@ -81,6 +81,12 @@
 		transform: translateY(-4px) rotate(-45deg);
 	}
 
+	@media (prefers-reduced-motion: reduce) {
+		.scroll-indicator {
+			animation: none;
+		}
+	}
+
 	@keyframes bounce {
 		0%,
 		20%,

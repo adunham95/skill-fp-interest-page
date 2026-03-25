@@ -140,6 +140,7 @@
 								field={item.card.icon_or_image}
 								class="h-64 w-full object-contain object-center lg:h-80"
 								imgixParams={{ q: 80, auto: ['format', 'compress'] }}
+								alt={item.card.icon_or_image.alt ?? ''}
 							/>
 						{:else}
 							<div class="h-64 w-full bg-slate-100 lg:h-80"></div>
