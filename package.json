@@ -47,6 +47,7 @@
 		"vite-plugin-devtools-json": "^0.2.1"
 	},
 	"dependencies": {
+		"@amplitude/unified": "^1.0.14",
 		"@neondatabase/serverless": "^1.0.1",
 		"@prisma/client": "^6.19.0",
 		"@prismicio/client": "^7.21.6",

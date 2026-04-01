@@ -12,7 +12,8 @@
 		PUBLIC_TWAK_ID,
 		PUBLIC_TWAK_WIDGET_ID,
 		PUBLIC_CLARITY_ID,
-		PUBLIC_GTM_ID
+		PUBLIC_GTM_ID,
+		PUBLIC_AMPLITUDE_KEY
 	} from '$env/static/public';
 	import mixpanel from 'mixpanel-browser';
 	import MpTargetHighlighter from '$lib/Components/MpTargetHighlighter.svelte';
@@ -21,6 +22,7 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { startPageTimer, flushPageTimer } from '$lib/tracking';
+	import * as amplitude from '@amplitude/unified';
 
 	const show = $derived(browser && page.url.searchParams.get('showMixPanelDevTools') === 'true');
 
@@ -51,6 +53,29 @@
 				: {},
 
 			record_sessions_percent: 1
+		});
+
+	isProd &&
+		amplitude.initAll(PUBLIC_AMPLITUDE_KEY, {
+			analytics: {
+				autocapture: {
+					attribution: true,
+					fileDownloads: true,
+					formInteractions: true,
+					pageViews: true,
+					sessions: true,
+					elementInteractions: true,
+					networkTracking: true,
+					webVitals: true,
+					frustrationInteractions: {
+						thrashedCursor: true,
+						errorClicks: true,
+						deadClicks: true,
+						rageClicks: true
+					}
+				}
+			},
+			sessionReplay: { sampleRate: 1 }
 		});
 
 	console.log(data.header?.data);
