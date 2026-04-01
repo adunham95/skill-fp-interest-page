@@ -67,7 +67,8 @@
 		const path = page.url.pathname;
 		tick().then(() => {
 			if (!browser) return;
-			const pageTitle = document.title.split(' | ')[0].trim();
+			const rawTitle = document.title.split(' | ')[0].trim();
+			const pageTitle = rawTitle === 'Career Fingerprint' ? 'Homepage' : rawTitle;
 			track(`${pageTitle} Page View`, { page_path: path, page_title: pageTitle });
 		});
 	});
