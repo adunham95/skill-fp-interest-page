@@ -18,9 +18,9 @@
 	import { page } from '$app/state';
 	import { browser } from '$app/environment';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import { startPageTimer, flushPageTimer } from '$lib/tracking';
-	import { initAmplitude } from '$lib/analytics.js';
+	import { initAmplitude, track } from '$lib/analytics.js';
 
 	const show = $derived(browser && page.url.searchParams.get('showMixPanelDevTools') === 'true');
 
@@ -53,8 +53,6 @@
 			record_sessions_percent: 1
 		});
 
-	console.log(data.header?.data);
-
 	afterNavigate(({ to }) => {
 		const pagePath = to?.url?.pathname ?? '';
 		const pageTitle = browser ? document.title : '';
@@ -63,6 +61,15 @@
 
 	beforeNavigate(() => {
 		flushPageTimer();
+	});
+
+	$effect(() => {
+		const path = page.url.pathname;
+		tick().then(() => {
+			if (!browser) return;
+			const pageTitle = document.title.split(' | ')[0].trim();
+			track(`${pageTitle} Page View`, { page_path: path, page_title: pageTitle });
+		});
 	});
 
 	onMount(() => {
