@@ -33,6 +33,7 @@
 	let isProd = data.env === 'production';
 
 	isProd &&
+		browser &&
 		mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
 			debug: false,
 			track_pageview: isProd ? true : false,
