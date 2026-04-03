@@ -13,13 +13,11 @@
 		PUBLIC_TWAK_WIDGET_ID,
 		PUBLIC_GTM_ID
 	} from '$env/static/public';
-	import mixpanel from 'mixpanel-browser';
 	import MpTargetHighlighter from '$lib/Components/MpTargetHighlighter.svelte';
 	import { page } from '$app/state';
 	import { browser } from '$app/environment';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { onMount, tick } from 'svelte';
-	import { startPageTimer, flushPageTimer } from '$lib/tracking';
 	import { initAmplitude, track } from '$lib/analytics.js';
 
 	const show = $derived(browser && page.url.searchParams.get('showMixPanelDevTools') === 'true');
@@ -29,39 +27,6 @@
 	let { children, data } = $props();
 
 	let isProd = data.env === 'production';
-
-	isProd &&
-		mixpanel.init(PUBLIC_MIXPANEL_TOKEN, {
-			debug: false,
-			track_pageview: isProd ? true : false,
-			cookie_domain: '.mycareerfingerprint.com', // note the leading dot,
-			autocapture: isProd
-				? {
-						pageview: 'full-url',
-						click: true, // click tracking enabled
-						scroll: true,
-						submit: true,
-						capture_text_content: true,
-						block_url_regexes: [
-							/\/preview/, // Prismic preview route
-							/\/api\/preview/, // Preview API endpoint (if you use it)
-							/\/slice-simulator/ // Slice Simulator route
-						]
-					}
-				: {},
-
-			record_sessions_percent: 1
-		});
-
-	afterNavigate(({ to }) => {
-		const pagePath = to?.url?.pathname ?? '';
-		const pageTitle = browser ? document.title : '';
-		startPageTimer(pagePath, pageTitle);
-	});
-
-	beforeNavigate(() => {
-		flushPageTimer();
-	});
 
 	$effect(() => {
 		const path = page.url.pathname;
@@ -75,8 +40,6 @@
 
 	onMount(() => {
 		initAmplitude();
-		window.addEventListener('beforeunload', flushPageTimer);
-		return () => window.removeEventListener('beforeunload', flushPageTimer);
 	});
 </script>
 
