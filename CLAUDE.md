@@ -2,45 +2,138 @@
 
 ## What this is
 
-The public marketing site for Career Fingerprint. Separate from the app — different codebase, different deployment. Content is managed in Prismic CMS and pulled at build/request time.
+The public marketing site for Career Fingerprint. Separate from the app — different codebase, deployed to Vercel. Content is managed in Prismic CMS and pulled at build/request time.
 
 ---
 
 ## Stack
 
-- **SvelteKit** (TypeScript)
-- **Tailwind CSS** (confirm version in package.json)
-- **Prismic CMS** — content source for all marketing copy, images, and page sections
+- **SvelteKit 2 / Svelte 5** (TypeScript) — use Svelte 5 runes (`$props()`, `$state()`, `$derived()`, etc.)
+- **Tailwind CSS v4** — utility classes only
+- **Prismic CMS** (`@prismicio/client`, `@prismicio/svelte`) — content source for all marketing copy, images, and page sections
+- **Prisma + Neon** — serverless Postgres for email list signups (`src/lib/Server/prisma.ts`)
+- **Amplitude** (`@amplitude/unified`) — analytics (`src/lib/analytics.ts`, `src/lib/tracking.ts`)
+- **Satori + resvg** — OG image generation (`src/routes/api/og/`)
+- **Vercel** — deployment target (`@sveltejs/adapter-vercel`)
 
 ---
 
 ## Structure
 
 ```
-Interest Page/
-├── src/
-│   ├── routes/      # SvelteKit file-based routing
-│   ├── lib/
-│   │   ├── components/
-│   │   └── utils/
-│   └── app.html
-└── package.json
+src/
+├── routes/
+│   ├── (site)/                          # Main site routes
+│   │   ├── [[preview=preview]]/         # Prismic preview-aware routes
+│   │   │   ├── +page.svelte/server.ts   # Homepage
+│   │   │   ├── [uid]/                   # Generic CMS pages
+│   │   │   ├── blog/                    # Blog list + [uid] posts
+│   │   │   └── tools/[uid]/             # Tool pages
+│   │   ├── brand-guidelines/
+│   │   └── +layout.svelte
+│   ├── api/
+│   │   ├── email-list/                  # Email list signup (writes to Neon DB)
+│   │   ├── og/                          # OG image generation (satori)
+│   │   ├── preview/                     # Prismic preview handler
+│   │   └── index-sitemap/
+│   ├── sitemap.xml/
+│   ├── sign-up-success/
+│   └── slice-simulator/                 # Prismic slice simulator
+├── lib/
+│   ├── Components/                      # Reusable UI components
+│   │   ├── Header/                      # Header, HeaderItem, MobileHeaderItem
+│   │   ├── Icon/                        # Icon component + iconMap.ts
+│   │   ├── Text/                        # Tag
+│   │   └── Banner, Button, ButtonRow, ColorCard, CurtainReveal,
+│   │       Footer, OGCard, PageContainer, ScrollIndicator, SEO,
+│   │       SocialSheet, MpTargetHighlighter
+│   ├── slices/                          # Prismic slice components (see below)
+│   ├── Utils/
+│   │   ├── generatePageName.ts
+│   │   └── isEmptyPrismic.ts
+│   ├── Server/
+│   │   └── prisma.ts                    # Prisma client (Neon serverless)
+│   ├── analytics.ts                     # Amplitude setup
+│   ├── tracking.ts                      # Event tracking helpers
+│   └── prismicio.ts                     # Prismic client factory
+├── params/
+│   └── preview.ts                       # Prismic preview param matcher
+├── prismicio-types.d.ts                 # Generated Prismic types
+├── app.css                              # Global styles + Tailwind import
+├── brand.css                            # Brand token CSS variables
+└── button-variants.css                  # Reusable button variant classes
 ```
+
+---
+
+## Prismic custom types
+
+| Type          | Description                             |
+| ------------- | --------------------------------------- |
+| `homepage`    | Homepage document                       |
+| `page`        | Generic marketing page (slice-based)    |
+| `blog_post`   | Blog post                               |
+| `features`    | Features page                           |
+| `header`      | Site header (nav links)                 |
+| `footer`      | Site footer                             |
+| `banner`      | Site-wide announcement banner           |
+| `vanity_url`  | Short URL redirects                     |
+
+---
+
+## Prismic slices
+
+All slices live in `src/lib/slices/`. Each has `index.svelte`, `model.json`, and `mocks.json`.
+
+| Slice                          | Description                                      |
+| ------------------------------ | ------------------------------------------------ |
+| `Hero`                         | Main hero, multiple variants (offset, phone)     |
+| `HeroWithScreenshot`           | Hero with app screenshot                         |
+| `HeroOverBackgroundImage`      | Hero overlaid on a background image              |
+| `HeroWithCtaAndNavigationPreview` | Hero with nav preview                         |
+| `VideoHero`                    | Hero with embedded video                         |
+| `HeadlineOverlay`              | Large headline overlay section                   |
+| `FeatureBentoBox`              | Bento grid feature layout                        |
+| `FeatureCardsGrid`             | Grid of feature cards                            |
+| `FeatureScreenshot`            | Feature with screenshot (light/dark variants)    |
+| `FeatureSideHero`              | Side-by-side feature with icon list              |
+| `FeatureVideo`                 | Feature with video                               |
+| `FeatureWIthImage`             | Feature with image (light/dark variants)         |
+| `AudienceOverview`             | Target audience section                          |
+| `UseCase`                      | Use case callout                                 |
+| `TheWhy`                       | "Why" narrative section                          |
+| `StepByStep`                   | Numbered steps                                   |
+| `SectionWithSubsections`       | Section with expandable subsections              |
+| `PricingOverview`              | Pricing cards                                    |
+| `AdvancedPricingTable`         | Detailed pricing comparison                      |
+| `PricingComparisonTable`       | Plan comparison table                            |
+| `PricingCalculator`            | Interactive pricing calculator                   |
+| `FaqGroup`                     | FAQ accordion                                    |
+| `SingleTestimonial`            | Testimonial quote                                |
+| `TeamOverview`                 | Team member cards                                |
+| `FeaturedBlogPosts`            | Blog post highlights                             |
+| `CtaBlock`                     | Call to action block                             |
+| `GradientCta`                  | Gradient-background CTA                          |
+| `MultiActions`                 | Multiple CTA buttons                             |
+| `NewsletterSignUp`             | Email capture form                               |
+| `ImageBlock`                   | Standalone image                                 |
+| `PageTitle`                    | Page title header                                |
+| `RichText`                     | Rich text content block                          |
 
 ---
 
 ## Conventions
 
-- **Content comes from Prismic.** Don't hardcode marketing copy into components — it should be fetched from Prismic so it can be edited without a deploy.
-- **Routing:** standard SvelteKit file-based conventions.
-- **Semantic HTML:** use proper elements (`<nav>`, `<main>`, `<section>`, `<button>`, etc.). No SvelteKit form actions.
-- **No raw CSS:** Tailwind utilities only.
+- **Content comes from Prismic.** Don't hardcode marketing copy into components.
+- **Routing:** standard SvelteKit file-based conventions. Preview-aware routes use the `[[preview=preview]]` optional segment.
+- **Svelte 5 runes** throughout — `$props()`, `$state()`, `$derived()`, etc. No Svelte 4 syntax.
+- **No raw CSS:** Tailwind v4 utilities only. Brand tokens defined in `brand.css` as CSS variables.
+- **Semantic HTML:** `<nav>`, `<main>`, `<section>`, `<button>`, etc. No SvelteKit form actions.
+- **Analytics:** use `src/lib/analytics.ts` / `src/lib/tracking.ts` for Amplitude events. No PII.
 
 ---
 
 ## Brand tokens
-
-Same brand system as the app — keep these consistent:
 
 | Name          | Hex       | Usage            |
 | ------------- | --------- | ---------------- |
@@ -53,22 +146,18 @@ Same brand system as the app — keep these consistent:
 
 ---
 
-## Prismic
-
-- Content types/slices defined in the Prismic dashboard.
-- Fetch content in `+page.server.ts` load functions using the Prismic client.
-- Don't duplicate content that lives in Prismic into hardcoded strings.
-
-> **TODO:** List key Prismic custom types and slice names here so Claude knows what's available without opening the Prismic dashboard.
-
----
-
 ## Adding a new page
 
-1. Create `src/routes/[path]/+page.svelte`
-2. In `+page.server.ts`, fetch the relevant Prismic document
-3. Pass data to the page component as props
+1. Create `src/routes/(site)/[[preview=preview]]/[uid]/+page.server.ts` — fetch the Prismic document by UID
+2. Create the matching `+page.svelte` — render slices via `<SliceZone>`
+3. Use `<SEO>` component for meta tags
 4. Use brand tokens and existing component patterns
+
+## Adding a new slice
+
+1. Define the model in Prismic dashboard, then sync with `npm run slice`
+2. The slice component is scaffolded at `src/lib/slices/[SliceName]/index.svelte`
+3. Add it to `src/lib/slices/index.ts`
 
 ---
 
@@ -77,4 +166,6 @@ Same brand system as the app — keep these consistent:
 - Don't hardcode marketing content that should live in Prismic.
 - Don't invent colors — use brand tokens above.
 - Don't use SvelteKit form actions.
+- Don't use Svelte 4 syntax — use Svelte 5 runes throughout.
 - Don't copy components from the app frontend (`front-end/`) — the two codebases are separate.
+- Don't log PII to Amplitude.
